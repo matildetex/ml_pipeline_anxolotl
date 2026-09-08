@@ -1,0 +1,81 @@
+Loading WESAD sequences... device=cpu
+
+=================================================================
+  WESAD LOSO — RNN (BiGRU) — WRIST (5 channels: [0, 5, 6, 7, 8])
+=================================================================
+           early stop epoch 29
+           early stop epoch 11
+           early stop epoch 12
+           early stop epoch 23
+           early stop epoch 12
+           early stop epoch 32
+           early stop epoch 11
+           early stop epoch 19
+           early stop epoch 17
+           early stop epoch 34
+           early stop epoch 42
+           early stop epoch 15
+           early stop epoch 12
+           early stop epoch 14
+           early stop epoch 16
+
+=================================================================
+  RNN (BiGRU) WESAD — wrist (5 ch)
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.87      0.89      0.88     17577
+      stress       0.80      0.76      0.78      9966
+
+    accuracy                           0.84     27543
+   macro avg       0.83      0.83      0.83     27543
+weighted avg       0.84      0.84      0.84     27543
+
+Macro F1   : 0.829
+AUC        : 0.857
+F1@opt     : 0.830  (t=0.511)
+Bal. Acc   : 0.825
+MCC        : 0.659
+F1 std     : 0.112  (mean per fold: 0.822)
+Confusion  : TN=15709 FP=1868 FN=2420 TP=7546
+
+=================================================================
+  WESAD LOSO — RNN (BiGRU) — ALL (16 channels)
+=================================================================
+           early stop epoch 11
+           early stop epoch 12
+           early stop epoch 18
+           early stop epoch 22
+           early stop epoch 11
+           early stop epoch 11
+           early stop epoch 20
+           early stop epoch 11
+           early stop epoch 18
+           early stop epoch 11
+           early stop epoch 23
+           early stop epoch 17
+           early stop epoch 20
+           early stop epoch 12
+           early stop epoch 12
+
+=================================================================
+  RNN (BiGRU) WESAD — all (16 ch)
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.95      0.93      0.94     17577
+      stress       0.89      0.92      0.90      9966
+
+    accuracy                           0.93     27543
+   macro avg       0.92      0.93      0.92     27543
+weighted avg       0.93      0.93      0.93     27543
+
+Macro F1   : 0.924
+AUC        : 0.968
+F1@opt     : 0.924  (t=0.436)
+Bal. Acc   : 0.928
+MCC        : 0.849
+F1 std     : 0.077  (mean per fold: 0.923)
+Confusion  : TN=16422 FP=1155 FN=787 TP=9179
+
+Resultados guardados em: /home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/../results/wesad_rnn.json

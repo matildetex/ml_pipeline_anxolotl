@@ -1,0 +1,55 @@
+Base wrist data: (25807, 55)  subjects=15
+
+Extracting ECG features from WESAD zip ...
+  S10 ... 1787 windows  BL=1121  ST=666
+  S11 ... 1742 windows  BL=1121  ST=621
+  S13 ... 1726 windows  BL=1121  ST=605
+  S14 ... 1737 windows  BL=1121  ST=616
+  S15 ... 1743 windows  BL=1116  ST=627
+  S16 ... 1735 windows  BL=1121  ST=614
+  S17 ... 1786 windows  BL=1122  ST=664
+  S2 ... 1641 windows  BL=1085  ST=556
+  S3 ... 1662 windows  BL=1081  ST=581
+  S4 ... 1675 windows  BL=1099  ST=576
+  S5 ... 1725 windows  BL=1139  ST=586
+  S6 ... 1712 windows  BL=1121  ST=591
+  S7 ... 1708 windows  BL=1127  ST=581
+  S8 ... 1721 windows  BL=1110  ST=611
+  S9 ... 1707 windows  BL=1121  ST=586
+
+Aligning ECG matrix with wrist matrix ...
+Combined matrix: (25807, 72)  (55 wrist + 17 ECG = 72 features)
+NaN fraction in ECG features: 0.118
+
+Running LOSO-CV ...
+  55-feat (wrist only) ... MacroF1=0.6902 ± 0.1848  AUROC=0.8536
+  72-feat (wrist + ECG) ... MacroF1=0.8900 ± 0.1526  AUROC=0.9751
+
+======================================================================
+WESAD LOSO — ExtraTrees + BL-norm
+Condition                       N_feat    MacroF1      ±SD    AUROC
+------------------------------------------------------------
+WESAD 55-feat (wrist)               55     0.6902   0.1848   0.8536
+WESAD 72-feat (wrist+ECG)           72     0.8900   0.1526   0.9751
+
+Anxolotl (ExtraTrees + BL-norm):
+  55-feat watch only       : MacroF1=0.9104
+  55+ECG  watch+ECG        : MacroF1=0.9507
+
+Per-fold MacroF1:
+Subject    55-feat   72-feat
+S10         0.4233    0.8952
+S11         0.6715    1.0000
+S13         0.6722    0.9994
+S14         0.8342    0.9850
+S15         0.7117    0.7358
+S16         0.6883    1.0000
+S17         0.5942    0.9839
+S2          0.7571    0.6731
+S3          0.3817    0.9967
+S4          0.9768    0.9501
+S5          0.9727    1.0000
+S6          0.5265    0.6288
+S7          0.8666    0.9496
+S8          0.8445    1.0000
+S9          0.4317    0.5530

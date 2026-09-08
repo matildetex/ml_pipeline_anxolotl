@@ -1,0 +1,81 @@
+Loading WESAD sequences... device=cuda
+
+=================================================================
+  WESAD LOSO — Transformer — WRIST (5 channels: [0, 5, 6, 7, 8])
+=================================================================
+           early stop epoch 11
+           early stop epoch 13
+           early stop epoch 14
+           early stop epoch 19
+           early stop epoch 19
+           early stop epoch 12
+           early stop epoch 37
+           early stop epoch 19
+           early stop epoch 11
+           early stop epoch 12
+           early stop epoch 31
+           early stop epoch 23
+           early stop epoch 20
+           early stop epoch 17
+           early stop epoch 16
+
+=================================================================
+  Transformer WESAD — wrist (5 ch)
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.87      0.86      0.86     17577
+      stress       0.76      0.76      0.76      9966
+
+    accuracy                           0.83     27543
+   macro avg       0.81      0.81      0.81     27543
+weighted avg       0.83      0.83      0.83     27543
+
+Macro F1   : 0.812
+AUC        : 0.877
+F1@opt     : 0.810  (t=0.480)
+Bal. Acc   : 0.813
+MCC        : 0.625
+F1 std     : 0.088  (mean per fold: 0.811)
+Confusion  : TN=15161 FP=2416 FN=2364 TP=7602
+
+=================================================================
+  WESAD LOSO — Transformer — ALL (16 channels)
+=================================================================
+           early stop epoch 25
+           early stop epoch 11
+           early stop epoch 11
+           early stop epoch 13
+           early stop epoch 20
+           early stop epoch 19
+           early stop epoch 12
+           early stop epoch 27
+           early stop epoch 16
+           early stop epoch 14
+           early stop epoch 30
+           early stop epoch 21
+           early stop epoch 12
+           early stop epoch 16
+           early stop epoch 22
+
+=================================================================
+  Transformer WESAD — all (16 ch)
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.92      0.92      0.92     17577
+      stress       0.85      0.87      0.86      9966
+
+    accuracy                           0.90     27543
+   macro avg       0.89      0.89      0.89     27543
+weighted avg       0.90      0.90      0.90     27543
+
+Macro F1   : 0.890
+AUC        : 0.937
+F1@opt     : 0.890  (t=0.463)
+Bal. Acc   : 0.891
+MCC        : 0.779
+F1 std     : 0.083  (mean per fold: 0.889)
+Confusion  : TN=16105 FP=1472 FN=1345 TP=8621
+
+Resultados guardados em: /home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/../results/wesad_transformer.json

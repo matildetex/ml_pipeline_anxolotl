@@ -1,0 +1,86 @@
+Loading results from /home/matildxi/Secretária/Documentos/Tese/anxolotl/results ...
+  Found: ['anxolotl_loso', 'cross_dataset_dann', 'cross_dataset_wdd', 'cross_dataset_wesad', 'wdd_classical', 'wesad_1dcnn', 'wesad_autogluon', 'wesad_cnngru', 'wesad_dann', 'wesad_ensemble', 'wesad_et', 'wesad_logreg', 'wesad_mamba', 'wesad_rf', 'wesad_rnn', 'wesad_svm', 'wesad_transformer']
+
+Generating figures → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures
+
+[1] WESAD comparison (wrist vs all)
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/fig1_wesad_comparison.png
+
+[2] Wrist vs All Δ F1
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/fig2_wrist_vs_all_delta.png
+
+[3] WDD LOSO comparison
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/fig3_wdd_comparison.png
+
+[4] Anxolotl LOSO
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/fig4_anxolotl_loso.png
+
+[5] Cross-dataset comparison
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/fig5_cross_dataset.png
+
+[6] ROC curves — WESAD wrist
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/fig6_roc_wesad_wrist.png
+
+[7] ROC curves — WESAD all
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/fig7_roc_wesad_all.png
+
+[8] ROC curves — WDD
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/fig8_roc_wdd.png
+
+[9] ROC curves — Anxolotl
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/fig7_roc_anxolotl.png
+
+[10] Metrics heatmap
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/fig8_metrics_heatmap.png
+
+[11] Fold variability
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/fig9_fold_variability.png
+
+[12] Confusion matrices
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/fig10_confusion_matrices.png
+
+[13] Summary overview
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/fig11_summary.png
+
+[A] Same model across datasets
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/figA_models_across_datasets.png
+
+[B] Wrist vs All — per dataset side-by-side
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/figB_wrist_vs_all_per_dataset.png
+
+[C] Pipeline progression WESAD→WDD→Cross-dataset→Anxolotl
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/figC_pipeline_progression.png
+
+[D] ΔF1 heatmap (All − Wrist)
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/figD_delta_heatmap.png
+
+[E] Model ranking per dataset
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/figE_model_ranking.png
+
+[F] F1 vs AUC scatter
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/figF_f1_vs_auc_scatter.png
+
+[G] Per-class precision & recall
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/figG_class_level_metrics.png
+
+[H] Per-fold F1 violin across datasets
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/figH_violin_across_datasets.png
+
+[I] Precision-Recall curves
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/figI_precision_recall_curves.png
+
+[J] Threshold gain (F1@0.5 vs F1@opt)
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/figJ_threshold_gain.png
+
+[K] Per-subject F1 heatmap
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/figK_subject_heatmap_wesad.png
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/figK_subject_heatmap_wdd.png
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/figK_subject_heatmap_anxolotl.png
+
+[L] Best ROC per dataset overlay
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/figL_roc_best_per_dataset.png
+
+[M] Radar chart best model per dataset
+  saved → /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures/figM_radar_best_per_dataset.png
+
+Done. All figures in /home/matildxi/Secretária/Documentos/Tese/anxolotl/figures

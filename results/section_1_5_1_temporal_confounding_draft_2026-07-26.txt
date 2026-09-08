@@ -1,0 +1,173 @@
+================================================================================
+DRAFT — §1.5.1 (Threats to Validity): temporal confounding, restructured
+Generated: 2026-07-26 (v2 — incorporates the feature-ablation control and the
+lf_hf correction; see NOTES section at the end for what changed and why)
+Ready to paste/adapt into the chapter. Numbers verified against:
+  - results/temporal_control_2026-07-24.txt (Teste A / A2)
+  - results/temporal_drift_feature_ablation_2026-07-26.txt (ablation + confirmation)
+================================================================================
+
+SUGGESTED PROSE (replaces the current one-paragraph treatment)
+--------------------------------------------------------------------------------
+
+A natural concern for any model evaluated on a fixed-protocol session is
+whether it is learning the true physiological response to stress, or simply
+that "baseline comes before stress" — i.e., a temporal position confound
+rather than a physiological one. Because the protocol's stress phases always
+follow the initial baseline period, and because a substantial final-rest
+period does not survive preprocessing for all but one subject (Sec. X.X.X),
+a naive test of this — labelling windows by their absolute position in the
+session (first third vs. last third) rather than by true class — is
+uninformative here: the synthetic positional label agrees with the true
+baseline/stress label on 99.8% of windows (429/430) by construction, so a
+high score on that test cannot distinguish "the model reads time" from "the
+model reads physiology" (both hypotheses predict the same labels almost
+everywhere).
+
+To isolate the two properly, we instead split WITHIN each subject's own true
+label: baseline windows and stress windows were each divided, per subject and
+per class, into an early half and a late half by chronological order (626 of
+686 canonical windows retained; 60 windows — the middle window of an
+odd-count run — excluded per subject/class, since they cannot be assigned to
+either half without arbitrarily breaking the tie). The true class is held
+fixed within each half, so any ability to separate early from late reflects a
+temporal or drift artifact independent of the true physiological state, not
+a restatement of the baseline/stress distinction. The same canonical
+pipeline was reused unchanged for this test: identical ET-1000 classifier
+(n_estimators=1000, max_features=0.5, class_weight='balanced'), identical
+leak-fixed BL-norm, identical LOSO-CV protocol (37 subjects) over the same
+686-window canonical feature set — the only difference from the main result
+is which windows are included and what the target label represents, so the
+comparison below is a like-for-like one.
+
+Table X.X — Temporal-confounding control: chance, temporal-only, and the
+full stress-classification result, all under the identical LOSO-CV/BL-norm/
+ET-1000 pipeline.
+
++-------------------------------------------+-----------+--------+---------------------------------+
+| Condition                                  | Macro F1  | AUROC  | What it measures                |
++-------------------------------------------+-----------+--------+---------------------------------+
+| Chance (no information)                    |   0.50    |  0.50  | reference floor                 |
+| Temporal-only (early vs. late, class fixed)|   0.73    |  0.83  | pure temporal/drift signal,      |
+|                                             | (SD=0.15) |        | physiology held constant         |
+| Full model (baseline vs. stress, canonical)|   0.9169  | 0.9646 | reference ceiling (Sec. X.X)     |
++-------------------------------------------+-----------+--------+---------------------------------+
+Temporal-only test: n=626/686 windows, 37 subjects (LOSO), classes balanced
+(313 early / 313 late by construction).
+
+The result sits clearly between the two reference points. A macro F1 of
+0.73 is well above chance (0.50), confirming that the feature set/BL-norm
+pipeline does carry a detectable temporal or drift signal within a fixed
+physiological state. At the same time, 0.73 is well below the full model's
+0.9169, and — importantly — this is not a gap that can be attributed to
+temporal position by linear subtraction: the temporal-only task and the
+baseline/stress task are different classification problems with different
+intrinsic difficulty, so the two macro-F1 values do not yield "X% of the
+model's performance is temporal." What can be said safely, and is the claim
+this test supports on its own, is qualitative: there is a real, detectable
+temporal signal (0.73 > 0.50), but it is insufficient to account for the
+stress-classification performance (0.73 < 0.9169).
+
+A follow-up test asked a sharper question: does the canonical stress
+classifier actually depend on the specific feature dimensions that carry
+this temporal signal? Of the 11 statistics computed per channel, two —
+slope (a linear fit against the within-window time index) and delta_mean
+(second-half mean minus first-half mean) — are trend statistics by direct
+construction, unambiguously about within-window drift rather than
+physiological level. Removing these 10 features (5 channels x 2) from the
+canonical 55-feature set left performance materially unchanged (45 features:
+Macro F1=0.9116, AUROC=0.9610; delta=+0.0052 vs. the full model, paired
+Wilcoxon p=0.33, not significant) — the model does not need these two
+dimensions to reach its reported performance.
+
+However, a confirmation check complicates a simple "problem solved" reading.
+Ranking all 55 features by their importance on the early-vs-late (temporal-
+only) task itself shows that slope and delta_mean are not, in fact, the
+features driving that signal: neither appears anywhere in the top 15 ranked
+features for that task. The temporal drift detected above is instead carried
+predominantly by the same percentile/mean/max-level statistics of IBI, HR,
+RMSSD and SDNN (e.g. ibi_p75, hr_p25, rmssd_p75, sdnn_max, acc_wrist_min)
+that also dominate the canonical stress-classification SHAP ranking
+(Sec. 1.4.x). Temporal drift and the physiological stress signal are
+therefore not cleanly separable at the feature level in this dataset — they
+are carried by the same channels, which rules out a clean "remove the drift
+features, keep the rest" ablation of the kind that would fully close this
+question.
+
+Read together, the three pieces of evidence support a specific, honest
+conclusion: the detected temporal drift is not concentrated in a separable
+set of dispensable statistics (the two unambiguous trend features can be
+removed at no cost), and the fact that drift instead shares its feature
+support with the model's core stress-relevant channels is itself more
+consistent with genuine within-phase physiological dynamics — e.g. habituation
+or a ramping/adapting autonomic response over the course of a multi-minute
+phase — than with a separable technical artifact (a sensor- or protocol-level
+artifact would not be expected to concentrate in exactly the channels
+already identified as most stress-relevant by SHAP). This is a more modest
+claim than "the model provably ignores temporal drift," and it is the one
+the evidence actually supports: temporal drift is present, partially
+physiological in origin, entangled with the model's real signal rather than
+separable from it, and insufficient on its own to explain the 0.9169 result.
+
+[LINKING SENTENCE — connects this test to §1.4.4 and §1.4.8]
+This temporal-confounding check does not stand alone: taken together with
+the marker-confirmation sensitivity analysis (Sec. 1.4.4 — Macro F1 remains
+high in both the high-confirmation (n_markers>=6: 0.8965) and
+low-confirmation (n_markers<=5: 0.9544) subgroups, ruling out a
+gesture-detection-quality artifact) and the wrist-accelerometer SHAP
+investigation (Sec. 1.4.8 — the top SHAP feature, acc_wrist_min, is higher
+under stress rather than lower, contradicts the marker-proximity artifact
+hypothesis by direction, and its removal leaves Macro F1 statistically
+unchanged: 0.9169 -> 0.9178, Wilcoxon p=0.89), these three controls attack
+the same underlying concern — that the model is learning protocol artifacts
+(session timing, gesture markers, movement) rather than physiology — from
+three independent angles. None finds evidence the model depends on an
+artifact; where a residual signal is detectable (as with temporal drift), it
+turns out to be entangled with, rather than separate from, the physiological
+signal the model needs for its main task.
+
+================================================================================
+NOTES FOR YOU (not for the thesis text)
+================================================================================
+- WHAT CHANGED IN v2: originally planned a second ablation tier ("aggressive":
+  slope + delta_mean + lf_hf). Dropped lf_hf entirely after your challenge —
+  lf_hf IS order-dependent (Welch PSD requires sample sequence to define
+  frequency content, so permuting samples changes it), but order-dependence
+  is not the same property as "is a trend/drift statistic": lf_hf measures
+  sympathovagal spectral balance (oscillatory structure), not within-window
+  level drift, unlike slope/delta_mean which are trend statistics by direct
+  construction. Conflating "requires sample order to compute" with "measures
+  drift" was a conceptual error on my part, not just a stylistic choice — an
+  examiner asking "why is lf_hf a temporal-trend feature?" would have no good
+  answer. The aggressive-tier number (40 feat: Macro F1=0.9053, delta=+0.0115,
+  p=0.056) is NOT included above; kept here only as an internal footnote in
+  case you want it for a robustness appendix, clearly labelled as "removes an
+  additional order-dependent-but-not-trend statistic, included for
+  completeness, not as part of the core drift-feature argument."
+- "0.73 (SD=0.1474)" -- SD is across the 37 per-subject LOSO fold F1 values,
+  same convention as every other canonical number in the chapter.
+- PRECISION QUESTION (still open, needs your decision): this draft mixes
+  0.50 / 0.73 (2 d.p.) with 0.9169 / 0.9646 / 0.9116 / 0.9610 (4 d.p.). Two
+  considered options:
+    (a) Keep 4 d.p. everywhere in this table, matching RECONCILIATION.md
+        §C's existing repo-wide recommendation ("standardise on 4 decimal
+        places throughout, matching the canonical ablation files") — this
+        argues for 0.9169 over 0.92 for consistency with every other table
+        in the chapter, provided that recommendation was actually adopted
+        elsewhere. I don't have the chapter text locally to confirm it was.
+    (b) Round to 2 s.f. matching the between-subject SD (~0.09-0.15), i.e.
+        "0.92" not "0.9169" -- more statistically honest (the 3rd/4th decimal
+        is well within one SD of noise) but a chapter-wide change, not just
+        this table.
+  I lean (a) only because it's already the repo's stated convention and this
+  table should not be the one place that breaks it — but this is your call,
+  not mine to make silently. Tell me which and I'll normalise every number
+  in this file to match.
+- Table numbering (Table X.X) and section refs (Sec. X.X.X for the
+  final-rest / Sec. 1.4.4 / Sec 1.4.8) are placeholders -- I don't have the
+  actual chapter file locally to resolve real numbers; fill in before pasting.
+- Full ablation source: results/temporal_drift_feature_ablation_2026-07-26.txt
+  (script: scripts/temporal_drift_feature_ablation.py). Confirmation-check top-15
+  list and full methodology/pre-registered interpretation criteria are there if
+  you want to quote more of it or check my arithmetic.
+================================================================================

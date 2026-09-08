@@ -1,0 +1,117 @@
+==============================================================================
+STEP 0 -- FEATURE SET VALIDATION (must match both reruns today)
+==============================================================================
+File: processed_data/wesad/processed_data.pkl -- 25807 rows x 130 cols, 15 subjects.
+Reduced column selection (prefixes ('acc_wrist', 'hr_', 'ibi_', 'rmssd_', 'sdnn_')): 55 columns.
+ASSERTION PASSED: exactly 55 columns.
+   1. acc_wrist_mean
+   2. acc_wrist_std
+   3. acc_wrist_min
+   4. acc_wrist_max
+   5. acc_wrist_p25
+   6. acc_wrist_p75
+   7. acc_wrist_skew
+   8. acc_wrist_kurtosis
+   9. acc_wrist_slope
+  10. acc_wrist_lf_hf
+  11. acc_wrist_delta_mean
+  12. hr_mean
+  13. hr_std
+  14. hr_min
+  15. hr_max
+  16. hr_p25
+  17. hr_p75
+  18. hr_skew
+  19. hr_kurtosis
+  20. hr_slope
+  21. hr_lf_hf
+  22. hr_delta_mean
+  23. ibi_mean
+  24. ibi_std
+  25. ibi_min
+  26. ibi_max
+  27. ibi_p25
+  28. ibi_p75
+  29. ibi_skew
+  30. ibi_kurtosis
+  31. ibi_slope
+  32. ibi_lf_hf
+  33. ibi_delta_mean
+  34. rmssd_mean
+  35. rmssd_std
+  36. rmssd_min
+  37. rmssd_max
+  38. rmssd_p25
+  39. rmssd_p75
+  40. rmssd_skew
+  41. rmssd_kurtosis
+  42. rmssd_slope
+  43. rmssd_lf_hf
+  44. rmssd_delta_mean
+  45. sdnn_mean
+  46. sdnn_std
+  47. sdnn_min
+  48. sdnn_max
+  49. sdnn_p25
+  50. sdnn_p75
+  51. sdnn_skew
+  52. sdnn_kurtosis
+  53. sdnn_slope
+  54. sdnn_lf_hf
+  55. sdnn_delta_mean
+
+==============================================================================
+STEP 1 -- BL-NORM (same canonical function as today's rerun)
+==============================================================================
+Source: 2_cross_dataset/cross_dataset_blnorm.py :: baseline_relative_scale (verbatim copy below -- that module executes top-level data-loading code with a relative path at import time, so it is inlined rather than imported, exactly as in run_wesad_wrist55_blnorm.py earlier today).
+X_bl shape: (25807, 55). NaN count: 1048 (handled by SimpleImputer(mean) below, applied globally since SHAP fits one pooled model, matching the StandardScaler-run SHAP convention).
+
+==============================================================================
+STEP 2 -- FIT ExtraTrees (pooled, hyperparameters identical to both LOSO reruns)
+==============================================================================
+ET fit on 25807 rows x 55 cols (BL-norm + mean-impute, pooled, no SMOTE).
+
+==============================================================================
+STEP 3 -- TreeSHAP
+==============================================================================
+TreeSHAP computed cleanly on CPU, 1200-row stratified sample (seed=42), no CPU/GPU explainer conflict encountered.
+
+==============================================================================
+STEP 4 -- SIGNAL-GROUP SHAP RANKING (for Section 1.2.6 prose) + FIGURES
+==============================================================================
+Signal-group SHAP importance (sum of mean|SHAP|), BL-norm, ExtraTrees -- replaces Figure 1.3b:
+  1. ACC    0.2615
+  2. SDNN   0.1077
+  3. RMSSD  0.0904
+  4. IBI    0.0548
+  5. HR     0.0516
+
+Top 20 individual features (mean|SHAP|):
+   1. acc_wrist_mean         0.059983
+   2. acc_wrist_p25          0.052941
+   3. acc_wrist_max          0.052015
+   4. acc_wrist_p75          0.036954
+   5. sdnn_p75               0.030426
+   6. acc_wrist_std          0.029985
+   7. sdnn_mean              0.027472
+   8. rmssd_p75              0.020455
+   9. rmssd_mean             0.020201
+  10. rmssd_p25              0.016912
+  11. sdnn_p25               0.016557
+  12. hr_max                 0.012617
+  13. hr_std                 0.012488
+  14. rmssd_min              0.010834
+  15. sdnn_min               0.010096
+  16. ibi_std                0.009972
+  17. ibi_min                0.009853
+  18. ibi_max                0.009846
+  19. acc_wrist_skew         0.008798
+  20. rmssd_max              0.008502
+
+Saved: results/section1_2_wesad_wrist55_blnorm_2026-07-26/figures/wesad_wrist55_ET_blnorm_shap_groups.png
+Saved: results/section1_2_wesad_wrist55_blnorm_2026-07-26/figures/wesad_wrist55_ET_blnorm_shap_beeswarm.png
+
+==============================================================================
+DONE. Total elapsed: 23.5 min
+Full-set (137-feat, Figure 1.3a) SHAP, Anxolotl SHAP, and cross-dataset SHAP were NOT touched by this script.
+==============================================================================

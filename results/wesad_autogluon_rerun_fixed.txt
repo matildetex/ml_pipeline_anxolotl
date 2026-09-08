@@ -1,0 +1,12 @@
+AutoGluon RERUN with Ray/NVML fix -- WESAD old schema (137/56 feat) -- 2026-07-25
+======================================================================
+
+full_137feat (n_feat=137):
+  MacroF1=0.8916+-0.1268  Acc=0.9133  BalAcc=0.8950  Prec=0.9159  Rec=0.8950  AUC=0.9726  MCC=0.8107
+  elapsed: 25.9 min
+
+wrist_56feat (n_feat=56):
+  MacroF1=0.7703+-0.2087  Acc=0.8166  BalAcc=0.8009  Prec=0.8016  Rec=0.8009  AUC=0.9030  MCC=0.6025
+  elapsed: 30.1 min
+
+TOTAL: 56.0 min

@@ -1,0 +1,86 @@
+Anxolotl phase3 exclusion: 699 raw rows -> 686 after excluding stress_phase==3 (OK, matches canonical 686).
+Using 55 common features (WESAD ∩ Anxolotl).
+WESAD (source): 25807 windows, 55 features, 15 subjects.
+Anxolotl (target): 686 windows, 37 subjects, baseline-relative-scale (protocol-based, label-free, N_BL=8).
+
+Training ExtraTrees on WESAD (n_estimators=500, min_samples_leaf=1, class_weight=balanced, random_state=42) -- exact setup from cross_dataset_blnorm.py...
+Done.
+
+======================================================================
+BEFORE recalibration (raw ET probability, fixed threshold 0.5)
+======================================================================
+  Macro F1  : 0.6495
+  Accuracy  : 0.6764
+  Bal. Acc  : 0.6841
+  AUC       : 0.8740  (unaffected by any per-subject monotonic shift within a subject, but the pooled AUC IS affected because the shift differs across subjects)
+  MCC       : 0.4520
+
+Per-subject logit bias (mean logit over first 8 protocol-baseline windows, label-free):
+  subject p10: bias=-1.4776
+  subject p11: bias=-1.2675
+  subject p12: bias=-1.3741
+  subject p13: bias=-1.4508
+  subject p14: bias=-1.4741
+  subject p15: bias=-1.6169
+  subject p16: bias=-1.4680
+  subject p17: bias=-1.3569
+  subject p18: bias=-1.3351
+  subject p19: bias=-1.5164
+  subject p20: bias=-1.3244
+  subject p21: bias=-1.2987
+  subject p22: bias=-1.5690
+  subject p23: bias=-1.5680
+  subject p25: bias=-1.4659
+  subject p26: bias=-1.5660
+  subject p27: bias=-1.3861
+  subject p28: bias=-1.3896
+  subject p29: bias=-1.6630
+  subject p30: bias=-1.3897
+  subject p31: bias=-1.4523
+  subject p32: bias=-1.2234
+  subject p33: bias=-1.4472
+  subject p34: bias=-1.3988
+  subject p35: bias=-1.5503
+  subject p36: bias=-1.3922
+  subject p37: bias=-1.3119
+  subject p38: bias=-1.2154
+  subject p39: bias=-1.3347
+  subject p40: bias=-1.3523
+  subject p41: bias=-1.4725
+  subject p42: bias=-1.2892
+  subject p43: bias=-1.4544
+  subject p44: bias=-1.3882
+  subject p7: bias=-1.4798
+  subject p8: bias=-1.3184
+  subject p9: bias=-1.3045
+
+======================================================================
+AFTER recalibration (logit recentered per subject, fixed threshold 0.5)
+======================================================================
+  Macro F1  : 0.7066
+  Accuracy  : 0.7259
+  Bal. Acc  : 0.7197
+  AUC       : 0.8755
+  MCC       : 0.5029
+
+======================================================================
+COMPARISON
+======================================================================
+  Metric           Before      After      Delta
+  Macro F1         0.6495     0.7066    +0.0571
+  Accuracy         0.6764     0.7259    +0.0496
+  Bal. Acc         0.6841     0.7197    +0.0356
+  AUC              0.8740     0.8755    +0.0015
+  MCC              0.4520     0.5029    +0.0509
+
+======================================================================
+SCHEMA-VERSION NOTE (sanity check against the OLD reference)
+======================================================================
+results/cross_dataset_wesad.json ("ExtraTrees BL-norm"), computed 2026-06-08, OLD schema: f1(default)=0.7295, f1opt(LEAKY)=0.7977, auc=0.8737, on 40 features common to the OLD WESAD/Anxolotl pkls.
+This run uses the CURRENT (post-2026-07-17-regen) pkls: 55 common features, not 40 -- both WESAD and Anxolotl processed_data pkls were regenerated in that batch (same schema-drift already documented elsewhere this session).
+  AUC cross-check: 0.8740 (this run) vs 0.8737 (old) -- near-identical, model discrimination reproduces despite the schema change.
+  F1 cross-check:  0.6495 (this run) vs 0.7295 (old) -- does NOT match; expected, since default-threshold F1 is sensitive to the exact feature composition/probability distribution in a way AUC is not.
+  CONCLUSION: the old 0.7295/0.7977 numbers are not a fair apples-to-apples ceiling for this run -- they are a different (stale) feature schema. Use this run's OWN leaky-optimal-threshold ceiling instead:
+  f1opt (LEAKY, current schema, true-label-selected threshold t=0.2780) = 0.7996
+
+  Honest label-free recalibrated F1 (0.7066) vs this run's OWN leaky ceiling (0.7996): recovers 38% of the gap between the naive default-threshold baseline and the best possible (label-using) threshold on this exact data.

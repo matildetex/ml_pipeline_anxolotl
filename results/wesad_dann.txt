@@ -1,0 +1,111 @@
+Loading WESAD sequences... device=cuda
+
+=================================================================
+  WESAD LOSO — DANN — WRIST (5 channels)
+=================================================================
+  fold  1 | subject: S10
+           F1=0.5728
+  fold  2 | subject: S11
+           F1=0.4708
+  fold  3 | subject: S13
+           F1=0.5709
+  fold  4 | subject: S14
+           F1=0.6358
+  fold  5 | subject: S15
+           F1=0.5593
+  fold  6 | subject: S16
+           F1=0.6150
+  fold  7 | subject: S17
+           F1=0.5673
+  fold  8 | subject: S2
+           F1=0.5632
+  fold  9 | subject: S3
+           F1=0.5323
+  fold 10 | subject: S4
+           F1=0.6493
+  fold 11 | subject: S5
+           F1=0.6720
+  fold 12 | subject: S6
+           F1=0.4486
+  fold 13 | subject: S7
+           F1=0.7487
+  fold 14 | subject: S8
+           F1=0.6038
+  fold 15 | subject: S9
+           F1=0.5723
+
+=================================================================
+  DANN WESAD — wrist (5 ch)
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.72      0.63      0.67     17577
+      stress       0.46      0.56      0.51      9966
+
+    accuracy                           0.61     27543
+   macro avg       0.59      0.60      0.59     27543
+weighted avg       0.63      0.61      0.61     27543
+
+Macro F1   : 0.590
+AUC        : 0.635
+F1@opt     : 0.612  (t=0.847)
+Bal. Acc   : 0.597
+MCC        : 0.188
+F1 std     : 0.072  (mean per fold: 0.585)
+Confusion  : TN=11116 FP=6461 FN=4366 TP=5600
+
+=================================================================
+  WESAD LOSO — DANN — ALL (16 channels)
+=================================================================
+  fold  1 | subject: S10
+           F1=0.8615
+  fold  2 | subject: S11
+           F1=0.7355
+  fold  3 | subject: S13
+           F1=0.5866
+  fold  4 | subject: S14
+           F1=0.9721
+  fold  5 | subject: S15
+           F1=0.8580
+  fold  6 | subject: S16
+           F1=1.0000
+  fold  7 | subject: S17
+           F1=0.9630
+  fold  8 | subject: S2
+           F1=0.5583
+  fold  9 | subject: S3
+           F1=0.6235
+  fold 10 | subject: S4
+           F1=0.9130
+  fold 11 | subject: S5
+           F1=0.9640
+  fold 12 | subject: S6
+           F1=0.4986
+  fold 13 | subject: S7
+           F1=0.8425
+  fold 14 | subject: S8
+           F1=0.8935
+  fold 15 | subject: S9
+           F1=0.6323
+
+=================================================================
+  DANN WESAD — all (16 ch)
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.86      0.87      0.87     17577
+      stress       0.76      0.76      0.76      9966
+
+    accuracy                           0.83     27543
+   macro avg       0.81      0.81      0.81     27543
+weighted avg       0.83      0.83      0.83     27543
+
+Macro F1   : 0.813
+AUC        : 0.836
+F1@opt     : 0.817  (t=0.000)
+Bal. Acc   : 0.812
+MCC        : 0.625
+F1 std     : 0.166  (mean per fold: 0.793)
+Confusion  : TN=15241 FP=2336 FN=2420 TP=7546
+
+Resultados guardados em: /home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/../results/wesad_dann.json

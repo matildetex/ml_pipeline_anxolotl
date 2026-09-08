@@ -1,0 +1,31 @@
+====================================================================================================
+EFFECT OF ADDING ECG (BIOPAC) -- canonical ET-1000 configuration, Anxolotl
+====================================================================================================
+Model         : ExtraTrees(n_estimators=1000, max_features=0.5, class_weight=balanced, random_state=42)
+Normalisation : baseline_relative_scale -- LEAK-FIXED 2026-07-19 (demographics_analysis.py)
+CV            : LOSO, 37 subjects. Phase 3 (stress_phase==3) excluded. Windows: 686 (of 699 before exclusion).
+Metric        : Macro F1.
+Replaces      : results/watch_ecg_vs_wesad.txt (Anxolotl rows) -- LGBM/ET sweep, pre-leak-fix
+                (dated 2026-07-18, before the 2026-07-19 00:28 fix), no SD/AUROC/significance
+                reported per row -- kept on disk, not overwritten.
+
+Row-alignment check: ECG pkl (processed_data_anxolotl_ecg.pkl) y/groups verified identical to
+freshly-built canonical wrist matrix, 699 rows, before phase3 exclusion.
+
+Config                 N_feat   MacroF1       SD    AUROC
+----------------------------------------------------------------------------------------------------
+Watch-only                 55    0.9169   0.0883   0.9646   <- should match canonical ET-1000 (0.9169)
+Watch+ECG                  72    0.9503   0.0770   0.9842
+Delta                           +0.0334
+
+Paired Wilcoxon signed-rank test (two-sided), 37 subjects, watch+ECG vs watch-only:
+  statistic=25.00  p-value=0.008380  (SIGNIFICANT at alpha=0.05)
+
+----------------------------------------------------------------------------------------------------
+For direct comparison with WESAD (results/wesad_55plus_ecg_loso.txt) -- WESAD chapter, not this one:
+  WESAD  55-feat (wrist)      : MacroF1=0.6902  SD=0.1848  AUROC=0.8536
+  WESAD  72-feat (wrist+ECG)  : MacroF1=0.8900  SD=0.1526  AUROC=0.9751
+  NOTE: WESAD file labels its model only "ExtraTrees + BL-norm"; the source script no longer
+  exists in the repo and exact hyperparameters (n_estimators, max_features) are not stated in
+  the saved file, so exact equivalence to ET-1000 (n_estimators=1000, max_features=0.5) used
+  here for Anxolotl is NOT confirmed -- flag this when placing the two side by side.

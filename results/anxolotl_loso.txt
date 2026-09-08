@@ -1,0 +1,498 @@
+Loading Anxolotl...
+Loading WESAD (for 40 common features)...
+  Anxolotl: 60 feat  |  common with WESAD: 40
+
+=================================================================
+  Anxolotl LOSO — Classical — 40 common feat
+=================================================================
+  fold  1 | p10  LogReg=0.396  SVM=0.405  RF=0.955  ET=1.000  Ensemble RF+ET=0.955  Ensemble full=0.955
+  fold  2 | p11  LogReg=0.457  SVM=0.400  RF=0.798  ET=0.954  Ensemble RF+ET=0.906  Ensemble full=0.906
+  fold  3 | p12  LogReg=0.568  SVM=0.382  RF=0.951  ET=0.951  Ensemble RF+ET=0.951  Ensemble full=0.856
+  fold  4 | p13  LogReg=0.358  SVM=0.389  RF=0.952  ET=0.906  Ensemble RF+ET=0.952  Ensemble full=0.861
+  fold  5 | p14  LogReg=0.381  SVM=0.395  RF=0.753  ET=0.808  Ensemble RF+ET=0.753  Ensemble full=0.808
+  fold  6 | p15  LogReg=0.598  SVM=0.318  RF=0.866  ET=0.861  Ensemble RF+ET=0.861  Ensemble full=0.866
+  fold  7 | p16  LogReg=0.618  SVM=0.382  RF=0.833  ET=0.899  Ensemble RF+ET=0.833  Ensemble full=0.948
+  fold  8 | p17  LogReg=0.437  SVM=0.375  RF=0.949  ET=0.896  Ensemble RF+ET=0.949  Ensemble full=0.949
+  fold  9 | p18  LogReg=0.530  SVM=0.389  RF=0.952  ET=0.812  Ensemble RF+ET=0.856  Ensemble full=0.768
+  fold 10 | p19  LogReg=0.476  SVM=0.300  RF=0.925  ET=1.000  Ensemble RF+ET=1.000  Ensemble full=0.844
+  fold 11 | p20  LogReg=0.464  SVM=0.318  RF=0.866  ET=0.932  Ensemble RF+ET=0.866  Ensemble full=0.932
+  fold 12 | p21  LogReg=0.708  SVM=0.300  RF=0.857  ET=0.928  Ensemble RF+ET=0.928  Ensemble full=0.857
+  fold 13 | p22  LogReg=0.708  SVM=0.378  RF=0.881  ET=0.881  Ensemble RF+ET=0.881  Ensemble full=0.881
+  fold 14 | p23  LogReg=0.760  SVM=0.389  RF=1.000  ET=1.000  Ensemble RF+ET=1.000  Ensemble full=1.000
+  fold 15 | p25  LogReg=0.641  SVM=0.300  RF=0.928  ET=0.928  Ensemble RF+ET=0.928  Ensemble full=0.925
+  fold 16 | p26  LogReg=0.667  SVM=0.318  RF=0.932  ET=0.932  Ensemble RF+ET=0.932  Ensemble full=0.866
+  fold 17 | p27  LogReg=0.568  SVM=0.382  RF=1.000  ET=1.000  Ensemble RF+ET=1.000  Ensemble full=1.000
+  fold 18 | p28  LogReg=0.667  SVM=0.318  RF=0.932  ET=0.932  Ensemble RF+ET=0.932  Ensemble full=0.932
+  fold 19 | p29  LogReg=0.464  SVM=0.318  RF=0.722  ET=0.722  Ensemble RF+ET=0.722  Ensemble full=0.796
+  fold 20 | p30  LogReg=0.499  SVM=0.389  RF=0.804  ET=0.902  Ensemble RF+ET=0.804  Ensemble full=0.804
+  fold 21 | p31  LogReg=0.306  SVM=0.318  RF=1.000  ET=0.932  Ensemble RF+ET=0.932  Ensemble full=0.932
+  fold 22 | p32  LogReg=0.722  SVM=0.318  RF=1.000  ET=1.000  Ensemble RF+ET=1.000  Ensemble full=0.933
+  fold 23 | p33  LogReg=0.316  SVM=0.405  RF=0.675  ET=0.718  Ensemble RF+ET=0.718  Ensemble full=0.638
+  fold 24 | p34  LogReg=0.464  SVM=0.318  RF=0.866  ET=0.933  Ensemble RF+ET=0.933  Ensemble full=0.933
+  fold 25 | p35  LogReg=0.487  SVM=0.395  RF=0.897  ET=0.951  Ensemble RF+ET=0.897  Ensemble full=0.904
+  fold 26 | p36  LogReg=0.714  SVM=0.382  RF=0.760  ET=0.760  Ensemble RF+ET=0.760  Ensemble full=0.667
+  fold 27 | p37  LogReg=0.583  SVM=0.318  RF=0.866  ET=0.933  Ensemble RF+ET=0.933  Ensemble full=0.932
+  fold 28 | p38  LogReg=0.534  SVM=0.400  RF=0.952  ET=0.952  Ensemble RF+ET=0.952  Ensemble full=0.911
+  fold 29 | p39  LogReg=0.598  SVM=0.318  RF=0.933  ET=0.861  Ensemble RF+ET=0.932  Ensemble full=0.932
+  fold 30 | p40  LogReg=0.390  SVM=0.395  RF=0.860  ET=0.953  Ensemble RF+ET=0.860  Ensemble full=0.817
+  fold 31 | p41  LogReg=0.296  SVM=0.789  RF=0.947  ET=0.894  Ensemble RF+ET=0.947  Ensemble full=0.842
+  fold 32 | p42  LogReg=0.795  SVM=0.395  RF=0.953  ET=0.953  Ensemble RF+ET=0.953  Ensemble full=0.865
+  fold 33 | p43  LogReg=0.688  SVM=0.405  RF=0.857  ET=0.908  Ensemble RF+ET=0.857  Ensemble full=0.908
+  fold 34 | p44  LogReg=0.389  SVM=0.318  RF=0.933  ET=0.933  Ensemble RF+ET=0.933  Ensemble full=1.000
+  fold 35 | p7  LogReg=0.450  SVM=0.389  RF=0.861  ET=0.861  Ensemble RF+ET=0.861  Ensemble full=0.768
+  fold 36 | p8  LogReg=0.378  SVM=0.300  RF=0.928  ET=0.928  Ensemble RF+ET=0.928  Ensemble full=0.928
+  fold 37 | p9  LogReg=0.732  SVM=0.318  RF=0.933  ET=0.933  Ensemble RF+ET=0.933  Ensemble full=0.861
+
+=================================================================
+  LogReg Anxolotl — 40 common feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.47      0.60      0.53       299
+      stress       0.64      0.51      0.57       413
+
+    accuracy                           0.55       712
+   macro avg       0.55      0.55      0.55       712
+weighted avg       0.57      0.55      0.55       712
+
+Macro F1   : 0.545
+AUC        : 0.565
+F1@opt     : 0.519  (t=0.501)
+Bal. Acc   : 0.554
+MCC        : 0.106
+F1 std     : 0.139  (mean per fold: 0.535)
+Confusion  : TN=179 FP=120 FN=203 TP=210
+
+=================================================================
+  SVM Anxolotl — 40 common feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.67      0.03      0.05       299
+      stress       0.58      0.99      0.73       413
+
+    accuracy                           0.59       712
+   macro avg       0.63      0.51      0.39       712
+weighted avg       0.62      0.59      0.45       712
+
+Macro F1   : 0.393
+AUC        : 0.520
+F1@opt     : 0.322  (t=0.513)
+Bal. Acc   : 0.509
+MCC        : 0.065
+F1 std     : 0.080  (mean per fold: 0.368)
+Confusion  : TN=8 FP=291 FN=4 TP=409
+
+=================================================================
+  RF Anxolotl — 40 common feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.87      0.88      0.88       299
+      stress       0.91      0.91      0.91       413
+
+    accuracy                           0.90       712
+   macro avg       0.89      0.90      0.89       712
+weighted avg       0.90      0.90      0.90       712
+
+Macro F1   : 0.895
+AUC        : 0.963
+F1@opt     : 0.900  (t=0.546)
+Bal. Acc   : 0.895
+MCC        : 0.790
+F1 std     : 0.078  (mean per fold: 0.894)
+Confusion  : TN=264 FP=35 FN=38 TP=375
+
+=================================================================
+  ET Anxolotl — 40 common feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.87      0.93      0.90       299
+      stress       0.95      0.90      0.92       413
+
+    accuracy                           0.91       712
+   macro avg       0.91      0.91      0.91       712
+weighted avg       0.91      0.91      0.91       712
+
+Macro F1   : 0.910
+AUC        : 0.967
+F1@opt     : 0.911  (t=0.494)
+Bal. Acc   : 0.914
+MCC        : 0.822
+F1 std     : 0.070  (mean per fold: 0.909)
+Confusion  : TN=278 FP=21 FN=42 TP=371
+
+=================================================================
+  Ensemble RF+ET Anxolotl — 40 common feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.87      0.90      0.89       299
+      stress       0.93      0.90      0.92       413
+
+    accuracy                           0.90       712
+   macro avg       0.90      0.90      0.90       712
+weighted avg       0.90      0.90      0.90       712
+
+Macro F1   : 0.901
+AUC        : 0.968
+F1@opt     : 0.908  (t=0.599)
+Bal. Acc   : 0.903
+MCC        : 0.802
+F1 std     : 0.073  (mean per fold: 0.901)
+Confusion  : TN=270 FP=29 FN=40 TP=373
+
+=================================================================
+  Ensemble full Anxolotl — 40 common feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.82      0.92      0.86       299
+      stress       0.94      0.85      0.89       413
+
+    accuracy                           0.88       712
+   macro avg       0.88      0.88      0.88       712
+weighted avg       0.89      0.88      0.88       712
+
+Macro F1   : 0.878
+AUC        : 0.957
+F1@opt     : 0.884  (t=0.407)
+Bal. Acc   : 0.885
+MCC        : 0.761
+F1 std     : 0.081  (mean per fold: 0.879)
+Confusion  : TN=275 FP=24 FN=62 TP=351
+
+=================================================================
+  Anxolotl LOSO — DANN — 40 common feat
+=================================================================
+  fold  1 | p10  F1=0.913
+  fold  2 | p11  F1=0.667
+  fold  3 | p12  F1=0.809
+  fold  4 | p13  F1=0.727
+  fold  5 | p14  F1=0.865
+  fold  6 | p15  F1=0.489
+  fold  7 | p16  F1=0.951
+  fold  8 | p17  F1=0.800
+  fold  9 | p18  F1=0.681
+  fold 10 | p19  F1=0.844
+  fold 11 | p20  F1=0.348
+  fold 12 | p21  F1=0.754
+  fold 13 | p22  F1=0.775
+  fold 14 | p23  F1=0.952
+  fold 15 | p25  F1=1.000
+  fold 16 | p26  F1=0.700
+  fold 17 | p27  F1=0.762
+  fold 18 | p28  F1=0.785
+  fold 19 | p29  F1=0.603
+  fold 20 | p30  F1=0.681
+  fold 21 | p31  F1=0.932
+  fold 22 | p32  F1=0.932
+  fold 23 | p33  F1=0.513
+  fold 24 | p34  F1=1.000
+  fold 25 | p35  F1=0.823
+  fold 26 | p36  F1=0.664
+  fold 27 | p37  F1=1.000
+  fold 28 | p38  F1=0.911
+  fold 29 | p39  F1=0.700
+  fold 30 | p40  F1=0.606
+  fold 31 | p41  F1=1.000
+  fold 32 | p42  F1=0.696
+  fold 33 | p43  F1=0.913
+  fold 34 | p44  F1=1.000
+  fold 35 | p7  F1=0.633
+  fold 36 | p8  F1=1.000
+  fold 37 | p9  F1=0.932
+
+=================================================================
+  DANN Anxolotl — 40 common feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.68      0.99      0.81       299
+      stress       0.99      0.66      0.79       413
+
+    accuracy                           0.80       712
+   macro avg       0.83      0.83      0.80       712
+weighted avg       0.86      0.80      0.80       712
+
+Macro F1   : 0.800
+AUC        : 0.916
+F1@opt     : 0.850  (t=0.044)
+Bal. Acc   : 0.827
+MCC        : 0.661
+F1 std     : 0.162  (mean per fold: 0.794)
+Confusion  : TN=296 FP=3 FN=139 TP=274
+
+=================================================================
+  Anxolotl LOSO — AutoGluon — 40 common feat
+=================================================================
+  AutoGluon fold 1 err: Learner is already fit.
+
+=================================================================
+  AutoGluon Anxolotl — 40 common feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.83      0.91      0.87       291
+      stress       0.93      0.86      0.90       396
+
+    accuracy                           0.88       687
+   macro avg       0.88      0.89      0.88       687
+weighted avg       0.89      0.88      0.88       687
+
+Macro F1   : 0.882
+AUC        : 0.949
+F1@opt     : 0.890  (t=0.554)
+Bal. Acc   : 0.887
+MCC        : 0.767
+F1 std     : 0.075  (mean per fold: 0.883)
+Confusion  : TN=265 FP=26 FN=54 TP=342
+
+=================================================================
+  Anxolotl LOSO — Classical — 60 all feat
+=================================================================
+  fold  1 | p10  LogReg=0.396  SVM=0.405  RF=0.955  ET=1.000  Ensemble RF+ET=0.955  Ensemble full=0.908
+  fold  2 | p11  LogReg=0.457  SVM=0.400  RF=0.899  ET=1.000  Ensemble RF+ET=1.000  Ensemble full=1.000
+  fold  3 | p12  LogReg=0.568  SVM=0.382  RF=0.951  ET=0.951  Ensemble RF+ET=0.951  Ensemble full=0.903
+  fold  4 | p13  LogReg=0.358  SVM=0.389  RF=0.952  ET=0.906  Ensemble RF+ET=0.952  Ensemble full=0.861
+  fold  5 | p14  LogReg=0.381  SVM=0.395  RF=0.904  ET=0.904  Ensemble RF+ET=0.904  Ensemble full=0.904
+  fold  6 | p15  LogReg=0.598  SVM=0.318  RF=0.866  ET=0.861  Ensemble RF+ET=0.932  Ensemble full=0.932
+  fold  7 | p16  LogReg=0.618  SVM=0.382  RF=0.833  ET=0.844  Ensemble RF+ET=0.833  Ensemble full=0.893
+  fold  8 | p17  LogReg=0.437  SVM=0.375  RF=0.949  ET=0.949  Ensemble RF+ET=0.949  Ensemble full=0.896
+  fold  9 | p18  LogReg=0.530  SVM=0.389  RF=0.949  ET=0.895  Ensemble RF+ET=0.949  Ensemble full=0.861
+  fold 10 | p19  LogReg=0.476  SVM=0.300  RF=1.000  ET=1.000  Ensemble RF+ET=1.000  Ensemble full=1.000
+  fold 11 | p20  LogReg=0.464  SVM=0.318  RF=0.866  ET=0.932  Ensemble RF+ET=0.932  Ensemble full=0.785
+  fold 12 | p21  LogReg=0.708  SVM=0.300  RF=0.928  ET=0.928  Ensemble RF+ET=0.928  Ensemble full=0.928
+  fold 13 | p22  LogReg=0.708  SVM=0.378  RF=0.836  ET=0.881  Ensemble RF+ET=0.881  Ensemble full=0.881
+  fold 14 | p23  LogReg=0.760  SVM=0.389  RF=1.000  ET=1.000  Ensemble RF+ET=1.000  Ensemble full=0.949
+  fold 15 | p25  LogReg=0.641  SVM=0.300  RF=0.857  ET=0.928  Ensemble RF+ET=0.857  Ensemble full=1.000
+  fold 16 | p26  LogReg=0.667  SVM=0.318  RF=0.932  ET=0.932  Ensemble RF+ET=0.932  Ensemble full=0.932
+  fold 17 | p27  LogReg=0.568  SVM=0.382  RF=0.948  ET=1.000  Ensemble RF+ET=1.000  Ensemble full=1.000
+  fold 18 | p28  LogReg=0.667  SVM=0.318  RF=0.932  ET=0.932  Ensemble RF+ET=0.932  Ensemble full=0.932
+  fold 19 | p29  LogReg=0.464  SVM=0.318  RF=0.583  ET=0.722  Ensemble RF+ET=0.583  Ensemble full=0.796
+  fold 20 | p30  LogReg=0.499  SVM=0.389  RF=0.848  ET=0.902  Ensemble RF+ET=0.848  Ensemble full=0.848
+  fold 21 | p31  LogReg=0.306  SVM=0.318  RF=1.000  ET=1.000  Ensemble RF+ET=1.000  Ensemble full=1.000
+  fold 22 | p32  LogReg=0.722  SVM=0.318  RF=1.000  ET=1.000  Ensemble RF+ET=1.000  Ensemble full=1.000
+  fold 23 | p33  LogReg=0.316  SVM=0.405  RF=0.675  ET=0.756  Ensemble RF+ET=0.756  Ensemble full=0.557
+  fold 24 | p34  LogReg=0.464  SVM=0.318  RF=0.933  ET=0.933  Ensemble RF+ET=0.933  Ensemble full=0.933
+  fold 25 | p35  LogReg=0.487  SVM=0.395  RF=0.951  ET=0.951  Ensemble RF+ET=0.951  Ensemble full=0.951
+  fold 26 | p36  LogReg=0.714  SVM=0.382  RF=0.714  ET=0.806  Ensemble RF+ET=0.760  Ensemble full=0.760
+  fold 27 | p37  LogReg=0.583  SVM=0.318  RF=1.000  ET=1.000  Ensemble RF+ET=1.000  Ensemble full=1.000
+  fold 28 | p38  LogReg=0.534  SVM=0.400  RF=0.899  ET=0.899  Ensemble RF+ET=0.899  Ensemble full=1.000
+  fold 29 | p39  LogReg=0.598  SVM=0.318  RF=0.932  ET=0.861  Ensemble RF+ET=0.861  Ensemble full=0.932
+  fold 30 | p40  LogReg=0.390  SVM=0.395  RF=0.860  ET=0.909  Ensemble RF+ET=0.860  Ensemble full=0.865
+  fold 31 | p41  LogReg=0.296  SVM=0.842  RF=0.894  ET=1.000  Ensemble RF+ET=0.947  Ensemble full=0.789
+  fold 32 | p42  LogReg=0.795  SVM=0.395  RF=0.909  ET=0.953  Ensemble RF+ET=0.953  Ensemble full=0.909
+  fold 33 | p43  LogReg=0.688  SVM=0.405  RF=0.857  ET=0.908  Ensemble RF+ET=0.857  Ensemble full=0.816
+  fold 34 | p44  LogReg=0.389  SVM=0.318  RF=0.933  ET=0.933  Ensemble RF+ET=0.933  Ensemble full=0.933
+  fold 35 | p7  LogReg=0.450  SVM=0.389  RF=0.768  ET=0.817  Ensemble RF+ET=0.768  Ensemble full=0.681
+  fold 36 | p8  LogReg=0.378  SVM=0.300  RF=0.928  ET=0.928  Ensemble RF+ET=0.928  Ensemble full=0.928
+  fold 37 | p9  LogReg=0.732  SVM=0.318  RF=0.933  ET=0.933  Ensemble RF+ET=0.933  Ensemble full=1.000
+
+=================================================================
+  LogReg Anxolotl — 60 all feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.47      0.60      0.53       299
+      stress       0.64      0.51      0.57       413
+
+    accuracy                           0.55       712
+   macro avg       0.55      0.55      0.55       712
+weighted avg       0.57      0.55      0.55       712
+
+Macro F1   : 0.545
+AUC        : 0.565
+F1@opt     : 0.517  (t=0.501)
+Bal. Acc   : 0.554
+MCC        : 0.106
+F1 std     : 0.139  (mean per fold: 0.535)
+Confusion  : TN=179 FP=120 FN=203 TP=210
+
+=================================================================
+  SVM Anxolotl — 60 all feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.73      0.03      0.05       299
+      stress       0.58      0.99      0.74       413
+
+    accuracy                           0.59       712
+   macro avg       0.66      0.51      0.39       712
+weighted avg       0.64      0.59      0.45       712
+
+Macro F1   : 0.394
+AUC        : 0.523
+F1@opt     : 0.325  (t=0.513)
+Bal. Acc   : 0.510
+MCC        : 0.078
+F1 std     : 0.088  (mean per fold: 0.370)
+Confusion  : TN=8 FP=291 FN=3 TP=410
+
+=================================================================
+  RF Anxolotl — 60 all feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.87      0.89      0.88       299
+      stress       0.92      0.91      0.91       413
+
+    accuracy                           0.90       712
+   macro avg       0.90      0.90      0.90       712
+weighted avg       0.90      0.90      0.90       712
+
+Macro F1   : 0.896
+AUC        : 0.966
+F1@opt     : 0.899  (t=0.636)
+Bal. Acc   : 0.897
+MCC        : 0.793
+F1 std     : 0.090  (mean per fold: 0.897)
+Confusion  : TN=265 FP=34 FN=38 TP=375
+
+=================================================================
+  ET Anxolotl — 60 all feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.89      0.93      0.91       299
+      stress       0.95      0.92      0.93       413
+
+    accuracy                           0.92       712
+   macro avg       0.92      0.92      0.92       712
+weighted avg       0.92      0.92      0.92       712
+
+Macro F1   : 0.921
+AUC        : 0.973
+F1@opt     : 0.923  (t=0.493)
+Bal. Acc   : 0.924
+MCC        : 0.843
+F1 std     : 0.067  (mean per fold: 0.920)
+Confusion  : TN=278 FP=21 FN=34 TP=379
+
+=================================================================
+  Ensemble RF+ET Anxolotl — 60 all feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.89      0.91      0.90       299
+      stress       0.93      0.92      0.92       413
+
+    accuracy                           0.91       712
+   macro avg       0.91      0.91      0.91       712
+weighted avg       0.91      0.91      0.91       712
+
+Macro F1   : 0.911
+AUC        : 0.972
+F1@opt     : 0.914  (t=0.487)
+Bal. Acc   : 0.912
+MCC        : 0.822
+F1 std     : 0.085  (mean per fold: 0.910)
+Confusion  : TN=272 FP=27 FN=35 TP=378
+
+=================================================================
+  Ensemble full Anxolotl — 60 all feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.84      0.93      0.88       299
+      stress       0.94      0.87      0.91       413
+
+    accuracy                           0.90       712
+   macro avg       0.89      0.90      0.89       712
+weighted avg       0.90      0.90      0.90       712
+
+Macro F1   : 0.895
+AUC        : 0.967
+F1@opt     : 0.898  (t=0.553)
+Bal. Acc   : 0.901
+MCC        : 0.793
+F1 std     : 0.096  (mean per fold: 0.899)
+Confusion  : TN=278 FP=21 FN=53 TP=360
+
+=================================================================
+  Anxolotl LOSO — DANN — 60 all feat
+=================================================================
+  fold  1 | p10  F1=0.955
+  fold  2 | p11  F1=0.748
+  fold  3 | p12  F1=0.856
+  fold  4 | p13  F1=0.727
+  fold  5 | p14  F1=0.909
+  fold  6 | p15  F1=0.603
+  fold  7 | p16  F1=0.856
+  fold  8 | p17  F1=0.899
+  fold  9 | p18  F1=0.861
+  fold 10 | p19  F1=0.925
+  fold 11 | p20  F1=0.489
+  fold 12 | p21  F1=0.754
+  fold 13 | p22  F1=0.816
+  fold 14 | p23  F1=1.000
+  fold 15 | p25  F1=1.000
+  fold 16 | p26  F1=0.700
+  fold 17 | p27  F1=0.856
+  fold 18 | p28  F1=0.700
+  fold 19 | p29  F1=0.796
+  fold 20 | p30  F1=0.681
+  fold 21 | p31  F1=0.861
+  fold 22 | p32  F1=0.932
+  fold 23 | p33  F1=0.557
+  fold 24 | p34  F1=1.000
+  fold 25 | p35  F1=0.865
+  fold 26 | p36  F1=0.618
+  fold 27 | p37  F1=0.932
+  fold 28 | p38  F1=0.911
+  fold 29 | p39  F1=0.700
+  fold 30 | p40  F1=0.781
+  fold 31 | p41  F1=1.000
+  fold 32 | p42  F1=0.823
+  fold 33 | p43  F1=0.913
+  fold 34 | p44  F1=1.000
+  fold 35 | p7  F1=0.681
+  fold 36 | p8  F1=1.000
+  fold 37 | p9  F1=0.866
+
+=================================================================
+  DANN Anxolotl — 60 all feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.72      0.98      0.83       299
+      stress       0.98      0.72      0.83       413
+
+    accuracy                           0.83       712
+   macro avg       0.85      0.85      0.83       712
+weighted avg       0.87      0.83      0.83       712
+
+Macro F1   : 0.833
+AUC        : 0.948
+F1@opt     : 0.882  (t=0.012)
+Bal. Acc   : 0.854
+MCC        : 0.706
+F1 std     : 0.133  (mean per fold: 0.826)
+Confusion  : TN=294 FP=5 FN=114 TP=299
+
+=================================================================
+  Anxolotl LOSO — AutoGluon — 60 all feat
+=================================================================
+
+=================================================================
+  AutoGluon Anxolotl — 60 all feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.86      0.91      0.88       299
+      stress       0.93      0.89      0.91       413
+
+    accuracy                           0.90       712
+   macro avg       0.89      0.90      0.90       712
+weighted avg       0.90      0.90      0.90       712
+
+Macro F1   : 0.896
+AUC        : 0.959
+F1@opt     : 0.901  (t=0.436)
+Bal. Acc   : 0.899
+MCC        : 0.793
+F1 std     : 0.098  (mean per fold: 0.899)
+Confusion  : TN=272 FP=27 FN=46 TP=367
+
+Resultados guardados em: /home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/../results/anxolotl_loso.json

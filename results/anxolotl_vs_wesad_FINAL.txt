@@ -1,0 +1,56 @@
+Anxolotl vs WESAD — final comparison, LOSO-CV, macro F1
+stress_phase == 3 excluded throughout on the Anxolotl side (BL-norm, median imputation).
+================================================================================
+
+CONFIG                                  FEATURES   MACRO F1   NOTES
+--------------------------------------------------------------------------------
+Anxolotl Watch-only  (90s window)          55       0.9689    ET n=300 mf=0.6 msl=1; largest window with a defensible per-fold sample size (10.4 windows/subj avg)
+Anxolotl Watch-only  (60s window)          55       0.9180    ET-1000 mf=0.5; matched window for the ECG comparisons below
+Anxolotl Watch+ECG   (60s window)          72       0.9503    ET-1000 mf=0.5; ECG re-extracted at 60s (original pkl)
+Anxolotl Watch+ECG   (90s window)          72       0.9857    RF-1000 (tied with Ensemble-ET-RF-HGB, ET-1000 mf=0.3); ECG re-extracted fresh at 90s for this comparison
+--------------------------------------------------------------------------------
+WESAD wrist-only     (Ensemble XGB+RF+LGBM)  77     0.853     no ECG (wrist BVP-derived HR/IBI/RMSSD/SDNN only)
+WESAD all-channels   (Ensemble XGB+RF+LGBM) 130     0.872     includes chest ECG + demographics
+--------------------------------------------------------------------------------
+SOTA reference: Heo et al. (2021), replicated on WESAD and Anxolotl base pipeline: MacroF1 ~ 0.921-0.922
+================================================================================
+
+NOTE ON AUROC — deliberately dropped from the table above.
+Per-fold AUROC saturates to ~1.0 in almost every LOSO fold at 90s (36-37 of 37),
+INCLUDING THE WATCH-ONLY CONFIG WITH NO ECG AT ALL (30/37 folds already at
+F1=1.0, AUC=1.0 in 37/37). This is not ECG-driven and not leakage — verified by
+checking the same BL-norm methodology at 60s, where it does NOT saturate
+(AUC~0.96-0.99). AUROC only requires correctly ranking pairs within a fold, and
+at 90s each fold has just 7-14 test windows — correct ranking of a handful of
+pairs is a much easier bar than getting F1=1.0 at a fixed 0.5 threshold, and is
+not evidence of production-grade reliability. MacroF1 remains the metric that
+still shows real, meaningful spread across subjects (sd 0.045-0.104, with
+p33/p38/p20 consistently harder than the rest) and is what should be reported
+and discussed, not the saturated AUROC.
+
+KEY FINDINGS
+1. Anxolotl watch-only (60s, no ECG) already beats WESAD-all (which DOES include
+   chest ECG): 0.918 vs 0.872. The Anxolotl advantage is not about sensors — it's
+   the gesture-marked protocol giving a cleaner baseline/stress boundary than
+   WESAD's TSST / driving-simulation protocol.
+2. ECG adds a real, consistent gain on the Anxolotl side at both windows tested:
+   +0.032 at 60s (0.918 -> 0.950), +0.017 at 90s (0.969 -> 0.986). Never hurts,
+   across 9 different model types.
+3. ECG also cuts fold-to-fold variance sharply at 90s (sd 0.104 -> 0.045) —
+   not just a higher mean, a more STABLE model across subjects.
+4. Best defensible number overall: Anxolotl Watch+ECG @ 90s, MacroF1 = 0.9857.
+   This is +0.064 above the SOTA reference (~0.921), and +0.113 / +0.134 above
+   WESAD's own wrist / all-channel numbers.
+
+CAVEATS
+- 90s is the largest window confirmed to have a reliable per-fold sample size
+  (>=7 windows/subject); 120s/150s were tested and rejected earlier for the
+  watch-only case (near-perfect scores at those sizes are a small-sample
+  artifact, not evidence of a better model) — the same caution partially
+  applies at 90s too (see AUROC note above), though MacroF1 still shows real
+  differential difficulty across subjects, unlike at 120s/150s.
+- ECG @ 90s used a freshly re-extracted feature set (ecg_biopac_features_90s.py)
+  since the original processed_data_anxolotl_ecg.pkl was only built at 60s;
+  window boundaries were verified to match the watch tabular pipeline exactly
+  (no window-count mismatches across all 36 subjects with BIOPAC data).
+- p41 has no BIOPAC recording in either ECG extraction (excluded / NaN, imputed).

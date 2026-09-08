@@ -1,0 +1,164 @@
+==============================================================================
+STEP 0 -- DATA SOURCE VALIDATION
+==============================================================================
+Candidate file: processed_data/wesad/processed_data.pkl
+  mtime: 2026-07-17 15:31:57.612862349
+  shape: 25807 rows x 130 cols
+  n_subjects: 15
+  class balance (y): {np.int64(0): np.int64(16726), np.int64(1): np.int64(9081)}
+
+Other candidate considered and REJECTED: processed_data/wesad_archive/processed_data_137feat_snapshot.pkl
+  This is the OLD (pre-2026-07-17) 137-feature/8-stats-per-channel schema.
+  Its wrist subset would be 7 channels x 8 stats = 56 columns -- the "56" the
+  request explicitly excludes. Not used for anything in this script.
+
+Reduced (Section 1.2) column selection: prefixes ('acc_wrist', 'hr_', 'ibi_', 'rmssd_', 'sdnn_')
+  -> 55 columns selected from the CURRENT (130-col) schema.
+  ASSERTION PASSED: exactly 55 columns.
+
+Full list of the 55 selected feature names:
+   1. acc_wrist_mean
+   2. acc_wrist_std
+   3. acc_wrist_min
+   4. acc_wrist_max
+   5. acc_wrist_p25
+   6. acc_wrist_p75
+   7. acc_wrist_skew
+   8. acc_wrist_kurtosis
+   9. acc_wrist_slope
+  10. acc_wrist_lf_hf
+  11. acc_wrist_delta_mean
+  12. hr_mean
+  13. hr_std
+  14. hr_min
+  15. hr_max
+  16. hr_p25
+  17. hr_p75
+  18. hr_skew
+  19. hr_kurtosis
+  20. hr_slope
+  21. hr_lf_hf
+  22. hr_delta_mean
+  23. ibi_mean
+  24. ibi_std
+  25. ibi_min
+  26. ibi_max
+  27. ibi_p25
+  28. ibi_p75
+  29. ibi_skew
+  30. ibi_kurtosis
+  31. ibi_slope
+  32. ibi_lf_hf
+  33. ibi_delta_mean
+  34. rmssd_mean
+  35. rmssd_std
+  36. rmssd_min
+  37. rmssd_max
+  38. rmssd_p25
+  39. rmssd_p75
+  40. rmssd_skew
+  41. rmssd_kurtosis
+  42. rmssd_slope
+  43. rmssd_lf_hf
+  44. rmssd_delta_mean
+  45. sdnn_mean
+  46. sdnn_std
+  47. sdnn_min
+  48. sdnn_max
+  49. sdnn_p25
+  50. sdnn_p75
+  51. sdnn_skew
+  52. sdnn_kurtosis
+  53. sdnn_slope
+  54. sdnn_lf_hf
+  55. sdnn_delta_mean
+
+X_reduced shape: (25807, 55), NaN count: 1048 (handled by per-fold SimpleImputer(mean), see preprocessing note below).
+
+CONCLUSION: current-schema file confirmed, 55/55 columns match spec exactly. Proceeding to training.
+
+==============================================================================
+STEP 0b -- NORMALIZATION / PREPROCESSING (matched to Section 1.1)
+==============================================================================
+Section 1.1 (1_wesad/classical/wesad_classical_rerun.py, Task 1, "SEM SMOTE" table = the chapter's Table 1.1) uses, per LOSO fold:
+  StandardScaler().fit_transform(X_train) -> SimpleImputer(strategy="mean").fit_transform(...)
+  then the SAME fitted scaler+imputer .transform()-ed onto X_test. No SMOTE.
+This script uses the identical per-fold fit-on-train-only StandardScaler + SimpleImputer(mean) protocol, no SMOTE, for every one of the 7 models below.
+
+==============================================================================
+STEP 1 -- 7 STANDALONE MODELS, LOSO-CV (15 folds), 55-feature wrist set
+==============================================================================
+SVM deviation: running on 40% stratified subsample (10322 of 25807 windows) -- matches this repo's established WESAD-SVM convention (poly-kernel SVC does not scale to n~26k). All other 6 models use the full 25807 windows.
+
+-- LogisticRegression --
+   MacroF1=0.5903±0.1757  BalAcc=0.6131  AUROC=0.6267  (5.4s, 15 folds)
+-- SVM --
+   MacroF1=0.6232±0.1517  BalAcc=0.6408  AUROC=0.6435  (120.0s, 15 folds)
+-- RandomForest --
+   MacroF1=0.6493±0.1448  BalAcc=0.6646  AUROC=0.7405  (25.3s, 15 folds)
+-- XGBoost --
+   MacroF1=0.6221±0.1295  BalAcc=0.6371  AUROC=0.6933  (13.2s, 15 folds)
+-- LightGBM --
+   MacroF1=0.6229±0.1201  BalAcc=0.6358  AUROC=0.6848  (14.8s, 15 folds)
+-- HistGradientBoosting --
+   MacroF1=0.6254±0.1276  BalAcc=0.6393  AUROC=0.6855  (36.9s, 15 folds)
+-- ExtraTrees --
+   MacroF1=0.6413±0.1332  BalAcc=0.6538  AUROC=0.7143  (159.4s, 15 folds)
+
+==============================================================================
+STEP 2 -- SUMMARY TABLE (sorted by Macro F1 desc) -- Table 1.7 draft
+==============================================================================
+Model                            Macro F1   BalAcc    AUROC
+-----------------------------------------------------------
+RandomForest             0.6493 ± 0.1448  0.6646 0.7405
+ExtraTrees               0.6413 ± 0.1332  0.6538 0.7143
+HistGradientBoosting     0.6254 ± 0.1276  0.6393 0.6855
+SVM                      0.6232 ± 0.1517  0.6408 0.6435
+LightGBM                 0.6229 ± 0.1201  0.6358 0.6848
+XGBoost                  0.6221 ± 0.1295  0.6371 0.6933
+LogisticRegression       0.5903 ± 0.1757  0.6131 0.6267
+
+==============================================================================
+STEP 3 -- SHAP (TreeSHAP) ON EXTRATREES, 55-FEATURE WRIST SET
+==============================================================================
+Fitting ET on the FULL pooled dataset (all 25807 windows, StandardScaler+SimpleImputer(mean), no SMOTE) -- matches scripts/xai.py / scripts/wesad_shap_reverification.py convention: SHAP explains a single pooled model, not per-LOSO-fold models.
+  ET fit on 25807 rows x 55 cols.
+  TreeSHAP computed on a 1200-row stratified sample (seed=42).
+
+Signal-group SHAP importance (sum of mean|SHAP|), replacing Figure 1.3b:
+  1. ACC    0.2823
+  2. SDNN   0.0914
+  3. HR     0.0683
+  4. RMSSD  0.0643
+  5. IBI    0.0492
+
+Top 20 individual features (mean|SHAP|):
+   1. acc_wrist_max          0.064336
+   2. acc_wrist_mean         0.052482
+   3. acc_wrist_std          0.045875
+   4. acc_wrist_p75          0.041157
+   5. acc_wrist_p25          0.032504
+   6. sdnn_p75               0.025484
+   7. hr_max                 0.024189
+   8. sdnn_mean              0.021902
+   9. acc_wrist_min          0.015627
+  10. sdnn_p25               0.015526
+  11. acc_wrist_skew         0.014685
+  12. rmssd_p25              0.014629
+  13. ibi_min                0.012502
+  14. rmssd_p75              0.012254
+  15. hr_std                 0.012220
+  16. rmssd_mean             0.011761
+  17. acc_wrist_kurtosis     0.008965
+  18. sdnn_min               0.008811
+  19. ibi_max                0.008133
+  20. rmssd_min              0.007835
+
+Saved: results/section1_2_wesad_wrist55_2026-07-26/figures/wesad_wrist55_ET_shap_groups.png
+Saved: results/section1_2_wesad_wrist55_2026-07-26/figures/wesad_wrist55_ET_shap_beeswarm.png
+
+==============================================================================
+DONE. Total elapsed: 15.4 min
+==============================================================================
+
+All output under: results/section1_2_wesad_wrist55_2026-07-26/

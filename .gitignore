@@ -1,0 +1,52 @@
+# Raw datasets (participant data, too large / too sensitive for git)
+/sessions/
+/dataset.zip
+/wesad.zip
+/zenodo_release/signals/
+/Data_tese.xlsx
+*.acq
+
+# Derived/processed data
+/processed_data/
+/models_data/
+/catboost_info/
+/*.pkl
+
+# AutoGluon checkpoints
+/scripts/AutogluonModels/
+/1_wesad/full/AutogluonModels/
+/1_wesad/full/autogluon_wrist_final/
+/1_wesad/classical/roc_data/
+
+# External sibling project copy
+/DANN/
+
+# Claude config
+/.claude/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.ipynb_checkpoints/
+
+# Environments
+.venv/
+venv/
+env/
+.conda/
+
+# Results logs (regenerable)
+/results/*.log
+/results/df_all_1hz_cache.pkl
+/results/wesad_autogluon_rerun_fixed.json.bak_2026-07-25
+/results/wesad_autogluon_rerun_fixed.txt.bak_2026-07-25
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

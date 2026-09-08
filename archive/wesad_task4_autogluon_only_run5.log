@@ -1,0 +1,40 @@
+[2026-07-24 22:48:32,776 E 1604697 1604993] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+REDUCED: (25807, 55), subjects=15
+Traceback (most recent call last):
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/1_wesad/classical/wesad_task4_autogluon_only.py", line 53, in <module>
+    preds = predictor.predict(test_df).values
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/tabular/predictor/predictor.py", line 2502, in predict
+    return self._learner.predict(X=data, model=model, as_pandas=as_pandas, transform_features=transform_features, decision_threshold=decision_threshold)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/tabular/learner/abstract_learner.py", line 208, in predict
+    y_pred_proba = self.predict_proba(
+                   ^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/tabular/learner/abstract_learner.py", line 189, in predict_proba
+    y_pred_proba = self.load_trainer().predict_proba(X, model=model)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/tabular/trainer/abstract_trainer.py", line 1008, in predict_proba
+    return self._predict_proba_model(X=X, model=model)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/tabular/trainer/abstract_trainer.py", line 3369, in _predict_proba_model
+    model_pred_proba_dict = self.get_model_pred_proba_dict(X=X, models=[model], model_pred_proba_dict=model_pred_proba_dict)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/tabular/trainer/abstract_trainer.py", line 1283, in get_model_pred_proba_dict
+    model_pred_proba_dict[model_name] = model.predict_proba(X, **preprocess_kwargs)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/core/models/abstract/abstract_model.py", line 1404, in predict_proba
+    y_pred_proba = self._predict_proba_internal(X=X, normalize=normalize, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/core/models/ensemble/bagged_ensemble_model.py", line 595, in _predict_proba_internal
+    y_pred_proba = model.predict_proba(X=X, preprocess_nonadaptive=False, normalize=normalize)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/core/models/abstract/abstract_model.py", line 1404, in predict_proba
+    y_pred_proba = self._predict_proba_internal(X=X, normalize=normalize, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/core/models/abstract/abstract_model.py", line 1438, in _predict_proba_internal
+    y_pred_proba = self._predict_proba(X=X, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/tabular/models/lgb/lgb_model.py", line 409, in _predict_proba
+    y_pred_proba = self.model.predict(X, num_threads=num_cpus)
+                   ^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'predict'

@@ -1,0 +1,100 @@
+================================================================================
+STATE-OF-THE-ART COMPARISON TABLE (WESAD literature vs Anxolotl)
+Generated: 2026-07-24
+Sources verified directly from primary papers (Schmidt et al. fetched and
+read in full as PDF; Abdelfattah/Elzeiny verified via publisher/PMC pages,
+not secondary blog summaries) — see citations below each row.
+================================================================================
+
+| Trabalho | Dataset | Sensores / Features | Protocolo de validação | Tarefa | Macro F1 | Acc |
+|---|---|---|---|---|---|---|
+| Schmidt et al. 2018 (WESAD original) | WESAD, n=15 | Chest physio (ECG,EDA,EMG,RESP,TEMP) | **LOSO**, 15 folds | Binário (stress vs não-stress) | 91.47% (LDA) | 93.12% |
+| Schmidt et al. 2018 (WESAD original) | WESAD, n=15 | **Wrist-only** physio (BVP,EDA,TEMP) | **LOSO**, 15 folds | Binário (stress vs não-stress) | 86.10% (RF) | 88.33% |
+| Schmidt et al. 2018 (WESAD original) | WESAD, n=15 | Chest physio | **LOSO**, 15 folds | 3-classe (baseline/stress/amusement) | 72.51% (AdaBoost) | 80.34% |
+| Elzeiny & Qaraqe 2020 (Sensors) | WESAD, n=15 | PPG (imagens espaciais/frequência) | Split fixo 70/15/15 (person-specific) OU 3 sujeitos held-out (generic) | Binário | — | 99.8% (person-specific, test) / **61%** (generic, sem calibração) / 88.1% (generic **calibrado com 20% dos dados do sujeito de teste**) |
+| Abdelfattah 2025 (IEEE Access) | WESAD | Multimodal (não especificado exatamente) | "Cross-subject" (RNN) vs "subject-specific" (RF/ET/XGB) — protocolo exato não confirmado no texto principal | Não especificada | RNN: 93% (cross-subject) / RF,ET,XGB: 99% (subject-specific) | — |
+| **Anxolotl (esta tese)** | Anxolotl, n=37 | **Wrist-only** (Apple Watch: ACC, HR, IBI, RMSSD, SDNN — sem EDA/TEMP/BVP) | **LOSO**, 37 folds | Binário (baseline vs stress) | **91.69%** (ET-1000) | — |
+
+================================================================================
+NOTES / VERIFICATION DETAIL PER ROW
+================================================================================
+
+Schmidt et al. 2018 — "Introducing WESAD, a Multimodal Dataset for Wearable
+Stress and Affect Detection" (ICMI'18). Verified by reading the actual PDF
+(ubi29.informatik.uni-siegen.de/usi/pdf/ubi_icmi2018.pdf), Tables 3 and 4:
+  - Binary, chest physio, LDA: F1=91.47, Acc=93.12 (Table 4, "Chest physio"
+    row) — matches the paper's own stated headline ("93.12% ... LDA
+    classifier ... all chest-based physiological modalities").
+  - Binary, WRIST physio, RF: F1=86.10±0.29, Acc=88.33±0.25 (Table 4,
+    "Wrist physio" row) — this is the most protocol-comparable row to
+    Anxolotl (wrist-only wearable), though WESAD's wrist set (BVP, EDA,
+    TEMP) differs from Anxolotl's (HR/IBI/RMSSD/SDNN from optical HR, no EDA
+    or skin temperature on Apple Watch).
+  - 3-class, chest physio, AdaBoost: F1=72.51±0.17, Acc=80.34±0.43 (Table 3).
+  - Protocol confirmed explicit in the paper: "All models were evaluated
+    using the leave-one-subject-out (LOSO) cross-validation (CV) procedure."
+
+Elzeiny & Qaraqe 2020 — "Stress Classification Using Photoplethysmogram-
+Based Spatial and Frequency Domain Images" (Sensors 20(18), 5312). Verified
+via PMC full text (PMC7571107). KEY POINT FOR THE THESIS: this is NOT LOSO
+and not even k-fold — it is a fixed 70/15/15 split for the person-specific
+model, and a 3-subjects-held-out split for the "generic" (person-independent)
+model. The generic model's TEST accuracy collapses to 61% without any
+calibration; it only reaches 88.1% after injecting 20% of the held-out test
+subject's OWN data into the training set ("calibrated-generic") — i.e. the
+headline 88.1%/99.8% numbers are NOT subject-independent results in the
+sense LOSO requires. This is a legitimate, citable point of methodological
+contrast: Anxolotl's 91.69% is a genuinely subject-independent (LOSO) number,
+comparable in spirit only to Elzeiny's uncalibrated 61% generic figure, not
+to its 88-99% person-specific/calibrated figures.
+
+Abdelfattah 2025 — "Machine and Deep Learning Models for Stress Detection
+Using Multimodal Physiological Data," IEEE Access, vol. 13, pp. 4597-4608,
+DOI 10.1109/ACCESS.2024.3525459. NOT independently verified against the
+primary PDF (paywalled/not locally available) — the 93%/99% figures above
+are as reported by a THIRD paper that cites Abdelfattah (Almadhor et al.
+2025, Frontiers in Bioeng. Biotech., PMC12685819), not read directly from
+Abdelfattah's own text. Flag this row as "needs primary-source verification
+before citing exact numbers in the thesis" — in particular, confirm whether
+"cross-subject" for the RNN figure means true LOSO or a coarser
+subject-group holdout, and confirm feature/sensor set (wrist-only or full
+multimodal) before placing it in the same column as Schmidt/Anxolotl.
+
+================================================================================
+THE ARGUMENT WORTH MAKING IN THE THESIS (as you suggested)
+================================================================================
+
+Framed correctly, this table supports two points, not just one:
+
+1. Anxolotl's wrist-only LOSO Macro F1 (91.69%) is HIGHER than WESAD's own
+   original wrist-only LOSO F1 (86.10%, Schmidt et al.) — despite Apple
+   Watch's more limited, consumer-grade sensor set (no EDA, no skin
+   temperature, no BVP waveform — only optical HR/IBI derivatives + ACC) and
+   despite a real-world/ecological protocol rather than a controlled lab
+   TSST. This is a genuinely favourable, apples-to-apples (both wrist-only,
+   both LOSO, both binary stress/non-stress) comparison.
+
+2. LOSO is a strictly harder evaluation than what most of the comparison
+   literature reports: Elzeiny's headline numbers use a fixed holdout (not
+   even k-fold) and let 20% of the test subject's own data leak into
+   training for the "calibrated" condition; Abdelfattah's 99% figures are
+   explicitly "subject-specific" (models trained AND tested on the same
+   subjects — not a generalisation test at all). Anxolotl's 91.69% has no
+   such leakage — every one of the 37 folds tests on a subject the model
+   never saw in any form. Say this explicitly in the table's caption/text:
+   it is the reason a lower-looking number (91.69% vs. someone else's 99%)
+   is not actually a weaker result.
+
+================================================================================
+STILL TO DO before this table is thesis-ready
+================================================================================
+  - Verify Abdelfattah 2025 against its own primary text (IEEE Xplore access
+    needed — ieeexplore.ieee.org/document/10820549), not a third paper's
+    citation of it.
+  - Decide whether to add a 4th comparison work with a closer protocol match
+    (LOSO, wrist-only) if one exists in the literature the thesis already
+    surveys, to strengthen the case beyond a single WESAD-vs-WESAD wrist row.
+  - Confirm exact Anxolotl AUROC to add as a column (0.9645, per
+    canonical_numbers_for_thesis.txt, flagged there as pre-leak-fix — a
+    post-fix AUROC has not been separately saved; see that file's own flag).
+================================================================================

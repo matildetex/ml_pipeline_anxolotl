@@ -1,0 +1,84 @@
+====================================================================================================
+TEMPORAL-DRIFT FEATURE ABLATION -- corrected "Ponto 3" for the
+temporal-confounding control (Sec 1.5.1)
+Generated: 2026-07-26
+====================================================================================================
+
+Replaces the originally-proposed "shuffle window order" test, which is a
+mathematical no-op for this pipeline (row-order-invariant model + a
+set-membership-based, not order-based, normalisation reference -- see this
+script's module docstring for the full argument). Instead: are the specific
+feature dimensions that carry the temporal-drift signal found by Teste A2
+(scripts/temporal_control.py, Macro F1=0.7328 early-vs-late within a fixed
+true class) dispensable for the canonical stress classifier?
+
+A PRIORI drop criterion (fixed before running, not selected by measured
+importance): of the 11 stats/channel, 8 are permutation-invariant (mean,
+std, min, max, p25, p75, skew, kurtosis); 3 are NOT (slope, delta_mean,
+lf_hf -- their value depends on within-window sample order).
+  CONSERVATIVE drop (10 feat): ['acc_wrist_slope', 'acc_wrist_delta_mean', 'hr_slope', 'hr_delta_mean', 'ibi_slope', 'ibi_delta_mean', 'rmssd_slope', 'rmssd_delta_mean', 'sdnn_slope', 'sdnn_delta_mean']
+  AGGRESSIVE drop (15 feat)  : ['acc_wrist_slope', 'acc_wrist_lf_hf', 'acc_wrist_delta_mean', 'hr_slope', 'hr_lf_hf', 'hr_delta_mean', 'ibi_slope', 'ibi_lf_hf', 'ibi_delta_mean', 'rmssd_slope', 'rmssd_lf_hf', 'rmssd_delta_mean', 'sdnn_slope', 'sdnn_lf_hf', 'sdnn_delta_mean']
+
+PRE-REGISTERED interpretation (fixed before seeing results):
+  |delta F1|<=0.01 AND p>=0.05  -> MAINTAINS (model does not need these dims)
+  0.01 < |delta F1| <=0.05       -> AMBIGUOUS (real but moderate; these features
+                                    are not purely artifactual -- e.g. lf_hf is a
+                                    standard sympathovagal marker, so a drop here
+                                    does NOT prove artifact-dependence)
+  |delta F1| > 0.05              -> LARGE DROP (model leans on these dims; still
+                                    does not by itself prove artifact-dependence,
+                                    flag as a limitation for discussion)
+
+Model/CV: identical to canonical (ET-1000 mf=0.5, leak-fixed BL-norm, LOSO,
+37 subjects, 686 windows).
+
+----------------------------------------------------------------------------------------------------
+Config                              Macro F1     AUROC   Delta vs full   Wilcoxon p       Verdict
+----------------------------------------------------------------------------------------------------
+Full (55 feat, canonical)             0.9169    0.9646              --           --            --
+Conservative (45 feat)                0.9116    0.9610         +0.0052    3.276e-01     MAINTAINS
+Aggressive (40 feat)                  0.9053    0.9576         +0.0115    5.553e-02     AMBIGUOUS
+----------------------------------------------------------------------------------------------------
+
+CONFIRMATION (not selection) -- a-priori drift features vs early-vs-late
+feature importance (in-sample pooled fit, same construction as Teste A2):
+  ibi_p75              0.0476
+  hr_p25               0.0440
+  rmssd_p75            0.0403
+  ibi_p25              0.0370
+  hr_p75               0.0332
+  rmssd_max            0.0327
+  sdnn_max             0.0282
+  sdnn_p75             0.0280
+  ibi_mean             0.0255
+  hr_mean              0.0246
+  acc_wrist_p25        0.0230
+  rmssd_p25            0.0213
+  ibi_skew             0.0209
+  rmssd_mean           0.0198
+  acc_wrist_min        0.0198
+0/15 a-priori drift features appear in the top 15 of 55 ranked by early-vs-late importance: []
+
+====================================================================================================
+SUMMARY
+====================================================================================================
+Conservative drop (slope, delta_mean only): MAINTAINS (delta=+0.0052, p=3.276e-01)
+Aggressive drop (+ lf_hf)                  : AMBIGUOUS (delta=+0.0115, p=5.553e-02)
+
+====================================================================================================
+CORRECTION (appended 2026-07-26, after review) -- lf_hf should NOT be grouped with slope/delta_mean
+====================================================================================================
+The "aggressive" tier's inclusion of lf_hf was conceptually flawed. lf_hf IS
+order-dependent (Welch PSD requires the sample sequence to define frequency
+content -- permuting samples destroys it), but order-dependence is not the
+same property as "measures within-window trend/drift". slope and delta_mean
+are trend statistics by direct construction (linear fit vs. time index;
+second-half-minus-first-half). lf_hf measures spectral/oscillatory balance
+(sympathovagal ratio) -- a real physiological quantity, not a drift artifact
+-- and has no established interpretation as a "temporal trend" feature. The
+aggressive-tier number above (40 feat, Macro F1=0.9053, delta=+0.0115,
+p=0.056) is NOT part of the thesis-facing argument for this reason -- see
+results/section_1_5_1_temporal_confounding_draft_2026-07-26.txt for the
+corrected write-up, which relies only on the conservative tier (slope,
+delta_mean) plus the confirmation-check finding (0/15 a-priori features in
+the real top-15), neither of which depends on this correction.

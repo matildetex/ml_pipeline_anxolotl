@@ -1,0 +1,37 @@
+====================================================================================================
+Table 1.7 -- WESAD wrist-only, 55 features, BL-norm: Ensemble(ET+RF+HGB) row
+Generated: 2026-07-26
+====================================================================================================
+
+Ensemble definition: copied VERBATIM from 3_anxolotl/friedman_nemenyi_anxolotl.py:70-74
+(identical copy at 3_anxolotl/recompute_macro_f1.py:173-176) -- the exact object behind
+Table 1.11's Anxolotl "Ensemble(ET+RF+HGB)" row. Not reimplemented.
+  VotingClassifier(voting='hard', estimators=[
+      ('et',  ExtraTreesClassifier(n_estimators=300, class_weight='balanced', random_state=42, n_jobs=-1)),
+      ('rf',  RandomForestClassifier(n_estimators=300, class_weight='balanced', random_state=42, n_jobs=-1)),
+      ('hgb', HistGradientBoostingClassifier(max_iter=200, max_depth=4, learning_rate=0.05, random_state=42)),
+  ])
+
+*** FLAG 1: task description said "soft-voting"; repo's canonical definition is
+hard voting. Used as-is (repo definition wins) for exact comparability with Table 1.11.
+*** FLAG 2: hard voting -> no predict_proba -> no canonical AUROC. Table 1.11's own
+Ensemble(ET+RF+HGB) row already has AUROC=MISSING in results_master.csv for the same
+reason -- this is a pre-existing, structural gap, not something new introduced here.
+
+Feature set   : 55 wrist-only (acc_wrist, hr_, ibi_, rmssd_, sdnn_ prefixes)
+Data source   : processed_data/wesad/processed_data.pkl (mtime 2026-07-17 15:31:57.612862349)
+Normalisation : BL-norm (2_cross_dataset/cross_dataset_blnorm.py :: baseline_relative_scale)
+CV            : LOSO (LeaveOneGroupOut), 15 subjects, full dataset, no subsample
+
+----------------------------------------------------------------------------------------------------
+Model                              Macro F1   BalAcc    AUROC
+------------------------------------------------------------
+Ensemble(ET+RF+HGB)      0.6991 +/- 0.1767  0.7064 0.8516*
+------------------------------------------------------------
+* AUROC marked with an asterisk is the SUPPLEMENTARY, NON-CANONICAL soft-averaged
+  value (see FLAG 2 above) -- NOT the same quantity as any other AUROC in this table,
+  since the canonical hard-voting ensemble has none. If Table 1.7 should show "--" or
+  "N/A" to stay strictly consistent with Table 1.11's own MISSING cell, drop the
+  asterisked value and use that instead.
+
+Runtime: 5.5 min

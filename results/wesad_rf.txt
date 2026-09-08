@@ -1,0 +1,53 @@
+Loading WESAD...
+
+=================================================================
+  WESAD LOSO — RandomForest — WRIST features
+=================================================================
+  Features: 56 wrist
+
+=================================================================
+  RF WESAD — wrist (56 feat)
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.82      0.85      0.83     17577
+      stress       0.72      0.67      0.69      9966
+
+    accuracy                           0.78     27543
+   macro avg       0.77      0.76      0.76     27543
+weighted avg       0.78      0.78      0.78     27543
+
+Macro F1   : 0.763
+AUC        : 0.869
+F1@opt     : 0.782  (t=0.133)
+Bal. Acc   : 0.759
+MCC        : 0.526
+F1 std     : 0.196  (mean per fold: 0.734)
+Confusion  : TN=14963 FP=2614 FN=3327 TP=6639
+
+=================================================================
+  WESAD LOSO — RandomForest — ALL features
+=================================================================
+  Features: 137 total
+
+=================================================================
+  RF WESAD — all (137 feat)
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.89      0.90      0.90     17577
+      stress       0.83      0.80      0.81      9966
+
+    accuracy                           0.87     27543
+   macro avg       0.86      0.85      0.85     27543
+weighted avg       0.87      0.87      0.87     27543
+
+Macro F1   : 0.855
+AUC        : 0.941
+F1@opt     : 0.853  (t=0.268)
+Bal. Acc   : 0.853
+MCC        : 0.710
+F1 std     : 0.157  (mean per fold: 0.835)
+Confusion  : TN=15889 FP=1688 FN=1980 TP=7986
+
+Resultados guardados em: /home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/../results/wesad_rf.json

@@ -1,0 +1,26 @@
+services:
+  stress-models:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: stress-models:latest
+    volumes:
+      - type: bind
+        source: .
+        target: /workspace
+      - type: bind
+        source: ${WESAD_SEQ_HOST_DIR:?define WESAD_SEQ_HOST_DIR com a pasta local que contém processed_data_sequences.pkl}
+        target: /data/wesad_seq
+        read_only: true
+    working_dir: /workspace
+    environment:
+      - WESAD_SEQ_PATH=/data/wesad_seq/processed_data_sequences.pkl
+      - PYTHON=python3
+    command: bash run_all.sh
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]

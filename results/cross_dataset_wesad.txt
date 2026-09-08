@@ -1,0 +1,106 @@
+Using 40 common features
+
+Training ExtraTrees on WESAD (baseline-relative)...
+Done.
+
+Evaluation set: 712 windows (baseline=299, stress=413)
+
+=======================================================
+  CROSS-DATASET: WESAD (BL-norm) → Anxolotl
+  (unsupervised protocol-based calibration)
+=======================================================
+
+--- Default threshold (0.50) ---
+
+=======================================================
+  ExtraTrees BL-norm | default  (threshold=0.500)
+=======================================================
+              precision    recall  f1-score   support
+
+    baseline       0.61      0.98      0.75       299
+      stress       0.97      0.55      0.70       413
+
+    accuracy                           0.73       712
+   macro avg       0.79      0.77      0.73       712
+weighted avg       0.82      0.73      0.73       712
+
+Macro F1 : 0.729
+ROC-AUC  : 0.874
+Bal. Acc : 0.766
+MCC      : 0.559
+
+--- Youden optimal threshold (upper bound) ---
+
+=======================================================
+  ExtraTrees BL-norm | optimal  (threshold=0.400)
+=======================================================
+              precision    recall  f1-score   support
+
+    baseline       0.69      0.93      0.79       299
+      stress       0.93      0.70      0.80       413
+
+    accuracy                           0.80       712
+   macro avg       0.81      0.82      0.80       712
+weighted avg       0.83      0.80      0.80       712
+
+Macro F1 : 0.798
+ROC-AUC  : 0.874
+Bal. Acc : 0.816
+MCC      : 0.627
+
+
+=======================================================
+  BASELINE: WESAD (standard scaler) → Anxolotl
+=======================================================
+
+--- Default threshold (0.50) ---
+
+=======================================================
+  ExtraTrees std-scaler | default  (threshold=0.500)
+=======================================================
+              precision    recall  f1-score   support
+
+    baseline       0.42      1.00      0.59       299
+      stress       0.00      0.00      0.00       413
+
+    accuracy                           0.42       712
+   macro avg       0.21      0.50      0.30       712
+weighted avg       0.18      0.42      0.25       712
+
+Macro F1 : 0.296
+ROC-AUC  : 0.529
+Bal. Acc : 0.500
+MCC      : 0.000
+
+--- Youden optimal threshold (upper bound) ---
+
+=======================================================
+  ExtraTrees std-scaler | optimal  (threshold=0.236)
+=======================================================
+              precision    recall  f1-score   support
+
+    baseline       0.45      0.57      0.50       299
+      stress       0.62      0.50      0.55       413
+
+    accuracy                           0.53       712
+   macro avg       0.54      0.54      0.53       712
+weighted avg       0.55      0.53      0.53       712
+
+Macro F1 : 0.530
+ROC-AUC  : 0.529
+Bal. Acc : 0.536
+MCC      : 0.071
+
+
+=================================================================
+  SUMMARY
+=================================================================
+Método                                 AUC   F1@0.5   F1@opt   MCC@0.5
+-----------------------------------------------------------------
+ExtraTrees BL-norm (A)               0.874    0.729    0.798     0.559
+ExtraTrees std-scaler                0.529    0.296    0.530     0.000
+
+  LOSO ceiling (Anxolotl):    AUC=0.725  F1=0.678
+  Previous best cross-dataset: AUC=0.590  F1=0.582 (DANN target norm)
+
+Resultados guardados em: /home/matildxi/Secretária/Documentos/Tese/anxolotl/2_cross_dataset/../results/cross_dataset_wesad.json

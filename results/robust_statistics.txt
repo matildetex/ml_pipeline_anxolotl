@@ -1,0 +1,42 @@
+==============================================================
+  ROBUST STATISTICS — Anxolotl LOSO-CV (ET-1000 + BL-norm)
+==============================================================
+
+── 1. Main result: production config (gesture-confirmed) ──
+  n subjects          : 37
+  Mean F1             : 0.9753
+  SD                  : 0.0334
+  SEM                 : 0.0055
+  Median F1           : 1.0000
+  IQR [Q1 – Q3]       : [0.9565 – 1.0000]
+  Min / Max           : 0.8800 / 1.0000
+  CV (SD/Mean)        : 0.034  (3.4%)
+  95% Bootstrap CI    : [0.9645 – 0.9853]  (n_boot=10000)
+  Shapiro-Wilk        : W=0.7491  p=0.0000  (non-normal at α=0.05)
+
+── 2. Seed robustness (10 seeds) ──────────────────────────
+  Seeds tested        : [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(8), np.int64(42)]
+  Mean F1             : 0.9735
+  SD                  : 0.0034
+  Range               : [0.9693 – 0.9787]
+  95% Bootstrap CI    : [0.9715 – 0.9755]
+
+── 3. Production vs temporal-imputed ──────────────────────
+  n common subjects   : 37
+
+  Production  — mean  : 0.9753  95% CI [0.9645 – 0.9853]
+  Imputed     — mean  : 0.9658  95% CI [0.9472 – 0.9803]
+
+  Mean diff (imp−prod): -0.0095
+  95% Boot CI (diff)  : [-0.0240 – +0.0025]
+  Improved/same/worse : 7/21/9  (out of 37)
+
+  Cohen's d (paired)  : 0.2268  (small)
+  Rank-biserial r     : -0.2794  (small)
+  Wilcoxon W          : 48.50  p=0.3131  (NOT significant at α=0.05)
+
+  Conclusion: the 95% bootstrap CI for the difference straddles zero
+  [-0.0240 – +0.0025], Cohen's d≈0.227 (negligible effect).
+  Main result is robust to marker-labelling strategy.
+
+==============================================================

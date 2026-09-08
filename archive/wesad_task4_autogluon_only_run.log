@@ -1,0 +1,17 @@
+Warning: Exception encountered during DyStack sub-fit:
+	No models were trained successfully during fit(). Inspect the log output or increase verbosity to determine why no models were fit. Alternatively, set `raise_on_no_models_fitted` to False during the fit call.
+REDUCED: (25807, 55), subjects=15
+Traceback (most recent call last):
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/1_wesad/classical/wesad_task4_autogluon_only.py", line 38, in <module>
+    path=fold_path).fit(
+                    ^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/common/utils/decorators.py", line 34, in _call
+    return f(*gargs, **gkwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/tabular/predictor/predictor.py", line 1412, in fit
+    self._fit(ag_fit_kwargs=ag_fit_kwargs, ag_post_fit_kwargs=ag_post_fit_kwargs)
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/tabular/predictor/predictor.py", line 1418, in _fit
+    self._learner.fit(**ag_fit_kwargs)
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/tabular/learner/abstract_learner.py", line 157, in fit
+    raise AssertionError("Learner is already fit.")
+AssertionError: Learner is already fit.

@@ -1,0 +1,28 @@
+============================================================
+1. SEED-ROBUSTNESS SWEEP — final config across 10 seeds
+============================================================
+  seed=0    F1=0.9518
+  seed=1    F1=0.9551
+  seed=2    F1=0.9511
+  seed=3    F1=0.9497
+  seed=4    F1=0.9509
+  seed=5    F1=0.9484
+  seed=6    F1=0.9494
+  seed=7    F1=0.9529
+  seed=8    F1=0.9505
+  seed=42   F1=0.9541
+
+Across 10 seeds: mean=0.9514  std=0.0020  min=0.9484  max=0.9551
+
+============================================================
+2. PAIRED WILCOXON SIGNED-RANK TEST — baseline vs. final
+============================================================
+Baseline (watch-only, ET-1000):       mean F1=0.9279
+Final (watch+ecg+demo+cal, tuned):    mean F1=0.9541
+Mean per-subject improvement:         +0.0262
+Subjects improved / same / worse:     18 / 15 / 4 (of 37)
+
+Wilcoxon signed-rank: statistic=38.00, p-value=0.004049
+=> SIGNIFICANT at alpha=0.05
+
+DONE

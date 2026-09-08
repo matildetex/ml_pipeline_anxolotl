@@ -1,0 +1,171 @@
+==============================================================================
+WESAD SHAP RE-VERIFICATION -- Section 3.1.6 figures/rankings vs current schema
+==============================================================================
+------------------------------------------------------------------------------
+1. MTIMES OF EVERY WESAD_all_*/WESAD_wrist_* SHAP FIGURE
+------------------------------------------------------------------------------
+Cutoff: processed_data/wesad/processed_data.pkl regen, 2026-07-17 16:31:57
+
+  WESAD_wrist_Ensemble_bar.png                     2026-06-14 12:59:36  STALE
+  WESAD_wrist_Ensemble_groups.png                  2026-06-14 12:59:36  STALE
+  WESAD_wrist_Ensemble_beeswarm.png                2026-06-14 12:59:36  STALE
+  WESAD_all_Ensemble_bar.png                       2026-06-14 13:05:27  STALE
+  WESAD_all_Ensemble_groups.png                    2026-06-14 13:05:28  STALE
+  WESAD_all_Ensemble_beeswarm.png                  2026-06-14 13:05:28  STALE
+  WESAD_wrist_RF_bar.png                           2026-07-16 20:48:52  STALE
+  WESAD_wrist_RF_groups.png                        2026-07-16 20:48:52  STALE
+  WESAD_wrist_RF_beeswarm.png                      2026-07-16 20:48:53  STALE
+  WESAD_wrist_ET_bar.png                           2026-07-16 20:50:38  STALE
+  WESAD_wrist_ET_groups.png                        2026-07-16 20:50:38  STALE
+  WESAD_wrist_ET_beeswarm.png                      2026-07-16 20:50:39  STALE
+  WESAD_wrist_LogReg_bar.png                       2026-07-16 20:50:39  STALE
+  WESAD_wrist_LogReg_groups.png                    2026-07-16 20:50:40  STALE
+  WESAD_wrist_LogReg_beeswarm.png                  2026-07-16 20:50:40  STALE
+  WESAD_wrist_SVM_bar.png                          2026-07-16 20:52:13  STALE
+  WESAD_wrist_SVM_groups.png                       2026-07-16 20:52:13  STALE
+  WESAD_wrist_XGBoost_bar.png                      2026-07-16 20:52:14  STALE
+  WESAD_wrist_XGBoost_groups.png                   2026-07-16 20:52:14  STALE
+  WESAD_wrist_XGBoost_beeswarm.png                 2026-07-16 20:52:15  STALE
+  WESAD_wrist_LightGBM_bar.png                     2026-07-16 20:52:16  STALE
+  WESAD_wrist_LightGBM_groups.png                  2026-07-16 20:52:16  STALE
+  WESAD_wrist_LightGBM_beeswarm.png                2026-07-16 20:52:17  STALE
+  WESAD_wrist_Ensemble_XGB_RF_LGBM_bar.png         2026-07-16 20:52:22  STALE
+  WESAD_wrist_Ensemble_XGB_RF_LGBM_groups.png      2026-07-16 20:52:22  STALE
+  WESAD_wrist_Ensemble_XGB_RF_LGBM_beeswarm.png    2026-07-16 20:52:23  STALE
+  WESAD_wrist_Ensemble_RF_ET_bar.png               2026-07-16 20:55:48  STALE
+  WESAD_wrist_Ensemble_RF_ET_groups.png            2026-07-16 20:55:48  STALE
+  WESAD_wrist_Ensemble_RF_ET_beeswarm.png          2026-07-16 20:55:48  STALE
+  WESAD_wrist_Ensemble_ET_RF_HGB_bar.png           2026-07-16 20:58:05  STALE
+  WESAD_wrist_Ensemble_ET_RF_HGB_groups.png        2026-07-16 20:58:05  STALE
+  WESAD_wrist_Ensemble_ET_RF_HGB_beeswarm.png      2026-07-16 20:58:06  STALE
+  WESAD_all_RF_bar.png                             2026-07-16 21:15:37  STALE
+  WESAD_all_RF_groups.png                          2026-07-16 21:15:37  STALE
+  WESAD_all_RF_beeswarm.png                        2026-07-16 21:15:38  STALE
+  WESAD_all_ET_bar.png                             2026-07-16 21:16:30  STALE
+  WESAD_all_ET_groups.png                          2026-07-16 21:16:30  STALE
+  WESAD_all_ET_beeswarm.png                        2026-07-16 21:16:32  STALE
+  WESAD_all_LogReg_bar.png                         2026-07-16 21:16:33  STALE
+  WESAD_all_LogReg_groups.png                      2026-07-16 21:16:33  STALE
+  WESAD_all_LogReg_beeswarm.png                    2026-07-16 21:16:34  STALE
+  WESAD_all_SVM_bar.png                            2026-07-16 21:19:03  STALE
+  WESAD_all_SVM_groups.png                         2026-07-16 21:19:03  STALE
+  WESAD_all_XGBoost_bar.png                        2026-07-16 21:19:03  STALE
+  WESAD_all_XGBoost_groups.png                     2026-07-16 21:19:03  STALE
+  WESAD_all_XGBoost_beeswarm.png                   2026-07-16 21:19:04  STALE
+  WESAD_all_LightGBM_bar.png                       2026-07-16 21:19:04  STALE
+  WESAD_all_LightGBM_groups.png                    2026-07-16 21:19:05  STALE
+  WESAD_all_LightGBM_beeswarm.png                  2026-07-16 21:19:05  STALE
+  WESAD_all_Ensemble_XGB_RF_LGBM_bar.png           2026-07-16 21:19:08  STALE
+  WESAD_all_Ensemble_XGB_RF_LGBM_groups.png        2026-07-16 21:19:08  STALE
+  WESAD_all_Ensemble_XGB_RF_LGBM_beeswarm.png      2026-07-16 21:19:09  STALE
+  WESAD_all_Ensemble_RF_ET_bar.png                 2026-07-16 21:20:42  STALE
+  WESAD_all_Ensemble_RF_ET_groups.png              2026-07-16 21:20:42  STALE
+  WESAD_all_Ensemble_RF_ET_beeswarm.png            2026-07-16 21:20:43  STALE
+  WESAD_all_Ensemble_ET_RF_HGB_bar.png             2026-07-16 21:22:05  STALE
+  WESAD_all_Ensemble_ET_RF_HGB_groups.png          2026-07-16 21:22:05  STALE
+  WESAD_all_Ensemble_ET_RF_HGB_beeswarm.png        2026-07-16 21:22:06  STALE
+  WESAD_wrist_AutoGluon_bar.png                    2026-07-16 21:23:46  STALE
+  WESAD_wrist_AutoGluon_groups.png                 2026-07-16 21:23:47  STALE
+  WESAD_all_AutoGluon_bar.png                      2026-07-16 21:23:51  STALE
+  WESAD_all_AutoGluon_groups.png                   2026-07-16 21:23:51  STALE
+
+  TOTAL: 62 figures, 62 STALE (predate 2026-07-17 16:31:57), 0 current.
+
+------------------------------------------------------------------------------
+2. REGENERATING ET FIGURES (bar/beeswarm/groups) FOR WESAD_all AND WESAD_wrist
+------------------------------------------------------------------------------
+Saved to NEW location figures/shap/reverified_2026-07-25/ -- does not overwrite the existing stale figures at figures/shap/WESAD_*_ET_*.png.
+
+--- WESAD_wrist (77 features) ---
+  Signal-group importance ranking (sum mean|SHAP|):
+    1. TEMP   0.2320
+    2. EDA    0.2228
+    3. ACC    0.0658
+    4. SDNN   0.0319
+    5. RMSSD  0.0211
+    6. HR     0.0191
+    7. IBI    0.0134
+
+  Top 20 features (mean|SHAP|):
+     1. eda_wrist_mean         0.037307
+     2. eda_wrist_p75          0.037078
+     3. eda_wrist_max          0.036983
+     4. temp_wrist_max         0.035521
+     5. temp_wrist_mean        0.034927
+     6. eda_wrist_min          0.034397
+     7. eda_wrist_p25          0.034043
+     8. temp_wrist_min         0.033191
+     9. temp_wrist_p75         0.032483
+    10. temp_wrist_p25         0.031166
+    11. temp_wrist_slope       0.030034
+    12. temp_wrist_delta_mean  0.028128
+    13. eda_wrist_std          0.021604
+    14. acc_wrist_max          0.012737
+    15. acc_wrist_p75          0.012635
+    16. acc_wrist_mean         0.012529
+    17. acc_wrist_p25          0.011727
+    18. eda_wrist_slope        0.010281
+    19. sdnn_p75               0.009532
+    20. eda_wrist_delta_mean   0.009451
+
+--- WESAD_all (130 features) ---
+  Signal-group importance ranking (sum mean|SHAP|):
+    1. TEMP   0.2364
+    2. EDA    0.2137
+    3. ACC    0.0966
+    4. DEMO   0.0302
+    5. SDNN   0.0131
+    6. EMG    0.0093
+    7. RMSSD  0.0086
+    8. HR     0.0032
+    9. IBI    0.0024
+
+  Top 20 features (mean|SHAP|):
+     1. temp_wrist_max         0.028554
+     2. temp_wrist_p75         0.028422
+     3. temp_wrist_min         0.027337
+     4. eda_wrist_p75          0.026742
+     5. temp_wrist_p25         0.025982
+     6. eda_wrist_max          0.025105
+     7. temp_wrist_mean        0.025089
+     8. eda_wrist_mean         0.022961
+     9. eda_wrist_p25          0.022842
+    10. acc_chest_p75          0.022659
+    11. eda_wrist_min          0.021258
+    12. acc_chest_p25          0.019120
+    13. acc_chest_mean         0.019098
+    14. temp_wrist_slope       0.017123
+    15. eda_chest_std          0.016373
+    16. temp_chest_max         0.015808
+    17. temp_chest_p75         0.015601
+    18. temp_wrist_delta_mean  0.014574
+    19. temp_chest_p25         0.014150
+    20. eda_wrist_std          0.013788
+
+------------------------------------------------------------------------------
+3. GROUP-RANKING COMPARISON: thesis claim vs current-schema regeneration
+------------------------------------------------------------------------------
+
+Thesis claim (per user): WESAD-full -> RESP/IBI/EDA at the top, HRV at the bottom.
+Current schema WESAD_all/ET ranking: TEMP > EDA > ACC > DEMO > SDNN > EMG > RMSSD > HR > IBI
+  RESP present in current feature set at all? False
+  RESP does not exist in the current 130-column WESAD schema (no resp_freq/resp_iri columns -- those were part of the OLD 137-feature schema, dropped in the 2026-07-17 regen; see RECONCILIATION.md F3/D-section for the schema history). The "RESP top" claim CANNOT be reproduced on the current pipeline -- not "fell in rank", genuinely absent.
+  IBI rank in current WESAD_all/ET: 9/9 (near the bottom)
+  => WESAD-full claim does NOT hold on the current schema: dominant groups are TEMP/EDA/ACC, and IBI/HR/RMSSD/SDNN (HRV) sit at the bottom, consistent with the "HRV at the bottom" half of the claim -- but RESP is entirely absent and IBI is at the bottom, not the top.
+
+Thesis claim (per user): WESAD-wrist -> EDA/ACC/TEMP dominant, HRV at the bottom.
+Current schema WESAD_wrist/ET ranking: TEMP > EDA > ACC > SDNN > RMSSD > HR > IBI
+  Top-3 groups match {EDA,ACC,TEMP} as a set? True  (top-3 found: ['TEMP', 'EDA', 'ACC'])
+  HRV groups (HR/IBI/RMSSD/SDNN) occupy ranks: [4, 5, 6, 7] (bottom 4 of 7)
+  => WESAD-wrist claim HOLDS on the current schema: same 3 groups dominate (order may differ), HRV groups cluster at the bottom, matching the thesis's description reasonably well -- unlike the full-set claim.
+
+Cross-check against RECONCILIATION.md section F2 (2026-07-24, same methodology, computed in-memory, no figures/results file saved at the time):
+  RECONCILIATION.md WESAD wrist/ET : TEMP > EDA > ACC > SDNN > RMSSD > HR > IBI
+  This script's WESAD wrist/ET    : TEMP > EDA > ACC > SDNN > RMSSD > HR > IBI
+  RECONCILIATION.md WESAD full/ET  : TEMP > EDA > ACC > DEMO > SDNN > EMG > RMSSD > HR > IBI
+  This script's WESAD full/ET     : TEMP > EDA > ACC > DEMO > SDNN > EMG > RMSSD > HR > IBI
+  Exact order match -- wrist: True, full: True (independent re-derivation, same seed/hyperparameters, cross-validates both).
+
+==============================================================================
+END
+==============================================================================

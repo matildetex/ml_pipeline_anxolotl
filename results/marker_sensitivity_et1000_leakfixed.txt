@@ -1,0 +1,35 @@
+====================================================================================================
+MARKER-CONFIRMATION SENSITIVITY -- canonical ET-1000 configuration (60s/30s, phase3 excluded)
+====================================================================================================
+Model         : ExtraTrees(n_estimators=1000, max_features=0.5, class_weight=balanced, random_state=42)
+Normalisation : baseline_relative_scale -- LEAK-FIXED 2026-07-19 (demographics_analysis.py)
+CV            : LOSO, 37 subjects. Phase 3 excluded. Windows: 686 (of 699 before exclusion).
+Features      : 55 (5 wrist channels x 11 stats).
+
+What "markers" are and what changed in this split: see script docstring
+(3_anxolotl/marker_sensitivity_et1000_leakfixed.py). In short: n_markers = number of the
+protocol's 8 wrist-raise gestures gesture-detected for that subject (source: raw accelerometer,
+reused unchanged from results/canonical_numbers_for_thesis.txt sec.3 / the old ablation file --
+unaffected by the BL-norm leak fix). Old split (n_markers==8 vs <8) gave a 1-subject group; this
+split uses n_markers>=6 (more than half the markers confirmed) vs n_markers<=5.
+
+n_markers distribution (37 subjects):
+  n_markers=4: 2 subjects  ['p32', 'p34']
+  n_markers=5: 11 subjects  ['p15', 'p19', 'p20', 'p21', 'p25', 'p28', 'p37', 'p39', 'p44', 'p8', 'p9']
+  n_markers=6: 20 subjects  ['p10', 'p11', 'p13', 'p14', 'p16', 'p17', 'p18', 'p23', 'p26', 'p27', 'p29', 'p30', 'p33', 'p35', 'p38', 'p40', 'p41', 'p42', 'p43', 'p7']
+  n_markers=7: 3 subjects  ['p12', 'p31', 'p36']
+  n_markers=8: 1 subjects  ['p22']
+
+Group HI (n_markers>=6, majority confirmed): 24 subjects  ['p10', 'p11', 'p12', 'p13', 'p14', 'p16', 'p17', 'p18', 'p22', 'p23', 'p26', 'p27', 'p29', 'p30', 'p31', 'p33', 'p35', 'p36', 'p38', 'p40', 'p41', 'p42', 'p43', 'p7']
+Group LO (n_markers<=5, majority inferred) : 13 subjects  ['p15', 'p19', 'p20', 'p21', 'p25', 'p28', 'p32', 'p34', 'p37', 'p39', 'p44', 'p8', 'p9']
+
+Group                                          N_subj  N_testwin   MacroF1       SD    AUROC
+----------------------------------------------------------------------------------------------------
+HI (n_markers>=6)                                  24        508    0.8965   0.0961   0.9585
+LO (n_markers<=5)                                  13        178    0.9544   0.0546   0.9905
+
+All 37 subjects (pooled, for reference; should match ET-1000 canonical 0.9169):
+  MacroF1=0.9169  SD=0.0883  AUROC=0.9646
+
+Replaces      : results/nbl_stride_marker_ablations_lgbm_loso.txt Ablation 3 (LGBM-300,
+                phase3 included, pre-leak-fix, confirmed-group n=1) -- kept on disk, not overwritten.

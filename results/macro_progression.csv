@@ -1,0 +1,6 @@
+stage,binary_f1,macro_f1,balanced_accuracy
+Watch only,0.9054,0.9108,0.9156
++ Demographics,0.9058,0.9110,0.9168
++ HP tuning,0.9208,0.9212,0.9260
++ Calibration,0.9125,0.9121,0.9204
++ ECG + adaptive (final),0.9543,0.9395,0.9559

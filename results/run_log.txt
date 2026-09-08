@@ -1,0 +1,858 @@
+
+════════════════════════════════════════════════════════════════
+  run_all.sh — seg 01 jun 2026 01:54:48 WEST
+  Python: Python 3.11.15
+════════════════════════════════════════════════════════════════
+
+════════════════════════════════════════════════════════════════
+  FASE 1 — WESAD LOSO  (27 543 janelas, 15 sujeitos, lab stress)
+════════════════════════════════════════════════════════════════
+
+  ── wesad_logreg ──
+
+════════════════════════════════════════════════════════════════
+  run_all.sh — seg 01 jun 2026 02:02:14 WEST
+  Python: Python 3.11.15
+════════════════════════════════════════════════════════════════
+
+════════════════════════════════════════════════════════════════
+  FASE 1 — WESAD LOSO  (27 543 janelas, 15 sujeitos, lab stress)
+════════════════════════════════════════════════════════════════
+
+  ── wesad_logreg ──
+  OK  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_logreg.txt
+Macro F1   : 0.596
+AUC        : 0.747
+F1@opt     : 0.672  (t=0.329)
+Bal. Acc   : 0.596
+Macro F1   : 0.816
+AUC        : 0.912
+F1@opt     : 0.814  (t=0.433)
+Bal. Acc   : 0.816
+
+  ── wesad_svm ──
+  OK  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_svm.txt
+Macro F1   : 0.701
+AUC        : 0.771
+F1@opt     : 0.690  (t=0.377)
+Bal. Acc   : 0.704
+Macro F1   : 0.764
+AUC        : 0.874
+F1@opt     : 0.762  (t=0.318)
+Bal. Acc   : 0.784
+
+  ── wesad_ensemble ──
+  OK  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_ensemble.txt
+Macro F1   : 0.788
+AUC        : 0.876
+F1@opt     : 0.794  (t=0.195)
+Bal. Acc   : 0.790
+Macro F1   : 0.912
+AUC        : 0.974
+F1@opt     : 0.914  (t=0.514)
+Bal. Acc   : 0.918
+
+  ── wesad_rf ──
+
+════════════════════════════════════════════════════════════════
+  run_all.sh — seg 01 jun 2026 11:27:10 WEST
+  Python: Python 3.11.15
+════════════════════════════════════════════════════════════════
+
+════════════════════════════════════════════════════════════════
+  FASE 1 — WESAD LOSO  (27 543 janelas, 15 sujeitos, lab stress)
+════════════════════════════════════════════════════════════════
+
+  ── wesad_logreg ──
+  OK  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_logreg.txt
+Macro F1   : 0.596
+AUC        : 0.747
+F1@opt     : 0.672  (t=0.329)
+Bal. Acc   : 0.596
+Macro F1   : 0.816
+AUC        : 0.912
+F1@opt     : 0.814  (t=0.433)
+Bal. Acc   : 0.816
+
+  ── wesad_svm ──
+  OK  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_svm.txt
+Macro F1   : 0.701
+AUC        : 0.771
+F1@opt     : 0.690  (t=0.376)
+Bal. Acc   : 0.704
+Macro F1   : 0.769
+AUC        : 0.880
+F1@opt     : 0.797  (t=0.862)
+Bal. Acc   : 0.786
+
+  ── wesad_ensemble ──
+  OK  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_ensemble.txt
+Macro F1   : 0.788
+AUC        : 0.876
+F1@opt     : 0.794  (t=0.195)
+Bal. Acc   : 0.790
+Macro F1   : 0.912
+AUC        : 0.974
+F1@opt     : 0.914  (t=0.514)
+Bal. Acc   : 0.918
+
+  ── wesad_rf ──
+
+════════════════════════════════════════════════════════════════
+  run_all.sh — seg 01 jun 2026 13:27:38 WEST
+  Python: Python 3.11.15
+════════════════════════════════════════════════════════════════
+
+════════════════════════════════════════════════════════════════
+  FASE 1 — WESAD LOSO  (27 543 janelas, 15 sujeitos, lab stress)
+════════════════════════════════════════════════════════════════
+
+  ── wesad_logreg ──
+  OK  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_logreg.txt
+Macro F1   : 0.596
+AUC        : 0.747
+F1@opt     : 0.672  (t=0.329)
+Bal. Acc   : 0.596
+Macro F1   : 0.816
+AUC        : 0.912
+F1@opt     : 0.814  (t=0.433)
+Bal. Acc   : 0.816
+
+  ── wesad_svm ──
+  OK  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_svm.txt
+Macro F1   : 0.702
+AUC        : 0.771
+F1@opt     : 0.690  (t=0.377)
+Bal. Acc   : 0.705
+Macro F1   : 0.764
+AUC        : 0.878
+F1@opt     : 0.762  (t=0.322)
+Bal. Acc   : 0.784
+
+  ── wesad_rf ──
+
+════════════════════════════════════════════════════════════════
+  run_all.sh — seg 01 jun 2026 14:43:15 WEST
+  Python: Python 3.11.15
+  CPUs: 20  |  Device CPU: env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=20 MKL_NUM_THREADS=20 OPENBLAS_NUM_THREADS=20
+  Device GPU: env CUDA_VISIBLE_DEVICES=0
+════════════════════════════════════════════════════════════════
+
+════════════════════════════════════════════════════════════════
+  FASE 1 — WESAD LOSO  (27 543 janelas, 15 sujeitos, lab stress)
+════════════════════════════════════════════════════════════════
+
+  ── wesad_logreg ──
+
+════════════════════════════════════════════════════════════════
+  run_all.sh — seg 01 jun 2026 14:50:19 WEST
+  Python: Python 3.11.15
+  CPUs: 20  |  Device CPU: env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=20 MKL_NUM_THREADS=20 OPENBLAS_NUM_THREADS=20
+  Device GPU: env CUDA_VISIBLE_DEVICES=0
+════════════════════════════════════════════════════════════════
+
+════════════════════════════════════════════════════════════════
+  FASE 1 — WESAD LOSO  (27 543 janelas, 15 sujeitos, lab stress)
+════════════════════════════════════════════════════════════════
+
+  ── wesad_logreg ──
+LogReg WESAD:   0%|                                                 | 0/15 folds [00:00<?]LogReg WESAD:   7%|███                                          | 1/15 folds [00:03<00:43]LogReg WESAD:  13%|██████                                       | 2/15 folds [00:05<00:37]LogReg WESAD:  20%|█████████                                    | 3/15 folds [00:13<00:58]LogReg WESAD:  27%|████████████                                 | 4/15 folds [00:17<00:49]LogReg WESAD:  33%|███████████████                              | 5/15 folds [00:22<00:47]LogReg WESAD:  40%|██████████████████                           | 6/15 folds [00:27<00:44]LogReg WESAD:  47%|█████████████████████                        | 7/15 folds [00:29<00:33]LogReg WESAD:  53%|████████████████████████                     | 8/15 folds [00:32<00:24]LogReg WESAD:  60%|███████████████████████████                  | 9/15 folds [00:34<00:17]LogReg WESAD:  67%|█████████████████████████████▎              | 10/15 folds [00:35<00:12]LogReg WESAD:  73%|████████████████████████████████▎           | 11/15 folds [00:41<00:13]LogReg WESAD:  80%|███████████████████████████████████▏        | 12/15 folds [00:46<00:12]LogReg WESAD:  87%|██████████████████████████████████████▏     | 13/15 folds [01:01<00:14]LogReg WESAD:  93%|█████████████████████████████████████████   | 14/15 folds [01:03<00:05]LogReg WESAD: 100%|████████████████████████████████████████████| 15/15 folds [01:07<00:00]LogReg WESAD: 100%|████████████████████████████████████████████| 15/15 folds [01:07<00:00]
+LogReg WESAD:   0%|                                                 | 0/15 folds [00:00<?]LogReg WESAD:   7%|███                                          | 1/15 folds [00:45<10:37]LogReg WESAD:  13%|██████                                       | 2/15 folds [01:19<08:23]LogReg WESAD:  20%|█████████                                    | 3/15 folds [01:36<05:46]LogReg WESAD:  27%|████████████                                 | 4/15 folds [01:57<04:40]LogReg WESAD:  33%|███████████████                              | 5/15 folds [02:32<04:51]LogReg WESAD:  40%|██████████████████                           | 6/15 folds [02:43<03:25]LogReg WESAD:  47%|█████████████████████                        | 7/15 folds [02:54<02:32]LogReg WESAD:  53%|████████████████████████                     | 8/15 folds [03:33<02:58]LogReg WESAD:  60%|███████████████████████████                  | 9/15 folds [05:02<04:31]LogReg WESAD:  67%|█████████████████████████████▎              | 10/15 folds [05:23<03:08]LogReg WESAD:  73%|████████████████████████████████▎           | 11/15 folds [05:39<02:04]LogReg WESAD:  80%|███████████████████████████████████▏        | 12/15 folds [05:45<01:10]LogReg WESAD:  87%|██████████████████████████████████████▏     | 13/15 folds [05:52<00:37]LogReg WESAD:  93%|█████████████████████████████████████████   | 14/15 folds [06:50<00:30]LogReg WESAD: 100%|████████████████████████████████████████████| 15/15 folds [07:08<00:00]LogReg WESAD: 100%|████████████████████████████████████████████| 15/15 folds [07:08<00:00]
+  OK  (500s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_logreg.txt
+F1@opt     : 0.672  (t=0.329)
+Bal. Acc   : 0.596
+Macro F1   : 0.816
+AUC        : 0.912
+F1@opt     : 0.814  (t=0.433)
+Bal. Acc   : 0.816
+
+  [█░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1/19  5%  | elapsed 0h08m | restante ~2h30m
+
+  ── wesad_svm ──
+SVM WESAD:   0%|                                                    | 0/15 folds [00:00<?]SVM WESAD:   7%|███▏                                            | 1/15 folds [01:08<16:02]SVM WESAD:  13%|██████▍                                         | 2/15 folds [02:33<16:56]SVM WESAD:  20%|█████████▌                                      | 3/15 folds [03:14<12:14]SVM WESAD:  27%|████████████▊                                   | 4/15 folds [03:55<09:44]SVM WESAD:  33%|████████████████                                | 5/15 folds [05:01<09:39]SVM WESAD:  40%|███████████████████▏                            | 6/15 folds [06:14<09:26]SVM WESAD:  47%|██████████████████████▍                         | 7/15 folds [07:21<08:33]SVM WESAD:  53%|█████████████████████████▌                      | 8/15 folds [08:26<07:31]SVM WESAD:  60%|████████████████████████████▊                   | 9/15 folds [09:30<06:26]SVM WESAD:  67%|███████████████████████████████▎               | 10/15 folds [10:23<05:03]SVM WESAD:  73%|██████████████████████████████████▍            | 11/15 folds [11:01<03:34]SVM WESAD:  80%|█████████████████████████████████████▌         | 12/15 folds [11:40<02:28]SVM WESAD:  87%|████████████████████████████████████████▋      | 13/15 folds [12:16<01:30]SVM WESAD:  93%|███████████████████████████████████████████▊   | 14/15 folds [12:49<00:41]SVM WESAD: 100%|███████████████████████████████████████████████| 15/15 folds [13:21<00:00]SVM WESAD: 100%|███████████████████████████████████████████████| 15/15 folds [13:21<00:00]
+SVM WESAD:   0%|                                                    | 0/15 folds [00:00<?]SVM WESAD:   7%|███▏                                            | 1/15 folds [00:57<13:28]SVM WESAD:  13%|██████▍                                         | 2/15 folds [02:16<15:09]SVM WESAD:  20%|█████████▌                                      | 3/15 folds [03:31<14:27]SVM WESAD:  27%|████████████▊                                   | 4/15 folds [05:06<14:55]SVM WESAD:  33%|████████████████                                | 5/15 folds [06:38<14:10]SVM WESAD:  40%|███████████████████▏                            | 6/15 folds [08:32<14:14]SVM WESAD:  47%|██████████████████████▍                         | 7/15 folds [10:18<13:09]SVM WESAD:  53%|█████████████████████████▌                      | 8/15 folds [12:11<12:03]SVM WESAD:  60%|████████████████████████████▊                   | 9/15 folds [14:06<10:41]SVM WESAD:  67%|███████████████████████████████▎               | 10/15 folds [16:34<09:57]SVM WESAD:  73%|██████████████████████████████████▍            | 11/15 folds [18:43<08:10]SVM WESAD:  80%|█████████████████████████████████████▌         | 12/15 folds [21:05<06:25]SVM WESAD:  87%|████████████████████████████████████████▋      | 13/15 folds [23:37<04:31]SVM WESAD:  93%|███████████████████████████████████████████▊   | 14/15 folds [25:47<02:13]SVM WESAD: 100%|███████████████████████████████████████████████| 15/15 folds [27:42<00:00]SVM WESAD: 100%|███████████████████████████████████████████████| 15/15 folds [27:42<00:00]
+  OK  (2468s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_svm.txt
+F1@opt     : 0.690  (t=0.376)
+Bal. Acc   : 0.704
+Macro F1   : 0.763
+AUC        : 0.883
+F1@opt     : 0.792  (t=0.856)
+Bal. Acc   : 0.781
+
+  [██░░░░░░░░░░░░░░░░░░░░░░░░░░] 2/19  10%  | elapsed 0h49m | restante ~7h00m
+
+  ── wesad_rf ──
+RF WESAD:   0%|                                                     | 0/15 folds [00:00<?]RF WESAD:   0%|                                                     | 0/15 folds [01:30<?]RF WESAD:   7%|███▎                                             | 1/15 folds [01:30<21:06]RF WESAD:   7%|███▎                                             | 1/15 folds [02:51<21:06]RF WESAD:  13%|██████▌                                          | 2/15 folds [02:51<18:24]RF WESAD:  13%|██████▌                                          | 2/15 folds [04:22<18:24]RF WESAD:  20%|█████████▊                                       | 3/15 folds [04:22<17:30]RF WESAD:  20%|█████████▊                                       | 3/15 folds [06:02<17:30]RF WESAD:  27%|█████████████                                    | 4/15 folds [06:02<16:59]RF WESAD:  27%|█████████████                                    | 4/15 folds [07:45<16:59]RF WESAD:  33%|████████████████▎                                | 5/15 folds [07:45<16:03]RF WESAD:  33%|████████████████▎                                | 5/15 folds [09:33<16:03]RF WESAD:  40%|███████████████████▌                             | 6/15 folds [09:33<15:03]RF WESAD:  40%|███████████████████▌                             | 6/15 folds [11:37<15:03]RF WESAD:  47%|██████████████████████▊                          | 7/15 folds [11:37<14:25]RF WESAD:  47%|██████████████████████▊                          | 7/15 folds [13:13<14:25]RF WESAD:  53%|██████████████████████████▏                      | 8/15 folds [13:13<12:09]RF WESAD:  53%|██████████████████████████▏                      | 8/15 folds [14:56<12:09]RF WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [14:56<10:22]RF WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [16:33<10:22]RF WESAD:  67%|████████████████████████████████                | 10/15 folds [16:33<08:28]RF WESAD:  67%|████████████████████████████████                | 10/15 folds [18:08<08:28]RF WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [18:08<06:38]RF WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [19:45<06:38]RF WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [19:45<04:56]RF WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [21:22<04:56]RF WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [21:22<03:16]RF WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [23:08<03:16]RF WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [23:08<01:40]RF WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [24:52<01:40]RF WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [24:52<00:00]RF WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [24:52<00:00]
+RF WESAD:   0%|                                                     | 0/15 folds [00:00<?]
+════════════════════════════════════════════════════════════════
+  run_all.sh — ter 02 jun 2026 18:28:03 WEST
+  Python: Python 3.11.15
+  CPUs: 20  |  Device CPU: env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=20 MKL_NUM_THREADS=20 OPENBLAS_NUM_THREADS=20
+  Device GPU: env CUDA_VISIBLE_DEVICES=0
+════════════════════════════════════════════════════════════════
+
+════════════════════════════════════════════════════════════════
+  FASE 1 — WESAD LOSO  (27 543 janelas, 15 sujeitos, lab stress)
+════════════════════════════════════════════════════════════════
+
+  ── wesad_logreg ──
+LogReg WESAD:   0%|                                                 | 0/15 folds [00:00<?]LogReg WESAD:   7%|███                                          | 1/15 folds [00:03<00:50]LogReg WESAD:  13%|██████                                       | 2/15 folds [00:05<00:34]LogReg WESAD:  20%|█████████                                    | 3/15 folds [00:10<00:42]LogReg WESAD:  27%|████████████                                 | 4/15 folds [00:13<00:37]LogReg WESAD:  33%|███████████████                              | 5/15 folds [00:18<00:38]LogReg WESAD:  40%|██████████████████                           | 6/15 folds [00:22<00:37]LogReg WESAD:  47%|█████████████████████                        | 7/15 folds [00:25<00:28]LogReg WESAD:  53%|████████████████████████                     | 8/15 folds [00:28<00:23]LogReg WESAD:  60%|███████████████████████████                  | 9/15 folds [00:30<00:18]LogReg WESAD:  67%|█████████████████████████████▎              | 10/15 folds [00:33<00:14]LogReg WESAD:  73%|████████████████████████████████▎           | 11/15 folds [00:41<00:17]LogReg WESAD:  80%|███████████████████████████████████▏        | 12/15 folds [00:46<00:14]LogReg WESAD:  87%|██████████████████████████████████████▏     | 13/15 folds [00:58<00:13]LogReg WESAD:  93%|█████████████████████████████████████████   | 14/15 folds [01:00<00:05]LogReg WESAD: 100%|████████████████████████████████████████████| 15/15 folds [01:02<00:00]LogReg WESAD: 100%|████████████████████████████████████████████| 15/15 folds [01:02<00:00]
+LogReg WESAD:   0%|                                                 | 0/15 folds [00:00<?]LogReg WESAD:   7%|███                                          | 1/15 folds [00:34<08:07]LogReg WESAD:  13%|██████                                       | 2/15 folds [01:23<09:18]LogReg WESAD:  20%|█████████                                    | 3/15 folds [01:40<06:12]LogReg WESAD:  27%|████████████                                 | 4/15 folds [01:59<04:51]LogReg WESAD:  33%|███████████████                              | 5/15 folds [02:33<04:50]LogReg WESAD:  40%|██████████████████                           | 6/15 folds [02:43<03:23]LogReg WESAD:  47%|█████████████████████                        | 7/15 folds [02:54<02:31]LogReg WESAD:  53%|████████████████████████                     | 8/15 folds [03:31<02:52]LogReg WESAD:  60%|███████████████████████████                  | 9/15 folds [03:59<02:33]LogReg WESAD:  67%|█████████████████████████████▎              | 10/15 folds [04:07<01:41]LogReg WESAD:  73%|████████████████████████████████▎           | 11/15 folds [04:24<01:16]LogReg WESAD:  80%|███████████████████████████████████▏        | 12/15 folds [04:32<00:47]LogReg WESAD:  87%|██████████████████████████████████████▏     | 13/15 folds [04:41<00:27]LogReg WESAD:  93%|█████████████████████████████████████████   | 14/15 folds [05:20<00:21]LogReg WESAD: 100%|████████████████████████████████████████████| 15/15 folds [05:32<00:00]LogReg WESAD: 100%|████████████████████████████████████████████| 15/15 folds [05:32<00:00]
+  OK  (404s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_logreg.txt
+F1@opt     : 0.672  (t=0.329)
+Bal. Acc   : 0.596
+Macro F1   : 0.816
+AUC        : 0.912
+F1@opt     : 0.814  (t=0.433)
+Bal. Acc   : 0.816
+
+  [█░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1/19  5%  | elapsed 0h06m | restante ~2h01m
+
+  ── wesad_svm ──
+SVM WESAD:   0%|                                                    | 0/15 folds [00:00<?]SVM WESAD:   7%|███▏                                            | 1/15 folds [01:17<18:00]SVM WESAD:  13%|██████▍                                         | 2/15 folds [02:29<16:08]SVM WESAD:  20%|█████████▌                                      | 3/15 folds [03:32<13:51]SVM WESAD:  27%|████████████▊                                   | 4/15 folds [04:22<11:17]SVM WESAD:  33%|████████████████                                | 5/15 folds [05:07<09:16]SVM WESAD:  40%|███████████████████▏                            | 6/15 folds [06:02<08:17]SVM WESAD:  47%|██████████████████████▍                         | 7/15 folds [07:06<07:44]SVM WESAD:  53%|█████████████████████████▌                      | 8/15 folds [08:28<07:39]SVM WESAD:  60%|████████████████████████████▊                   | 9/15 folds [09:28<06:24]SVM WESAD:  67%|███████████████████████████████▎               | 10/15 folds [10:28<05:14]SVM WESAD:  73%|██████████████████████████████████▍            | 11/15 folds [11:41<04:23]SVM WESAD:  80%|█████████████████████████████████████▌         | 12/15 folds [12:42<03:12]SVM WESAD:  87%|████████████████████████████████████████▋      | 13/15 folds [13:37<02:02]SVM WESAD:  93%|███████████████████████████████████████████▊   | 14/15 folds [14:23<00:56]SVM WESAD: 100%|███████████████████████████████████████████████| 15/15 folds [15:24<00:00]SVM WESAD: 100%|███████████████████████████████████████████████| 15/15 folds [15:24<00:00]
+SVM WESAD:   0%|                                                    | 0/15 folds [00:00<?]SVM WESAD:   7%|███▏                                            | 1/15 folds [01:09<16:17]SVM WESAD:  13%|██████▍                                         | 2/15 folds [02:27<16:07]SVM WESAD:  20%|█████████▌                                      | 3/15 folds [03:31<13:58]SVM WESAD:  27%|████████████▊                                   | 4/15 folds [04:29<11:56]SVM WESAD:  33%|████████████████                                | 5/15 folds [05:24<10:13]SVM WESAD:  40%|███████████████████▏                            | 6/15 folds [06:55<10:43]SVM WESAD:  47%|██████████████████████▍                         | 7/15 folds [08:24<10:17]SVM WESAD:  53%|█████████████████████████▌                      | 8/15 folds [09:17<08:06]SVM WESAD:  60%|████████████████████████████▊                   | 9/15 folds [10:17<06:38]SVM WESAD:  67%|███████████████████████████████▎               | 10/15 folds [11:33<05:47]SVM WESAD:  73%|██████████████████████████████████▍            | 11/15 folds [13:11<05:12]SVM WESAD:  80%|█████████████████████████████████████▌         | 12/15 folds [14:33<03:58]SVM WESAD:  87%|████████████████████████████████████████▋      | 13/15 folds [16:34<03:03]SVM WESAD:  93%|███████████████████████████████████████████▊   | 14/15 folds [18:23<01:37]SVM WESAD: 100%|███████████████████████████████████████████████| 15/15 folds [19:42<00:00]SVM WESAD: 100%|███████████████████████████████████████████████| 15/15 folds [19:42<00:00]
+  OK  (2111s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_svm.txt
+F1@opt     : 0.689  (t=0.374)
+Bal. Acc   : 0.703
+Macro F1   : 0.767
+AUC        : 0.880
+F1@opt     : 0.762  (t=0.331)
+Bal. Acc   : 0.784
+
+  [██░░░░░░░░░░░░░░░░░░░░░░░░░░] 2/19  10%  | elapsed 0h41m | restante ~5h56m
+
+  ── wesad_rf ──
+RF WESAD:   0%|                                                     | 0/15 folds [00:00<?]RF WESAD:   0%|                                                     | 0/15 folds [01:06<?]RF WESAD:   7%|███▎                                             | 1/15 folds [01:06<15:34]RF WESAD:   7%|███▎                                             | 1/15 folds [02:16<15:34]RF WESAD:  13%|██████▌                                          | 2/15 folds [02:16<14:51]RF WESAD:  13%|██████▌                                          | 2/15 folds [03:26<14:51]RF WESAD:  20%|█████████▊                                       | 3/15 folds [03:26<13:51]RF WESAD:  20%|█████████▊                                       | 3/15 folds [04:36<13:51]RF WESAD:  27%|█████████████                                    | 4/15 folds [04:36<12:44]RF WESAD:  27%|█████████████                                    | 4/15 folds [05:48<12:44]RF WESAD:  33%|████████████████▎                                | 5/15 folds [05:48<11:42]RF WESAD:  33%|████████████████▎                                | 5/15 folds [07:00<11:42]RF WESAD:  40%|███████████████████▌                             | 6/15 folds [07:00<10:38]RF WESAD:  40%|███████████████████▌                             | 6/15 folds [08:09<10:38]RF WESAD:  47%|██████████████████████▊                          | 7/15 folds [08:09<09:22]RF WESAD:  47%|██████████████████████▊                          | 7/15 folds [09:19<09:22]RF WESAD:  53%|██████████████████████████▏                      | 8/15 folds [09:19<08:11]RF WESAD:  53%|██████████████████████████▏                      | 8/15 folds [10:28<08:11]RF WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [10:28<06:59]RF WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [11:42<06:59]RF WESAD:  67%|████████████████████████████████                | 10/15 folds [11:42<05:54]RF WESAD:  67%|████████████████████████████████                | 10/15 folds [12:52<05:54]RF WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [12:52<04:43]RF WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [14:05<04:43]RF WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [14:05<03:34]RF WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [15:17<03:34]RF WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [15:17<02:23]RF WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [16:25<02:23]RF WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [16:25<01:10]RF WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [17:35<01:10]RF WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [17:35<00:00]RF WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [17:35<00:00]
+RF WESAD:   0%|                                                     | 0/15 folds [00:00<?]RF WESAD:   0%|                                                     | 0/15 folds [03:36<?]RF WESAD:   7%|███▎                                             | 1/15 folds [03:36<50:27]RF WESAD:   7%|███▎                                             | 1/15 folds [07:04<50:27]RF WESAD:  13%|██████▌                                          | 2/15 folds [07:04<45:53]RF WESAD:  13%|██████▌                                          | 2/15 folds [10:49<45:53]RF WESAD:  20%|█████████▊                                       | 3/15 folds [10:49<43:31]RF WESAD:  20%|█████████▊                                       | 3/15 folds [14:15<43:31]RF WESAD:  27%|█████████████                                    | 4/15 folds [14:15<39:03]RF WESAD:  27%|█████████████                                    | 4/15 folds [18:09<39:03]RF WESAD:  33%|████████████████▎                                | 5/15 folds [18:09<36:44]RF WESAD:  33%|████████████████▎                                | 5/15 folds [22:19<36:44]RF WESAD:  40%|███████████████████▌                             | 6/15 folds [22:19<34:35]RF WESAD:  40%|███████████████████▌                             | 6/15 folds [25:26<34:35]RF WESAD:  47%|██████████████████████▊                          | 7/15 folds [25:26<28:50]RF WESAD:  47%|██████████████████████▊                          | 7/15 folds [29:38<28:50]RF WESAD:  53%|██████████████████████████▏                      | 8/15 folds [29:38<26:34]RF WESAD:  53%|██████████████████████████▏                      | 8/15 folds [33:20<26:34]RF WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [33:20<22:36]RF WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [37:21<22:36]RF WESAD:  67%|████████████████████████████████                | 10/15 folds [37:21<19:12]RF WESAD:  67%|████████████████████████████████                | 10/15 folds [41:10<19:12]RF WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [41:10<15:19]RF WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [45:00<15:19]RF WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [45:00<11:30]RF WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [48:45<11:30]RF WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [48:45<07:36]RF WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [52:39<07:36]RF WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [52:39<03:50]RF WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [56:28<03:50]RF WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [56:28<00:00]RF WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [56:28<00:00]
+  OK  (4447s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_rf.txt
+F1@opt     : 0.782  (t=0.133)
+Bal. Acc   : 0.759
+Macro F1   : 0.855
+AUC        : 0.941
+F1@opt     : 0.853  (t=0.268)
+Bal. Acc   : 0.853
+
+  [████░░░░░░░░░░░░░░░░░░░░░░░░] 3/19  15%  | elapsed 1h56m | restante ~10h18m
+
+  ── wesad_et ──
+ET WESAD:   0%|                                                     | 0/15 folds [00:00<?]ET WESAD:   0%|                                                     | 0/15 folds [00:10<?]ET WESAD:   7%|███▎                                             | 1/15 folds [00:10<02:23]ET WESAD:   7%|███▎                                             | 1/15 folds [00:20<02:23]ET WESAD:  13%|██████▌                                          | 2/15 folds [00:20<02:16]ET WESAD:  13%|██████▌                                          | 2/15 folds [00:31<02:16]ET WESAD:  20%|█████████▊                                       | 3/15 folds [00:31<02:05]ET WESAD:  20%|█████████▊                                       | 3/15 folds [00:41<02:05]ET WESAD:  27%|█████████████                                    | 4/15 folds [00:41<01:54]ET WESAD:  27%|█████████████                                    | 4/15 folds [00:52<01:54]ET WESAD:  33%|████████████████▎                                | 5/15 folds [00:52<01:44]ET WESAD:  33%|████████████████▎                                | 5/15 folds [01:02<01:44]ET WESAD:  40%|███████████████████▌                             | 6/15 folds [01:02<01:34]ET WESAD:  40%|███████████████████▌                             | 6/15 folds [01:13<01:34]ET WESAD:  47%|██████████████████████▊                          | 7/15 folds [01:13<01:23]ET WESAD:  47%|██████████████████████▊                          | 7/15 folds [01:23<01:23]ET WESAD:  53%|██████████████████████████▏                      | 8/15 folds [01:23<01:13]ET WESAD:  53%|██████████████████████████▏                      | 8/15 folds [01:33<01:13]ET WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [01:33<01:02]ET WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [01:44<01:02]ET WESAD:  67%|████████████████████████████████                | 10/15 folds [01:44<00:51]ET WESAD:  67%|████████████████████████████████                | 10/15 folds [01:54<00:51]ET WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [01:54<00:41]ET WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [02:05<00:41]ET WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [02:05<00:31]ET WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [02:15<00:31]ET WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [02:15<00:21]ET WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [02:26<00:21]ET WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [02:26<00:10]ET WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [02:37<00:10]ET WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [02:37<00:00]ET WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [02:37<00:00]
+ET WESAD:   0%|                                                     | 0/15 folds [00:00<?]ET WESAD:   0%|                                                     | 0/15 folds [00:22<?]ET WESAD:   7%|███▎                                             | 1/15 folds [00:22<05:15]ET WESAD:   7%|███▎                                             | 1/15 folds [00:47<05:15]ET WESAD:  13%|██████▌                                          | 2/15 folds [00:47<05:08]ET WESAD:  13%|██████▌                                          | 2/15 folds [01:11<05:08]ET WESAD:  20%|█████████▊                                       | 3/15 folds [01:11<04:48]ET WESAD:  20%|█████████▊                                       | 3/15 folds [01:36<04:48]ET WESAD:  27%|█████████████                                    | 4/15 folds [01:36<04:29]ET WESAD:  27%|█████████████                                    | 4/15 folds [02:01<04:29]ET WESAD:  33%|████████████████▎                                | 5/15 folds [02:01<04:06]ET WESAD:  33%|████████████████▎                                | 5/15 folds [02:27<04:06]ET WESAD:  40%|███████████████████▌                             | 6/15 folds [02:27<03:45]ET WESAD:  40%|███████████████████▌                             | 6/15 folds [02:51<03:45]ET WESAD:  47%|██████████████████████▊                          | 7/15 folds [02:51<03:18]ET WESAD:  47%|██████████████████████▊                          | 7/15 folds [03:16<03:18]ET WESAD:  53%|██████████████████████████▏                      | 8/15 folds [03:16<02:53]ET WESAD:  53%|██████████████████████████▏                      | 8/15 folds [03:41<02:53]ET WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [03:41<02:29]ET WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [04:06<02:29]ET WESAD:  67%|████████████████████████████████                | 10/15 folds [04:06<02:03]ET WESAD:  67%|████████████████████████████████                | 10/15 folds [04:29<02:03]ET WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [04:29<01:37]ET WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [04:52<01:37]ET WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [04:52<01:11]ET WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [05:15<01:11]ET WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [05:15<00:47]ET WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [05:39<00:47]ET WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [05:39<00:23]ET WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [06:02<00:23]ET WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [06:02<00:00]ET WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [06:02<00:00]
+  OK  (523s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_et.txt
+F1@opt     : 0.722  (t=0.407)
+Bal. Acc   : 0.716
+Macro F1   : 0.848
+AUC        : 0.945
+F1@opt     : 0.862  (t=0.562)
+Bal. Acc   : 0.853
+
+  [█████░░░░░░░░░░░░░░░░░░░░░░░] 4/19  21%  | elapsed 2h04m | restante ~7h47m
+
+  ── wesad_ensemble ──
+Ensemble WESAD:   0%|                                               | 0/15 folds [00:00<?]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:   7%|██▊                                        | 1/15 folds [01:25<19:54]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  13%|█████▋                                     | 2/15 folds [02:52<18:42]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  20%|████████▌                                  | 3/15 folds [04:23<17:40]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  27%|███████████▍                               | 4/15 folds [05:55<16:29]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  33%|██████████████▎                            | 5/15 folds [07:44<16:08]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  40%|█████████████████▏                         | 6/15 folds [09:36<15:17]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  47%|████████████████████                       | 7/15 folds [11:17<13:32]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  53%|██████████████████████▉                    | 8/15 folds [12:55<11:43]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  60%|█████████████████████████▊                 | 9/15 folds [14:27<09:47]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  67%|████████████████████████████              | 10/15 folds [16:04<08:07]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  73%|██████████████████████████████▊           | 11/15 folds [17:42<06:30]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  80%|█████████████████████████████████▌        | 12/15 folds [19:16<04:50]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  87%|████████████████████████████████████▍     | 13/15 folds [20:47<03:09]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  93%|███████████████████████████████████████▏  | 14/15 folds [22:18<01:33]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD: 100%|██████████████████████████████████████████| 15/15 folds [23:45<00:00]Ensemble WESAD: 100%|██████████████████████████████████████████| 15/15 folds [23:45<00:00]
+Ensemble WESAD:   0%|                                               | 0/15 folds [00:00<?]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:   7%|██▊                                        | 1/15 folds [01:21<18:57]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  13%|█████▋                                     | 2/15 folds [02:36<16:51]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  20%|████████▌                                  | 3/15 folds [03:55<15:38]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  27%|███████████▍                               | 4/15 folds [05:17<14:36]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  33%|██████████████▎                            | 5/15 folds [06:39<13:26]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  40%|█████████████████▏                         | 6/15 folds [08:02<12:11]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  47%|████████████████████                       | 7/15 folds [09:20<10:42]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  53%|██████████████████████▉                    | 8/15 folds [10:40<09:20]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  60%|█████████████████████████▊                 | 9/15 folds [11:58<07:57]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  67%|████████████████████████████              | 10/15 folds [13:24<06:47]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  73%|██████████████████████████████▊           | 11/15 folds [14:51<05:33]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  80%|█████████████████████████████████▌        | 12/15 folds [16:19<04:13]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  87%|████████████████████████████████████▍     | 13/15 folds [17:42<02:48]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  93%|███████████████████████████████████████▏  | 14/15 folds [19:17<01:27]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD: 100%|██████████████████████████████████████████| 15/15 folds [20:52<00:00]Ensemble WESAD: 100%|██████████████████████████████████████████| 15/15 folds [20:52<00:00]
+  OK  (2683s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_ensemble.txt
+F1@opt     : 0.794  (t=0.195)
+Bal. Acc   : 0.790
+Macro F1   : 0.912
+AUC        : 0.974
+F1@opt     : 0.914  (t=0.514)
+Bal. Acc   : 0.918
+
+  [███████░░░░░░░░░░░░░░░░░░░░░] 5/19  26%  | elapsed 2h49m | restante ~7h54m
+
+  ── wesad_autogluon ──
+AutoGluon WESAD:   0%|                                              | 0/15 folds [00:00<?]2026-06-02 21:17:52,298	INFO worker.py:2023 -- Started a local Ray instance.
+/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/ray/_private/worker.py:2062: FutureWarning: Tip: In future versions of Ray, Ray will no longer override accelerator visible devices env var if num_gpus=0 or num_gpus=None (default). To enable this behavior and turn off this error message, set RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO=0
+  warnings.warn(
+Warning: Exception encountered during DyStack sub-fit:
+	Not enough time left to train models. Consider specifying a larger time_limit. Time remaining: -0.03s
+[2026-06-02 21:18:40,505 E 149987 150299] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+AutoGluon WESAD:   7%|██▋                                     | 1/15 folds [07:14<1:41:16]AutoGluon WESAD:   7%|██▋                                     | 1/15 folds [15:10<3:32:32]
+Traceback (most recent call last):
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/wesad_autogluon.py", line 52, in <module>
+    r = run_loso(X_df, y, groups, wcols, f'AutoGluon WESAD — wrist ({len(wcols)} feat)')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/wesad_autogluon.py", line 30, in run_loso
+    ).fit(train_df, time_limit=300, presets='good_quality')
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/common/utils/decorators.py", line 34, in _call
+    return f(*gargs, **gkwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/tabular/predictor/predictor.py", line 1401, in fit
+    raise AssertionError(
+AssertionError: Not enough time left to train models for the full fit. Consider specifying a larger time_limit or setting `dynamic_stacking=False`. Time remaining: -356.84s
+  ERRO (918s)  — ver /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_autogluon.txt
+Loading WESAD...
+
+=================================================================
+  WESAD LOSO — AutoGluon — WRIST features
+=================================================================
+  Features: 56 wrist
+  fold  1 | subject: S10
+           F1=0.4114
+  fold  2 | subject: S11
+
+  [████████░░░░░░░░░░░░░░░░░░░░] 6/19  31%  | elapsed 3h04m | restante ~6h40m
+
+  ── wesad_1dcnn ──
+1D-CNN WESAD — wrist (5 ch):   0%|                                  | 0/15 folds [00:00<?]1D-CNN WESAD — wrist (5 ch):   0%|                                | 0/15 folds [1:33:26<?]1D-CNN WESAD — wrist (5 ch):   7%|█▋                       | 1/15 folds [1:33:26<21:48:10]1D-CNN WESAD — wrist (5 ch):   7%|█▋                       | 1/15 folds [2:41:41<21:48:10]1D-CNN WESAD — wrist (5 ch):  13%|███▎                     | 2/15 folds [2:41:41<17:02:02]1D-CNN WESAD — wrist (5 ch):  13%|███▎                     | 2/15 folds [4:41:33<17:02:02]1D-CNN WESAD — wrist (5 ch):  20%|█████                    | 3/15 folds [4:41:33<19:29:26]1D-CNN WESAD — wrist (5 ch):  20%|█████                    | 3/15 folds [5:46:13<19:29:26]1D-CNN WESAD — wrist (5 ch):  27%|██████▋                  | 4/15 folds [5:46:13<15:29:38]1D-CNN WESAD — wrist (5 ch):  27%|██████▋                  | 4/15 folds [6:48:56<15:29:38]1D-CNN WESAD — wrist (5 ch):  33%|████████▎                | 5/15 folds [6:48:56<12:46:31]1D-CNN WESAD — wrist (5 ch):  33%|████████▎                | 5/15 folds [8:21:00<12:46:31]1D-CNN WESAD — wrist (5 ch):  40%|██████████               | 6/15 folds [8:21:00<12:17:03]1D-CNN WESAD — wrist (5 ch):  40%|█████████▌              | 6/15 folds [10:09:28<12:17:03]1D-CNN WESAD — wrist (5 ch):  47%|███████████▏            | 7/15 folds [10:09:28<12:04:39]1D-CNN WESAD — wrist (5 ch):  47%|███████████▏            | 7/15 folds [11:19:10<12:04:39]1D-CNN WESAD — wrist (5 ch):  53%|█████████████▎           | 8/15 folds [11:19:10<9:47:31]1D-CNN WESAD — wrist (5 ch):  53%|█████████████▎           | 8/15 folds [12:50:45<9:47:31]1D-CNN WESAD — wrist (5 ch):  60%|███████████████          | 9/15 folds [12:50:45<8:37:57]1D-CNN WESAD — wrist (5 ch):  60%|███████████████          | 9/15 folds [14:51:48<8:37:57]1D-CNN WESAD — wrist (5 ch):  67%|████████████████        | 10/15 folds [14:51:48<8:05:13]1D-CNN WESAD — wrist (5 ch):  67%|████████████████        | 10/15 folds [16:01:20<8:05:13]1D-CNN WESAD — wrist (5 ch):  73%|█████████████████▌      | 11/15 folds [16:01:20<5:54:30]1D-CNN WESAD — wrist (5 ch):  73%|█████████████████▌      | 11/15 folds [17:22:55<5:54:30]1D-CNN WESAD — wrist (5 ch):  80%|███████████████████▏    | 12/15 folds [17:22:55<4:19:27]1D-CNN WESAD — wrist (5 ch):  80%|███████████████████▏    | 12/15 folds [19:00:43<4:19:27]1D-CNN WESAD — wrist (5 ch):  87%|████████████████████▊   | 13/15 folds [19:00:43<2:59:49]1D-CNN WESAD — wrist (5 ch):  87%|████████████████████▊   | 13/15 folds [20:31:57<2:59:49]1D-CNN WESAD — wrist (5 ch):  93%|██████████████████████▍ | 14/15 folds [20:31:57<1:30:18]1D-CNN WESAD — wrist (5 ch):  93%|██████████████████████▍ | 14/15 folds [23:31:42<1:30:18]1D-CNN WESAD — wrist (5 ch): 100%|██████████████████████████| 15/15 folds [23:31:42<00:00]1D-CNN WESAD — wrist (5 ch): 100%|██████████████████████████| 15/15 folds [23:31:42<00:00]
+1D-CNN WESAD — all (16 ch):   0%|                                   | 0/15 folds [00:00<?]1D-CNN WESAD — all (16 ch):   0%|                                 | 0/15 folds [1:23:00<?]1D-CNN WESAD — all (16 ch):   7%|█▋                        | 1/15 folds [1:23:00<19:22:01]
+════════════════════════════════════════════════════════════════
+  run_all.sh — sex 05 jun 2026 00:11:58 WEST
+  Python: Python 3.11.15
+  CPUs: 20  |  Device CPU: env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=20 MKL_NUM_THREADS=20 OPENBLAS_NUM_THREADS=20
+  Device GPU: env CUDA_VISIBLE_DEVICES=0
+════════════════════════════════════════════════════════════════
+
+════════════════════════════════════════════════════════════════
+  FASE 1 — WESAD LOSO  (27 543 janelas, 15 sujeitos, lab stress)
+════════════════════════════════════════════════════════════════
+
+  ── wesad_logreg ──
+LogReg WESAD:   0%|                                                 | 0/15 folds [00:00<?]LogReg WESAD:   7%|███                                          | 1/15 folds [00:00<00:08]LogReg WESAD:  13%|██████                                       | 2/15 folds [00:00<00:06]LogReg WESAD:  20%|█████████                                    | 3/15 folds [00:02<00:08]LogReg WESAD:  27%|████████████                                 | 4/15 folds [00:02<00:07]LogReg WESAD:  33%|███████████████                              | 5/15 folds [00:03<00:07]LogReg WESAD:  40%|██████████████████                           | 6/15 folds [00:04<00:07]LogReg WESAD:  47%|█████████████████████                        | 7/15 folds [00:04<00:05]LogReg WESAD:  53%|████████████████████████                     | 8/15 folds [00:05<00:04]LogReg WESAD:  60%|███████████████████████████                  | 9/15 folds [00:05<00:03]LogReg WESAD:  67%|█████████████████████████████▎              | 10/15 folds [00:06<00:02]LogReg WESAD:  73%|████████████████████████████████▎           | 11/15 folds [00:07<00:03]LogReg WESAD:  80%|███████████████████████████████████▏        | 12/15 folds [00:08<00:02]LogReg WESAD:  87%|██████████████████████████████████████▏     | 13/15 folds [00:10<00:02]LogReg WESAD:  93%|█████████████████████████████████████████   | 14/15 folds [00:11<00:00]LogReg WESAD: 100%|████████████████████████████████████████████| 15/15 folds [00:11<00:00]LogReg WESAD: 100%|████████████████████████████████████████████| 15/15 folds [00:11<00:00]
+LogReg WESAD:   0%|                                                 | 0/15 folds [00:00<?]LogReg WESAD:   7%|███                                          | 1/15 folds [00:09<02:13]LogReg WESAD:  13%|██████                                       | 2/15 folds [00:18<01:59]LogReg WESAD:  20%|█████████                                    | 3/15 folds [00:23<01:25]LogReg WESAD:  27%|████████████                                 | 4/15 folds [00:29<01:13]LogReg WESAD:  33%|███████████████                              | 5/15 folds [00:40<01:22]LogReg WESAD:  40%|██████████████████                           | 6/15 folds [00:43<00:58]LogReg WESAD:  47%|█████████████████████                        | 7/15 folds [00:46<00:43]LogReg WESAD:  53%|████████████████████████                     | 8/15 folds [00:57<00:49]LogReg WESAD:  60%|███████████████████████████                  | 9/15 folds [01:05<00:44]LogReg WESAD:  67%|█████████████████████████████▎              | 10/15 folds [01:07<00:29]LogReg WESAD:  73%|████████████████████████████████▎           | 11/15 folds [01:12<00:21]LogReg WESAD:  80%|███████████████████████████████████▏        | 12/15 folds [01:14<00:13]LogReg WESAD:  87%|██████████████████████████████████████▏     | 13/15 folds [01:16<00:07]LogReg WESAD:  93%|█████████████████████████████████████████   | 14/15 folds [01:27<00:05]LogReg WESAD: 100%|████████████████████████████████████████████| 15/15 folds [01:31<00:00]LogReg WESAD: 100%|████████████████████████████████████████████| 15/15 folds [01:31<00:00]
+  OK  (104s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_logreg.txt
+F1@opt     : 0.672  (t=0.329)
+Bal. Acc   : 0.596
+Macro F1   : 0.816
+AUC        : 0.912
+F1@opt     : 0.814  (t=0.433)
+Bal. Acc   : 0.816
+
+  [█░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1/19  5%  | elapsed 0h01m | restante ~0h31m
+
+  ── wesad_svm ──
+SVM WESAD:   0%|                                                    | 0/15 folds [00:00<?]SVM WESAD:   7%|███▏                                            | 1/15 folds [00:11<02:47]SVM WESAD:  13%|██████▍                                         | 2/15 folds [00:24<02:38]SVM WESAD:  20%|█████████▌                                      | 3/15 folds [00:36<02:24]SVM WESAD:  27%|████████████▊                                   | 4/15 folds [00:47<02:10]SVM WESAD:  33%|████████████████                                | 5/15 folds [00:59<01:57]SVM WESAD:  40%|███████████████████▏                            | 6/15 folds [01:11<01:46]SVM WESAD:  47%|██████████████████████▍                         | 7/15 folds [01:24<01:37]SVM WESAD:  53%|█████████████████████████▌                      | 8/15 folds [01:36<01:25]SVM WESAD:  60%|████████████████████████████▊                   | 9/15 folds [01:50<01:17]SVM WESAD:  67%|███████████████████████████████▎               | 10/15 folds [02:05<01:06]SVM WESAD:  73%|██████████████████████████████████▍            | 11/15 folds [02:20<00:55]SVM WESAD:  80%|█████████████████████████████████████▌         | 12/15 folds [02:34<00:42]SVM WESAD:  87%|████████████████████████████████████████▋      | 13/15 folds [02:47<00:27]SVM WESAD:  93%|███████████████████████████████████████████▊   | 14/15 folds [03:00<00:13]SVM WESAD: 100%|███████████████████████████████████████████████| 15/15 folds [03:12<00:00]SVM WESAD: 100%|███████████████████████████████████████████████| 15/15 folds [03:12<00:00]
+SVM WESAD:   0%|                                                    | 0/15 folds [00:00<?]SVM WESAD:   7%|███▏                                            | 1/15 folds [00:14<03:24]SVM WESAD:  13%|██████▍                                         | 2/15 folds [00:29<03:12]SVM WESAD:  20%|█████████▌                                      | 3/15 folds [00:43<02:52]SVM WESAD:  27%|████████████▊                                   | 4/15 folds [00:57<02:36]SVM WESAD:  33%|████████████████                                | 5/15 folds [01:10<02:19]SVM WESAD:  40%|███████████████████▏                            | 6/15 folds [01:25<02:07]SVM WESAD:  47%|██████████████████████▍                         | 7/15 folds [01:39<01:52]SVM WESAD:  53%|█████████████████████████▌                      | 8/15 folds [01:52<01:36]SVM WESAD:  60%|████████████████████████████▊                   | 9/15 folds [02:05<01:21]SVM WESAD:  67%|███████████████████████████████▎               | 10/15 folds [02:19<01:08]SVM WESAD:  73%|██████████████████████████████████▍            | 11/15 folds [02:33<00:54]SVM WESAD:  80%|█████████████████████████████████████▌         | 12/15 folds [02:47<00:41]SVM WESAD:  87%|████████████████████████████████████████▋      | 13/15 folds [03:01<00:27]SVM WESAD:  93%|███████████████████████████████████████████▊   | 14/15 folds [03:14<00:13]SVM WESAD: 100%|███████████████████████████████████████████████| 15/15 folds [03:27<00:00]SVM WESAD: 100%|███████████████████████████████████████████████| 15/15 folds [03:27<00:00]
+  OK  (401s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_svm.txt
+F1@opt     : 0.690  (t=0.374)
+Bal. Acc   : 0.704
+Macro F1   : 0.770
+AUC        : 0.887
+F1@opt     : 0.796  (t=0.855)
+Bal. Acc   : 0.789
+
+  [██░░░░░░░░░░░░░░░░░░░░░░░░░░] 2/19  10%  | elapsed 0h08m | restante ~1h11m
+
+  ── wesad_rf ──
+RF WESAD:   0%|                                                     | 0/15 folds [00:00<?]RF WESAD:   0%|                                                     | 0/15 folds [00:20<?]RF WESAD:   7%|███▎                                             | 1/15 folds [00:20<04:46]RF WESAD:   7%|███▎                                             | 1/15 folds [00:42<04:46]RF WESAD:  13%|██████▌                                          | 2/15 folds [00:42<04:40]RF WESAD:  13%|██████▌                                          | 2/15 folds [01:05<04:40]RF WESAD:  20%|█████████▊                                       | 3/15 folds [01:05<04:23]RF WESAD:  20%|█████████▊                                       | 3/15 folds [01:28<04:23]RF WESAD:  27%|█████████████                                    | 4/15 folds [01:28<04:05]RF WESAD:  27%|█████████████                                    | 4/15 folds [01:51<04:05]RF WESAD:  33%|████████████████▎                                | 5/15 folds [01:51<03:45]RF WESAD:  33%|████████████████▎                                | 5/15 folds [02:13<03:45]RF WESAD:  40%|███████████████████▌                             | 6/15 folds [02:13<03:23]RF WESAD:  40%|███████████████████▌                             | 6/15 folds [02:36<03:23]RF WESAD:  47%|██████████████████████▊                          | 7/15 folds [02:36<02:59]RF WESAD:  47%|██████████████████████▊                          | 7/15 folds [02:58<02:59]RF WESAD:  53%|██████████████████████████▏                      | 8/15 folds [02:58<02:36]RF WESAD:  53%|██████████████████████████▏                      | 8/15 folds [03:20<02:36]RF WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [03:20<02:14]RF WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [03:43<02:14]RF WESAD:  67%|████████████████████████████████                | 10/15 folds [03:43<01:52]RF WESAD:  67%|████████████████████████████████                | 10/15 folds [04:04<01:52]RF WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [04:04<01:28]RF WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [04:26<01:28]RF WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [04:26<01:06]RF WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [04:50<01:06]RF WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [04:50<00:44]RF WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [05:12<00:44]RF WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [05:12<00:22]RF WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [05:34<00:22]RF WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [05:34<00:00]RF WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [05:34<00:00]
+RF WESAD:   0%|                                                     | 0/15 folds [00:00<?]RF WESAD:   0%|                                                     | 0/15 folds [01:07<?]RF WESAD:   7%|███▎                                             | 1/15 folds [01:07<15:50]RF WESAD:   7%|███▎                                             | 1/15 folds [02:12<15:50]RF WESAD:  13%|██████▌                                          | 2/15 folds [02:12<14:14]RF WESAD:  13%|██████▌                                          | 2/15 folds [03:24<14:14]RF WESAD:  20%|█████████▊                                       | 3/15 folds [03:24<13:43]RF WESAD:  20%|█████████▊                                       | 3/15 folds [04:27<13:43]RF WESAD:  27%|█████████████                                    | 4/15 folds [04:27<12:11]RF WESAD:  27%|█████████████                                    | 4/15 folds [05:41<12:11]RF WESAD:  33%|████████████████▎                                | 5/15 folds [05:41<11:33]RF WESAD:  33%|████████████████▎                                | 5/15 folds [06:58<11:33]RF WESAD:  40%|███████████████████▌                             | 6/15 folds [06:58<10:46]RF WESAD:  40%|███████████████████▌                             | 6/15 folds [07:58<10:46]RF WESAD:  47%|██████████████████████▊                          | 7/15 folds [07:58<09:03]RF WESAD:  47%|██████████████████████▊                          | 7/15 folds [09:16<09:03]RF WESAD:  53%|██████████████████████████▏                      | 8/15 folds [09:16<08:17]RF WESAD:  53%|██████████████████████████▏                      | 8/15 folds [10:27<08:17]RF WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [10:27<07:06]RF WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [11:42<07:06]RF WESAD:  67%|████████████████████████████████                | 10/15 folds [11:42<06:01]RF WESAD:  67%|████████████████████████████████                | 10/15 folds [12:56<06:01]RF WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [12:56<04:51]RF WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [14:06<04:51]RF WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [14:06<03:36]RF WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [15:18<03:36]RF WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [15:18<02:23]RF WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [16:32<02:23]RF WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [16:32<01:12]RF WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [17:44<01:12]RF WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [17:44<00:00]RF WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [17:44<00:00]
+  OK  (1401s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_rf.txt
+F1@opt     : 0.782  (t=0.133)
+Bal. Acc   : 0.759
+Macro F1   : 0.855
+AUC        : 0.941
+F1@opt     : 0.853  (t=0.268)
+Bal. Acc   : 0.853
+
+  [████░░░░░░░░░░░░░░░░░░░░░░░░] 3/19  15%  | elapsed 0h31m | restante ~2h49m
+
+  ── wesad_et ──
+ET WESAD:   0%|                                                     | 0/15 folds [00:00<?]ET WESAD:   0%|                                                     | 0/15 folds [00:02<?]ET WESAD:   7%|███▎                                             | 1/15 folds [00:02<00:40]ET WESAD:   7%|███▎                                             | 1/15 folds [00:05<00:40]ET WESAD:  13%|██████▌                                          | 2/15 folds [00:05<00:38]ET WESAD:  13%|██████▌                                          | 2/15 folds [00:08<00:38]ET WESAD:  20%|█████████▊                                       | 3/15 folds [00:08<00:35]ET WESAD:  20%|█████████▊                                       | 3/15 folds [00:11<00:35]ET WESAD:  27%|█████████████                                    | 4/15 folds [00:11<00:31]ET WESAD:  27%|█████████████                                    | 4/15 folds [00:14<00:31]ET WESAD:  33%|████████████████▎                                | 5/15 folds [00:14<00:29]ET WESAD:  33%|████████████████▎                                | 5/15 folds [00:17<00:29]ET WESAD:  40%|███████████████████▌                             | 6/15 folds [00:17<00:26]ET WESAD:  40%|███████████████████▌                             | 6/15 folds [00:20<00:26]ET WESAD:  47%|██████████████████████▊                          | 7/15 folds [00:20<00:23]ET WESAD:  47%|██████████████████████▊                          | 7/15 folds [00:23<00:23]ET WESAD:  53%|██████████████████████████▏                      | 8/15 folds [00:23<00:20]ET WESAD:  53%|██████████████████████████▏                      | 8/15 folds [00:26<00:20]ET WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [00:26<00:17]ET WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [00:29<00:17]ET WESAD:  67%|████████████████████████████████                | 10/15 folds [00:29<00:14]ET WESAD:  67%|████████████████████████████████                | 10/15 folds [00:32<00:14]ET WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [00:32<00:11]ET WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [00:35<00:11]ET WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [00:35<00:08]ET WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [00:38<00:08]ET WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [00:38<00:05]ET WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [00:41<00:05]ET WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [00:41<00:02]ET WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [00:44<00:02]ET WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [00:44<00:00]ET WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [00:44<00:00]
+ET WESAD:   0%|                                                     | 0/15 folds [00:00<?]ET WESAD:   0%|                                                     | 0/15 folds [00:06<?]ET WESAD:   7%|███▎                                             | 1/15 folds [00:06<01:27]ET WESAD:   7%|███▎                                             | 1/15 folds [00:12<01:27]ET WESAD:  13%|██████▌                                          | 2/15 folds [00:12<01:21]ET WESAD:  13%|██████▌                                          | 2/15 folds [00:18<01:21]ET WESAD:  20%|█████████▊                                       | 3/15 folds [00:18<01:16]ET WESAD:  20%|█████████▊                                       | 3/15 folds [00:25<01:16]ET WESAD:  27%|█████████████                                    | 4/15 folds [00:25<01:10]ET WESAD:  27%|█████████████                                    | 4/15 folds [00:32<01:10]ET WESAD:  33%|████████████████▎                                | 5/15 folds [00:32<01:04]ET WESAD:  33%|████████████████▎                                | 5/15 folds [00:38<01:04]ET WESAD:  40%|███████████████████▌                             | 6/15 folds [00:38<00:58]ET WESAD:  40%|███████████████████▌                             | 6/15 folds [00:44<00:58]ET WESAD:  47%|██████████████████████▊                          | 7/15 folds [00:44<00:51]ET WESAD:  47%|██████████████████████▊                          | 7/15 folds [00:51<00:51]ET WESAD:  53%|██████████████████████████▏                      | 8/15 folds [00:51<00:45]ET WESAD:  53%|██████████████████████████▏                      | 8/15 folds [00:57<00:45]ET WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [00:57<00:38]ET WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [01:04<00:38]ET WESAD:  67%|████████████████████████████████                | 10/15 folds [01:04<00:32]ET WESAD:  67%|████████████████████████████████                | 10/15 folds [01:10<00:32]ET WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [01:10<00:25]ET WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [01:16<00:25]ET WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [01:16<00:18]ET WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [01:23<00:18]ET WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [01:23<00:12]ET WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [01:29<00:12]ET WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [01:29<00:06]ET WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [01:36<00:06]ET WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [01:36<00:00]ET WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [01:36<00:00]
+  OK  (141s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_et.txt
+F1@opt     : 0.722  (t=0.407)
+Bal. Acc   : 0.716
+Macro F1   : 0.848
+AUC        : 0.945
+F1@opt     : 0.862  (t=0.562)
+Bal. Acc   : 0.853
+
+  [█████░░░░░░░░░░░░░░░░░░░░░░░] 4/19  21%  | elapsed 0h34m | restante ~2h07m
+
+  ── wesad_ensemble ──
+Ensemble WESAD:   0%|                                               | 0/15 folds [00:00<?]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:   7%|██▊                                        | 1/15 folds [00:04<01:07]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  13%|█████▋                                     | 2/15 folds [00:10<01:07]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  20%|████████▌                                  | 3/15 folds [00:15<01:02]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  27%|███████████▍                               | 4/15 folds [00:21<00:59]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  33%|██████████████▎                            | 5/15 folds [00:26<00:53]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  40%|█████████████████▏                         | 6/15 folds [00:33<00:52]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  47%|████████████████████                       | 7/15 folds [00:38<00:44]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  53%|██████████████████████▉                    | 8/15 folds [00:43<00:38]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  60%|█████████████████████████▊                 | 9/15 folds [00:48<00:32]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  67%|████████████████████████████              | 10/15 folds [00:54<00:27]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  73%|██████████████████████████████▊           | 11/15 folds [00:59<00:21]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  80%|█████████████████████████████████▌        | 12/15 folds [01:05<00:16]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  87%|████████████████████████████████████▍     | 13/15 folds [01:10<00:10]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  93%|███████████████████████████████████████▏  | 14/15 folds [01:15<00:05]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD: 100%|██████████████████████████████████████████| 15/15 folds [01:21<00:00]Ensemble WESAD: 100%|██████████████████████████████████████████| 15/15 folds [01:21<00:00]
+Ensemble WESAD:   0%|                                               | 0/15 folds [00:00<?]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:   7%|██▊                                        | 1/15 folds [00:07<01:48]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  13%|█████▋                                     | 2/15 folds [00:15<01:43]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  20%|████████▌                                  | 3/15 folds [00:23<01:35]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  27%|███████████▍                               | 4/15 folds [00:31<01:26]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  33%|██████████████▎                            | 5/15 folds [00:39<01:18]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  40%|█████████████████▏                         | 6/15 folds [00:48<01:14]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  47%|████████████████████                       | 7/15 folds [00:55<01:03]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  53%|██████████████████████▉                    | 8/15 folds [01:04<00:56]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  60%|█████████████████████████▊                 | 9/15 folds [01:13<00:50]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  67%|████████████████████████████              | 10/15 folds [01:21<00:41]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  73%|██████████████████████████████▊           | 11/15 folds [01:29<00:32]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  80%|█████████████████████████████████▌        | 12/15 folds [01:37<00:24]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  87%|████████████████████████████████████▍     | 13/15 folds [01:45<00:16]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  93%|███████████████████████████████████████▏  | 14/15 folds [01:53<00:08]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD: 100%|██████████████████████████████████████████| 15/15 folds [02:02<00:00]Ensemble WESAD: 100%|██████████████████████████████████████████| 15/15 folds [02:02<00:00]
+  OK  (206s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_ensemble.txt
+F1@opt     : 0.794  (t=0.195)
+Bal. Acc   : 0.790
+Macro F1   : 0.912
+AUC        : 0.974
+F1@opt     : 0.914  (t=0.514)
+Bal. Acc   : 0.918
+
+  [███████░░░░░░░░░░░░░░░░░░░░░] 5/19  26%  | elapsed 0h37m | restante ~1h45m
+
+  ── wesad_autogluon ──
+AutoGluon WESAD:   0%|                                              | 0/15 folds [00:00<?][2026-06-05 00:49:35,134 W 17759 17759] network_util.cc:296: Failed to determine local IP via external connectivity to: 8.8.8.8:53, [2001:4860:4860::8888]:53, falling back to hostname resolution
+2026-06-05 00:49:36,834	INFO worker.py:2023 -- Started a local Ray instance.
+/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/ray/_private/worker.py:2062: FutureWarning: Tip: In future versions of Ray, Ray will no longer override accelerator visible devices env var if num_gpus=0 or num_gpus=None (default). To enable this behavior and turn off this error message, set RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO=0
+  warnings.warn(
+[33m(raylet)[0m [2026-06-05 00:49:46,791 E 17974 18008] (raylet) file_system_monitor.cc:116: /tmp/ray/session_2026-06-05_00-49-35_129580_17759 is over 95% full, available space: 3.29335 GB; capacity: 198.854 GB. Object creation will fail if spilling is required.
+[33m(raylet)[0m [2026-06-05 00:49:56,811 E 17974 18008] (raylet) file_system_monitor.cc:116: /tmp/ray/session_2026-06-05_00-49-35_129580_17759 is over 95% full, available space: 3.29144 GB; capacity: 198.854 GB. Object creation will fail if spilling is required.
+[36m(pid=gcs_server)[0m [2026-06-05 00:50:05,401 E 17828 17828] (gcs_server) gcs_server.cc:303: Failed to establish connection to the event+metrics exporter agent. Events and metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[33m(raylet)[0m [2026-06-05 00:50:06,801 E 17974 17974] (raylet) main.cc:979: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[33m(raylet)[0m [2026-06-05 00:50:06,827 E 17974 18008] (raylet) file_system_monitor.cc:116: /tmp/ray/session_2026-06-05_00-49-35_129580_17759 is over 95% full, available space: 3.29081 GB; capacity: 198.854 GB. Object creation will fail if spilling is required.
+[36m(_dystack pid=18058)[0m [2026-06-05 00:50:11,360 E 18058 18246] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[2026-06-05 00:50:12,110 E 17759 18045] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[33m(raylet)[0m [2026-06-05 00:50:16,859 E 17974 18008] (raylet) file_system_monitor.cc:116: /tmp/ray/session_2026-06-05_00-49-35_129580_17759 is over 95% full, available space: 3.28239 GB; capacity: 198.854 GB. Object creation will fail if spilling is required.
+[33m(raylet)[0m [2026-06-05 00:50:26,872 E 17974 18008] (raylet) file_system_monitor.cc:116: /tmp/ray/session_2026-06-05_00-49-35_129580_17759 is over 95% full, available space: 3.28239 GB; capacity: 198.854 GB. Object creation will fail if spilling is required.
+[33m(raylet)[0m [2026-06-05 00:50:36,888 E 17974 18008] (raylet) file_system_monitor.cc:116: /tmp/ray/session_2026-06-05_00-49-35_129580_17759 is over 95% full, available space: 3.28075 GB; capacity: 198.854 GB. Object creation will fail if spilling is required.
+[33m(raylet)[0m [2026-06-05 00:50:46,907 E 17974 18008] (raylet) file_system_monitor.cc:116: /tmp/ray/session_2026-06-05_00-49-35_129580_17759 is over 95% full, available space: 3.27932 GB; capacity: 198.854 GB. Object creation will fail if spilling is required.
+[33m(raylet)[0m [2026-06-05 00:50:56,927 E 17974 18008] (raylet) file_system_monitor.cc:116: /tmp/ray/session_2026-06-05_00-49-35_129580_17759 is over 95% full, available space: 3.26908 GB; capacity: 198.854 GB. Object creation will fail if spilling is required.
+AutoGluon WESAD:   7%|██▋                                     | 1/15 folds [05:40<1:19:31]AutoGluon WESAD:  13%|█████▎                                  | 2/15 folds [11:28<1:14:42]AutoGluon WESAD:  20%|████████                                | 3/15 folds [17:09<1:08:35]AutoGluon WESAD:  27%|██████████▋                             | 4/15 folds [22:48<1:02:37]AutoGluon WESAD:  33%|██████████████                            | 5/15 folds [28:30<56:55]AutoGluon WESAD:  40%|████████████████▊                         | 6/15 folds [34:10<51:10]AutoGluon WESAD:  47%|███████████████████▌                      | 7/15 folds [39:51<45:29]AutoGluon WESAD:  53%|██████████████████████▍                   | 8/15 folds [45:29<39:40]AutoGluon WESAD:  60%|█████████████████████████▏                | 9/15 folds [51:10<34:03]AutoGluon WESAD:  67%|███████████████████████████▎             | 10/15 folds [56:49<28:19]AutoGluon WESAD:  73%|████████████████████████████▌          | 11/15 folds [1:02:35<22:46]AutoGluon WESAD:  80%|███████████████████████████████▏       | 12/15 folds [1:08:16<17:04]AutoGluon WESAD:  87%|█████████████████████████████████▊     | 13/15 folds [1:13:55<11:21]AutoGluon WESAD:  93%|████████████████████████████████████▍  | 14/15 folds [1:19:35<05:40]AutoGluon WESAD: 100%|███████████████████████████████████████| 15/15 folds [1:25:20<00:00]AutoGluon WESAD: 100%|███████████████████████████████████████| 15/15 folds [1:25:20<00:00]
+AutoGluon WESAD:   0%|                                              | 0/15 folds [00:00<?]AutoGluon WESAD:   7%|██▋                                     | 1/15 folds [05:19<1:14:30]AutoGluon WESAD:  13%|█████▎                                  | 2/15 folds [10:41<1:09:31]AutoGluon WESAD:  20%|████████                                | 3/15 folds [16:04<1:04:21]AutoGluon WESAD:  27%|███████████▏                              | 4/15 folds [21:28<59:09]AutoGluon WESAD:  33%|██████████████                            | 5/15 folds [26:49<53:41]AutoGluon WESAD:  40%|████████████████▊                         | 6/15 folds [32:14<48:28]AutoGluon WESAD:  47%|███████████████████▌                      | 7/15 folds [37:38<43:06]AutoGluon WESAD:  53%|██████████████████████▍                   | 8/15 folds [43:00<37:42]AutoGluon WESAD:  60%|█████████████████████████▏                | 9/15 folds [48:26<32:22]AutoGluon WESAD:  67%|███████████████████████████▎             | 10/15 folds [53:51<27:00]AutoGluon WESAD:  73%|██████████████████████████████           | 11/15 folds [59:14<21:35]AutoGluon WESAD:  80%|███████████████████████████████▏       | 12/15 folds [1:04:38<16:11]AutoGluon WESAD:  87%|█████████████████████████████████▊     | 13/15 folds [1:10:04<10:48]AutoGluon WESAD:  93%|████████████████████████████████████▍  | 14/15 folds [1:15:23<05:22]AutoGluon WESAD: 100%|███████████████████████████████████████| 15/15 folds [1:20:46<00:00]AutoGluon WESAD: 100%|███████████████████████████████████████| 15/15 folds [1:20:46<00:00]
+  OK  (9970s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_autogluon.txt
+F1@opt     : 0.811  (t=0.897)
+Bal. Acc   : 0.783
+Macro F1   : 0.886
+AUC        : 0.954
+F1@opt     : 0.886  (t=0.464)
+Bal. Acc   : 0.898
+
+  [████████░░░░░░░░░░░░░░░░░░░░] 6/19  31%  | elapsed 3h23m | restante ~7h21m
+
+  ── wesad_1dcnn ──
+1D-CNN WESAD — wrist (5 ch):   0%|                                  | 0/15 folds [00:00<?]1D-CNN WESAD — wrist (5 ch):   0%|                                  | 0/15 folds [00:00<?]
+Traceback (most recent call last):
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/wesad_1dcnn.py", line 32, in <module>
+    run_dl_model(
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/_dl_loso.py", line 108, in run_dl_model
+    r = dl_loso(model_fn_wrist, X_wrist, y_seq, groups_seq,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/_dl_loso.py", line 46, in dl_loso
+    model = model_fn(C).to(DEVICE)
+                     ^
+NameError: name 'C' is not defined
+  ERRO (1s)  — ver /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_1dcnn.txt
+Loading WESAD sequences... device=cpu
+
+=================================================================
+  WESAD LOSO — 1D-CNN — WRIST (5 channels: [0, 5, 6, 7, 8])
+=================================================================
+
+  [██████████░░░░░░░░░░░░░░░░░░] 7/19  36%  | elapsed 3h23m | restante ~5h49m
+
+  ── wesad_cnngru ──
+CNN-GRU WESAD — wrist (5 ch):   0%|                                 | 0/15 folds [00:00<?]CNN-GRU WESAD — wrist (5 ch):   0%|                                 | 0/15 folds [00:00<?]
+Traceback (most recent call last):
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/wesad_cnngru.py", line 34, in <module>
+    run_dl_model(
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/_dl_loso.py", line 108, in run_dl_model
+    r = dl_loso(model_fn_wrist, X_wrist, y_seq, groups_seq,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/_dl_loso.py", line 46, in dl_loso
+    model = model_fn(C).to(DEVICE)
+                     ^
+NameError: name 'C' is not defined
+  ERRO (2s)  — ver /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_cnngru.txt
+Loading WESAD sequences... device=cpu
+
+=================================================================
+  WESAD LOSO — CNN-GRU — WRIST (5 channels: [0, 5, 6, 7, 8])
+=================================================================
+
+  [███████████░░░░░░░░░░░░░░░░░] 8/19  42%  | elapsed 3h23m | restante ~4h40m
+
+  ── wesad_rnn ──
+RNN (BiGRU) WESAD — wrist (5 ch):   0%|                             | 0/15 folds [00:00<?]RNN (BiGRU) WESAD — wrist (5 ch):   0%|                             | 0/15 folds [00:00<?]
+Traceback (most recent call last):
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/wesad_rnn.py", line 26, in <module>
+    run_dl_model(
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/_dl_loso.py", line 108, in run_dl_model
+    r = dl_loso(model_fn_wrist, X_wrist, y_seq, groups_seq,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/_dl_loso.py", line 46, in dl_loso
+    model = model_fn(C).to(DEVICE)
+                     ^
+NameError: name 'C' is not defined
+  ERRO (2s)  — ver /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_rnn.txt
+Loading WESAD sequences... device=cpu
+
+=================================================================
+  WESAD LOSO — RNN (BiGRU) — WRIST (5 channels: [0, 5, 6, 7, 8])
+=================================================================
+
+  [█████████████░░░░░░░░░░░░░░░] 9/19  47%  | elapsed 3h23m | restante ~3h46m
+
+  ── wesad_transformer ──
+Transformer WESAD — wrist (5 ch):   0%|                             | 0/15 folds [00:00<?]Transformer WESAD — wrist (5 ch):   0%|                             | 0/15 folds [00:00<?]
+Traceback (most recent call last):
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/wesad_transformer.py", line 32, in <module>
+    run_dl_model(
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/_dl_loso.py", line 108, in run_dl_model
+    r = dl_loso(model_fn_wrist, X_wrist, y_seq, groups_seq,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/_dl_loso.py", line 46, in dl_loso
+    model = model_fn(C).to(DEVICE)
+                     ^
+NameError: name 'C' is not defined
+  ERRO (2s)  — ver /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_transformer.txt
+Loading WESAD sequences... device=cpu
+
+=================================================================
+  WESAD LOSO — Transformer — WRIST (5 channels: [0, 5, 6, 7, 8])
+=================================================================
+
+  [██████████████░░░░░░░░░░░░░░] 10/19  52%  | elapsed 3h23m | restante ~3h03m
+
+  ── wesad_mamba ──
+Mamba (SSM) WESAD — wrist (5 ch):   0%|                             | 0/15 folds [00:00<?]Mamba (SSM) WESAD — wrist (5 ch):   0%|                             | 0/15 folds [00:00<?]
+Traceback (most recent call last):
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/wesad_mamba.py", line 49, in <module>
+    run_dl_model(
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/_dl_loso.py", line 108, in run_dl_model
+    r = dl_loso(model_fn_wrist, X_wrist, y_seq, groups_seq,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/_dl_loso.py", line 46, in dl_loso
+    model = model_fn(C).to(DEVICE)
+                     ^
+NameError: name 'C' is not defined
+  ERRO (2s)  — ver /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_mamba.txt
+Loading WESAD sequences... device=cpu
+
+=================================================================
+  WESAD LOSO — Mamba (SSM) — WRIST (5 channels: [0, 5, 6, 7, 8])
+=================================================================
+
+  [███████████████░░░░░░░░░░░░░] 11/19  57%  | elapsed 3h23m | restante ~2h28m
+
+  ── wesad_dann ──
+LOSO:   0%|                                                         | 0/15 folds [00:00<?]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.num_heads is odd
+  warnings.warn(
+LOSO:   7%|███▍                                               | 1/15 folds [29:30<6:53:05]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.num_heads is odd
+  warnings.warn(
+LOSO:  13%|██████▊                                            | 2/15 folds [59:12<6:25:05]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.num_heads is odd
+  warnings.warn(
+LOSO:  20%|█████████▊                                       | 3/15 folds [1:28:45<5:55:05]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.num_heads is odd
+  warnings.warn(
+LOSO:  27%|█████████████                                    | 4/15 folds [1:58:22<5:25:33]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.num_heads is odd
+  warnings.warn(
+LOSO:  33%|████████████████▎                                | 5/15 folds [2:27:59<4:56:02]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.num_heads is odd
+  warnings.warn(
+LOSO:  40%|███████████████████▌                             | 6/15 folds [2:57:29<4:26:07]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.num_heads is odd
+  warnings.warn(
+LOSO:  47%|██████████████████████▊                          | 7/15 folds [3:26:57<3:56:18]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.num_heads is odd
+  warnings.warn(
+LOSO:  53%|██████████████████████████▏                      | 8/15 folds [3:56:43<3:27:16]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.num_heads is odd
+  warnings.warn(
+LOSO:  60%|█████████████████████████████▍                   | 9/15 folds [4:26:22<2:57:43]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.num_heads is odd
+  warnings.warn(
+LOSO:  67%|████████████████████████████████                | 10/15 folds [4:55:58<2:28:04]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.num_heads is odd
+  warnings.warn(
+LOSO:  73%|███████████████████████████████████▏            | 11/15 folds [5:25:39<1:58:32]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.num_heads is odd
+  warnings.warn(
+LOSO:  80%|██████████████████████████████████████▍         | 12/15 folds [5:55:03<1:28:42]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.num_heads is odd
+  warnings.warn(
+LOSO:  87%|███████████████████████████████████████████▎      | 13/15 folds [6:24:45<59:12]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.num_heads is odd
+  warnings.warn(
+LOSO:  93%|██████████████████████████████████████████████▋   | 14/15 folds [6:54:23<29:36]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.num_heads is odd
+  warnings.warn(
+
+════════════════════════════════════════════════════════════════
+  run_all.sh — sex 05 jun 2026 10:57:02 WEST
+  Python: Python 3.11.15
+  CPUs: 20  |  Device CPU: env CUDA_VISIBLE_DEVICES= OMP_NUM_THREADS=20 MKL_NUM_THREADS=20 OPENBLAS_NUM_THREADS=20
+  Device GPU: env CUDA_VISIBLE_DEVICES=0
+════════════════════════════════════════════════════════════════
+
+════════════════════════════════════════════════════════════════
+  FASE 1 — WESAD LOSO  (27 543 janelas, 15 sujeitos, lab stress)
+════════════════════════════════════════════════════════════════
+
+  ── wesad_logreg ──
+LogReg WESAD:   0%|                                                 | 0/15 folds [00:00<?]LogReg WESAD:   7%|███                                          | 1/15 folds [00:00<00:08]LogReg WESAD:  13%|██████                                       | 2/15 folds [00:01<00:06]LogReg WESAD:  20%|█████████                                    | 3/15 folds [00:02<00:09]LogReg WESAD:  27%|████████████                                 | 4/15 folds [00:02<00:07]LogReg WESAD:  33%|███████████████                              | 5/15 folds [00:03<00:07]LogReg WESAD:  40%|██████████████████                           | 6/15 folds [00:04<00:06]LogReg WESAD:  47%|█████████████████████                        | 7/15 folds [00:04<00:05]LogReg WESAD:  53%|████████████████████████                     | 8/15 folds [00:05<00:04]LogReg WESAD:  60%|███████████████████████████                  | 9/15 folds [00:05<00:03]LogReg WESAD:  67%|█████████████████████████████▎              | 10/15 folds [00:06<00:02]LogReg WESAD:  73%|████████████████████████████████▎           | 11/15 folds [00:07<00:03]LogReg WESAD:  80%|███████████████████████████████████▏        | 12/15 folds [00:08<00:02]LogReg WESAD:  87%|██████████████████████████████████████▏     | 13/15 folds [00:10<00:02]LogReg WESAD:  93%|█████████████████████████████████████████   | 14/15 folds [00:11<00:01]LogReg WESAD: 100%|████████████████████████████████████████████| 15/15 folds [00:11<00:00]LogReg WESAD: 100%|████████████████████████████████████████████| 15/15 folds [00:11<00:00]
+LogReg WESAD:   0%|                                                 | 0/15 folds [00:00<?]LogReg WESAD:   7%|███                                          | 1/15 folds [00:09<02:07]LogReg WESAD:  13%|██████                                       | 2/15 folds [00:18<01:59]LogReg WESAD:  20%|█████████                                    | 3/15 folds [00:23<01:25]LogReg WESAD:  27%|████████████                                 | 4/15 folds [00:28<01:12]LogReg WESAD:  33%|███████████████                              | 5/15 folds [00:38<01:18]LogReg WESAD:  40%|██████████████████                           | 6/15 folds [00:41<00:55]LogReg WESAD:  47%|█████████████████████                        | 7/15 folds [00:44<00:41]LogReg WESAD:  53%|████████████████████████                     | 8/15 folds [00:56<00:51]LogReg WESAD:  60%|███████████████████████████                  | 9/15 folds [01:05<00:46]LogReg WESAD:  67%|█████████████████████████████▎              | 10/15 folds [01:08<00:30]LogReg WESAD:  73%|████████████████████████████████▎           | 11/15 folds [01:12<00:22]LogReg WESAD:  80%|███████████████████████████████████▏        | 12/15 folds [01:14<00:13]LogReg WESAD:  87%|██████████████████████████████████████▏     | 13/15 folds [01:17<00:07]LogReg WESAD:  93%|█████████████████████████████████████████   | 14/15 folds [01:29<00:06]LogReg WESAD: 100%|████████████████████████████████████████████| 15/15 folds [01:32<00:00]LogReg WESAD: 100%|████████████████████████████████████████████| 15/15 folds [01:32<00:00]
+  OK  (106s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_logreg.txt
+F1@opt     : 0.672  (t=0.329)
+Bal. Acc   : 0.596
+Macro F1   : 0.816
+AUC        : 0.912
+F1@opt     : 0.814  (t=0.433)
+Bal. Acc   : 0.816
+
+  [█░░░░░░░░░░░░░░░░░░░░░░░░░░░] 1/19  5%  | elapsed 0h01m | restante ~0h31m
+
+  ── wesad_svm ──
+SVM WESAD:   0%|                                                    | 0/15 folds [00:00<?]SVM WESAD:   7%|███▏                                            | 1/15 folds [00:12<03:00]SVM WESAD:  13%|██████▍                                         | 2/15 folds [00:28<03:07]SVM WESAD:  20%|█████████▌                                      | 3/15 folds [00:43<02:57]SVM WESAD:  27%|████████████▊                                   | 4/15 folds [00:57<02:40]SVM WESAD:  33%|████████████████                                | 5/15 folds [01:10<02:19]SVM WESAD:  40%|███████████████████▏                            | 6/15 folds [01:23<02:02]SVM WESAD:  47%|██████████████████████▍                         | 7/15 folds [01:36<01:45]SVM WESAD:  53%|█████████████████████████▌                      | 8/15 folds [01:48<01:31]SVM WESAD:  60%|████████████████████████████▊                   | 9/15 folds [02:01<01:18]SVM WESAD:  67%|███████████████████████████████▎               | 10/15 folds [02:15<01:07]SVM WESAD:  73%|██████████████████████████████████▍            | 11/15 folds [02:29<00:53]SVM WESAD:  80%|█████████████████████████████████████▌         | 12/15 folds [02:42<00:39]SVM WESAD:  87%|████████████████████████████████████████▋      | 13/15 folds [02:55<00:26]SVM WESAD:  93%|███████████████████████████████████████████▊   | 14/15 folds [03:08<00:13]SVM WESAD: 100%|███████████████████████████████████████████████| 15/15 folds [03:21<00:00]SVM WESAD: 100%|███████████████████████████████████████████████| 15/15 folds [03:21<00:00]
+SVM WESAD:   0%|                                                    | 0/15 folds [00:00<?]SVM WESAD:   7%|███▏                                            | 1/15 folds [00:15<03:36]SVM WESAD:  13%|██████▍                                         | 2/15 folds [00:30<03:21]SVM WESAD:  20%|█████████▌                                      | 3/15 folds [00:45<02:59]SVM WESAD:  27%|████████████▊                                   | 4/15 folds [01:00<02:46]SVM WESAD:  33%|████████████████                                | 5/15 folds [01:14<02:26]SVM WESAD:  40%|███████████████████▏                            | 6/15 folds [01:28<02:09]SVM WESAD:  47%|██████████████████████▍                         | 7/15 folds [01:42<01:53]SVM WESAD:  53%|█████████████████████████▌                      | 8/15 folds [01:55<01:36]SVM WESAD:  60%|████████████████████████████▊                   | 9/15 folds [02:08<01:21]SVM WESAD:  67%|███████████████████████████████▎               | 10/15 folds [02:21<01:07]SVM WESAD:  73%|██████████████████████████████████▍            | 11/15 folds [02:35<00:54]SVM WESAD:  80%|█████████████████████████████████████▌         | 12/15 folds [02:48<00:40]SVM WESAD:  87%|████████████████████████████████████████▋      | 13/15 folds [03:02<00:27]SVM WESAD:  93%|███████████████████████████████████████████▊   | 14/15 folds [03:16<00:13]SVM WESAD: 100%|███████████████████████████████████████████████| 15/15 folds [03:29<00:00]SVM WESAD: 100%|███████████████████████████████████████████████| 15/15 folds [03:29<00:00]
+  OK  (412s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_svm.txt
+F1@opt     : 0.689  (t=0.375)
+Bal. Acc   : 0.704
+Macro F1   : 0.765
+AUC        : 0.874
+F1@opt     : 0.764  (t=0.343)
+Bal. Acc   : 0.785
+
+  [██░░░░░░░░░░░░░░░░░░░░░░░░░░] 2/19  10%  | elapsed 0h08m | restante ~1h13m
+
+  ── wesad_rf ──
+RF WESAD:   0%|                                                     | 0/15 folds [00:00<?]RF WESAD:   0%|                                                     | 0/15 folds [00:23<?]RF WESAD:   7%|███▎                                             | 1/15 folds [00:23<05:24]RF WESAD:   7%|███▎                                             | 1/15 folds [00:47<05:24]RF WESAD:  13%|██████▌                                          | 2/15 folds [00:47<05:07]RF WESAD:  13%|██████▌                                          | 2/15 folds [01:11<05:07]RF WESAD:  20%|█████████▊                                       | 3/15 folds [01:11<04:46]RF WESAD:  20%|█████████▊                                       | 3/15 folds [01:35<04:46]RF WESAD:  27%|█████████████                                    | 4/15 folds [01:35<04:24]RF WESAD:  27%|█████████████                                    | 4/15 folds [02:00<04:24]RF WESAD:  33%|████████████████▎                                | 5/15 folds [02:00<04:01]RF WESAD:  33%|████████████████▎                                | 5/15 folds [02:24<04:01]RF WESAD:  40%|███████████████████▌                             | 6/15 folds [02:24<03:39]RF WESAD:  40%|███████████████████▌                             | 6/15 folds [02:49<03:39]RF WESAD:  47%|██████████████████████▊                          | 7/15 folds [02:49<03:14]RF WESAD:  47%|██████████████████████▊                          | 7/15 folds [03:13<03:14]RF WESAD:  53%|██████████████████████████▏                      | 8/15 folds [03:13<02:49]RF WESAD:  53%|██████████████████████████▏                      | 8/15 folds [03:37<02:49]RF WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [03:37<02:24]RF WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [04:02<02:24]RF WESAD:  67%|████████████████████████████████                | 10/15 folds [04:02<02:02]RF WESAD:  67%|████████████████████████████████                | 10/15 folds [04:25<02:02]RF WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [04:25<01:36]RF WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [04:49<01:36]RF WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [04:49<01:12]RF WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [05:14<01:12]RF WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [05:14<00:48]RF WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [05:38<00:48]RF WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [05:38<00:24]RF WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [06:02<00:24]RF WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [06:02<00:00]RF WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [06:02<00:00]
+RF WESAD:   0%|                                                     | 0/15 folds [00:00<?]RF WESAD:   0%|                                                     | 0/15 folds [01:11<?]RF WESAD:   7%|███▎                                             | 1/15 folds [01:11<16:47]RF WESAD:   7%|███▎                                             | 1/15 folds [02:21<16:47]RF WESAD:  13%|██████▌                                          | 2/15 folds [02:21<15:17]RF WESAD:  13%|██████▌                                          | 2/15 folds [03:39<15:17]RF WESAD:  20%|█████████▊                                       | 3/15 folds [03:39<14:46]RF WESAD:  20%|█████████▊                                       | 3/15 folds [04:47<14:46]RF WESAD:  27%|█████████████                                    | 4/15 folds [04:47<13:09]RF WESAD:  27%|█████████████                                    | 4/15 folds [06:09<13:09]RF WESAD:  33%|████████████████▎                                | 5/15 folds [06:09<12:31]RF WESAD:  33%|████████████████▎                                | 5/15 folds [07:32<12:31]RF WESAD:  40%|███████████████████▌                             | 6/15 folds [07:32<11:41]RF WESAD:  40%|███████████████████▌                             | 6/15 folds [08:37<11:41]RF WESAD:  47%|██████████████████████▊                          | 7/15 folds [08:37<09:48]RF WESAD:  47%|██████████████████████▊                          | 7/15 folds [10:02<09:48]RF WESAD:  53%|██████████████████████████▏                      | 8/15 folds [10:02<09:00]RF WESAD:  53%|██████████████████████████▏                      | 8/15 folds [11:19<09:00]RF WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [11:19<07:43]RF WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [12:39<07:43]RF WESAD:  67%|████████████████████████████████                | 10/15 folds [12:39<06:30]RF WESAD:  67%|████████████████████████████████                | 10/15 folds [13:57<06:30]RF WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [13:57<05:12]RF WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [15:13<05:12]RF WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [15:13<03:52]RF WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [16:31<03:52]RF WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [16:31<02:35]RF WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [17:52<02:35]RF WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [17:52<01:18]RF WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [19:09<01:18]RF WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [19:09<00:00]RF WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [19:09<00:00]
+  OK  (1513s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_rf.txt
+F1@opt     : 0.782  (t=0.133)
+Bal. Acc   : 0.759
+Macro F1   : 0.855
+AUC        : 0.941
+F1@opt     : 0.853  (t=0.268)
+Bal. Acc   : 0.853
+
+  [████░░░░░░░░░░░░░░░░░░░░░░░░] 3/19  15%  | elapsed 0h33m | restante ~3h00m
+
+  ── wesad_et ──
+ET WESAD:   0%|                                                     | 0/15 folds [00:00<?]ET WESAD:   0%|                                                     | 0/15 folds [00:03<?]ET WESAD:   7%|███▎                                             | 1/15 folds [00:03<00:42]ET WESAD:   7%|███▎                                             | 1/15 folds [00:06<00:42]ET WESAD:  13%|██████▌                                          | 2/15 folds [00:06<00:40]ET WESAD:  13%|██████▌                                          | 2/15 folds [00:09<00:40]ET WESAD:  20%|█████████▊                                       | 3/15 folds [00:09<00:37]ET WESAD:  20%|█████████▊                                       | 3/15 folds [00:12<00:37]ET WESAD:  27%|█████████████                                    | 4/15 folds [00:12<00:34]ET WESAD:  27%|█████████████                                    | 4/15 folds [00:15<00:34]ET WESAD:  33%|████████████████▎                                | 5/15 folds [00:15<00:31]ET WESAD:  33%|████████████████▎                                | 5/15 folds [00:18<00:31]ET WESAD:  40%|███████████████████▌                             | 6/15 folds [00:18<00:28]ET WESAD:  40%|███████████████████▌                             | 6/15 folds [00:21<00:28]ET WESAD:  47%|██████████████████████▊                          | 7/15 folds [00:21<00:25]ET WESAD:  47%|██████████████████████▊                          | 7/15 folds [00:25<00:25]ET WESAD:  53%|██████████████████████████▏                      | 8/15 folds [00:25<00:22]ET WESAD:  53%|██████████████████████████▏                      | 8/15 folds [00:28<00:22]ET WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [00:28<00:19]ET WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [00:31<00:19]ET WESAD:  67%|████████████████████████████████                | 10/15 folds [00:31<00:15]ET WESAD:  67%|████████████████████████████████                | 10/15 folds [00:34<00:15]ET WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [00:34<00:12]ET WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [00:37<00:12]ET WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [00:37<00:09]ET WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [00:41<00:09]ET WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [00:41<00:06]ET WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [00:44<00:06]ET WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [00:44<00:03]ET WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [00:47<00:03]ET WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [00:47<00:00]ET WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [00:47<00:00]
+ET WESAD:   0%|                                                     | 0/15 folds [00:00<?]ET WESAD:   0%|                                                     | 0/15 folds [00:06<?]ET WESAD:   7%|███▎                                             | 1/15 folds [00:06<01:33]ET WESAD:   7%|███▎                                             | 1/15 folds [00:13<01:33]ET WESAD:  13%|██████▌                                          | 2/15 folds [00:13<01:30]ET WESAD:  13%|██████▌                                          | 2/15 folds [00:20<01:30]ET WESAD:  20%|█████████▊                                       | 3/15 folds [00:20<01:22]ET WESAD:  20%|█████████▊                                       | 3/15 folds [00:27<01:22]ET WESAD:  27%|█████████████                                    | 4/15 folds [00:27<01:17]ET WESAD:  27%|█████████████                                    | 4/15 folds [00:34<01:17]ET WESAD:  33%|████████████████▎                                | 5/15 folds [00:34<01:09]ET WESAD:  33%|████████████████▎                                | 5/15 folds [00:42<01:09]ET WESAD:  40%|███████████████████▌                             | 6/15 folds [00:42<01:03]ET WESAD:  40%|███████████████████▌                             | 6/15 folds [00:48<01:03]ET WESAD:  47%|██████████████████████▊                          | 7/15 folds [00:48<00:55]ET WESAD:  47%|██████████████████████▊                          | 7/15 folds [00:56<00:55]ET WESAD:  53%|██████████████████████████▏                      | 8/15 folds [00:56<00:49]ET WESAD:  53%|██████████████████████████▏                      | 8/15 folds [01:02<00:49]ET WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [01:02<00:41]ET WESAD:  60%|█████████████████████████████▍                   | 9/15 folds [01:09<00:41]ET WESAD:  67%|████████████████████████████████                | 10/15 folds [01:09<00:34]ET WESAD:  67%|████████████████████████████████                | 10/15 folds [01:16<00:34]ET WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [01:16<00:27]ET WESAD:  73%|███████████████████████████████████▏            | 11/15 folds [01:23<00:27]ET WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [01:23<00:20]ET WESAD:  80%|██████████████████████████████████████▍         | 12/15 folds [01:30<00:20]ET WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [01:30<00:13]ET WESAD:  87%|█████████████████████████████████████████▌      | 13/15 folds [01:37<00:13]ET WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [01:37<00:06]ET WESAD:  93%|████████████████████████████████████████████▊   | 14/15 folds [01:44<00:06]ET WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [01:44<00:00]ET WESAD: 100%|████████████████████████████████████████████████| 15/15 folds [01:44<00:00]
+  OK  (154s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_et.txt
+F1@opt     : 0.722  (t=0.407)
+Bal. Acc   : 0.716
+Macro F1   : 0.848
+AUC        : 0.945
+F1@opt     : 0.862  (t=0.562)
+Bal. Acc   : 0.853
+
+  [█████░░░░░░░░░░░░░░░░░░░░░░░] 4/19  21%  | elapsed 0h36m | restante ~2h16m
+
+  ── wesad_ensemble ──
+Ensemble WESAD:   0%|                                               | 0/15 folds [00:00<?]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:   7%|██▊                                        | 1/15 folds [00:05<01:11]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  13%|█████▋                                     | 2/15 folds [00:11<01:14]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  20%|████████▌                                  | 3/15 folds [00:17<01:09]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  27%|███████████▍                               | 4/15 folds [00:23<01:07]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  33%|██████████████▎                            | 5/15 folds [00:29<01:00]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  40%|█████████████████▏                         | 6/15 folds [00:36<00:57]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  47%|████████████████████                       | 7/15 folds [00:42<00:49]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  53%|██████████████████████▉                    | 8/15 folds [00:48<00:42]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  60%|█████████████████████████▊                 | 9/15 folds [00:54<00:36]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  67%|████████████████████████████              | 10/15 folds [01:00<00:29]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  73%|██████████████████████████████▊           | 11/15 folds [01:07<00:25]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  80%|█████████████████████████████████▌        | 12/15 folds [01:13<00:18]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  87%|████████████████████████████████████▍     | 13/15 folds [01:19<00:12]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  93%|███████████████████████████████████████▏  | 14/15 folds [01:24<00:05]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD: 100%|██████████████████████████████████████████| 15/15 folds [01:32<00:00]Ensemble WESAD: 100%|██████████████████████████████████████████| 15/15 folds [01:32<00:00]
+Ensemble WESAD:   0%|                                               | 0/15 folds [00:00<?]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:   7%|██▊                                        | 1/15 folds [00:09<02:14]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  13%|█████▋                                     | 2/15 folds [00:17<01:50]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  20%|████████▌                                  | 3/15 folds [00:26<01:45]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  27%|███████████▍                               | 4/15 folds [00:34<01:35]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  33%|██████████████▎                            | 5/15 folds [00:43<01:26]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  40%|█████████████████▏                         | 6/15 folds [00:52<01:17]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  47%|████████████████████                       | 7/15 folds [01:00<01:08]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  53%|██████████████████████▉                    | 8/15 folds [01:09<01:00]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  60%|█████████████████████████▊                 | 9/15 folds [01:18<00:52]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  67%|████████████████████████████              | 10/15 folds [01:27<00:44]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  73%|██████████████████████████████▊           | 11/15 folds [01:36<00:35]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  80%|█████████████████████████████████▌        | 12/15 folds [01:44<00:26]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  87%|████████████████████████████████████▍     | 13/15 folds [01:52<00:17]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD:  93%|███████████████████████████████████████▏  | 14/15 folds [02:01<00:08]/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+Ensemble WESAD: 100%|██████████████████████████████████████████| 15/15 folds [02:10<00:00]Ensemble WESAD: 100%|██████████████████████████████████████████| 15/15 folds [02:10<00:00]
+  OK  (224s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_ensemble.txt
+F1@opt     : 0.794  (t=0.195)
+Bal. Acc   : 0.790
+Macro F1   : 0.912
+AUC        : 0.974
+F1@opt     : 0.914  (t=0.514)
+Bal. Acc   : 0.918
+
+  [███████░░░░░░░░░░░░░░░░░░░░░] 5/19  26%  | elapsed 0h40m | restante ~1h52m
+
+  ── wesad_autogluon ──
+AutoGluon WESAD:   0%|                                              | 0/15 folds [00:00<?]2026-06-05 11:37:15,891	INFO worker.py:2023 -- Started a local Ray instance.
+/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/ray/_private/worker.py:2062: FutureWarning: Tip: In future versions of Ray, Ray will no longer override accelerator visible devices env var if num_gpus=0 or num_gpus=None (default). To enable this behavior and turn off this error message, set RAY_ACCEL_ENV_VAR_OVERRIDE_ON_ZERO=0
+  warnings.warn(
+[36m(pid=gcs_server)[0m [2026-06-05 11:37:44,426 E 954019 954019] (gcs_server) gcs_server.cc:303: Failed to establish connection to the event+metrics exporter agent. Events and metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[33m(raylet)[0m [2026-06-05 11:37:45,824 E 954163 954163] (raylet) main.cc:979: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[36m(_dystack pid=954237)[0m [2026-06-05 11:37:50,654 E 954237 954397] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+[2026-06-05 11:37:51,842 E 953952 954234] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+AutoGluon WESAD:   7%|██▋                                     | 1/15 folds [05:39<1:19:13]AutoGluon WESAD:  13%|█████▎                                  | 2/15 folds [11:19<1:13:39]AutoGluon WESAD:  20%|████████                                | 3/15 folds [16:50<1:07:07]AutoGluon WESAD:  27%|██████████▋                             | 4/15 folds [22:19<1:01:04]AutoGluon WESAD:  33%|██████████████                            | 5/15 folds [27:57<55:48][2026-06-05 12:10:17,597 E 953952 955347] rpc_client.h:203: Failed to connect to GCS within 60 seconds. GCS may have been killed. It's either GCS is terminated by `ray stop` or is killed unexpectedly. If it is killed unexpectedly, see the log file gcs_server.out. https://docs.ray.io/en/master/ray-observability/user-guides/configure-logging.html#logging-directory-structure. The program will terminate.
+  ERRO (1986s)  — ver /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_autogluon.txt
+Loading WESAD...
+
+=================================================================
+  WESAD LOSO — AutoGluon — WRIST features
+=================================================================
+  Features: 56 wrist
+
+  [████████░░░░░░░░░░░░░░░░░░░░] 6/19  31%  | elapsed 1h13m | restante ~2h38m
+
+  ── wesad_1dcnn ──
+1D-CNN WESAD — wrist (5 ch):   0%|                                  | 0/15 folds [00:00<?]1D-CNN WESAD — wrist (5 ch):   0%|                                  | 0/15 folds [05:26<?]1D-CNN WESAD — wrist (5 ch):   7%|█▊                          | 1/15 folds [05:26<1:16:06]1D-CNN WESAD — wrist (5 ch):   7%|█▊                          | 1/15 folds [07:28<1:16:06]1D-CNN WESAD — wrist (5 ch):  13%|████                          | 2/15 folds [07:28<44:40]1D-CNN WESAD — wrist (5 ch):  13%|████                          | 2/15 folds [10:49<44:40]1D-CNN WESAD — wrist (5 ch):  20%|██████                        | 3/15 folds [10:49<40:45]1D-CNN WESAD — wrist (5 ch):  20%|██████                        | 3/15 folds [12:28<40:45]1D-CNN WESAD — wrist (5 ch):  27%|████████                      | 4/15 folds [12:28<29:48]1D-CNN WESAD — wrist (5 ch):  27%|████████                      | 4/15 folds [14:33<29:48]1D-CNN WESAD — wrist (5 ch):  33%|██████████                    | 5/15 folds [14:33<24:51]1D-CNN WESAD — wrist (5 ch):  33%|██████████                    | 5/15 folds [17:54<24:51]1D-CNN WESAD — wrist (5 ch):  40%|████████████                  | 6/15 folds [17:54<24:58]1D-CNN WESAD — wrist (5 ch):  40%|████████████                  | 6/15 folds [20:26<24:58]1D-CNN WESAD — wrist (5 ch):  47%|██████████████                | 7/15 folds [20:26<21:34]1D-CNN WESAD — wrist (5 ch):  47%|██████████████                | 7/15 folds [23:00<21:34]1D-CNN WESAD — wrist (5 ch):  53%|████████████████              | 8/15 folds [23:00<18:34]1D-CNN WESAD — wrist (5 ch):  53%|████████████████              | 8/15 folds [26:01<18:34]1D-CNN WESAD — wrist (5 ch):  60%|██████████████████            | 9/15 folds [26:01<16:37]1D-CNN WESAD — wrist (5 ch):  60%|██████████████████            | 9/15 folds [27:48<16:37]1D-CNN WESAD — wrist (5 ch):  67%|███████████████████▎         | 10/15 folds [27:48<12:19]1D-CNN WESAD — wrist (5 ch):  67%|███████████████████▎         | 10/15 folds [31:44<12:19]1D-CNN WESAD — wrist (5 ch):  73%|█████████████████████▎       | 11/15 folds [31:44<11:39]1D-CNN WESAD — wrist (5 ch):  73%|█████████████████████▎       | 11/15 folds [33:22<11:39]1D-CNN WESAD — wrist (5 ch):  80%|███████████████████████▏     | 12/15 folds [33:22<07:34]1D-CNN WESAD — wrist (5 ch):  80%|███████████████████████▏     | 12/15 folds [36:19<07:34]1D-CNN WESAD — wrist (5 ch):  87%|█████████████████████████▏   | 13/15 folds [36:19<05:18]1D-CNN WESAD — wrist (5 ch):  87%|█████████████████████████▏   | 13/15 folds [38:48<05:18]1D-CNN WESAD — wrist (5 ch):  93%|███████████████████████████  | 14/15 folds [38:48<02:36]1D-CNN WESAD — wrist (5 ch):  93%|███████████████████████████  | 14/15 folds [40:35<02:36]1D-CNN WESAD — wrist (5 ch): 100%|█████████████████████████████| 15/15 folds [40:35<00:00]1D-CNN WESAD — wrist (5 ch): 100%|█████████████████████████████| 15/15 folds [40:35<00:00]
+1D-CNN WESAD — all (16 ch):   0%|                                   | 0/15 folds [00:00<?]1D-CNN WESAD — all (16 ch):   0%|                                   | 0/15 folds [02:03<?]1D-CNN WESAD — all (16 ch):   7%|██                             | 1/15 folds [02:03<28:53]1D-CNN WESAD — all (16 ch):   7%|██                             | 1/15 folds [04:30<28:53]1D-CNN WESAD — all (16 ch):  13%|████▏                          | 2/15 folds [04:30<29:45]1D-CNN WESAD — all (16 ch):  13%|████▏                          | 2/15 folds [06:40<29:45]1D-CNN WESAD — all (16 ch):  20%|██████▏                        | 3/15 folds [06:40<26:49]1D-CNN WESAD — all (16 ch):  20%|██████▏                        | 3/15 folds [09:55<26:49]1D-CNN WESAD — all (16 ch):  27%|████████▎                      | 4/15 folds [09:55<28:58]1D-CNN WESAD — all (16 ch):  27%|████████▎                      | 4/15 folds [14:01<28:58]1D-CNN WESAD — all (16 ch):  33%|██████████▎                    | 5/15 folds [14:01<31:36]1D-CNN WESAD — all (16 ch):  33%|██████████▎                    | 5/15 folds [15:36<31:36]1D-CNN WESAD — all (16 ch):  40%|████████████▍                  | 6/15 folds [15:36<23:37]1D-CNN WESAD — all (16 ch):  40%|████████████▍                  | 6/15 folds [19:02<23:37]1D-CNN WESAD — all (16 ch):  47%|██████████████▍                | 7/15 folds [19:02<23:06]1D-CNN WESAD — all (16 ch):  47%|██████████████▍                | 7/15 folds [21:08<23:06]1D-CNN WESAD — all (16 ch):  53%|████████████████▌              | 8/15 folds [21:08<18:27]1D-CNN WESAD — all (16 ch):  53%|████████████████▌              | 8/15 folds [22:47<18:27]1D-CNN WESAD — all (16 ch):  60%|██████████████████▌            | 9/15 folds [22:47<13:58]1D-CNN WESAD — all (16 ch):  60%|██████████████████▌            | 9/15 folds [24:34<13:58]1D-CNN WESAD — all (16 ch):  67%|████████████████████          | 10/15 folds [24:34<10:47]1D-CNN WESAD — all (16 ch):  67%|████████████████████          | 10/15 folds [28:12<10:47]1D-CNN WESAD — all (16 ch):  73%|██████████████████████        | 11/15 folds [28:12<10:27]1D-CNN WESAD — all (16 ch):  73%|██████████████████████        | 11/15 folds [31:49<10:27]1D-CNN WESAD — all (16 ch):  80%|████████████████████████      | 12/15 folds [31:49<08:44]1D-CNN WESAD — all (16 ch):  80%|████████████████████████      | 12/15 folds [33:26<08:44]1D-CNN WESAD — all (16 ch):  87%|██████████████████████████    | 13/15 folds [33:26<05:03]1D-CNN WESAD — all (16 ch):  87%|██████████████████████████    | 13/15 folds [35:22<05:03]1D-CNN WESAD — all (16 ch):  93%|████████████████████████████  | 14/15 folds [35:22<02:20]1D-CNN WESAD — all (16 ch):  93%|████████████████████████████  | 14/15 folds [38:28<02:20]1D-CNN WESAD — all (16 ch): 100%|██████████████████████████████| 15/15 folds [38:28<00:00]1D-CNN WESAD — all (16 ch): 100%|██████████████████████████████| 15/15 folds [38:28<00:00]
+  OK  (4747s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_1dcnn.txt
+F1@opt     : 0.752  (t=0.507)
+Bal. Acc   : 0.768
+Macro F1   : 0.912
+AUC        : 0.962
+F1@opt     : 0.912  (t=0.508)
+Bal. Acc   : 0.919
+
+  [██████████░░░░░░░░░░░░░░░░░░] 7/19  36%  | elapsed 2h32m | restante ~4h21m
+
+  ── wesad_cnngru ──
+CNN-GRU WESAD — wrist (5 ch):   0%|                                 | 0/15 folds [00:00<?]CNN-GRU WESAD — wrist (5 ch):   0%|                               | 0/15 folds [1:04:40<?]CNN-GRU WESAD — wrist (5 ch):   7%|█▌                      | 1/15 folds [1:04:40<15:05:25]CNN-GRU WESAD — wrist (5 ch):   7%|█▌                      | 1/15 folds [1:55:24<15:05:25]CNN-GRU WESAD — wrist (5 ch):  13%|███▏                    | 2/15 folds [1:55:24<12:14:11]CNN-GRU WESAD — wrist (5 ch):  13%|███▏                    | 2/15 folds [2:24:24<12:14:11]CNN-GRU WESAD — wrist (5 ch):  20%|█████                    | 3/15 folds [2:24:24<8:47:05]CNN-GRU WESAD — wrist (5 ch):  20%|█████                    | 3/15 folds [3:10:15<8:47:05]CNN-GRU WESAD — wrist (5 ch):  27%|██████▋                  | 4/15 folds [3:10:15<8:11:34]CNN-GRU WESAD — wrist (5 ch):  27%|██████▋                  | 4/15 folds [3:59:04<8:11:34]CNN-GRU WESAD — wrist (5 ch):  33%|████████▎                | 5/15 folds [3:59:04<7:41:47]CNN-GRU WESAD — wrist (5 ch):  33%|████████▎                | 5/15 folds [4:50:03<7:41:47]CNN-GRU WESAD — wrist (5 ch):  40%|██████████               | 6/15 folds [4:50:03<7:10:17]CNN-GRU WESAD — wrist (5 ch):  40%|██████████               | 6/15 folds [5:21:42<7:10:17]CNN-GRU WESAD — wrist (5 ch):  47%|███████████▋             | 7/15 folds [5:21:42<5:40:11]CNN-GRU WESAD — wrist (5 ch):  47%|███████████▋             | 7/15 folds [5:58:42<5:40:11]CNN-GRU WESAD — wrist (5 ch):  53%|█████████████▎           | 8/15 folds [5:58:42<4:45:21]CNN-GRU WESAD — wrist (5 ch):  53%|█████████████▎           | 8/15 folds [6:28:44<4:45:21]CNN-GRU WESAD — wrist (5 ch):  60%|███████████████          | 9/15 folds [6:28:44<3:44:28]CNN-GRU WESAD — wrist (5 ch):  60%|███████████████          | 9/15 folds [7:26:53<3:44:28]CNN-GRU WESAD — wrist (5 ch):  67%|████████████████        | 10/15 folds [7:26:53<3:39:03]CNN-GRU WESAD — wrist (5 ch):  67%|████████████████        | 10/15 folds [8:08:04<3:39:03]CNN-GRU WESAD — wrist (5 ch):  73%|█████████████████▌      | 11/15 folds [8:08:04<2:52:02]CNN-GRU WESAD — wrist (5 ch):  73%|█████████████████▌      | 11/15 folds [9:01:22<2:52:02]CNN-GRU WESAD — wrist (5 ch):  80%|███████████████████▏    | 12/15 folds [9:01:22<2:18:25]CNN-GRU WESAD — wrist (5 ch):  80%|███████████████████▏    | 12/15 folds [9:44:47<2:18:25]CNN-GRU WESAD — wrist (5 ch):  87%|████████████████████▊   | 13/15 folds [9:44:47<1:30:37]CNN-GRU WESAD — wrist (5 ch):  87%|███████████████████▉   | 13/15 folds [10:28:19<1:30:37]CNN-GRU WESAD — wrist (5 ch):  93%|███████████████████████▎ | 14/15 folds [10:28:19<44:46]CNN-GRU WESAD — wrist (5 ch):  93%|███████████████████████▎ | 14/15 folds [11:14:16<44:46]CNN-GRU WESAD — wrist (5 ch): 100%|█████████████████████████| 15/15 folds [11:14:16<00:00]CNN-GRU WESAD — wrist (5 ch): 100%|█████████████████████████| 15/15 folds [11:14:16<00:00]
+CNN-GRU WESAD — all (16 ch):   0%|                                  | 0/15 folds [00:00<?]CNN-GRU WESAD — all (16 ch):   0%|                                | 0/15 folds [1:26:56<?]CNN-GRU WESAD — all (16 ch):   7%|█▋                       | 1/15 folds [1:26:56<20:17:09]CNN-GRU WESAD — all (16 ch):   7%|█▋                       | 1/15 folds [1:58:25<20:17:09]CNN-GRU WESAD — all (16 ch):  13%|███▎                     | 2/15 folds [1:58:25<11:46:05]CNN-GRU WESAD — all (16 ch):  13%|███▎                     | 2/15 folds [2:42:01<11:46:05]CNN-GRU WESAD — all (16 ch):  20%|█████▏                    | 3/15 folds [2:42:01<9:53:06]CNN-GRU WESAD — all (16 ch):  20%|█████▏                    | 3/15 folds [3:28:05<9:53:06]CNN-GRU WESAD — all (16 ch):  27%|██████▉                   | 4/15 folds [3:28:05<8:49:07]CNN-GRU WESAD — all (16 ch):  27%|██████▉                   | 4/15 folds [3:59:33<8:49:07]CNN-GRU WESAD — all (16 ch):  33%|████████▋                 | 5/15 folds [3:59:33<7:01:00]CNN-GRU WESAD — all (16 ch):  33%|████████▋                 | 5/15 folds [4:35:56<7:01:00]CNN-GRU WESAD — all (16 ch):  40%|██████████▍               | 6/15 folds [4:35:56<6:01:25]CNN-GRU WESAD — all (16 ch):  40%|██████████▍               | 6/15 folds [5:12:15<6:01:25]CNN-GRU WESAD — all (16 ch):  47%|████████████▏             | 7/15 folds [5:12:15<5:11:13]CNN-GRU WESAD — all (16 ch):  47%|████████████▏             | 7/15 folds [5:41:19<5:11:13]CNN-GRU WESAD — all (16 ch):  53%|█████████████▊            | 8/15 folds [5:41:19<4:10:22]CNN-GRU WESAD — all (16 ch):  53%|█████████████▊            | 8/15 folds [6:39:42<4:10:22]CNN-GRU WESAD — all (16 ch):  60%|███████████████▌          | 9/15 folds [6:39:42<4:17:02]CNN-GRU WESAD — all (16 ch):  60%|███████████████▌          | 9/15 folds [7:11:23<4:17:02]CNN-GRU WESAD — all (16 ch):  67%|████████████████▋        | 10/15 folds [7:11:23<3:16:58]CNN-GRU WESAD — all (16 ch):  67%|████████████████▋        | 10/15 folds [8:22:32<3:16:58]CNN-GRU WESAD — all (16 ch):  73%|██████████████████▎      | 11/15 folds [8:22:32<3:16:27]CNN-GRU WESAD — all (16 ch):  73%|██████████████████▎      | 11/15 folds [9:06:42<3:16:27]CNN-GRU WESAD — all (16 ch):  80%|████████████████████     | 12/15 folds [9:06:42<2:22:49]CNN-GRU WESAD — all (16 ch):  80%|███████████████████▏    | 12/15 folds [14:37:05<2:22:49]CNN-GRU WESAD — all (16 ch):  87%|████████████████████▊   | 13/15 folds [14:37:05<4:26:32]CNN-GRU WESAD — all (16 ch):  87%|████████████████████▊   | 13/15 folds [15:06:14<4:26:32]CNN-GRU WESAD — all (16 ch):  93%|██████████████████████▍ | 14/15 folds [15:06:14<1:41:49]CNN-GRU WESAD — all (16 ch):  93%|██████████████████████▍ | 14/15 folds [15:45:13<1:41:49]CNN-GRU WESAD — all (16 ch): 100%|██████████████████████████| 15/15 folds [15:45:13<00:00]CNN-GRU WESAD — all (16 ch): 100%|██████████████████████████| 15/15 folds [15:45:13<00:00]
+  OK  (97173s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_cnngru.txt
+F1@opt     : 0.788  (t=0.513)
+Bal. Acc   : 0.797
+Macro F1   : 0.902
+AUC        : 0.966
+F1@opt     : 0.901  (t=0.428)
+Bal. Acc   : 0.905
+
+  [███████████░░░░░░░░░░░░░░░░░] 8/19  42%  | elapsed 29h31m | restante ~40h36m
+
+  ── wesad_rnn ──
+RNN (BiGRU) WESAD — wrist (5 ch):   0%|                             | 0/15 folds [00:00<?]RNN (BiGRU) WESAD — wrist (5 ch):   0%|                             | 0/15 folds [38:01<?]RNN (BiGRU) WESAD — wrist (5 ch):   7%|█▌                     | 1/15 folds [38:01<8:52:25]RNN (BiGRU) WESAD — wrist (5 ch):   7%|█▌                     | 1/15 folds [53:56<8:52:25]RNN (BiGRU) WESAD — wrist (5 ch):  13%|███                    | 2/15 folds [53:56<5:25:14]RNN (BiGRU) WESAD — wrist (5 ch):  13%|██▊                  | 2/15 folds [1:11:42<5:25:14]RNN (BiGRU) WESAD — wrist (5 ch):  20%|████▏                | 3/15 folds [1:11:42<4:20:28]RNN (BiGRU) WESAD — wrist (5 ch):  20%|████▏                | 3/15 folds [1:44:30<4:20:28]RNN (BiGRU) WESAD — wrist (5 ch):  27%|█████▌               | 4/15 folds [1:44:30<4:46:58]RNN (BiGRU) WESAD — wrist (5 ch):  27%|█████▌               | 4/15 folds [2:01:15<4:46:58]RNN (BiGRU) WESAD — wrist (5 ch):  33%|███████              | 5/15 folds [2:01:15<3:47:12]RNN (BiGRU) WESAD — wrist (5 ch):  33%|███████              | 5/15 folds [2:50:19<3:47:12]RNN (BiGRU) WESAD — wrist (5 ch):  40%|████████▍            | 6/15 folds [2:50:19<4:45:05]RNN (BiGRU) WESAD — wrist (5 ch):  40%|████████▍            | 6/15 folds [3:07:20<4:45:05]RNN (BiGRU) WESAD — wrist (5 ch):  47%|█████████▊           | 7/15 folds [3:07:20<3:35:05]RNN (BiGRU) WESAD — wrist (5 ch):  47%|█████████▊           | 7/15 folds [3:35:09<3:35:05]RNN (BiGRU) WESAD — wrist (5 ch):  53%|███████████▏         | 8/15 folds [3:35:09<3:10:16]RNN (BiGRU) WESAD — wrist (5 ch):  53%|███████████▏         | 8/15 folds [3:57:37<3:10:16]RNN (BiGRU) WESAD — wrist (5 ch):  60%|████████████▌        | 9/15 folds [3:57:37<2:34:15]RNN (BiGRU) WESAD — wrist (5 ch):  60%|████████████▌        | 9/15 folds [4:42:55<2:34:15]RNN (BiGRU) WESAD — wrist (5 ch):  67%|█████████████▎      | 10/15 folds [4:42:55<2:38:45]RNN (BiGRU) WESAD — wrist (5 ch):  67%|█████████████▎      | 10/15 folds [5:39:07<2:38:45]RNN (BiGRU) WESAD — wrist (5 ch):  73%|██████████████▋     | 11/15 folds [5:39:07<2:36:57]RNN (BiGRU) WESAD — wrist (5 ch):  73%|██████████████▋     | 11/15 folds [5:57:47<2:36:57]RNN (BiGRU) WESAD — wrist (5 ch):  80%|████████████████    | 12/15 folds [5:57:47<1:38:56]RNN (BiGRU) WESAD — wrist (5 ch):  80%|████████████████    | 12/15 folds [6:12:37<1:38:56]RNN (BiGRU) WESAD — wrist (5 ch):  87%|███████████████████   | 13/15 folds [6:12:37<54:57]RNN (BiGRU) WESAD — wrist (5 ch):  87%|███████████████████   | 13/15 folds [6:29:21<54:57]RNN (BiGRU) WESAD — wrist (5 ch):  93%|████████████████████▌ | 14/15 folds [6:29:21<24:14]RNN (BiGRU) WESAD — wrist (5 ch):  93%|████████████████████▌ | 14/15 folds [6:49:31<24:14]RNN (BiGRU) WESAD — wrist (5 ch): 100%|██████████████████████| 15/15 folds [6:49:31<00:00]RNN (BiGRU) WESAD — wrist (5 ch): 100%|██████████████████████| 15/15 folds [6:49:31<00:00]
+RNN (BiGRU) WESAD — all (16 ch):   0%|                              | 0/15 folds [00:00<?]RNN (BiGRU) WESAD — all (16 ch):   0%|                              | 0/15 folds [14:21<?]RNN (BiGRU) WESAD — all (16 ch):   7%|█▌                      | 1/15 folds [14:21<3:20:54]RNN (BiGRU) WESAD — all (16 ch):   7%|█▌                      | 1/15 folds [29:55<3:20:54]RNN (BiGRU) WESAD — all (16 ch):  13%|███▏                    | 2/15 folds [29:55<3:15:56]RNN (BiGRU) WESAD — all (16 ch):  13%|███▏                    | 2/15 folds [53:25<3:15:56]RNN (BiGRU) WESAD — all (16 ch):  20%|████▊                   | 3/15 folds [53:25<3:47:00]RNN (BiGRU) WESAD — all (16 ch):  20%|████▍                 | 3/15 folds [1:31:39<3:47:00]RNN (BiGRU) WESAD — all (16 ch):  27%|█████▊                | 4/15 folds [1:31:39<4:51:58]RNN (BiGRU) WESAD — all (16 ch):  27%|█████▊                | 4/15 folds [1:46:53<4:51:58]RNN (BiGRU) WESAD — all (16 ch):  33%|███████▎              | 5/15 folds [1:46:53<3:44:40]RNN (BiGRU) WESAD — all (16 ch):  33%|███████▎              | 5/15 folds [2:04:18<3:44:40]RNN (BiGRU) WESAD — all (16 ch):  40%|████████▊             | 6/15 folds [2:04:18<3:06:43]RNN (BiGRU) WESAD — all (16 ch):  40%|████████▊             | 6/15 folds [2:37:26<3:06:43]RNN (BiGRU) WESAD — all (16 ch):  47%|██████████▎           | 7/15 folds [2:37:26<3:18:23]RNN (BiGRU) WESAD — all (16 ch):  47%|██████████▎           | 7/15 folds [2:54:27<3:18:23]RNN (BiGRU) WESAD — all (16 ch):  53%|███████████▋          | 8/15 folds [2:54:27<2:36:15]RNN (BiGRU) WESAD — all (16 ch):  53%|███████████▋          | 8/15 folds [3:21:59<2:36:15]RNN (BiGRU) WESAD — all (16 ch):  60%|█████████████▏        | 9/15 folds [3:21:59<2:23:42]RNN (BiGRU) WESAD — all (16 ch):  60%|█████████████▏        | 9/15 folds [3:38:29<2:23:42]RNN (BiGRU) WESAD — all (16 ch):  67%|██████████████       | 10/15 folds [3:38:29<1:48:15]RNN (BiGRU) WESAD — all (16 ch):  67%|██████████████       | 10/15 folds [4:13:33<1:48:15]RNN (BiGRU) WESAD — all (16 ch):  73%|███████████████▍     | 11/15 folds [4:13:33<1:43:00]RNN (BiGRU) WESAD — all (16 ch):  73%|███████████████▍     | 11/15 folds [4:39:29<1:43:00]RNN (BiGRU) WESAD — all (16 ch):  80%|████████████████▊    | 12/15 folds [4:39:29<1:17:25]RNN (BiGRU) WESAD — all (16 ch):  80%|████████████████▊    | 12/15 folds [5:10:32<1:17:25]RNN (BiGRU) WESAD — all (16 ch):  87%|███████████████████▉   | 13/15 folds [5:10:32<54:47]RNN (BiGRU) WESAD — all (16 ch):  87%|███████████████████▉   | 13/15 folds [5:28:06<54:47]RNN (BiGRU) WESAD — all (16 ch):  93%|█████████████████████▍ | 14/15 folds [5:28:06<24:25]RNN (BiGRU) WESAD — all (16 ch):  93%|█████████████████████▍ | 14/15 folds [5:44:53<24:25]RNN (BiGRU) WESAD — all (16 ch): 100%|███████████████████████| 15/15 folds [5:44:53<00:00]RNN (BiGRU) WESAD — all (16 ch): 100%|███████████████████████| 15/15 folds [5:44:53<00:00]
+  OK  (45267s)  →  /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/wesad_rnn.txt
+F1@opt     : 0.830  (t=0.511)
+Bal. Acc   : 0.825
+Macro F1   : 0.924
+AUC        : 0.968
+F1@opt     : 0.924  (t=0.436)
+Bal. Acc   : 0.928
+
+  [█████████████░░░░░░░░░░░░░░░] 9/19  47%  | elapsed 42h06m | restante ~46h47m
+
+  ── wesad_transformer ──
+Transformer WESAD — wrist (5 ch):   0%|                             | 0/15 folds [00:00<?]Transformer WESAD — wrist (5 ch):   0%|                             | 0/15 folds [26:06<?]Transformer WESAD — wrist (5 ch):   7%|█▌                     | 1/15 folds [26:06<6:05:31]Transformer WESAD — wrist (5 ch):   7%|█▍                   | 1/15 folds [1:17:09<6:05:31]Transformer WESAD — wrist (5 ch):  13%|██▊                  | 2/15 folds [1:17:09<8:50:09]Transformer WESAD — wrist (5 ch):  13%|██▊                  | 2/15 folds [1:49:44<8:50:09]Transformer WESAD — wrist (5 ch):  20%|████▏                | 3/15 folds [1:49:44<7:24:27]Transformer WESAD — wrist (5 ch):  20%|████▏                | 3/15 folds [2:23:57<7:24:27]Transformer WESAD — wrist (5 ch):  27%|█████▌               | 4/15 folds [2:23:57<6:35:07]Transformer WESAD — wrist (5 ch):  27%|█████▌               | 4/15 folds [2:52:54<6:35:07]Transformer WESAD — wrist (5 ch):  33%|███████              | 5/15 folds [2:52:54<5:34:05]Transformer WESAD — wrist (5 ch):  33%|███████              | 5/15 folds [3:51:48<5:34:05]Transformer WESAD — wrist (5 ch):  40%|████████▍            | 6/15 folds [3:51:48<6:18:42]Transformer WESAD — wrist (5 ch):  40%|████████▍            | 6/15 folds [4:34:42<6:18:42]Transformer WESAD — wrist (5 ch):  47%|█████████▊           | 7/15 folds [4:34:42<5:38:45]Transformer WESAD — wrist (5 ch):  47%|█████████▊           | 7/15 folds [5:09:33<5:38:45]Transformer WESAD — wrist (5 ch):  53%|███████████▏         | 8/15 folds [5:09:33<4:39:43]Transformer WESAD — wrist (5 ch):  53%|███████████▏         | 8/15 folds [5:54:12<4:39:43]Transformer WESAD — wrist (5 ch):  60%|████████████▌        | 9/15 folds [5:54:12<4:08:33]Transformer WESAD — wrist (5 ch):  60%|████████████▌        | 9/15 folds [6:18:46<4:08:33]Transformer WESAD — wrist (5 ch):  67%|█████████████▎      | 10/15 folds [6:18:46<3:01:06]Transformer WESAD — wrist (5 ch):  67%|█████████████▎      | 10/15 folds [6:51:54<3:01:06]Transformer WESAD — wrist (5 ch):  73%|██████████████▋     | 11/15 folds [6:51:54<2:21:05]Transformer WESAD — wrist (5 ch):  73%|██████████████▋     | 11/15 folds [7:32:11<2:21:05]Transformer WESAD — wrist (5 ch):  80%|████████████████    | 12/15 folds [7:32:11<1:50:23]Transformer WESAD — wrist (5 ch):  80%|████████████████    | 12/15 folds [8:03:29<1:50:23]Transformer WESAD — wrist (5 ch):  87%|█████████████████▎  | 13/15 folds [8:03:29<1:10:15]Transformer WESAD — wrist (5 ch):  87%|█████████████████▎  | 13/15 folds [8:27:40<1:10:15]Transformer WESAD — wrist (5 ch):  93%|████████████████████▌ | 14/15 folds [8:27:40<31:49]Transformer WESAD — wrist (5 ch):  93%|████████████████████▌ | 14/15 folds [8:49:48<31:49]Transformer WESAD — wrist (5 ch): 100%|██████████████████████| 15/15 folds [8:49:48<00:00]Transformer WESAD — wrist (5 ch): 100%|██████████████████████| 15/15 folds [8:49:48<00:00]
+Transformer WESAD — all (16 ch):   0%|                              | 0/15 folds [00:00<?]Transformer WESAD — all (16 ch):   0%|                              | 0/15 folds [27:50<?]Transformer WESAD — all (16 ch):   7%|█▌                      | 1/15 folds [27:50<6:29:45]

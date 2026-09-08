@@ -1,0 +1,15 @@
+====================================================================================================
+STRIDE / OVERLAP SENSITIVITY -- canonical ET-1000 configuration (window fixed at 60s)
+====================================================================================================
+Model         : ExtraTrees(n_estimators=1000, max_features=0.5, class_weight=balanced, random_state=42)
+Normalisation : baseline_relative_scale -- LEAK-FIXED 2026-07-19 (demographics_analysis.py),
+                leading run of label=0 windows per subject (adaptive, not fixed-count).
+CV            : LOSO, 37 subjects. Phase 3 (stress_phase==3) excluded at both strides.
+Features      : 55 (5 wrist channels x 11 stats). Window fixed at 60s.
+Replaces      : results/nbl_stride_marker_ablations_lgbm_loso.txt Ablation 2 (LGBM-300,
+                phase3 included, pre-leak-fix -- kept on disk, not overwritten).
+
+Config                                   N_win    N_BL    N_ST  Win/subj   MacroF1       SD    AUROC
+----------------------------------------------------------------------------------------------------
+stride=30s (50% overlap, canonical)        686     334     352      18.5    0.9169   0.0883   0.9646
+stride=60s (no overlap)                    373     185     188      10.1    0.9662   0.0517   0.9921

@@ -1,0 +1,81 @@
+Loading WESAD sequences... device=cuda
+
+=================================================================
+  WESAD LOSO — Mamba (SSM) — WRIST (5 channels: [0, 5, 6, 7, 8])
+=================================================================
+           early stop epoch 17
+           early stop epoch 16
+           early stop epoch 12
+           early stop epoch 14
+           early stop epoch 16
+           early stop epoch 14
+           early stop epoch 32
+           early stop epoch 22
+           early stop epoch 11
+           early stop epoch 18
+           early stop epoch 13
+           early stop epoch 19
+           early stop epoch 17
+           early stop epoch 14
+           early stop epoch 13
+
+=================================================================
+  Mamba (SSM) WESAD — wrist (5 ch)
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.73      0.91      0.81     17577
+      stress       0.72      0.41      0.52      9966
+
+    accuracy                           0.73     27543
+   macro avg       0.72      0.66      0.66     27543
+weighted avg       0.73      0.73      0.70     27543
+
+Macro F1   : 0.664
+AUC        : 0.667
+F1@opt     : 0.665  (t=0.500)
+Bal. Acc   : 0.658
+MCC        : 0.377
+F1 std     : 0.145  (mean per fold: 0.652)
+Confusion  : TN=16002 FP=1575 FN=5924 TP=4042
+
+=================================================================
+  WESAD LOSO — Mamba (SSM) — ALL (16 channels)
+=================================================================
+           early stop epoch 25
+           early stop epoch 12
+           early stop epoch 27
+           early stop epoch 15
+           early stop epoch 32
+           early stop epoch 30
+           early stop epoch 17
+           early stop epoch 21
+           early stop epoch 46
+           early stop epoch 26
+           early stop epoch 22
+           early stop epoch 27
+           early stop epoch 13
+           early stop epoch 32
+           early stop epoch 16
+
+=================================================================
+  Mamba (SSM) WESAD — all (16 ch)
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.94      0.90      0.92     17577
+      stress       0.83      0.89      0.86      9966
+
+    accuracy                           0.89     27543
+   macro avg       0.88      0.89      0.89     27543
+weighted avg       0.90      0.89      0.90     27543
+
+Macro F1   : 0.888
+AUC        : 0.959
+F1@opt     : 0.889  (t=0.503)
+Bal. Acc   : 0.894
+MCC        : 0.777
+F1 std     : 0.097  (mean per fold: 0.887)
+Confusion  : TN=15753 FP=1824 FN=1074 TP=8892
+
+Resultados guardados em: /home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/../results/wesad_mamba.json

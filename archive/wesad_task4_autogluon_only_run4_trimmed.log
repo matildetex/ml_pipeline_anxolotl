@@ -1,0 +1,17 @@
+REDUCED: (25807, 55), subjects=15
+Traceback (most recent call last):
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/1_wesad/classical/wesad_task4_autogluon_only.py", line 50, in <module>
+    path=fold_path).fit(
+                    ^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/common/utils/decorators.py", line 34, in _call
+    return f(*gargs, **gkwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/tabular/predictor/predictor.py", line 1133, in fit
+    kwargs = self._validate_fit_kwargs(kwargs=kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/tabular/predictor/predictor.py", line 5166, in _validate_fit_kwargs
+    kwargs = self._validate_fit_extra_kwargs(kwargs, extra_valid_keys=list(fit_kwargs_default.keys()) + ds_valid_keys)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/tabular/predictor/predictor.py", line 5340, in _validate_fit_extra_kwargs
+    raise ValueError(
+ValueError: `set_best_to_refit_full=True` is only available when `refit_full=True`. Set `refit_full=True` to utilize `set_best_to_refit_full`.

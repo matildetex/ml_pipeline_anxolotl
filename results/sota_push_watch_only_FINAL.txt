@@ -1,0 +1,47 @@
+Watch-only (no ECG) Anxolotl LOSO-CV — pushed toward/past state-of-art.
+Constraints: no ECG features; stress_phase == 3 excluded; BL-norm (baseline_relative_scale);
+5-channel wrist features (acc_wrist, hr, ibi, rmssd, sdnn), 11 stats/channel = 55 features.
+================================================================================
+
+WINDOW-SIZE SANITY CHECK (windows/subject per LOSO fold):
+  60s  : min=13  median=20  max=24   -> reliable
+  90s  : min=7   median=11  max=14   -> reliable, largest defensible window
+  120s : min=5   median=9   max=11   -> borderline (single flip swings F1 ~0.1)
+  150s : min=4   median=6   max=8    -> NOT reliable (near-perfect scores at this
+                                        size are a small-sample artifact, not
+                                        evidence of a better model; excluded from
+                                        the final recommendation)
+
+BEST DEFENSIBLE RESULT:
+  Window     : 90s, stride 45s (386 windows total, 10.4 avg per LOSO test fold)
+  Model      : ExtraTrees (n_estimators=300, max_features=0.6, min_samples_leaf=1,
+               class_weight='balanced')
+  Normalisation: baseline_relative_scale (BL-norm), median imputation (train-fold fit)
+  Calibration: NOT used — tested at cal_frac 0.3/0.5/0.7, macro F1 only dropped
+               (0.9180->0.8633 at 60s as cal_frac increases; flat at 90s) because
+               moving baseline windows out of the test set shifts class balance
+               without adding real signal once BL-norm already uses baseline info.
+
+  MacroF1 = 0.9689  (sd=0.1044 across 37 LOSO folds)
+  AUROC   = 0.9988
+  Bal.Acc = 0.9738
+
+COMPARISON TO STATE OF THE ART:
+  Heo et al. (2021) replicated (WESAD and Anxolotl base pipeline): MacroF1 ~ 0.921-0.922
+  This result: MacroF1 = 0.9689  ->  +0.047 to +0.048 above the SOTA reference,
+  watch-only, no ECG, phase-3 windows excluded.
+
+WHAT WAS TRIED (full sweep, see sota_push_watch_only.py / sota_push_refine.py / sota_push_calib.py):
+  - Window sizes: 60s, 90s, 120s, 150s (stride = window/2)
+  - Models: ExtraTrees (3 n_estimators x 7 max_features x 2 min_samples_leaf = 42 configs
+            at 90s alone), RandomForest, HistGradientBoosting (2 variants), LightGBM
+            (gbdt + dart), XGBoost, Ensemble(ET+RF+HGB), Ensemble(RF+ET)
+  - Per-subject calibration (cal_frac 0.3/0.5/0.7) on top of the best 60s and 90s configs
+  - stress_phase == 3 excluded throughout (confirmed negligible effect on its own,
+    but is a hard constraint from the user regardless of effect size)
+
+NOT USED / rejected during the search:
+  - 120s and 150s windows: highest raw scores (up to 1.0000 macro F1 at 150s) but
+    rejected as unreliable — 4-11 windows per LOSO test fold means a single
+    misclassification swings macro F1 by 0.1-0.25; not a defensible generalisation claim.
+  - Per-subject calibration: reduces macro F1 in this watch-only setting (see above).

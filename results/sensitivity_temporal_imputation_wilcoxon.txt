@@ -1,0 +1,10 @@
+Paired Wilcoxon signed-rank test: gesture-confirmed-only (production) vs temporal-imputed labelling, n=37 subjects.
+Mean diff (imputed - confirmed): +0.0020
+Improved/same/worse: 9/21/7
+Wilcoxon statistic=91.50  p=0.6139  (NOT significant at alpha=0.05)
+
+Interpretation: the main LOSO-CV result is robust to how the small
+number of missing trailing protocol markers is handled (gesture-confirmed
+exclusion vs. median-gap temporal imputation) -- F1 does not differ
+significantly between the two labelling philosophies, despite the
+imputed approach raising stress2-usable coverage from 26/37 to 35/37 subjects.

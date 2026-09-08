@@ -1,0 +1,81 @@
+Loading WESAD sequences... device=cpu
+
+=================================================================
+  WESAD LOSO — 1D-CNN — WRIST (5 channels: [0, 5, 6, 7, 8])
+=================================================================
+           early stop epoch 27
+           early stop epoch 11
+           early stop epoch 18
+           early stop epoch 11
+           early stop epoch 14
+           early stop epoch 22
+           early stop epoch 17
+           early stop epoch 17
+           early stop epoch 20
+           early stop epoch 11
+           early stop epoch 21
+           early stop epoch 11
+           early stop epoch 20
+           early stop epoch 17
+           early stop epoch 12
+
+=================================================================
+  1D-CNN WESAD — wrist (5 ch)
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.87      0.74      0.80     17577
+      stress       0.63      0.80      0.71      9966
+
+    accuracy                           0.76     27543
+   macro avg       0.75      0.77      0.75     27543
+weighted avg       0.78      0.76      0.76     27543
+
+Macro F1   : 0.751
+AUC        : 0.821
+F1@opt     : 0.752  (t=0.507)
+Bal. Acc   : 0.768
+MCC        : 0.518
+F1 std     : 0.097  (mean per fold: 0.750)
+Confusion  : TN=12944 FP=4633 FN=1990 TP=7976
+
+=================================================================
+  WESAD LOSO — 1D-CNN — ALL (16 channels)
+=================================================================
+           early stop epoch 14
+           early stop epoch 16
+           early stop epoch 15
+           early stop epoch 19
+           early stop epoch 27
+           early stop epoch 11
+           early stop epoch 22
+           early stop epoch 12
+           early stop epoch 11
+           early stop epoch 12
+           early stop epoch 20
+           early stop epoch 24
+           early stop epoch 11
+           early stop epoch 13
+           early stop epoch 19
+
+=================================================================
+  1D-CNN WESAD — all (16 ch)
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.96      0.91      0.93     17577
+      stress       0.86      0.92      0.89      9966
+
+    accuracy                           0.92     27543
+   macro avg       0.91      0.92      0.91     27543
+weighted avg       0.92      0.92      0.92     27543
+
+Macro F1   : 0.912
+AUC        : 0.962
+F1@opt     : 0.912  (t=0.508)
+Bal. Acc   : 0.919
+MCC        : 0.825
+F1 std     : 0.082  (mean per fold: 0.912)
+Confusion  : TN=16047 FP=1530 FN=750 TP=9216
+
+Resultados guardados em: /home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/../results/wesad_1dcnn.json

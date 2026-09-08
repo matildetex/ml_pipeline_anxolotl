@@ -1,0 +1,115 @@
+==============================================================================
+acc_wrist_min INVESTIGATION -- Anxolotl canonical ET-1000 (686 windows, 55 feat)
+==============================================================================
+Windows: 699 -> 686 (13 phase3 removed), subjects: 37
+
+------------------------------------------------------------------------------
+1. DISTRIBUTION OF acc_wrist_min BY CLASS
+------------------------------------------------------------------------------
+Feature space: X_raw BEFORE baseline_relative_scale -- this is the "real measured" feature
+space, not yet biased toward baseline≈0 by BL-norm.
+
+CORRECTION (added post-hoc, values below were originally printed as 0.0000 -- a %.4f
+formatting artifact, not a data bug): tracing assemble_dataframe() in
+anxolotl_preprocessing.py shows preprocess_session() calls
+`assemble_dataframe(signals_raw, ...)`, NOT `assemble_dataframe(signals_norm, ...)` --
+signals_norm (the per-subject z-scored version) is computed but never actually used to
+build df_all. So the 'acc_wrist' column in results/df_all_1hz_cache.pkl, and therefore
+acc_wrist_min, is RAW bandpass-filtered (0.5-10 Hz) squared-magnitude energy (removes the
+gravity/DC component), in the sensor's native units -- not per-subject normalised. This is
+a real, previously-undocumented quirk of the pipeline (separate from the 2026-07-19 BL-norm
+leak fix, which operates downstream on this same raw feature). It does not affect Tasks 2-4
+(which already work in BL-normalised or explicitly-labelled raw space), but it means the
+"per-subject z-scored" framing below was wrong -- corrected here with full precision:
+
+  Baseline (n=334): mean=1.1295e-05  std=1.0733e-05  median=7.9546e-06
+  Stress   (n=352): mean=2.2744e-05  std=3.6990e-05  median=1.3390e-05
+  Mean difference (stress - baseline): +1.1448e-05  (stress ~2.0x baseline mean)
+  => stress windows have systematically HIGHER acc_wrist_min than baseline windows (pooled means),
+     roughly double in magnitude, not lower as the "reduced movement under stress" narrative predicts.
+
+  [Pooled, non-independence caveat] Mann-Whitney U=79122.0, p=4.538e-15
+
+  Per-subject paired comparison (n=37/37 subjects with both classes present):
+    Subjects with stress_mean > baseline_mean : 31
+    Subjects with stress_mean < baseline_mean : 6
+    Mean per-subject delta (stress-baseline)  : +1.0516e-05  (std=1.8978e-05)
+    Paired t-test        : t=3.371, p=1.802e-03
+    Wilcoxon signed-rank : W=84.0, p=1.556e-05
+
+  CONCLUSION 1: stress windows have significantly higher acc_wrist_min than baseline (per-subject paired Wilcoxon p=1.556e-05).
+
+------------------------------------------------------------------------------
+2. SHAP DIRECTION FOR acc_wrist_min (canonical ET-1000, pooled fit)
+------------------------------------------------------------------------------
+Computing TreeSHAP (exact, full 686-row matrix)...
+  acc_wrist_min mean|SHAP| = 0.035427  (rank 1/55, cross-checks results/shap_canonical_et1000_leakfixed.txt)
+  Spearman(feature value, SHAP value) = +0.5097  (p=1.264e-46)
+  Mean SHAP value by feature-value quintile (Q1=lowest acc_wrist_min ... Q5=highest):
+    Q1: mean SHAP(class=stress) = -0.0043  (n=139)
+    Q2: mean SHAP(class=stress) = -0.0239  (n=136)
+    Q3: mean SHAP(class=stress) = -0.0207  (n=137)
+    Q4: mean SHAP(class=stress) = -0.0121  (n=138)
+    Q5: mean SHAP(class=stress) = +0.0825  (n=136)
+
+  CONCLUSION 2: HIGH acc_wrist_min values push the model TOWARD stress (positive SHAP); LOW values push toward baseline.
+  Consistency check vs "less movement under stress" narrative: that story predicts stress windows have LOWER acc_wrist_min (already tested in Task 1) AND that low acc_wrist_min should carry positive SHAP toward stress (negative correlation feature-vs-SHAP). Compare the sign above to Task 1's direction.
+
+------------------------------------------------------------------------------
+3. MARKER-PROXIMITY CONFOUND TEST
+------------------------------------------------------------------------------
+Re-running detect_markers() on raw sessions (same defaults preprocess_session() uses: n_markers=8, z_percentile=85, min_duration_sec=8, marker_min_gap_sec=120, baseline_duration_sec=300).
+
+  Markers recovered for 37/37 subjects (failed/missing: none)
+
+  Alignment check OK: meta rows match df_feat rows 1:1 (acc_wrist_min, subject, label).
+
+  Windows with a marker time available: 686/686
+
+  Spearman(acc_wrist_min, distance from window's own arg-min to nearest marker) = -0.3078  (p=1.597e-16)
+  Positive rho would mean "closer to marker => lower min" (supports gesture-aftermath
+  contamination). The measured rho is NEGATIVE and highly significant: closer to a marker
+  associates with a HIGHER acc_wrist_min, and windows far from any marker have LOWER minimums.
+  This is the OPPOSITE of the contamination hypothesis -- it is not consistent with "the
+  quiet/apnea moment right after a gesture is what's producing low mins nearby." If anything,
+  the gesture itself (arm raise + breathing, ~8-15s of elevated motion) keeps nearby windows'
+  minimums elevated, and the lowest mins occur in stretches well away from any protocol event.
+
+  [BASELINE] extreme acc_wrist_min windows (bottom/top 10%, n=69): median dist-to-marker=127.2s
+  [BASELINE] typical windows (middle 80%, n=265): median dist-to-marker=135.1s
+  [BASELINE] Mann-Whitney U=8396.0, p=2.964e-01
+
+  [STRESS] extreme acc_wrist_min windows (bottom/top 10%, n=72): median dist-to-marker=77.5s
+  [STRESS] typical windows (middle 80%, n=280): median dist-to-marker=55.4s
+  [STRESS] Mann-Whitney U=13049.0, p=1.158e-04
+
+  [BASELINE only] Spearman(acc_wrist_min, dist-to-marker) = -0.1400  (p=1.041e-02, n=334)
+  [STRESS only] Spearman(acc_wrist_min, dist-to-marker) = -0.1730  (p=1.116e-03, n=352)
+
+  CONCLUSION 3: marker-proximity confound is REJECTED by this test, in the specific form
+  hypothesised (gesture aftermath -> artificially LOW min nearby). The correlation between
+  acc_wrist_min and distance-to-marker is real, significant, and survives stratifying by
+  class (baseline: rho=-0.140, p=0.010; stress: rho=-0.173, p=0.001), but it runs the
+  opposite direction: windows near a marker have HIGHER minimums, windows far from any
+  marker have LOWER minimums. The STRESS-only extreme-vs-typical test (p=1.16e-04) is
+  significant in the same direction (extreme-value stress windows sit ~78s from a marker vs
+  ~55s for typical stress windows -- i.e. extremes are farther away, not closer). So the low
+  acc_wrist_min values that dominate the SHAP signal are not a marker-detection artifact;
+  they occur during genuine mid-phase stretches away from the protocol's gesture events.
+
+------------------------------------------------------------------------------
+4. ROBUSTNESS -- LOSO ET-1000 macro F1 with vs without acc_wrist_min
+------------------------------------------------------------------------------
+Running LOSO with all 55 features (canonical)...
+  Full (55 feat)         : Macro F1 = 0.9169  AUROC = 0.9646
+Running LOSO with acc_wrist_min removed (54 feat)...
+  Without acc_wrist_min (54 feat): Macro F1 = 0.9178  AUROC = 0.9625
+  Delta (full - dropped)  : -0.0010
+
+  Per-subject paired Wilcoxon on fold F1 (full vs dropped): W=17.0, p=8.886e-01
+
+  CONCLUSION 4: removing acc_wrist_min changes Macro F1 by -0.0010 (not statistically significant at p=8.886e-01). The model is NOT decisively dependent on this single feature.
+
+==============================================================================
+END OF INVESTIGATION
+==============================================================================

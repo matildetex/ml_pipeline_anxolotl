@@ -1,0 +1,22 @@
+Window-size ablation study — stress detection pipeline, fixed model: LightGBM (n_estimators=300, max_depth=4, lr=0.1, num_leaves=31, class_weight=balanced), LOSO-CV (n=37), BL-norm (baseline_relative_scale), 50% overlap stride, 5-channel wrist features (acc_wrist, hr, ibi, rmssd, sdnn), 11 stats/channel = 55 features.
+================================================================================
+
+Win (s)  Stride   N_win    N_BL    N_ST  Win/subj    MacroF1      ±SD    AUROC
+------------------------------------------------------------------------------
+     30      15    1491     706     785      40.3     0.7987   0.1242   0.8807
+     60      30     699     334     365      18.9     0.8817   0.0994   0.9460
+     90      45     395     185     210      10.7     0.9333   0.1221   0.9974
+    120      60     304     148     156       8.2     0.9573   0.0832   1.0000
+
+================================================================================
+
+Best window size: 120s (stride 60s)  MacroF1=0.9573
+
+Trade-off note: The winning window (120s) generates 304 windows, which is 20% of the 30s config's 1491 windows. The substantially smaller sample count means fewer training examples per fold and more variable per-subject estimates — this trade-off should be considered when choosing the operating window for deployment.
+
+Per-fold MacroF1 (all subjects) by window size:
+--------------------------------------------------
+  Window=30s:  n_folds=37  min=0.4750  median=0.8091  max=1.0000
+  Window=60s:  n_folds=37  min=0.6190  median=0.8944  max=1.0000
+  Window=90s:  n_folds=37  min=0.4167  median=1.0000  max=1.0000
+  Window=120s:  n_folds=37  min=0.6970  median=1.0000  max=1.0000

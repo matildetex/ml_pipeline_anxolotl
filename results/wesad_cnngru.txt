@@ -1,0 +1,81 @@
+Loading WESAD sequences... device=cpu
+
+=================================================================
+  WESAD LOSO — CNN-GRU — WRIST (5 channels: [0, 5, 6, 7, 8])
+=================================================================
+           early stop epoch 26
+           early stop epoch 21
+           early stop epoch 12
+           early stop epoch 19
+           early stop epoch 20
+           early stop epoch 21
+           early stop epoch 13
+           early stop epoch 15
+           early stop epoch 12
+           early stop epoch 24
+           early stop epoch 17
+           early stop epoch 22
+           early stop epoch 18
+           early stop epoch 18
+           early stop epoch 19
+
+=================================================================
+  CNN-GRU WESAD — wrist (5 ch)
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.87      0.80      0.83     17577
+      stress       0.69      0.80      0.74      9966
+
+    accuracy                           0.80     27543
+   macro avg       0.78      0.80      0.79     27543
+weighted avg       0.81      0.80      0.80     27543
+
+Macro F1   : 0.787
+AUC        : 0.849
+F1@opt     : 0.788  (t=0.513)
+Bal. Acc   : 0.797
+MCC        : 0.579
+F1 std     : 0.073  (mean per fold: 0.786)
+Confusion  : TN=14028 FP=3549 FN=2032 TP=7934
+
+=================================================================
+  WESAD LOSO — CNN-GRU — ALL (16 channels)
+=================================================================
+           early stop epoch 36
+           early stop epoch 13
+           early stop epoch 18
+           early stop epoch 19
+           early stop epoch 13
+           early stop epoch 15
+           early stop epoch 15
+           early stop epoch 12
+           early stop epoch 24
+           early stop epoch 13
+           early stop epoch 28
+           early stop epoch 18
+           early stop epoch 14
+           early stop epoch 12
+           early stop epoch 15
+
+=================================================================
+  CNN-GRU WESAD — all (16 ch)
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.94      0.92      0.93     17577
+      stress       0.86      0.89      0.88      9966
+
+    accuracy                           0.91     27543
+   macro avg       0.90      0.91      0.90     27543
+weighted avg       0.91      0.91      0.91     27543
+
+Macro F1   : 0.902
+AUC        : 0.966
+F1@opt     : 0.901  (t=0.428)
+Bal. Acc   : 0.905
+MCC        : 0.804
+F1 std     : 0.098  (mean per fold: 0.901)
+Confusion  : TN=16133 FP=1444 FN=1074 TP=8892
+
+Resultados guardados em: /home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/../results/wesad_cnngru.json

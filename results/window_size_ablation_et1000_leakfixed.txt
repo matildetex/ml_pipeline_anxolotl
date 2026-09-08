@@ -1,0 +1,19 @@
+================================================================================================
+WINDOW-SIZE SENSITIVITY -- canonical ET-1000 configuration
+================================================================================================
+Model         : ExtraTrees(n_estimators=1000, max_features=0.5, class_weight=balanced, random_state=42)
+Normalisation : baseline_relative_scale -- LEAK-FIXED 2026-07-19 (demographics_analysis.py),
+                leading run of label=0 windows per subject (adaptive, not fixed-count).
+CV            : LOSO, 37 subjects. Phase 3 (stress_phase==3) excluded at every window size.
+Features      : 55 (5 wrist channels x 11 stats). Overlap: 50% at every window size.
+Replaces      : results/window_size_ablation_lgbm_loso*.txt (LGBM-300, some phase3-included,
+                all pre-leak-fix -- kept on disk, not overwritten, for audit trail).
+
+Win (s)  Stride   N_win    N_BL    N_ST  Win/subj   MacroF1       SD    AUROC
+------------------------------------------------------------------------------------------------
+     30      15    1464     706     758      39.6    0.8171   0.1166   0.8781
+     60      30     686     334     352      18.5    0.9169   0.0883   0.9646
+     90      45     386     185     201      10.4    0.9664   0.1069   0.9990
+    120      60     299     148     151       8.1    0.9800   0.0489   1.0000
+
+Best window size: 120s (stride 60s)  MacroF1=0.9800

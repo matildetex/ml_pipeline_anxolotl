@@ -1,0 +1,162 @@
+================================================================================
+AUDIT: FOUR FLAGGED NUMBER INCONSISTENCIES — RESOLVED
+Generated: 2026-07-24
+================================================================================
+
+Note: this file complements RECONCILIATION.md / MISSING.md (generated
+2026-07-23/24 by a prior audit pass over the same repo). That audit could not
+diff against the actual chapter text because no .tex/.docx/.md chapter draft
+exists anywhere on this machine (confirmed again in this pass — see item 4
+below). The four items here were raised directly against specific
+table/section numbers (Tabela 2.3, Secção 3.4.3, Tabela 3.10) that do not
+appear in any local file, so — as before — this is artifact-level resolution,
+not a line-by-line diff against the chapter's actual wording. If/when the
+chapter text becomes available locally (paste or file path), a real diff pass
+can close the loop on whether these fixes were actually applied correctly.
+
+================================================================================
+1. SESSION DURATION: 13.89h / 22.5min  vs  11.5h / 18.7min
+================================================================================
+
+RESOLVED — both numbers are correct; they measure different spans.
+
+  13.89h / 22.5min = RAW recording duration: first timestamp to LAST timestamp
+                     in each session_*.csv file (includes setup time before
+                     the first marker AND any trailing recording after the
+                     final labelled event).
+                     Verified directly: sum over the 37 canonical subjects
+                     (all sessions except p6, p24) of (last_ts - first_ts) =
+                     49,993.6s = 13.89h; mean = 1351.2s = 22.52min/subject.
+
+  11.5h / 18.7min  = LABELLED-SPAN duration: session start to the LAST
+                     LABELLED event only (per results/canonical_numbers_for_
+                     thesis.txt §4, sourced from results/df_all_1hz_cache.pkl
+                     t_sec field). Total 41,405s = 11.5h; mean 18.7min.
+                     This excludes any trailing recording after the protocol
+                     was considered "done" (e.g. sensor left running while
+                     removing equipment / debriefing).
+
+  A THIRD number also exists in the same source file and should not be
+  confused with either of the above: 23,821s total / ~10.7 min per subject =
+  purely the LABELLED, NON-DISCARD seconds (excludes the breathing/transition
+  segments between phases, which are recorded but labelled -1 and never fed
+  to any model).
+
+ACTION: state explicitly, once, which of the three spans is being reported.
+Recommend: use 11.5h/18.7min (labelled span) as "session duration" in the
+main text, since it is what actually maps to the labelled dataset, and
+footnote the 13.89h/22.5min raw figure only if describing total data
+collected/recording burden rather than usable data.
+
+================================================================================
+2. WINDOW COUNT: 699 vs 686
+================================================================================
+
+RESOLVED — single, exact arithmetic chain (also independently confirmed in
+RECONCILIATION.md §E2 by directly re-running the current preprocessing code):
+
+  699  = all wrist-window LOSO samples produced by the canonical pipeline
+         (3_anxolotl/anxolotl_preprocessing.py, 60s/30s windows, boundary-fix
+         applied), BEFORE excluding stress-phase-3 windows.
+         Confirmed: X.shape=(699,55) in processed_data/anxolotl/
+         processed_data_anxolotl.pkl.
+
+  -13  = windows belonging to stress phase 3, present in only 4 of the 37
+         subjects (p12, p22, p31, p36 — the only subjects whose protocol
+         session included a confirmed Stress-3 marker; see marker-coverage
+         table in canonical_numbers_for_thesis.txt §3).
+
+  686  = 699 − 13 = canonical window count used in every reported LOSO number
+         in Sec. "Anxolotl LOSO" (0.9169 Macro F1, etc.).
+
+  699 − 13 = 686 exactly (arithmetic checks out; there is no separate "lost
+  window" mystery). A now-obsolete THIRD number, 712, sometimes appears in
+  older log files (advanced_models_log.txt, anxolotl_loso.txt, 2026-06-08)
+  — that is a different, pre-canonicalisation pipeline generation (old
+  60-feature schema, different windowing rule) and is NOT "686 + 26 lost
+  windows" from the current pipeline; it should simply be treated as
+  obsolete and removed wherever it appears (see RECONCILIATION.md #7 for the
+  full empirical test ruling out a reconciling arithmetic relationship).
+
+ACTION: write the transition once, e.g. in the dataset/methods section:
+  "699 windows are produced per the 60s/30s windowing rule; 13 of these
+   (4 subjects, whose sessions reached the optional Stress-3 phase) are
+   excluded, leaving the reported 686-window canonical dataset."
+Do not repeat 699 and 686 elsewhere without this one-line derivation attached
+or cross-referenced.
+
+================================================================================
+3. 0.5647 vs "melhoria sobre 0.582" (Tabela 3.10, WESAD→Anxolotl transfer)
+================================================================================
+
+RESOLVED — the "melhoria" framing is stale; it was never meant to describe
+the 0.5647 figure. Three distinct F1 numbers are in play, from two different
+script runs of 2_cross_dataset/cross_dataset_wesad.py:
+
+  0.582  = "Previous best cross-dataset: AUC=0.590 F1=0.582 (DANN target
+           norm)" — a reference/comparison line the script itself prints,
+           citing an EARLIER, different-methodology cross-dataset result
+           (DANN-style target normalisation) as a baseline to beat.
+           Source: results/cross_dataset_wesad.txt, line ~104.
+
+  0.729  = the ORIGINAL 2026-06-08 run's own result for that comparison:
+           "ExtraTrees BL-norm (A): AUC=0.874 F1@0.5=0.729 F1@opt=0.798" —
+           printed on the SAME page, immediately above the "melhoria sobre
+           0.582" framing line. 0.729 > 0.582, so "an improvement over 0.582"
+           is TRUE for this number. This is almost certainly what the
+           original sentence was written to describe.
+           NOTE: this run scored against the OLD, pre-canonicalisation
+           712-window/60-feature Anxolotl target (see RECONCILIATION.md §D3),
+           not the current canonical 686-window/55-feature target.
+
+  0.5647 = a DIFFERENT, NEWER number: the 2026-07-24 rerun of the same
+           WESAD→Anxolotl transfer against the CURRENT canonical 686-window/
+           55-feature Anxolotl target (see RECONCILIATION.md §E5 and
+           results_master.csv row "WESADtoAnxolotl ... Ensemble RF+ET").
+           0.5647 < 0.582, so calling it "an improvement over 0.582" is
+           FALSE at face value — it is a regression against that reference,
+           not an improvement, if compared directly.
+
+MOST LIKELY EXPLANATION: Tabela 3.10 (or its surrounding text) was updated
+at some point to cite the newer, methodologically-cleaner 0.5647 number
+(scored on the canonical target, which is the right thing to do), but the
+accompanying "melhoria sobre 0.582" sentence was left over from when the
+table cited 0.729 instead. The number in the cell was fixed; the sentence
+describing it was not.
+
+IMPORTANT CONTEXT for whichever number is kept: at the default 0.5
+threshold, WESAD→Anxolotl F1 collapses (0.5647) even though AUC stays good
+(0.8825, close to the original run's 0.8737) — F1@opt (Youden-optimal
+threshold) recovers to 0.8076. This is a genuine, defensible finding (WESAD's
+classifier discriminates fine but its probabilities don't transfer/calibrate
+to Anxolotl at threshold 0.5) — NOT a bug and not something to paper over by
+comparison to 0.582. See RECONCILIATION.md §E5 for the full analysis.
+
+ACTION: pick one of two fixes —
+  (a) keep 0.5647 (canonical-target, most defensible) and REMOVE or rewrite
+      the "melhoria sobre 0.582" sentence — it no longer applies. Frame the
+      result instead around the F1@0.5 vs F1@opt gap (0.5647 → 0.8076) as
+      evidence of a calibration-transfer gap, per RECONCILIATION.md §E5.
+  (b) if the point being made really is "our method beats a 2018-era DANN
+      baseline of 0.582," cite 0.729 (old-target run) explicitly as that
+      comparison and do NOT present it next to 0.5647 in the same cell/row.
+  Recommend (a) — it's scored on the canonical target and is the more
+  scientifically honest number to lead with.
+
+================================================================================
+4. UNRESOLVED "??" REFERENCES / GLOSSARY SWEEP
+================================================================================
+
+BLOCKED — cannot be done. Searched again this round (in addition to the
+2026-07-23 pass documented in RECONCILIATION.md/MISSING.md): no .tex, .docx,
+.odt, or .md file containing the chapter text (or literal strings "Tabela
+3.10", "Secção 3.4.3", "Tabela 2.3") exists anywhere under
+~/Secretária/Documentos/Tese on this machine. Google Drive was NOT searched
+for this file per explicit instruction not to access it.
+
+ACTION NEEDED FROM YOU: paste the chapter text directly into the chat, or
+save it as a local file (e.g. under this repo or elsewhere under
+Documentos/Tese) and give the path — then the "??" / broken-\ref / glossary
+sweep (and the line-by-line Tarefa 3 diff RECONCILIATION.md flagged as
+blocked) can be done in one pass.
+================================================================================

@@ -1,0 +1,6 @@
+stage,binary_f1,macro_f1
+Watch only,0.9341,0.9231
++ Demographics,0.9406,0.9285
++ Calibração de sujeito,0.9391,0.8955
++ HP tuning (mf=0.3),0.9352,0.8888
+"+ ECG (BIOPAC, final)",0.9753,0.9548

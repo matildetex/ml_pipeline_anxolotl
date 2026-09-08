@@ -1,0 +1,14 @@
+Window-size ablation study — CORRECTED: excludes stress_phase == 3.
+Fixed model: LightGBM (n_estimators=300, max_depth=4, lr=0.1, num_leaves=31, class_weight=balanced), LOSO-CV (n=37), BL-norm (baseline_relative_scale), 50% overlap stride, 5-channel wrist features (acc_wrist, hr, ibi, rmssd, sdnn), 11 stats/channel = 55 features.
+================================================================================
+
+Win (s)  Stride   N_win    N_BL    N_ST  Win/subj   MacroF1      ±SD    AUROC
+--------------------------------------------------------------------------------
+     30      15    1464     706     758      39.6    0.7827   0.1246   0.8630
+     60      30     686     334     352      18.5    0.8735   0.1018   0.9406
+     90      45     386     185     201      10.4    0.9369   0.1221   0.9949
+    120      60     299     148     151       8.1    0.9512   0.0910   0.9968
+
+================================================================================
+
+Best window size: 120s (stride 60s)  MacroF1=0.9512

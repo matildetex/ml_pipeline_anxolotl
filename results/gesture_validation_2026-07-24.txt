@@ -1,0 +1,179 @@
+==============================================================================
+GESTURE-DETECTION VALIDATION — 2026-07-24
+==============================================================================
+
+------------------------------------------------------------------------------
+1. ALGORITHM PARAMETERS (detect_markers, 3_anxolotl/anxolotl_preprocessing.py:132)
+------------------------------------------------------------------------------
+Signature defaults actually used in production (preprocess_session never
+overrides bridge_gap_sec or relax_level_frac -- see call site at line 652):
+
+  z_percentile          = 85     (adaptive threshold: 85th pctile of the
+                                   session's OWN 1s-median z-axis distribution)
+  min_duration_sec      = 8      (arm must stay above threshold >= 8s)
+  min_gap_sec           = 120    (min spacing between markers 2..8)
+  baseline_duration_sec = 300    (min spacing enforced between marker 1 and 2)
+  bridge_gap_sec        = 0      (ACTUAL default; docstring says 3 -- MISMATCH,
+                                   no gap-bridging happens in production runs)
+  relax_level_frac      = 0.45   (ACTUAL default; docstring says 0.6 -- MISMATCH)
+  min_gesture_amplitude = 0.15   (min resting->raised z amplitude to attempt relaxed pass)
+  relax_min_duration_sec= 5      (min duration for a relaxed-pass candidate)
+  relax_max_std_frac    = 0.35   (max variance, as frac of amplitude, for a
+                                   relaxed candidate to be accepted as a plateau)
+
+DOCSTRING/CODE MISMATCH FLAGGED: the docstring for bridge_gap_sec and
+relax_level_frac states different default values than the function signature
+actually uses. Since preprocess_session() calls detect_markers() without
+overriding either, the REAL behaviour in every one of the 37 processed
+sessions is bridge_gap_sec=0 (no dropout-bridging at all) and
+relax_level_frac=0.45, not the values the docstring describes.
+
+Core detection logic:
+  1. z_1s = 1-second median of raw ACC z-axis (robust to single-sample noise)
+  2. z_threshold = percentile(z_1s, 85)  -- adaptive per session, no fixed volts
+  3. raised = z_1s > z_threshold; find contiguous True-runs >= 8s long
+  4. Greedy protocol-aware selection: marker1->2 gap >= 300s, all others >= 120s
+  5. Relaxed second pass on the unexplored tail if < 8 markers found, using a
+     per-subject-calibrated threshold (45% of the subject's own resting->raised
+     amplitude), only if that subject's confirmed gestures show amplitude >= 0.15
+  6. Structural sanity check: inter-marker spacing must be 100-400s or the whole
+     session is rejected as having no valid gestures
+  7. Minimum 4 markers required to accept a session at all (else ValueError)
+
+------------------------------------------------------------------------------
+2. INDEPENDENT GROUND TRUTH — SEARCHED, NONE FOUND
+------------------------------------------------------------------------------
+Checked and ruled out:
+  - Video/audio recordings: none found anywhere in the repo (searched for
+    .mp4/.mov/.avi)
+  - Investigator notes / session logs / timestamp files: none found
+    (searched for *notes*, *log_sessao*, *investigador*, *timestamp*)
+  - Manual annotation column in the watch session CSVs: does not exist --
+    columns are exactly [timestamp_unix, hr_bpm, ibi_ms, steps, calories_kcal,
+    distance_m, acc_x, acc_y, acc_z], no phase/event/marker column
+  - Data_tese.xlsx: only has Questionario/VAS/EADS-21 sheets (self-report
+    questionnaires), no session-timing sheet
+  - BIOPAC event markers (a real candidate -- BIOPAC AcqKnowledge supports a
+    manual marker button an investigator could press during acquisition):
+    checked via bioread .event_markers on all sampled participants -- every
+    single session has EXACTLY ONE marker, type_code 'apnd' at sample_index=0,
+    which is the auto-generated "recording started" marker, not a manual
+    investigator annotation of any protocol phase transition.
+
+CONCLUSION: there is no independent ground-truth record of real phase timing
+anywhere in this dataset. Task 3 (compare detected markers against ground
+truth) cannot be performed -- proceeding to Task 4 (visual-inspection plots)
+and Task 5 (marker distribution + tail-time analysis) as the fallback you
+specified.
+
+------------------------------------------------------------------------------
+5. PER-SUBJECT MARKER DISTRIBUTION AND TAIL-TIME ANALYSIS
+------------------------------------------------------------------------------
+
+Distribution of n_markers detected (excludes p6, manually excluded earlier):
+  n_markers = 0 : 1 subjects
+  n_markers = 4 : 2 subjects
+  n_markers = 5 : 11 subjects
+  n_markers = 6 : 20 subjects
+  n_markers = 7 : 3 subjects
+  n_markers = 8 : 1 subjects
+  Total subjects analysed: 38
+
+Full per-subject table:
+subject  n_markers  last_marker_t  total_duration  tail_after_last                                                                                                                                                note
+     p7          6       1254.883        1363.171          108.288                                                                                                                                                    
+     p8          5        975.568        1299.521          323.953                                                                                                                                                    
+     p9          5        883.793        1207.148          323.355                                                                                                                                                    
+    p10          6       1228.037        1321.571           93.534                                                                                                                                                    
+    p11          6       1379.541        1426.183           46.642                                                                                                                                                    
+    p12          7       1367.595        1392.894           25.299                                                                                                                                                    
+    p13          6       1324.807        1420.942           96.135                                                                                                                                                    
+    p14          6       1311.746        1459.739          147.993                                                                                                                                                    
+    p15          5        988.626        1309.423          320.797                                                                                                                                                    
+    p16          6       1041.440        1366.598          325.158                                                                                                                                                    
+    p17          6       1185.071        1348.231          163.160                                                                                                                                                    
+    p18          6       1206.042        1303.357           97.315                                                                                                                                                    
+    p19          5       1069.374        1398.928          329.554                                                                                                                                                    
+    p20          5       1041.460        1374.014          332.554                                                                                                                                                    
+    p21          5        922.684        1295.541          372.857                                                                                                                                                    
+    p22          8       1294.861        1365.651           70.790                                                                                                                                                    
+    p23          6       1248.881        1362.364          113.483                                                                                                                                                    
+    p24          0            NaN        1518.403              NaN FAILED: Only 3 valid arm-raise gestures detected (expected 8, minimum 4). Try lowering z_percentile (current: 85) or min_duration_sec (current: 8).
+    p25          5       1017.490        1352.827          335.337                                                                                                                                                    
+    p26          6       1081.278        1291.128          209.850                                                                                                                                                    
+    p27          6       1087.363        1410.745          323.382                                                                                                                                                    
+    p28          5       1051.410        1386.350          334.940                                                                                                                                                    
+    p29          6       1281.852        1333.487           51.635                                                                                                                                                    
+    p30          6       1238.890        1353.962          115.072                                                                                                                                                    
+    p31          7       1356.640        1380.142           23.502                                                                                                                                                    
+    p32          4        823.936        1151.068          327.132                                                                                                                                                    
+    p33          6       1312.661        1340.951           28.290                                                                                                                                                    
+    p34          4       1317.805        1391.588           73.783                                                                                                                                                    
+    p35          6       1266.930        1333.530           66.600                                                                                                                                                    
+    p36          7       1236.911        1440.556          203.645                                                                                                                                                    
+    p37          5       1044.475        1405.553          361.078                                                                                                                                                    
+    p38          6       1296.844        1360.050           63.206                                                                                                                                                    
+    p39          5       1085.375        1411.943          326.568                                                                                                                                                    
+    p40          6       1257.739        1323.817           66.078                                                                                                                                                    
+    p41          6       1016.568        1219.837          203.269                                                                                                                                                    
+    p42          6       1220.004        1295.978           75.974                                                                                                                                                    
+    p43          6       1283.644        1341.496           57.852                                                                                                                                                    
+    p44          5       1124.279        1453.239          328.960                                                                                                                                                    
+
+------------------------------------------------------------------------------
+Tail-time-after-last-marker for incomplete sessions (n_markers < 8)
+------------------------------------------------------------------------------
+Distinguishes "gesture genuinely not performed" (short/no tail left in the
+recording after the last confirmed marker -- session simply ended) from
+"gesture performed but not detected" (long tail exists with plenty of time
+for another task+breathing block, yet no marker was found in it).
+
+subject  n_markers  last_marker_t  total_duration  tail_after_last
+    p31          7       1356.640        1380.142           23.502
+    p12          7       1367.595        1392.894           25.299
+    p33          6       1312.661        1340.951           28.290
+    p11          6       1379.541        1426.183           46.642
+    p29          6       1281.852        1333.487           51.635
+    p43          6       1283.644        1341.496           57.852
+    p38          6       1296.844        1360.050           63.206
+    p40          6       1257.739        1323.817           66.078
+    p35          6       1266.930        1333.530           66.600
+    p34          4       1317.805        1391.588           73.783
+    p42          6       1220.004        1295.978           75.974
+    p10          6       1228.037        1321.571           93.534
+    p13          6       1324.807        1420.942           96.135
+    p18          6       1206.042        1303.357           97.315
+     p7          6       1254.883        1363.171          108.288
+    p23          6       1248.881        1362.364          113.483
+    p30          6       1238.890        1353.962          115.072
+    p14          6       1311.746        1459.739          147.993
+    p17          6       1185.071        1348.231          163.160
+    p41          6       1016.568        1219.837          203.269
+    p36          7       1236.911        1440.556          203.645
+    p26          6       1081.278        1291.128          209.850
+    p15          5        988.626        1309.423          320.797
+     p9          5        883.793        1207.148          323.355
+    p27          6       1087.363        1410.745          323.382
+     p8          5        975.568        1299.521          323.953
+    p16          6       1041.440        1366.598          325.158
+    p39          5       1085.375        1411.943          326.568
+    p32          4        823.936        1151.068          327.132
+    p44          5       1124.279        1453.239          328.960
+    p19          5       1069.374        1398.928          329.554
+    p20          5       1041.460        1374.014          332.554
+    p28          5       1051.410        1386.350          334.940
+    p25          5       1017.490        1352.827          335.337
+    p37          5       1044.475        1405.553          361.078
+    p21          5        922.684        1295.541          372.857
+
+Interpretation heuristic used here: min_gap_sec=120s is the minimum spacing
+the algorithm requires between markers, and a real task+breathing block runs
+120-400s per the structural sanity check in detect_markers(). So:
+  tail_after_last <  120s : very likely "gesture not performed" -- session
+                            ended before another block could physically fit
+  tail_after_last >= 120s : recording had room for another block -- worth
+                            flagging as a possible missed detection, not
+                            just a skipped gesture
+
+  Incomplete subjects with tail < 120s ("not performed"):  17  ['p31', 'p12', 'p33', 'p11', 'p29', 'p43', 'p38', 'p40', 'p35', 'p34', 'p42', 'p10', 'p13', 'p18', 'p7', 'p23', 'p30']
+  Incomplete subjects with tail >= 120s ("possible miss") : 19  ['p14', 'p17', 'p41', 'p36', 'p26', 'p15', 'p9', 'p27', 'p8', 'p16', 'p39', 'p32', 'p44', 'p19', 'p20', 'p28', 'p25', 'p37', 'p21']

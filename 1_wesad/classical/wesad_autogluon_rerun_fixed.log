@@ -1,0 +1,39 @@
+[2026-07-25 21:21:27,249 E 15589 15902] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+FULL: (27543, 137), subjects=15
+WRIST: (27543, 56) (56 feat)
+  [full] fold  1  F1=0.9308  (1.8 min elapsed)
+  [full] fold  2  F1=0.9403  (3.6 min elapsed)
+  [full] fold  3  F1=0.6017  (5.4 min elapsed)
+  [full] fold  4  F1=0.8819  (7.1 min elapsed)
+  [full] fold  5  F1=1.0000  (9.7 min elapsed)
+  [full] fold  6  F1=1.0000  (11.7 min elapsed)
+  [full] fold  7  F1=0.8900  (13.5 min elapsed)
+  [full] fold  8  F1=0.7434  (15.2 min elapsed)
+  [full] fold  9  F1=0.8887  (16.9 min elapsed)
+  [full] fold 10  F1=0.9116  (18.6 min elapsed)
+  [full] fold 11  F1=0.9976  (20.2 min elapsed)
+  [full] fold 12  F1=0.9384  (21.9 min elapsed)
+  [full] fold 13  F1=0.9490  (23.5 min elapsed)
+  [full] fold 14  F1=0.9941  (25.2 min elapsed)
+  [full] fold 15  F1=0.9691  (26.8 min elapsed)
+[full] FINAL: {'macro_f1': 0.9091080998073555, 'macro_f1_std': 0.10410442627726546, 'fold_f1s': [0.9307805850873724, 0.9403334499467977, 0.6017165898789122, 0.881887649896274, 1.0, 1.0, 0.8899709620823288, 0.7433579170804486, 0.8887295458724029, 0.9116160516743912, 0.997611456713323, 0.9384123816650631, 0.9489897457386296, 0.9941111296127884, 0.969104031861602], 'accuracy': 0.918708927858258, 'balanced_accuracy': 0.911152055921692, 'precision_macro': 0.9125462109419084, 'recall_macro': 0.911152055921692, 'roc_auc': 0.9428549244709135, 'mcc': 0.8236970870203916, 'n_features': 137, 'elapsed_min': 26.795849816004434}
+Saved after FULL.
+  [wrist] fold  1  F1=0.4114  (1.8 min elapsed)
+  [wrist] fold  2  F1=0.8631  (3.6 min elapsed)
+  [wrist] fold  3  F1=0.9449  (5.4 min elapsed)
+  [wrist] fold  4  F1=0.4895  (7.3 min elapsed)
+  [wrist] fold  5  F1=0.9813  (9.1 min elapsed)
+  [wrist] fold  6  F1=1.0000  (10.9 min elapsed)
+  [wrist] fold  7  F1=0.4058  (12.8 min elapsed)
+  [wrist] fold  8  F1=0.7564  (14.6 min elapsed)
+  [wrist] fold  9  F1=0.7487  (16.5 min elapsed)
+  [wrist] fold 10  F1=0.9861  (18.4 min elapsed)
+  [wrist] fold 11  F1=0.7299  (20.2 min elapsed)
+  [wrist] fold 12  F1=0.8048  (21.9 min elapsed)
+  [wrist] fold 13  F1=0.6775  (23.6 min elapsed)
+  [wrist] fold 14  F1=0.9595  (25.4 min elapsed)
+  [wrist] fold 15  F1=0.5643  (27.1 min elapsed)
+[wrist] FINAL: {'macro_f1': 0.7548845241905153, 'macro_f1_std': 0.20169595820090958, 'fold_f1s': [0.41144253454668017, 0.8631185422860675, 0.9448863317953412, 0.48954136771897794, 0.9813426569921175, 1.0, 0.40577811336853803, 0.7564129765027982, 0.7486535689544227, 0.9860906912965888, 0.7299309579002247, 0.804751404794082, 0.6775445998071359, 0.9595201408760731, 0.5642539760186819], 'accuracy': 0.8012199106851106, 'balanced_accuracy': 0.7862745024498211, 'precision_macro': 0.784610861906764, 'recall_macro': 0.7862745024498211, 'roc_auc': 0.9028171547042159, 'mcc': 0.5708829403097402, 'n_features': 56, 'elapsed_min': 27.104587841033936}
+Saved after WRIST.
+
+ALL DONE. Total elapsed: 53.9 min

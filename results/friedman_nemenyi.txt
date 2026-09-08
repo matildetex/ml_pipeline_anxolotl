@@ -1,0 +1,84 @@
+
+======================================================================
+WRIST-ONLY MODELS (5-7 channels, no chest ECG)
+======================================================================
+  ET             mean=0.6795  sd=0.1767   (ET WESAD — wrist (56 feat))
+  RF             mean=0.7340  sd=0.1959   (RF WESAD — wrist (56 feat))
+  LogReg         mean=0.5603  sd=0.1656   (LogReg WESAD — wrist (56 feat))
+  SVM            mean=0.6798  sd=0.1460   (SVM WESAD — wrist (56 feat))
+  Ensemble       mean=0.8391  sd=0.1720   (Ensemble WESAD — wrist (77 feat))
+  1D-CNN         mean=0.7503  sd=0.0969   (1D-CNN WESAD — wrist (5 ch))
+  CNN-GRU        mean=0.7855  sd=0.0726   (CNN-GRU WESAD — wrist (5 ch))
+  BiGRU          mean=0.8219  sd=0.1121   (RNN (BiGRU) WESAD — wrist (5 ch))
+  Transformer    mean=0.8113  sd=0.0876   (Transformer WESAD — wrist (5 ch))
+  SSM (Mamba)    mean=0.6516  sd=0.1447   (Mamba (SSM) WESAD — wrist (5 ch))
+
+  Friedman chi2=53.2103  p=0.000000  (n_models=10, n_subjects=15)
+  --> significant differences among models (p<0.05); running Nemenyi post-hoc...
+
+  Nemenyi pairwise p-values:
+                 ET      RF  LogReg     SVM  Ensemble  1D-CNN  CNN-GRU   BiGRU  Transformer  SSM (Mamba)
+ET           1.0000  0.9610  0.4770  1.0000    0.1680  0.9979   0.6062  0.0544       0.1250       1.0000
+RF           0.9610  1.0000  0.0208  0.9122    0.9122  1.0000   0.9994  0.6900       0.8638       0.7673
+LogReg       0.4770  0.0208  1.0000  0.6062    0.0000  0.0771   0.0013  0.0000       0.0000       0.8024
+SVM          1.0000  0.9122  0.6062  1.0000    0.1070  0.9908   0.4770  0.0310       0.0771       1.0000
+Ensemble     0.1680  0.9122  0.0000  0.1070    1.0000  0.6900   0.9994  1.0000       1.0000       0.0453
+1D-CNN       0.9979  1.0000  0.0771  0.9908    0.6900  1.0000   0.9799  0.3944       0.6062       0.9477
+CNN-GRU      0.6062  0.9994  0.0013  0.4770    0.9994  0.9799   1.0000  0.9799       0.9979       0.2834
+BiGRU        0.0544  0.6900  0.0000  0.0310    1.0000  0.3944   0.9799  1.0000       1.0000       0.0111
+Transformer  0.1250  0.8638  0.0000  0.0771    1.0000  0.6062   0.9979  1.0000       1.0000       0.0310
+SSM (Mamba)  1.0000  0.7673  0.8024  1.0000    0.0453  0.9477   0.2834  0.0111       0.0310       1.0000
+
+  Average rank (1 = best) per model:
+BiGRU          3.13
+Transformer    3.47
+Ensemble       3.60
+CNN-GRU        4.40
+RF             5.20
+1D-CNN         5.67
+ET             6.60
+SVM            6.80
+SSM (Mamba)    7.13
+LogReg         9.00
+
+======================================================================
+ALL-CHANNEL MODELS (includes chest ECG + demographics)
+======================================================================
+  ET             mean=0.8335  sd=0.1535   (ET WESAD — all (137 feat))
+  RF             mean=0.8354  sd=0.1567   (RF WESAD — all (137 feat))
+  LogReg         mean=0.7953  sd=0.1683   (LogReg WESAD — all (137 feat))
+  SVM            mean=0.7451  sd=0.1986   (SVM WESAD — all (137 feat))
+  Ensemble       mean=0.8511  sd=0.1886   (Ensemble WESAD — all (130 feat))
+  1D-CNN         mean=0.9119  sd=0.0824   (1D-CNN WESAD — all (16 ch))
+  CNN-GRU        mean=0.9013  sd=0.0982   (CNN-GRU WESAD — all (16 ch))
+  BiGRU          mean=0.9234  sd=0.0775   (RNN (BiGRU) WESAD — all (16 ch))
+  Transformer    mean=0.8886  sd=0.0833   (Transformer WESAD — all (16 ch))
+  SSM (Mamba)    mean=0.8866  sd=0.0970   (Mamba (SSM) WESAD — all (16 ch))
+
+  Friedman chi2=29.4792  p=0.000538  (n_models=10, n_subjects=15)
+  --> significant differences among models (p<0.05); running Nemenyi post-hoc...
+
+  Nemenyi pairwise p-values:
+                 ET      RF  LogReg     SVM  Ensemble  1D-CNN  CNN-GRU   BiGRU  Transformer  SSM (Mamba)
+ET           1.0000  1.0000  0.9716  0.3554    0.9999  0.9477   0.9833  0.6062       1.0000       0.9999
+RF           1.0000  1.0000  0.9994  0.6900    0.9862  0.7297   0.8496  0.2834       1.0000       0.9908
+LogReg       0.9716  0.9994  1.0000  0.9799    0.7297  0.2508   0.3747  0.0453       0.9760       0.7673
+SVM          0.3554  0.6900  0.9799  1.0000    0.0910  0.0089   0.0188  0.0006       0.3747       0.1070
+Ensemble     0.9999  0.9862  0.7297  0.0910    1.0000  0.9994   1.0000  0.9316       0.9998       1.0000
+1D-CNN       0.9477  0.7297  0.2508  0.0089    0.9994  1.0000   1.0000  0.9997       0.9400       0.9988
+CNN-GRU      0.9833  0.8496  0.3747  0.0188    1.0000  1.0000   1.0000  0.9972       0.9799       0.9999
+BiGRU        0.6062  0.2834  0.0453  0.0006    0.9316  0.9997   0.9972  1.0000       0.5847       0.9122
+Transformer  1.0000  1.0000  0.9760  0.3747    0.9998  0.9400   0.9799  0.5847       1.0000       0.9999
+SSM (Mamba)  0.9999  0.9908  0.7673  0.1070    1.0000  0.9988   0.9999  0.9122       0.9999       1.0000
+
+  Average rank (1 = best) per model:
+BiGRU          3.47
+1D-CNN         4.20
+CNN-GRU        4.43
+Ensemble       5.00
+SSM (Mamba)    5.07
+ET             5.67
+Transformer    5.70
+RF             6.20
+LogReg         7.00
+SVM            8.27

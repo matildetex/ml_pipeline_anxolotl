@@ -1,0 +1,223 @@
+================================================================================
+CANONICAL ANXOLOTL NUMBERS FOR THESIS
+Generated: 2026-07-19  (read from saved files and processed data — no retraining)
+================================================================================
+
+Canonical configuration
+  Dataset     : Anxolotl
+  Signal      : wrist-only (Apple Watch)
+  Channels    : acc_wrist, hr, ibi, rmssd, sdnn
+  Window      : 60 s
+  Stride      : 30 s  (50% overlap)
+  Phase 3     : EXCLUDED  (stress_phase == 3 removed)
+  Boundary fix: applied — window labelled by its FIRST sample; windows where
+                label[first] ≠ label[last] (i.e. crossing a phase boundary)
+                are discarded
+  Normalisation: BL-norm (baseline_relative_scale, leak-fixed 2026-07-19)
+                 each subject normalised by their own label=0 windows
+  Model       : ExtraTrees (n_estimators=1000, max_features=0.5,
+                min_samples_leaf=1, class_weight='balanced', random_state=42)
+  Evaluation  : LOSO-CV (Leave-One-Subject-Out), n=37 subjects
+
+================================================================================
+1. WINDOW COUNTS
+================================================================================
+
+  Total labelled windows (phase3 excluded)  :  686
+  Baseline windows (label=0, stress_phase=-1):  334  (48.7%)
+  Stress windows   (label=1, phase1+phase2)  :  352  (51.3%)
+      → Stress phase 1 windows              :  175
+      → Stress phase 2 windows              :  177
+      → Stress phase 3 windows (excluded)   :   13   (from 4 subjects: p12, p22, p31, p36)
+
+  Windows per subject (phase3 excluded):
+      Mean   : 18.5
+      Min    : 13  (subjects: p19, p21, p25, p8)
+      Max    : 24  (subjects: p10, p33, p43)
+
+  Source: processed_data/anxolotl/processed_data_anxolotl.pkl (699 total before
+          phase3 exclusion, confirmed X.shape=(699,55); 686 confirmed in
+          results/sota_push_watch_only.txt and results/window_size_ablation_lgbm_loso_no_phase3.txt)
+  Note:  The .pkl stores all 699 windows including phase3.  Phase3 exclusion is
+         applied at training/evaluation time via stress_phase != 3 mask.
+
+================================================================================
+2. FEATURE COUNT
+================================================================================
+
+  DEFINITIVE ANSWER: 11 statistical features per channel × 5 channels = 55 features total.
+                     NOT 12 (there is no 12th statistic in the canonical pipeline).
+
+  11 statistics per channel (in column order):
+      1.  mean
+      2.  std
+      3.  min
+      4.  max
+      5.  p25         (25th percentile)
+      6.  p75         (75th percentile)
+      7.  skew
+      8.  kurtosis
+      9.  slope       (linear regression slope over the window)
+      10. lf_hf       (Welch PSD ratio: LF [0.04-0.15 Hz] / HF [0.15-0.40 Hz])
+      11. delta_mean   (mean of second half − mean of first half of window)
+
+  5 channels × 11 stats = 55 features.
+
+  Source: 3_anxolotl/anxolotl_preprocessing.py lines 756-820 (function
+          build_features_tabular; docstring explicitly states "11 each = 55 total").
+          Confirmed by processed_data/anxolotl/processed_data_anxolotl.pkl → X.shape=(699, 55)
+          and feature_cols listing (55 columns: acc_wrist_mean ... sdnn_delta_mean).
+
+================================================================================
+3. MARKER COVERAGE (after phase3 exclusion, n=37 subjects)
+================================================================================
+
+  Protocol uses up to 8 wrist-raise gesture markers:
+    Marker 1 → baseline start
+    Marker 2 → breathing 1 start (discarded segment)
+    Marker 3 → stress 1 start
+    Marker 4 → breathing 2 start (discarded; = stress 1 end)
+    Marker 5 → stress 2 start
+    Marker 6 → breathing 3 start (discarded; = stress 2 end)
+    Marker 7 → stress 3 start
+    Marker 8 → final baseline start (= stress 3 end)
+
+  Marker count distribution (n subjects):
+    n_markers = 4 :  2 subjects  [p32, p34]
+    n_markers = 5 : 11 subjects  [p15, p19, p20, p21, p25, p28, p37, p39, p44, p8, p9]
+    n_markers = 6 : 20 subjects  [p10, p11, p13, p14, p16, p17, p18, p23, p26, p27,
+                                   p29, p30, p33, p35, p38, p40, p41, p42, p43, p7]
+    n_markers = 7 :  3 subjects  [p12, p31, p36]
+    n_markers = 8 :  1 subject   [p22]
+
+  Phase labelling requires (code: 3_anxolotl/anxolotl_preprocessing.py lines 391-406):
+    Stress 1  → n_markers ≥ 4  (markers 3 and 4 detected)
+    Stress 2  → n_markers ≥ 6  (markers 5 and 6 detected)
+    Stress 3  → n_markers ≥ 7  (marker 7 detected; ends at marker 8 or session end)
+
+  Confirmed stress markers:
+    Stress 1 confirmed  :  37 / 37  (all subjects have n_markers ≥ 4)
+    Stress 2 confirmed  :  24 / 37  (subjects with n_markers ≥ 6: 20+3+1)
+    Stress 3 confirmed  :   4 / 37  (subjects with n_markers ≥ 7: p12, p22, p31, p36)
+
+  Source: results/nbl_stride_marker_ablations_lgbm_loso.txt (marker count histogram)
+          3_anxolotl/anxolotl_preprocessing.py (labelling logic)
+          processed_data/anxolotl/processed_data_anxolotl.pkl df['stress_phase'] column
+
+  ── DISCREPANCY EXPLANATION ("4/37" vs "1/37") ──────────────────────────────
+
+  Earlier run reported "4/37 subjects have phase3 data" (correct, from df['stress_phase']==3
+  in the pkl: subjects p12, p22, p31, p36).
+
+  Later marker ablation reported "Complete sessions (n_markers=8): 1/37" (also correct,
+  but this counts subjects with ALL 8 markers confirmed including the final baseline
+  marker — a STRICTER criterion than "stress 3 confirmed").
+
+  Correct mapping:
+    • "Confirmed Stress 3 marker" = n_markers ≥ 7 = 4/37  ← phase 3 start detected
+    • "Complete sessions (all 8 markers)" = n_markers = 8 = 1/37  ← p22 only
+
+  The two numbers answer different questions. For thesis reporting, use 4/37 for
+  "confirmed Stress 3 marker" and 1/37 for "fully confirmed session (all 8 gestures)".
+
+================================================================================
+4. SESSION-LEVEL NUMBERS
+================================================================================
+
+  Sessions recorded  : 39   (session_0006.csv through session_0044.csv → p6–p44)
+  Sessions discarded :  2
+      p6  : "no valid arm-raise gestures detected (z signal too flat)"
+             Source: 3_anxolotl/anxolotl_preprocessing.py line 1029
+      p24 : "excluded from processed_data"
+             Source: 3_anxolotl/demographics_analysis.py line 39 (comment)
+             Note: the reason for p24 exclusion is NOT explicitly documented in any
+             code comment beyond "excluded from processed_data". If a reviewer asks,
+             verify against the raw session_0024.csv file.
+  Sessions retained  : 37
+
+  Session duration (time from session start to last labelled event):
+      Total   : 11.5 h  (41,405 s across 37 subjects)
+      Mean    : 18.7 min per subject
+      Min     :  11.7 min  (p9,  699 s)
+      Max     :  24.0 min  (p36, 1440 s)
+
+  Labelled (non-discard) seconds in 1Hz cache: 23,821 s total ≈ 10.7 min/subject mean
+  (discard segments = setup + breathing transitions between phases, labelled -1,
+   not included in the 23,821 s or in any model input)
+
+  Source: results/df_all_1hz_cache.pkl (t_sec = seconds from session start in 1Hz
+          labelled DataFrame; discard rows already removed)
+
+================================================================================
+5. HEADLINE RESULT
+================================================================================
+
+  Model       : ExtraTrees  (n_estimators=1000, max_features=0.5,
+                min_samples_leaf=1, class_weight='balanced', random_state=42)
+  Config      : 60s/30s stride, 686 windows, phase3 excluded, BL-norm (leak-fixed)
+  CV          : LOSO, n=37 subjects
+
+  MacroF1     : 0.9169   (mean across 37 folds)
+  ±SD         : 0.0895
+  Min fold F1 : 0.6190   (p33)
+  Max fold F1 : 1.0000   (multiple subjects: p12,p14,p19,p23,p25,p28,p32,p34,p35,p37,p8)
+  AUROC       : 0.9645   ⚠  (see flag below)
+
+  Source: results/anxolotl_wrist_loso_per_subject.csv  (per-subject ET-1000 column,
+          mean=0.9169, std=0.0895; 37 subjects)
+  Source: results/friedman_nemenyi_anxolotl_wrist_loso.txt  (confirms 0.9169 ± 0.0895,
+          explicitly labelled "BL-norm (leak-fixed 2026-07-19)")
+  Source: results/sota_push_watch_only.txt  (AUROC=0.9645 for ET-1000-mf0.5 at 60s/30s)
+
+  ── FLAG: F1 DISCREPANCY ──────────────────────────────────────────────────────
+
+  Three F1 values appear in different files for "60s/30s, phase3 excluded, ET-1000":
+
+    0.9108  results/macro_progression.csv ("Watch only" stage)
+            ← uses FULL 699-window pkl (phase3 INCLUDED); earlier BL-norm; NOT canonical.
+
+    0.9180  results/sota_push_watch_only.txt + results/watch_ecg_vs_wesad.txt
+            ← 686 windows (phase3 excluded), ET-1000-mf0.5; PRE-leak-fix BL-norm.
+
+    0.9169  results/anxolotl_wrist_loso_per_subject.csv +
+              results/friedman_nemenyi_anxolotl_wrist_loso.txt  ← CANONICAL
+            ← 686 windows (phase3 excluded), BL-norm LEAK-FIXED (2026-07-19).
+            The Friedman file explicitly documents the correction.
+
+  USE 0.9169 ± 0.0895 in the thesis.  The difference from 0.9180 (pre-fix) is 0.0011,
+  which arises from the corrected BL-norm implementation.
+
+  ── FLAG: AUROC VERSION ───────────────────────────────────────────────────────
+
+  AUROC=0.9645 comes from results/sota_push_watch_only.txt (pre-leak-fix run).
+  No post-fix AUROC was saved separately. The F1 change from the leak fix was
+  0.0011 (0.9180→0.9169), so the AUROC is unlikely to differ materially, but
+  cannot be confirmed without rerunning. If an exact post-fix AUROC is required,
+  it must be recomputed from the corrected pipeline.
+
+================================================================================
+CROSS-REFERENCE: OTHER SAVED RESULTS NOT IN CANONICAL CONFIG
+================================================================================
+
+  results/macro_progression.csv — pipeline stage progression (699 windows, phase3 IN):
+      Watch only              : MacroF1=0.9108   ← NOT canonical (phase3 included)
+      + HP tuning             : MacroF1=0.9212
+      + ECG + adaptive (final): MacroF1=0.9395
+
+  results/sota_push_watch_only_FINAL.txt — best DEFENSIBLE result (not the canonical config):
+      Window: 90s, stride 45s, N=386 windows (9 phase3 removed)
+      ET (n=300, max_features=0.6): MacroF1=0.9689, AUROC=0.9988
+      This is the best overall wrist-only result; defensible because 90s windows
+      give ≥7 test windows per fold (median=10.4). Canonical config uses 60s.
+
+  results/watch_ecg_vs_wesad.txt — watch + ECG comparison (60s, phase3 excluded):
+      Watch-only  ET-1000-mf0.5: MacroF1=0.9180  (pre-leak-fix)
+      Watch+ECG   ET-1000-mf0.5: MacroF1=0.9503  (72 features = 55+17 ECG)
+
+  results/wesad_55plus_ecg_loso.txt — WESAD cross-dataset comparison:
+      WESAD 55-feat (wrist): MacroF1=0.6902  AUROC=0.8536
+      WESAD 72-feat (+ECG) : MacroF1=0.8900  AUROC=0.9751
+
+================================================================================
+END
+================================================================================

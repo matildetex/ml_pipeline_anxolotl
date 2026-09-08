@@ -1,0 +1,71 @@
+Loading data...
+Winning feature set: (712, 88)
+
+======================================================================
+1. CALIBRATION SPLIT-RATIO SWEEP (ET-1000, RF-1000)
+======================================================================
+  cal_frac=0.3  ET-1000    F1=0.9478
+  cal_frac=0.3  RF-1000    F1=0.9465
+  (129s)
+  cal_frac=0.4  ET-1000    F1=0.9460
+  cal_frac=0.4  RF-1000    F1=0.9455
+  (131s)
+  cal_frac=0.5  ET-1000    F1=0.9500
+  cal_frac=0.5  RF-1000    F1=0.9464
+  (144s)
+  cal_frac=0.6  ET-1000    F1=0.9466
+  cal_frac=0.6  RF-1000    F1=0.9455
+  (129s)
+  cal_frac=0.7  ET-1000    F1=0.9466
+  cal_frac=0.7  RF-1000    F1=0.9464
+  (130s)
+
+Best calibration ratio: 0.5 (ET-1000 F1=0.9500)
+
+======================================================================
+2. ET-1000 HYPERPARAMETER GRID (cal_frac=0.5)
+======================================================================
+  {'n_estimators': 500, 'max_features': 0.3, 'min_samples_leaf': 1}  F1=0.9516  (27s)
+  {'n_estimators': 500, 'max_features': 0.3, 'min_samples_leaf': 2}  F1=0.9494  (28s)
+  {'n_estimators': 500, 'max_features': 0.5, 'min_samples_leaf': 1}  F1=0.9515  (27s)
+  {'n_estimators': 500, 'max_features': 0.5, 'min_samples_leaf': 2}  F1=0.9459  (27s)
+  {'n_estimators': 500, 'max_features': 0.7, 'min_samples_leaf': 1}  F1=0.9445  (27s)
+  {'n_estimators': 500, 'max_features': 0.7, 'min_samples_leaf': 2}  F1=0.9407  (27s)
+  {'n_estimators': 1000, 'max_features': 0.3, 'min_samples_leaf': 1}  F1=0.9541  (51s)
+  {'n_estimators': 1000, 'max_features': 0.3, 'min_samples_leaf': 2}  F1=0.9415  (52s)
+  {'n_estimators': 1000, 'max_features': 0.5, 'min_samples_leaf': 1}  F1=0.9500  (51s)
+  {'n_estimators': 1000, 'max_features': 0.5, 'min_samples_leaf': 2}  F1=0.9456  (51s)
+  {'n_estimators': 1000, 'max_features': 0.7, 'min_samples_leaf': 1}  F1=0.9461  (52s)
+  {'n_estimators': 1000, 'max_features': 0.7, 'min_samples_leaf': 2}  F1=0.9415  (51s)
+  {'n_estimators': 1500, 'max_features': 0.3, 'min_samples_leaf': 1}  F1=0.9539  (75s)
+  {'n_estimators': 1500, 'max_features': 0.3, 'min_samples_leaf': 2}  F1=0.9405  (76s)
+  {'n_estimators': 1500, 'max_features': 0.5, 'min_samples_leaf': 1}  F1=0.9480  (74s)
+  {'n_estimators': 1500, 'max_features': 0.5, 'min_samples_leaf': 2}  F1=0.9455  (74s)
+  {'n_estimators': 1500, 'max_features': 0.7, 'min_samples_leaf': 1}  F1=0.9461  (75s)
+  {'n_estimators': 1500, 'max_features': 0.7, 'min_samples_leaf': 2}  F1=0.9415  (75s)
+
+Best ET-1000 params: {'n_estimators': 1000.0, 'max_features': 0.3, 'min_samples_leaf': 1.0, 'f1': 0.9540956910101368}
+
+======================================================================
+3. CATBOOST (cal_frac=0.5)
+======================================================================
+  CatBoost-base  F1=0.8872  (42s)
+  CatBoost-deep  F1=0.9002  (307s)
+
+======================================================================
+4. STACKING: ET-1000 + RF-1000 + LGBM-deep + ExtraTrees (cal_frac=0.5)
+======================================================================
+
+Stacking F1 = 0.9479  AUC = 0.9908  (1163s)
+
+======================================================================
+FINAL SUMMARY — all four experiments
+======================================================================
+Baseline (grid winner):     ET-1000  F1=0.9500
+1. Best cal_frac:           0.5  (ET-1000 F1=0.9500)
+2. Best ET-1000 HP:         {'n_estimators': 1000.0, 'max_features': 0.3, 'min_samples_leaf': 1.0, 'f1': 0.9540956910101368}  F1=0.9541
+3. Best CatBoost:           {'model': 'CatBoost-deep', 'f1': 0.9002475583296059}
+4. Stacking:                F1=0.9479
+
+BEST OVERALL: ET-1000 HP-tuned  F1=0.9541
+DONE

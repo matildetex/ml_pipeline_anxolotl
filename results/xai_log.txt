@@ -1,0 +1,190 @@
+These features in provided data are not utilized by the predictor and will be ignored: ['acc_chest_mean', 'acc_chest_std', 'acc_chest_min', 'acc_chest_max', 'acc_chest_p25', 'acc_chest_p75', 'acc_chest_skew', 'acc_chest_kurtosis', 'eda_chest_mean', 'eda_chest_std', 'eda_chest_min', 'eda_chest_max', 'eda_chest_p25', 'eda_chest_p75', 'eda_chest_skew', 'eda_chest_kurtosis', 'ecg_hr_mean', 'ecg_hr_std', 'ecg_hr_min', 'ecg_hr_max', 'ecg_hr_p25', 'ecg_hr_p75', 'ecg_hr_skew', 'ecg_hr_kurtosis', 'ecg_ibi_mean', 'ecg_ibi_std', 'ecg_ibi_min', 'ecg_ibi_max', 'ecg_ibi_p25', 'ecg_ibi_p75', 'ecg_ibi_skew', 'ecg_ibi_kurtosis', 'ecg_rmssd_mean', 'ecg_rmssd_std', 'ecg_rmssd_min', 'ecg_rmssd_max', 'ecg_rmssd_p25', 'ecg_rmssd_p75', 'ecg_rmssd_skew', 'ecg_rmssd_kurtosis', 'ecg_sdnn_mean', 'ecg_sdnn_std', 'ecg_sdnn_min', 'ecg_sdnn_max', 'ecg_sdnn_p25', 'ecg_sdnn_p75', 'ecg_sdnn_skew', 'ecg_sdnn_kurtosis', 'resp_freq_mean', 'resp_freq_std', 'resp_freq_min', 'resp_freq_max', 'resp_freq_p25', 'resp_freq_p75', 'resp_freq_skew', 'resp_freq_kurtosis', 'resp_iri_mean', 'resp_iri_std', 'resp_iri_min', 'resp_iri_max', 'resp_iri_p25', 'resp_iri_p75', 'resp_iri_skew', 'resp_iri_kurtosis', 'emg_chest_mean', 'emg_chest_std', 'emg_chest_min', 'emg_chest_max', 'emg_chest_p25', 'emg_chest_p75', 'emg_chest_skew', 'emg_chest_kurtosis', 'age', 'gender', 'coffee_today', 'coffee_last_hour', 'sports', 'smoker', 'ill', 'stai_baseline', 'stai_stress']
+Loading datasets…
+
+============================================================
+  WESAD — wrist features (tabular)
+============================================================
+
+  Preprocessing WESAD_wrist (56 features)…
+  Training classical models…
+    Training RF…
+    Training ET…
+    Training LogReg…
+    Training SVM…
+    Training Ensemble…
+  SHAP — RF
+    → WESAD_wrist_RF_bar.png
+    → WESAD_wrist_RF_groups.png
+    → WESAD_wrist_RF_beeswarm.png
+  SHAP — ET
+    → WESAD_wrist_ET_bar.png
+    → WESAD_wrist_ET_groups.png
+    → WESAD_wrist_ET_beeswarm.png
+  SHAP — LogReg
+    → WESAD_wrist_LogReg_bar.png
+    → WESAD_wrist_LogReg_groups.png
+    → WESAD_wrist_LogReg_beeswarm.png
+  SHAP — SVM
+    → WESAD_wrist_SVM_bar.png
+    → WESAD_wrist_SVM_groups.png
+  SHAP — Ensemble
+    → WESAD_wrist_Ensemble_bar.png
+    → WESAD_wrist_Ensemble_groups.png
+    → WESAD_wrist_Ensemble_beeswarm.png
+  Training DANN tabular…
+  SHAP — DANN
+    [DeepExplainer ERR] Expected all tensors to be on the same device, but got mat1 is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA_addmm); trying GradientExplainer…
+    [GradientExplainer ERR] Expected all tensors to be on the same device, but got mat1 is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA_addmm)
+
+============================================================
+  WESAD — all features (tabular)
+============================================================
+
+  Preprocessing WESAD_all (137 features)…
+  Training classical models…
+    Training RF…
+    Training ET…
+    Training LogReg…
+    Training SVM…
+    Training Ensemble…
+  SHAP — RF
+    → WESAD_all_RF_bar.png
+    → WESAD_all_RF_groups.png
+    → WESAD_all_RF_beeswarm.png
+  SHAP — ET
+    → WESAD_all_ET_bar.png
+    → WESAD_all_ET_groups.png
+    → WESAD_all_ET_beeswarm.png
+  SHAP — LogReg
+    → WESAD_all_LogReg_bar.png
+    → WESAD_all_LogReg_groups.png
+    → WESAD_all_LogReg_beeswarm.png
+  SHAP — SVM
+    → WESAD_all_SVM_bar.png
+    → WESAD_all_SVM_groups.png
+  SHAP — Ensemble
+    → WESAD_all_Ensemble_bar.png
+    → WESAD_all_Ensemble_groups.png
+    → WESAD_all_Ensemble_beeswarm.png
+  Training DANN tabular…
+  SHAP — DANN
+    [DeepExplainer ERR] Expected all tensors to be on the same device, but got mat1 is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA_addmm); trying GradientExplainer…
+    [GradientExplainer ERR] Expected all tensors to be on the same device, but got mat1 is on cpu, different from other tensors on cuda:0 (when checking argument in method wrapper_CUDA_addmm)
+  AutoGluon feature importance…
+    → WESAD_wrist_AutoGluon_bar.png
+    → WESAD_wrist_AutoGluon_groups.png
+  AutoGluon feature importance…
+    → WESAD_all_AutoGluon_bar.png
+    → WESAD_all_AutoGluon_groups.png
+
+============================================================
+  WESAD — sequences (1D-CNN, CNN-GRU, RNN, Transformer, Mamba, DANN)
+============================================================
+  Training 1D-CNN on WESAD sequences (5 channels)…
+  SHAP (gradient) — 1D-CNN
+    [GradientExplainer seq ERR] Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN tensor and weight is a dense tensor
+  Training CNN-GRU on WESAD sequences (5 channels)…
+  SHAP (gradient) — CNN-GRU
+    [GradientExplainer seq ERR] Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN tensor and weight is a dense tensor
+  Training RNN on WESAD sequences (5 channels)…
+  SHAP (gradient) — RNN
+    [GradientExplainer seq ERR] Input and parameter tensors are not at the same device, found input tensor at cpu and parameter tensor at cuda:0
+  Training Transformer on WESAD sequences (5 channels)…
+  SHAP (gradient) — Transformer
+    [GradientExplainer seq ERR] Expected all tensors to be on the same device, but got mat2 is on cuda:0, different from other tensors on cpu (when checking argument in method wrapper_CUDA_mm)
+  Training Mamba on WESAD sequences (5 channels)…
+  SHAP (gradient) — Mamba
+    [GradientExplainer seq ERR] Expected all tensors to be on the same device, but got mat2 is on cuda:0, different from other tensors on cpu (when checking argument in method wrapper_CUDA_mm)
+  Training DANN on WESAD sequences (5 channels)…
+  SHAP (gradient) — DANN
+    [GradientExplainer seq ERR] Expected all tensors to be on the same device, but got mat2 is on cuda:0, different from other tensors on cpu (when checking argument in method wrapper_CUDA_mm)
+  Loading saved RNN…
+    [saved RNN ERR] Error(s) in loading state_dict for RNN1D:
+	Missing key(s) in state_dict: "cls.0.weight", "cls.0.bias", "cls.3.weight", "cls.3.bias". 
+	Unexpected key(s) in state_dict: "classifier.0.weight", "classifier.0.bias", "classifier.3.weight", "classifier.3.bias". 
+  Loading saved DANN…
+    [GradientExplainer seq ERR] Expected all tensors to be on the same device, but got mat2 is on cuda:0, different from other tensors on cpu (when checking argument in method wrapper_CUDA_mm)
+  Training 1D-CNN on WESAD sequences (16 channels)…
+  SHAP (gradient) — 1D-CNN
+    [GradientExplainer seq ERR] Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN tensor and weight is a dense tensor
+  Training CNN-GRU on WESAD sequences (16 channels)…
+  SHAP (gradient) — CNN-GRU
+    [GradientExplainer seq ERR] Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN tensor and weight is a dense tensor
+  Training RNN on WESAD sequences (16 channels)…
+  SHAP (gradient) — RNN
+    [GradientExplainer seq ERR] Input and parameter tensors are not at the same device, found input tensor at cpu and parameter tensor at cuda:0
+  Training Transformer on WESAD sequences (16 channels)…
+  SHAP (gradient) — Transformer
+    [GradientExplainer seq ERR] Expected all tensors to be on the same device, but got mat2 is on cuda:0, different from other tensors on cpu (when checking argument in method wrapper_CUDA_mm)
+  Training Mamba on WESAD sequences (16 channels)…
+  SHAP (gradient) — Mamba
+    [GradientExplainer seq ERR] Expected all tensors to be on the same device, but got mat2 is on cuda:0, different from other tensors on cpu (when checking argument in method wrapper_CUDA_mm)
+  Training DANN on WESAD sequences (16 channels)…
+  SHAP (gradient) — DANN
+    [GradientExplainer seq ERR] Expected all tensors to be on the same device, but got mat2 is on cuda:0, different from other tensors on cpu (when checking argument in method wrapper_CUDA_mm)
+  Loading saved RNN…
+    [saved RNN ERR] Error(s) in loading state_dict for RNN1D:
+	Missing key(s) in state_dict: "cls.0.weight", "cls.0.bias", "cls.3.weight", "cls.3.bias". 
+	Unexpected key(s) in state_dict: "classifier.0.weight", "classifier.0.bias", "classifier.3.weight", "classifier.3.bias". 
+  Loading saved DANN…
+    [GradientExplainer seq ERR] Expected all tensors to be on the same device, but got mat2 is on cuda:0, different from other tensors on cpu (when checking argument in method wrapper_CUDA_mm)
+
+============================================================
+  WDD — 60 common features
+============================================================
+
+  Preprocessing WDD_60common (60 features)…
+  Training classical models…
+    Training RF…
+    Training ET…
+    Training LogReg…
+    Training SVM…
+    Training Ensemble…
+  SHAP — RF
+    → WDD_60common_RF_bar.png
+    → WDD_60common_RF_groups.png
+    → WDD_60common_RF_beeswarm.png
+  SHAP — ET
+    → WDD_60common_ET_bar.png
+    → WDD_60common_ET_groups.png
+    → WDD_60common_ET_beeswarm.png
+  SHAP — LogReg
+    → WDD_60common_LogReg_bar.png
+    → WDD_60common_LogReg_groups.png
+    → WDD_60common_LogReg_beeswarm.png
+  SHAP — SVM
+    → WDD_60common_SVM_bar.png
+    → WDD_60common_SVM_groups.png
+  SHAP — Ensemble
+    → WDD_60common_Ensemble_bar.png[2026-06-14 13:51:23,846 W 238968 238968] network_util.cc:296: Failed to determine local IP via external connectivity to: 8.8.8.8:53, [2001:4860:4860::8888]:53, falling back to hostname resolution
+[2026-06-14 13:51:57,995 E 238968 241321] core_worker_process.cc:837: Failed to establish connection to the metrics exporter agent. Metrics will not be exported. Exporter agent status: RpcError: Running out of retries to initialize the metrics agent. rpc_code: 14
+double free or corruption (!prev)
+*** SIGABRT received at time=1781442148 on cpu 5 ***
+PC: @     0x7aa559e9eb2c  (unknown)  pthread_kill
+    @     0x7aa559e45330  (unknown)  (unknown)
+    @     0x7aa559e4527e         32  raise
+    @     0x7aa559e288ff        192  abort
+    @     0x7aa559e297b6        288  (unknown)
+    @     0x7aa559ea8ff5         16  (unknown)
+    @     0x7aa559eab12c         64  (unknown)
+    @     0x7aa559eab43a         80  (unknown)
+    @     0x7aa559eaddce         64  cfree
+    @     0x7aa558d52ff3  (unknown)  array_dealloc
+[2026-06-14 14:02:28,459 E 238968 238968] logging.cc:474: *** SIGABRT received at time=1781442148 on cpu 5 ***
+[2026-06-14 14:02:28,459 E 238968 238968] logging.cc:474: PC: @     0x7aa559e9eb2c  (unknown)  pthread_kill
+[2026-06-14 14:02:28,459 E 238968 238968] logging.cc:474:     @     0x7aa559e45330  (unknown)  (unknown)
+[2026-06-14 14:02:28,459 E 238968 238968] logging.cc:474:     @     0x7aa559e4527e         32  raise
+[2026-06-14 14:02:28,459 E 238968 238968] logging.cc:474:     @     0x7aa559e288ff        192  abort
+[2026-06-14 14:02:28,459 E 238968 238968] logging.cc:474:     @     0x7aa559e297b6        288  (unknown)
+[2026-06-14 14:02:28,459 E 238968 238968] logging.cc:474:     @     0x7aa559ea8ff5         16  (unknown)
+[2026-06-14 14:02:28,459 E 238968 238968] logging.cc:474:     @     0x7aa559eab12c         64  (unknown)
+[2026-06-14 14:02:28,459 E 238968 238968] logging.cc:474:     @     0x7aa559eab43a         80  (unknown)
+[2026-06-14 14:02:28,459 E 238968 238968] logging.cc:474:     @     0x7aa559eaddce         64  cfree
+[2026-06-14 14:02:28,459 E 238968 238968] logging.cc:474:     @     0x7aa558d52ff3  (unknown)  array_dealloc
+Fatal Python error: Aborted
+
+Stack (most recent call first):
+  File "/home/matildxi/Secret\xe1ria/Documentos/Tese/anxolotl/scripts/xai.py", line 586 in cross_dataset_groups
+  File "/home/matildxi/Secret\xe1ria/Documentos/Tese/anxolotl/scripts/xai.py", line 680 in <module>
+
+Extension modules: numpy._core._multiarray_umath, numpy.linalg._umath_linalg, pyarrow.lib, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._pcg64, numpy.random._mt19937, numpy.random._generator, numpy.random._philox, numpy.random._sfc64, numpy.random.mtrand, pandas._libs.tslibs.ccalendar, pandas._libs.tslibs.np_datetime, pandas._libs.tslibs.dtypes, pandas._libs.tslibs.base, pandas._libs.tslibs.nattype, pandas._libs.tslibs.timezones, pandas._libs.tslibs.fields, pandas._libs.tslibs.timedeltas, pandas._libs.tslibs.tzconversion, pandas._libs.tslibs.timestamps, pandas._libs.properties, pandas._libs.tslibs.offsets, pandas._libs.tslibs.strptime, pandas._libs.tslibs.parsing, pandas._libs.tslibs.conversion, pandas._libs.tslibs.period, pandas._libs.tslibs.vectorized, pandas._libs.ops_dispatch, pandas._libs.missing, pandas._libs.hashtable, pandas._libs.algos, pandas._libs.interval, pandas._libs.lib, pyarrow._compute, pandas._libs.ops, pandas._libs.hashing, pandas._libs.arrays, pandas._libs.tslib, pandas._libs.sparse, pandas._libs.internals, pandas._libs.indexing, pandas._libs.index, pandas._libs.writers, pandas._libs.join, pandas._libs.window.aggregations, pandas._libs.window.indexers, pandas._libs.reshape, pandas._libs.groupby, pandas._libs.json, pandas._libs.parsers, pandas._libs.testing, PIL._imaging, kiwisolver._cext, scipy._lib._ccallback_c, charset_normalizer.md, charset_normalizer.cd, _cyutility, scipy._cyutility, scipy.sparse._sparsetools, _csparsetools, scipy.sparse._csparsetools, scipy.spatial._ckdtree, scipy._lib.messagestream, scipy.linalg._fblas, scipy.linalg._flapack, scipy.linalg.cython_lapack, scipy.linalg._cythonized_array_utils, scipy.linalg._solve_toeplitz, scipy.linalg._decomp_lu_cython, scipy.linalg._matfuncs_schur_sqrtm, scipy.linalg._matfuncs_expm, scipy.linalg._linalg_pythran, scipy.linalg.cython_blas, scipy.linalg._decomp_update, scipy.spatial._qhull, scipy.spatial._voronoi, scipy.special._ufuncs_cxx, scipy.special._ellip_harm_2, scipy.special._special_ufuncs, scipy.special._gufuncs, scipy.special._ufuncs, scipy.special._specfun, scipy.special._comb, scipy.spatial._hausdorff, scipy.spatial._distance_wrap, scipy.spatial.transform._rotation, scipy.spatial.transform._rigid_transform, scipy.cluster._vq, scipy.cluster._hierarchy, scipy.cluster._optimal_leaf_ordering, sklearn.__check_build._check_build, psutil._psutil_linux, scipy.sparse.linalg._dsolve._superlu, scipy.sparse.linalg._eigen.arpack._arpack, scipy.sparse.linalg._propack._spropack, scipy.sparse.linalg._propack._dpropack, scipy.sparse.linalg._propack._cpropack, scipy.sparse.linalg._propack._zpropack, scipy.optimize._group_columns, scipy.optimize._trlib._trlib, scipy.optimize._lbfgsb, _moduleTNC, scipy.optimize._moduleTNC, scipy.optimize._slsqplib, scipy.optimize._minpack, scipy.optimize._lsq.givens_elimination, scipy.optimize._zeros, scipy._lib._uarray._uarray, scipy.linalg._decomp_interpolative, scipy.optimize._bglu_dense, scipy.optimize._lsap, scipy.optimize._direct, scipy.integrate._odepack, scipy.integrate._quadpack, scipy.integrate._vode, scipy.integrate._dop, scipy.integrate._lsoda, scipy.interpolate._fitpack, scipy.interpolate._dfitpack, scipy.interpolate._dierckx, scipy.interpolate._ppoly, scipy.interpolate._interpnd, scipy.interpolate._rbfinterp_pythran, scipy.interpolate._rgi_cython, scipy.special.cython_special, scipy.stats._stats, scipy.stats._biasedurn, scipy.stats._stats_pythran, scipy.stats._levy_stable.levyst, scipy.stats._ansari_swilk_statistics, scipy.sparse.csgraph._tools, scipy.sparse.csgraph._shortest_path, scipy.sparse.csgraph._traversal, scipy.sparse.csgraph._min_spanning_tree, scipy.sparse.csgraph._flow, scipy.sparse.csgraph._matching, scipy.sparse.csgraph._reordering, scipy.stats._sobol, scipy.stats._qmc_cy, scipy.stats._rcont.rcont, scipy.stats._qmvnt_cy, scipy.ndimage._nd_image, scipy.ndimage._rank_filter_1d, _ni_label, scipy.ndimage._ni_label, sklearn._cyutility, sklearn.utils._isfinite, sklearn.utils.sparsefuncs_fast, sklearn.utils.murmurhash, sklearn.utils._openmp_helpers, yaml._yaml, numba.core.typeconv._typeconv, numba._helperlib, numba._dynfunc, numba._dispatcher, numba.core.runtime._nrt_python, numba.np.ufunc._internal, numba.experimental.jitclass._box, sklearn.metrics.cluster._expected_mutual_info_fast, sklearn.preprocessing._csr_polynomial_expansion, sklearn.preprocessing._target_encoder_fast, sklearn.metrics._dist_metrics, sklearn.metrics._pairwise_distances_reduction._datasets_pair, sklearn.utils._cython_blas, sklearn.metrics._pairwise_distances_reduction._base, sklearn.metrics._pairwise_distances_reduction._middle_term_computer, sklearn.utils._heap, sklearn.utils._sorting, sklearn.metrics._pairwise_distances_reduction._argkmin, sklearn.metrics._pairwise_distances_reduction._argkmin_classmode, sklearn.utils._vector_sentinel, sklearn.metrics._pairwise_distances_reduction._radius_neighbors, sklearn.metrics._pairwise_distances_reduction._radius_neighbors_classmode, sklearn.metrics._pairwise_fast, sklearn.utils._fast_dict, sklearn.cluster._hierarchical_fast, sklearn.cluster._k_means_common, sklearn.cluster._k_means_elkan, sklearn.cluster._k_means_lloyd, sklearn.cluster._k_means_minibatch, sklearn.neighbors._partition_nodes, sklearn.neighbors._ball_tree, sklearn.neighbors._kd_tree, sklearn.utils.arrayfuncs, sklearn.utils._random, sklearn.utils._seq_dataset, sklearn.linear_model._cd_fast, _loss, sklearn._loss._loss, sklearn.svm._liblinear, sklearn.svm._libsvm, sklearn.svm._libsvm_sparse, sklearn.linear_model._sag_fast, sklearn.utils._weight_vector, sklearn.linear_model._sgd_fast, sklearn.decomposition._online_lda_fast, sklearn.decomposition._cdnmf_fast, sklearn.cluster._dbscan_inner, sklearn.cluster._hdbscan._tree, sklearn.cluster._hdbscan._linkage, sklearn.cluster._hdbscan._reachability, sklearn._isotonic, sklearn.tree._utils, sklearn.tree._tree, sklearn.tree._partitioner, sklearn.tree._splitter, sklearn.tree._criterion, sklearn.neighbors._quad_tree, sklearn.manifold._barnes_hut_tsne, sklearn.manifold._utils, sklearn.ensemble._gradient_boosting, sklearn.ensemble._hist_gradient_boosting.common, sklearn.ensemble._hist_gradient_boosting._gradient_boosting, sklearn.ensemble._hist_gradient_boosting._binning, sklearn.ensemble._hist_gradient_boosting._bitset, sklearn.ensemble._hist_gradient_boosting.histogram, sklearn.ensemble._hist_gradient_boosting._predictor, sklearn.ensemble._hist_gradient_boosting.splitting, shap._cext, _kernel_lib, scipy.io.matlab._mio_utils, scipy.io.matlab._streams, scipy.io.matlab._mio5_utils, sklearn.datasets._svmlight_format_fast, sklearn.feature_extraction._hashing_fast, torch._C, torch._C._dynamo.autograd_compiler, torch._C._dynamo.eval_frame, torch._C._dynamo.guards, torch._C._dynamo.utils, torch._C._fft, torch._C._linalg, torch._C._nested, torch._C._nn, torch._C._sparse, torch._C._special, _cffi_backend, PIL._imagingmath, requests.packages.charset_normalizer.md, requests.packages.chardet.md, requests.packages.charset_normalizer.cd, requests.packages.chardet.cd, msgpack._cmsgpack, google._upb._message, uvloop.loop, ray._raylet, pyarrow._json, _catboost, catboost._catboost, plum._bear, plum._method, plum._resolver, plum._overload, plum._dispatcher, apsw, apsw._unicode (total: 258)

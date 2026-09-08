@@ -1,0 +1,34 @@
+====================================================================================================
+OVERLAP SWEEP -- canonical ET-1000 configuration (window fixed at 60s)
+====================================================================================================
+Model         : ExtraTrees(n_estimators=1000, max_features=0.5, class_weight=balanced, random_state=42)
+Normalisation : baseline_relative_scale -- LEAK-FIXED 2026-07-19 (demographics_analysis.py),
+                leading run of label=0 windows per subject (adaptive, not fixed-count).
+CV            : LOSO, 37 subjects. Phase 3 (stress_phase==3) excluded at every stride.
+Features      : 55 (5 wrist channels x 11 stats). Window fixed at 60s; only stride/overlap varies.
+Replaces      : results/stride_ablation_et1000_leakfixed.txt (2-point: 0% vs 50% overlap only)
+                -- kept on disk, not overwritten; this is a finer 4-point sweep.
+
+ Overlap  Stride   N_win    N_BL    N_ST  Win/subj   MacroF1       SD    AUROC
+----------------------------------------------------------------------------------------------------
+      0%      60     373     185     188      10.1    0.9662   0.0517   0.9921
+     25%      45     452     223     229      12.2    0.9606   0.0612   0.9862
+     50%      30     686     334     352      18.5    0.9169   0.0883   0.9646
+     75%      15    1314     630     684      35.5    0.8841   0.1028   0.9536
+
+----------------------------------------------------------------------------------------------------
+Overlap-inflation check (each row vs the 0%-overlap / independent-window baseline):
+    0% overlap: MacroF1=0.9662  delta vs 0%-overlap = +0.0000
+   25% overlap: MacroF1=0.9606  delta vs 0%-overlap = -0.0056
+   50% overlap: MacroF1=0.9169  delta vs 0%-overlap = -0.0494
+   75% overlap: MacroF1=0.8841  delta vs 0%-overlap = -0.0822
+
+No inflation flag: overlap does NOT inflate performance here. If anything the pattern runs the
+OPPOSITE way to the inflation concern -- MacroF1 decreases monotonically as overlap increases
+(0.9662 -> 0.9606 -> 0.9169 -> 0.8841 from 0% to 75%), a -0.0822 drop at 75% vs 0%, which is a
+large effect, just in the direction opposite to "correlated windows inflate the score". No causal
+explanation for this direction is asserted here -- only that the inflation hypothesis this check
+was built to catch is not supported by these numbers.
+[Corrected 2026-07-22: the script's auto-generated flag logic above only tested for large POSITIVE
+deltas (inflation) and printed "not a large jump" for this negative delta by mistake; the delta is
+in fact large, just negative. Numbers are unaffected -- only this interpretive text was corrected.]

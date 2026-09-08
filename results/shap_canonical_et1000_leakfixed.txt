@@ -1,0 +1,32 @@
+Canonical Anxolotl SHAP -- ET-1000, leak-fixed BL-norm, phase3 excluded
+Windows: 686 (from 699, 13 phase3 removed), subjects: 37, features: 55
+Model fit on all 686 windows pooled (not per-fold); TreeSHAP exact on the full 686-row matrix.
+
+Signal-group importance (summed mean |SHAP|):
+  ACC      0.160179
+  RMSSD    0.112202
+  SDNN     0.111444
+  IBI      0.093030
+  HR       0.088635
+
+Top 20 features (mean |SHAP|):
+   1. acc_wrist_min        0.035427
+   2. sdnn_max             0.031752
+   3. acc_wrist_p25        0.028110
+   4. ibi_p75              0.025506
+   5. hr_p25               0.024608
+   6. sdnn_p75             0.022698
+   7. rmssd_p75            0.021785
+   8. ibi_max              0.020022
+   9. acc_wrist_skew       0.019761
+  10. rmssd_max            0.019540
+  11. hr_min               0.019128
+  12. acc_wrist_p75        0.018625
+  13. ibi_mean             0.014708
+  14. rmssd_mean           0.014330
+  15. acc_wrist_max        0.012822
+  16. acc_wrist_mean       0.012497
+  17. hr_mean              0.012386
+  18. sdnn_mean            0.011659
+  19. acc_wrist_std        0.011438
+  20. rmssd_p25            0.010684

@@ -1,0 +1,20 @@
+====================================================================================================
+NORMALISATION-SCHEME ABLATION -- canonical ET-1000 configuration
+====================================================================================================
+Model         : ExtraTrees(n_estimators=1000, max_features=0.5, class_weight=balanced, random_state=42)
+Normalisation : varies per row -- no_norm (impute only) / StandardScaler (fit-train-only) /
+                blnorm_canonical (baseline_relative_scale, LEAK-FIXED 2026-07-19, reference row)
+CV            : LOSO, 37 subjects. Phase 3 (stress_phase==3) excluded. Windows: 686 (of 699 before exclusion).
+Features      : 55 (5 wrist channels x 11 stats). Metric: Macro F1.
+
+Scheme                 MacroF1       SD    AUROC
+----------------------------------------------------------------------------------------------------
+no_norm                 0.6314   0.1446   0.7265
+standard_scaler         0.6314   0.1446   0.7266
+blnorm_canonical        0.9169   0.0883   0.9646   <- reference, should match canonical ET-1000 (0.9169)
+
+----------------------------------------------------------------------------------------------------
+Paired Wilcoxon signed-rank test (two-sided), 37 per-subject Macro F1 values, BL-norm vs each alternative
+----------------------------------------------------------------------------------------------------
+BL-norm vs no_norm             : statistic=0.00  p-value=0.000000  (SIGNIFICANT at alpha=0.05)
+BL-norm vs standard_scaler     : statistic=0.00  p-value=0.000000  (SIGNIFICANT at alpha=0.05)

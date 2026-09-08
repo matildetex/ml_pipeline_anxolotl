@@ -1,0 +1,30 @@
+====================================================================================================
+CALIBRATION-WINDOW SENSITIVITY -- canonical ET-1000 configuration (60s/30s, phase3 excluded)
+====================================================================================================
+Model         : ExtraTrees(n_estimators=1000, max_features=0.5, class_weight=balanced, random_state=42)
+Normalisation : baseline_relative_scale_capped -- same leak-fixed reference rule as
+                demographics_analysis.py (leading run of label=0 windows, never past it),
+                but capped to use only the first `cap` windows of that leading run.
+CV            : LOSO, 37 subjects. Phase 3 (stress_phase==3) excluded. Windows: 686 (of 699 before exclusion).
+Features      : 55 (5 wrist channels x 11 stats).
+
+Natural (uncapped) leading-run length per subject at 60s/30s: min=9  median=9  max=9  (identical for all 37 subjects: yes)
+--> cap=9 is therefore mathematically identical to the canonical, uncapped BL-norm.
+
+WHAT WAS VARIED: see script docstring (3_anxolotl/calibration_window_sensitivity_et1000_leakfixed.py)
+for the full reasoning. In short: the leak-fixed pipeline has no fixed N_BL hyperparameter to
+sweep (it adaptively uses the whole leading run, which is exactly 9 windows for every subject at
+60s/30s) -- so instead we cap how many of those 9 leading windows are used as the BL-norm
+reference, never touching data past the true leading run for any cap value.
+
+Replaces      : results/nbl_stride_marker_ablations_lgbm_loso.txt Ablation 1 (LGBM-300,
+                blind first-N-chronological-windows design, phase3 included, pre-leak-fix)
+                -- kept on disk, not overwritten.
+
+  Cap   N_win   MacroF1       SD    AUROC
+----------------------------------------------------------------------------------------------------
+    2     686    0.6703   0.1435   0.7470
+    4     686    0.7373   0.1067   0.8379
+    6     686    0.8251   0.1037   0.9090
+    8     686    0.8831   0.1121   0.9518
+    9     686    0.9169   0.0883   0.9646   <- uncapped, should match canonical ET-1000 (0.9169)

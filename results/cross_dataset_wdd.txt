@@ -1,0 +1,68 @@
+/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+60-feat cols (WDD→Anxolotl): 60
+40-feat cols (WESAD∩Anxolotl): 40
+
+==============================================================================
+  BASELINE: WDD-only 60 feat, RF+ET mf=0.5 n=1000  (prev best F1=0.867)
+==============================================================================
+  RF mf=0.5 n=1000  (WDD-60)                               F1=0.855  F1@opt=0.862  AUC=0.905  t=0.475
+  ET mf=0.5 n=1000  (WDD-60)                               F1=0.853  F1@opt=0.853  AUC=0.926  t=0.503
+  Ensemble RF+ET mf=0.5 n=1000  (WDD-60)                   F1=0.867  F1@opt=0.871  AUC=0.923  t=0.474
+
+==============================================================================
+  TOWER B: WESAD+WDD 40 feat  (add WESAD signal on shared features)
+==============================================================================
+  RF mf=0.5 n=1000  (WESAD+WDD-40)                         F1=0.768  F1@opt=0.799  AUC=0.869  t=0.412
+  ET mf=0.5 n=1000  (WESAD+WDD-40)                         F1=0.839  F1@opt=0.858  AUC=0.921  t=0.466
+  Ensemble RF+ET  (WESAD+WDD-40)                           F1=0.826  F1@opt=0.843  AUC=0.909  t=0.458
+
+==============================================================================
+  TWO-TOWER: WDD-60 + WESAD+WDD-40  (weighted combinations)
+==============================================================================
+  WDD-60×0.90 + WESAD+WDD-40×0.10                          F1=0.865  F1@opt=0.875  AUC=0.924  t=0.464
+  WDD-60×0.80 + WESAD+WDD-40×0.20                          F1=0.867  F1@opt=0.873  AUC=0.925  t=0.475
+  WDD-60×0.75 + WESAD+WDD-40×0.25                          F1=0.868  F1@opt=0.872  AUC=0.926  t=0.479
+  WDD-60×0.70 + WESAD+WDD-40×0.30                          F1=0.867  F1@opt=0.872  AUC=0.926  t=0.451
+  WDD-60×0.60 + WESAD+WDD-40×0.40                          F1=0.864  F1@opt=0.873  AUC=0.927  t=0.439
+  WDD-60×0.50 + WESAD+WDD-40×0.50                          F1=0.864  F1@opt=0.872  AUC=0.927  t=0.445
+
+==============================================================================
+  SAMPLE WEIGHTS: WDD samples upweighted vs WESAD (train on 40 feat)
+==============================================================================
+  RF+ET WESAD+WDD-40  WDD_weight=3                         F1=0.828  F1@opt=0.846  AUC=0.904  t=0.443
+  RF+ET WESAD+WDD-40  WDD_weight=5                         F1=0.839  F1@opt=0.850  AUC=0.906  t=0.450
+  RF+ET WESAD+WDD-40  WDD_weight=8                         F1=0.827  F1@opt=0.852  AUC=0.906  t=0.432
+  RF+ET WESAD+WDD-40  WDD_weight=10                        F1=0.833  F1@opt=0.849  AUC=0.907  t=0.438
+  RF+ET WESAD+WDD-40  WDD_weight=15                        F1=0.833  F1@opt=0.846  AUC=0.906  t=0.450
+
+==============================================================================
+  LARGER ENSEMBLES: n=2000 on WDD-60
+==============================================================================
+  RF mf=0.5 n=2000  (WDD-60)                               F1=0.854  F1@opt=0.860  AUC=0.904  t=0.481
+  ET mf=0.5 n=2000  (WDD-60)                               F1=0.849  F1@opt=0.856  AUC=0.926  t=0.455
+  Ensemble RF+ET mf=0.5 n=2000  (WDD-60)                   F1=0.865  F1@opt=0.869  AUC=0.922  t=0.475
+  WDD-60-2k×0.80 + WESAD+WDD-40×0.20                       F1=0.864  F1@opt=0.873  AUC=0.925  t=0.469
+  WDD-60-2k×0.75 + WESAD+WDD-40×0.25                       F1=0.868  F1@opt=0.872  AUC=0.925  t=0.465
+  WDD-60-2k×0.70 + WESAD+WDD-40×0.30                       F1=0.868  F1@opt=0.872  AUC=0.926  t=0.470
+
+==============================================================================
+  LGBM: tune on WDD-60 (add to ensemble)
+==============================================================================
+  LGB d=4 l=25 n=1000  (WDD-60)                            F1=0.782  F1@opt=0.827  AUC=0.896  t=0.109
+  LGB d=3 l=15 n=1000  (WDD-60)                            F1=0.795  F1@opt=0.824  AUC=0.900  t=0.015
+  LGB d=5 l=31 n=500  (WDD-60)                             F1=0.796  F1@opt=0.830  AUC=0.894  t=0.020
+
+  RF+ET+LGB d=4 l=  (WDD-60)                               F1=0.822  F1@opt=0.859  AUC=0.923  t=0.367
+  RF+ET+LGB d=3 l=  (WDD-60)                               F1=0.820  F1@opt=0.863  AUC=0.922  t=0.329
+  RF+ET+LGB d=5 l=  (WDD-60)                               F1=0.821  F1@opt=0.859  AUC=0.921  t=0.363
+  Mega: RF1k+ET1k+RF2k+ET2k+LGB (WDD-60)                   F1=0.844  F1@opt=0.863  AUC=0.924  t=0.404
+
+  anterior melhor: F1=0.867  (RF+ET mf=0.5 n=1000, WDD-60)
+  LOSO ceiling:    F1=0.919
+
+Resultados guardados em: /home/matildxi/Secretária/Documentos/Tese/anxolotl/2_cross_dataset/../results/cross_dataset_wdd.json

@@ -1,0 +1,54 @@
+====================================================================================================
+NON-CONTRIBUTING-COMPONENT ABLATION -- canonical ET-1000 configuration
+====================================================================================================
+Model         : ExtraTrees(n_estimators=1000, max_features=0.5, class_weight=balanced, random_state=42)
+Normalisation : baseline_relative_scale -- LEAK-FIXED 2026-07-19 (demographics_analysis.py)
+CV            : LOSO, 37 subjects. Phase 3 (stress_phase==3) excluded. Windows: 686 (of 699 before exclusion).
+Metric        : Macro F1.
+
+----------------------------------------------------------------------------------------------------
+PART 1 -- ADAPTIVE CALIBRATION (calibration_split from final_summary.py:84-93, cal_frac=0.5)
+----------------------------------------------------------------------------------------------------
+Config                      MacroF1       SD    AUROC   TotalEvalWindows
+----------------------------------------------------------------------------------------------------
+without calibration          0.9169   0.0883   0.9646                686   <- reference, should match canonical ET-1000 (0.9169)
+with calibration             0.9017   0.1027   0.9583                537
+
+NOTE: eval-set size differs by design (686 vs 537 windows total across 37 subjects) -- calibration_split removes the windows it moves into training from evaluation. The two rows
+are not scored on the identical set of windows; this is inherent to the calibration method, not an error.
+
+Paired Wilcoxon signed-rank (two-sided), 37 subjects, with vs without calibration:
+  statistic=38.00  p-value=0.001367  (SIGNIFICANT at alpha=0.05)
+
+----------------------------------------------------------------------------------------------------
+PART 2 -- DEMOGRAPHIC FEATURES (11 fields from Data_tese.xlsx, appended: 55 -> 66 features)
+----------------------------------------------------------------------------------------------------
+Subjects missing from Data_tese.xlsx (zero-filled demo row): none
+
+Config                      MacroF1       SD    AUROC
+----------------------------------------------------------------------------------------------------
+without demographics (55)    0.9169   0.0883   0.9646   <- reference, should match canonical ET-1000 (0.9169)
+with demographics (66)       0.9138   0.0850   0.9646
+
+Diagnostic -- effect of per-subject BL-norm on the (per-subject-constant) demographic columns:
+Demo field        raw std (all windows)   std AFTER BL-norm
+age                              2.1295            0.000000
+gender                           0.4993            0.000000
+height                           8.1328            0.000000
+weight                          15.8850            0.000000
+bmi                              4.4590            0.000000
+respiratory                      0.3558            0.000000
+medication                       0.1598            0.000000
+exercises                        0.4999            0.000000
+exercise_freq                    0.7737            0.000000
+athlete                          0.2109            0.000000
+stimulant                        0.4741            0.000000
+(BL-norm z-scores each column per-subject against that subject's own baseline windows; a
+demographic value is identical across all of a subject's own windows, so its per-subject mean
+equals every value in that subject's column and its per-subject std is exactly 0 -- BL-norm
+therefore maps it to ~0 for every subject, regardless of the field's true cross-subject variance
+shown in the raw-std column above. This numeric collapse, not a lack of true relevance, is the
+most likely reason demographics contribute ~nothing once BL-norm is applied on top of them.
+
+Paired Wilcoxon signed-rank (two-sided), 37 subjects, with vs without demographics:
+  statistic=13.00  p-value=0.483303  (not significant at alpha=0.05)

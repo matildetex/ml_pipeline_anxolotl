@@ -1,0 +1,80 @@
+====================================================================================================
+TEMPORAL CONTROL EXPERIMENTS -- does BL-norm/ET-1000 read temporal position
+instead of physiological response?
+Generated: 2026-07-24
+====================================================================================================
+
+Model         : ExtraTrees(n_estimators=1000, max_features=0.5, class_weight=balanced, random_state=42)
+Normalisation : baseline_relative_scale -- LEAK-FIXED 2026-07-19 (3_anxolotl/demographics_analysis.py), unchanged
+Features      : 55 (5 wrist channels x 11 stats), unchanged canonical extraction
+CV            : LOSO, 37 subjects, unchanged canonical loop (3_anxolotl/_canonical_sensitivity_common.py)
+Seed          : 42
+Canonical windows: 686 (of 699 before phase3 exclusion)
+
+----------------------------------------------------------------------------------------------------
+TESTE A -- temporal confounder: label = first third vs last third of each
+subject's own chronological window sequence (middle third discarded).
+Real baseline/stress label is NOT used anywhere in this test.
+Interpretation: MacroF1/AUROC near ~0.90-1.0 => model can read session position
+alone; near ~0.5 => no positional signal for it to exploit.
+----------------------------------------------------------------------------------------------------
+Windows kept        : 430 / 686 (first-third=215, last-third=215)
+Macro F1            : 0.9570  (SD=0.0866)
+AUROC               : 0.9817
+Agreement w/ TRUE label (first-third==baseline & last-third==stress): 0.9977
+
+*** CAVEAT: this agreement is 99.77% (429/430 windows). Teste A's synthetic
+label is almost identical to the TRUE baseline/stress label by construction
+(stress phases start only after the initial baseline, and there is no
+substantial final-rest to blur the boundary -- see Teste B). A high score here
+is therefore expected regardless of whether the model reads time or physiology
+-- it CANNOT be used alone to conclude a temporal confound exists. See Teste A2,
+added below, which isolates the two properly. ***
+
+----------------------------------------------------------------------------------------------------
+TESTE A2 (added, not in the original spec -- see script docstring for why Teste A
+alone is uninformative here). Within each subject's TRUE label (baseline-only,
+stress-only), splits chronologically into an early half (temporal=0) and late
+half (temporal=1). True label is held fixed within each half -- so this isolates
+pure temporal/drift signal from physiology. Interpretation: MacroF1/AUROC near
+~0.5 => no temporal drift signal once physiology is held constant (reassuring);
+well above ~0.5 => real evidence the model/normalisation carries a temporal
+artifact independent of the true label.
+----------------------------------------------------------------------------------------------------
+Windows kept        : 626 / 686
+Cross-tab (temporal_label, true_label) -> count: {(0, 0): 149, (0, 1): 164, (1, 0): 149, (1, 1): 164}
+Macro F1            : 0.7328  (SD=0.1474)
+AUROC               : 0.8324
+
+----------------------------------------------------------------------------------------------------
+TESTE B -- final-rest as normalisation reference: SKIPPED, not executable.
+----------------------------------------------------------------------------------------------------
+Checked results/df_all_1hz_cache.pkl directly: of the 4 subjects reaching
+stress phase 3 (p12, p22, p31, p36), only p22 has any trailing label=0 /
+stress_phase=-1 segment recorded (71s, t=1294-1365s); the other 3 recordings
+end still inside phase 3. Per results/canonical_numbers_for_thesis.txt sec.3,
+only 1/37 subjects has the marker-8 gesture confirmed (the marker that would
+demarcate the true start of a final-rest period) -- not recoverable from raw
+session CSVs for the other 36 subjects either, since without marker 8 there is
+no known boundary between "still task 3" and "now resting" in the continuous
+recording. A LOSO-wide reference swap needs a final-rest segment in every
+subject; usable data exists in 1/37, so the test cannot be run as specified.
+
+----------------------------------------------------------------------------------------------------
+TESTE C -- marker-confirmation sensitivity (HI n_markers>=6 vs LO n_markers<=5).
+Not rerun here -- verbatim readout of /home/matildxi/Secretária/Documentos/Tese/anxolotl/results/marker_sensitivity_et1000_leakfixed.txt
+(same canonical config/seed). Included for side-by-side comparison with A.
+----------------------------------------------------------------------------------------------------
+HI (n_markers>=6)   : n_subj=24  n_testwin=508  MacroF1=0.8965  SD=0.0961  AUROC=0.9585
+LO (n_markers<=5)   : n_subj=13  n_testwin=178  MacroF1=0.9544  SD=0.0546  AUROC=0.9905
+All 37 (pooled ref) : MacroF1=0.9169  SD=0.0883  AUROC=0.9646
+
+====================================================================================================
+SUMMARY LINE (one row per test)
+====================================================================================================
+Test      Description                                     MacroF1     AUROC
+A         1st-vs-last-third (99.8% == true label; see caveat)    0.9570    0.9817
+A2        within-class early-vs-late (label held fixed)    0.7328    0.8324
+B         SKIPPED (final-rest not recoverable)                 --        --
+C-HI      marker HI (n_markers>=6)                         0.8965    0.9585
+C-LO      marker LO (n_markers<=5)                         0.9544    0.9905

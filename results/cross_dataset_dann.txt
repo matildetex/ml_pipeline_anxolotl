@@ -1,0 +1,57 @@
+Device: cuda
+
+========================================================================
+  DANN CROSS-DATASET: WDD (labeled source) → Anxolotl (unlabeled target)
+  60 features, BL-norm
+========================================================================
+  Source (WDD): (5595, 60)  |  Target (Anxolotl, no labels): (712, 60)
+
+  DANN WDD-60 dw=0.05 ep=200                              F1=0.304  F1@opt=0.578  AUC=0.562  t=0.485
+  DANN WDD-60 dw=0.05 ep=400                              F1=0.317  F1@opt=0.577  AUC=0.550  t=0.314
+  DANN WDD-60 dw=0.1 ep=200                               F1=0.312  F1@opt=0.576  AUC=0.564  t=0.487
+  DANN WDD-60 dw=0.1 ep=400                               F1=0.322  F1@opt=0.440  AUC=0.457  t=0.338
+  DANN WDD-60 dw=0.2 ep=200                               F1=0.301  F1@opt=0.582  AUC=0.569  t=0.488
+  DANN WDD-60 dw=0.2 ep=400                               F1=0.301  F1@opt=0.550  AUC=0.504  t=0.270
+  DANN WDD-60 dw=0.5 ep=200                               F1=0.301  F1@opt=0.581  AUC=0.582  t=0.496
+  DANN WDD-60 dw=0.5 ep=400                               F1=0.322  F1@opt=0.348  AUC=0.462  t=0.469
+
+========================================================================
+  DANN CROSS-DATASET: WESAD (labeled source) → Anxolotl (unlabeled target)
+  40 features, BL-norm
+========================================================================
+  Source (WESAD): (27543, 40)  |  Target (Anxolotl, no labels): (712, 40)
+
+  DANN WESAD-40 dw=0.05 ep=200                            F1=0.679  F1@opt=0.681  AUC=0.743  t=0.970
+  DANN WESAD-40 dw=0.05 ep=400                            F1=0.688  F1@opt=0.688  AUC=0.747  t=0.996
+  DANN WESAD-40 dw=0.1 ep=200                             F1=0.649  F1@opt=0.667  AUC=0.719  t=0.988
+  DANN WESAD-40 dw=0.1 ep=400                             F1=0.694  F1@opt=0.703  AUC=0.755  t=0.984
+  DANN WESAD-40 dw=0.2 ep=200                             F1=0.687  F1@opt=0.701  AUC=0.765  t=0.992
+  DANN WESAD-40 dw=0.2 ep=400                             F1=0.694  F1@opt=0.691  AUC=0.755  t=0.995
+  DANN WESAD-40 dw=0.5 ep=200                             F1=0.671  F1@opt=0.696  AUC=0.766  t=0.996
+  DANN WESAD-40 dw=0.5 ep=400                             F1=0.712  F1@opt=0.720  AUC=0.769  t=0.983
+
+========================================================================
+  DANN CROSS-DATASET: WESAD+WDD (labeled source) → Anxolotl (target)
+  40 features, BL-norm
+========================================================================
+  Source (WESAD+WDD): (33138, 40)  |  Target: (712, 40)
+
+  DANN WESAD+WDD-40 dw=0.05 ep=200                        F1=0.358  F1@opt=0.608  AUC=0.589  t=0.351
+  DANN WESAD+WDD-40 dw=0.05 ep=400                        F1=0.443  F1@opt=0.637  AUC=0.641  t=0.349
+  DANN WESAD+WDD-40 dw=0.1 ep=200                         F1=0.325  F1@opt=0.608  AUC=0.587  t=0.213
+  DANN WESAD+WDD-40 dw=0.1 ep=400                         F1=0.446  F1@opt=0.688  AUC=0.721  t=0.202
+  DANN WESAD+WDD-40 dw=0.2 ep=200                         F1=0.417  F1@opt=0.724  AUC=0.785  t=0.247
+  DANN WESAD+WDD-40 dw=0.2 ep=400                         F1=0.441  F1@opt=0.629  AUC=0.666  t=0.377
+
+========================================================================
+  SUMÁRIO
+========================================================================
+  Melhor DANN WDD-60 : DANN WDD-60 dw=0.1 ep=400  →  F1=0.322
+  Melhor DANN WESAD-40: DANN WESAD-40 dw=0.5 ep=400  →  F1=0.712
+
+  Referência RF+ET (sem DANN):
+    WDD-60  → Anxolotl : F1=0.867  AUC=0.923
+    WESAD-40→ Anxolotl : F1=0.729  AUC=0.874
+  LOSO ceiling Anxolotl: F1=0.919
+
+Resultados guardados em: /home/matildxi/Secretária/Documentos/Tese/anxolotl/2_cross_dataset/../results/cross_dataset_dann.json

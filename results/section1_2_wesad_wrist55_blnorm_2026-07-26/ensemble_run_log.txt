@@ -1,0 +1,37 @@
+==============================================================================
+STEP 0 -- DATA SOURCE + FEATURE SET VALIDATION (must match the standalone run)
+==============================================================================
+File: processed_data/wesad/processed_data.pkl  (mtime 2026-07-17 15:31:57.612862349)
+  shape: 25807 rows x 130 cols, n_subjects=15
+Reduced column selection (prefixes ('acc_wrist', 'hr_', 'ibi_', 'rmssd_', 'sdnn_')): 55 columns.
+ASSERTION PASSED: exactly 55 columns (identical set to the standalone-model run).
+
+==============================================================================
+STEP 1 -- BL-NORM (2_cross_dataset/cross_dataset_blnorm.py :: baseline_relative_scale, same function used for the 7 standalone models in this directory)
+==============================================================================
+X_bl shape: (25807, 55). Applied once globally (safe under LOSO -- per-subject reference only depends on that subject's own leading baseline run; see run_wesad_wrist55_blnorm.py STEP 2 for the full argument).
+
+==============================================================================
+STEP 2 -- ENSEMBLE DEFINITION (copied verbatim, not reimplemented)
+==============================================================================
+Source: 3_anxolotl/friedman_nemenyi_anxolotl.py:70-74 (identical copy at 3_anxolotl/recompute_macro_f1.py:173-176)
+  VotingClassifier(voting='hard', estimators=[
+      ('et',  ExtraTreesClassifier(n_estimators=300, class_weight='balanced', random_state=42, n_jobs=-1)),
+      ('rf',  RandomForestClassifier(n_estimators=300, class_weight='balanced', random_state=42, n_jobs=-1)),
+      ('hgb', HistGradientBoostingClassifier(max_iter=200, max_depth=4, learning_rate=0.05, random_state=42)),
+  ])
+
+*** FLAG: task description said "soft-voting"; the repo's actual canonical definition is voting='hard'. Using the repo's real definition for comparability with Table 1.11, per instructions to reuse rather than reimplement. See this file's module docstring. ***
+
+*** FLAG: hard voting has no predict_proba in sklearn -> no canonical AUROC is possible for this ensemble. results_master.csv already lists AUROC=MISSING for the Anxolotl Ensemble(ET+RF+HGB) row (source: friedman_nemenyi_anxolotl_wrist_loso.txt) for the same reason -- this is not a new gap. A supplementary, NON-CANONICAL AUROC (soft-averaging the three already-fitted sub-estimators' probabilities) is computed below and reported separately, clearly labeled. ***
+
+==============================================================================
+STEP 3 -- LOSO-CV, WESAD (15 subjects), full dataset, no subsample
+==============================================================================
+Folds run: 15
+Macro F1 (mean +/- SD across subjects) : 0.6991 +/- 0.1767
+Balanced Accuracy (pooled)             : 0.7064
+Accuracy (pooled)                      : 0.7824
+AUROC (canonical, hard-voting ensemble): N/A -- voting='hard' has no predict_proba; matches the Anxolotl Ensemble(ET+RF+HGB) row in results_master.csv, which also lists AUROC=MISSING for the same structural reason.
+AUROC (SUPPLEMENTARY, non-canonical -- uniform average of the 3 fitted sub-estimators' predict_proba, NOT what Table 1.11 reports): 0.8516
+

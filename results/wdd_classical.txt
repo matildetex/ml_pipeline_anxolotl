@@ -1,0 +1,373 @@
+Loading WDD...
+  WDD: 90 feat  |  common with Anxolotl: 60
+
+=================================================================
+  WDD LOSO — Classical — 60 common feat
+=================================================================
+  fold  1  LogReg=0.496  SVM=0.558  RF=0.548  ET=0.539  Ensemble=0.548
+  fold  2  LogReg=0.295  SVM=0.742  RF=0.633  ET=0.633  Ensemble=0.633
+  fold  3  LogReg=0.929  SVM=0.501  RF=0.466  ET=0.459  Ensemble=0.459
+  fold  4  LogReg=0.758  SVM=0.624  RF=0.558  ET=0.546  Ensemble=0.558
+  fold  5  LogReg=0.541  SVM=0.595  RF=0.568  ET=0.554  Ensemble=0.554
+  fold  6  LogReg=0.168  SVM=0.684  RF=0.608  ET=0.594  Ensemble=0.594
+  fold  7  LogReg=0.686  SVM=0.583  RF=0.571  ET=0.571  Ensemble=0.571
+  fold  8  LogReg=0.150  SVM=0.636  RF=0.555  ET=0.555  Ensemble=0.555
+  fold  9  LogReg=0.623  SVM=0.574  RF=0.553  ET=0.531  Ensemble=0.542
+  fold 10  LogReg=0.591  SVM=0.569  RF=0.546  ET=0.557  Ensemble=0.557
+  fold 11  LogReg=0.493  SVM=0.620  RF=0.554  ET=0.582  Ensemble=0.568
+  fold 12  LogReg=0.650  SVM=0.528  RF=0.539  ET=0.539  Ensemble=0.539
+  fold 13  LogReg=0.536  SVM=0.635  RF=0.595  ET=0.595  Ensemble=0.595
+  fold 14  LogReg=0.559  SVM=0.640  RF=0.610  ET=0.595  Ensemble=0.610
+  fold 15  LogReg=0.387  SVM=0.510  RF=0.501  ET=0.501  Ensemble=0.501
+  fold 16  LogReg=0.133  SVM=0.659  RF=0.564  ET=0.593  Ensemble=0.579
+
+=================================================================
+  LogReg WDD — 60 common feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.26      0.49      0.34      1159
+      stress       0.83      0.63      0.72      4436
+
+    accuracy                           0.60      5595
+   macro avg       0.54      0.56      0.53      5595
+weighted avg       0.71      0.60      0.64      5595
+
+Macro F1   : 0.529
+AUC        : 0.557
+F1@opt     : 0.528  (t=0.608)
+Bal. Acc   : 0.564
+MCC        : 0.106
+F1 std     : 0.218  (mean per fold: 0.500)
+Confusion  : TN=573 FP=586 FN=1626 TP=2810
+
+=================================================================
+  SVM WDD — 60 common feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       1.00      0.17      0.29      1159
+      stress       0.82      1.00      0.90      4436
+
+    accuracy                           0.83      5595
+   macro avg       0.91      0.58      0.60      5595
+weighted avg       0.86      0.83      0.78      5595
+
+Macro F1   : 0.596
+AUC        : 0.570
+F1@opt     : 0.614  (t=1.000)
+Bal. Acc   : 0.585
+MCC        : 0.373
+F1 std     : 0.062  (mean per fold: 0.603)
+Confusion  : TN=196 FP=963 FN=0 TP=4436
+
+=================================================================
+  RF WDD — 60 common feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       1.00      0.12      0.21      1159
+      stress       0.81      1.00      0.90      4436
+
+    accuracy                           0.82      5595
+   macro avg       0.91      0.56      0.56      5595
+weighted avg       0.85      0.82      0.76      5595
+
+Macro F1   : 0.556
+AUC        : 0.728
+F1@opt     : 0.646  (t=0.979)
+Bal. Acc   : 0.560
+MCC        : 0.312
+F1 std     : 0.039  (mean per fold: 0.561)
+Confusion  : TN=139 FP=1020 FN=0 TP=4436
+
+=================================================================
+  ET WDD — 60 common feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       1.00      0.12      0.21      1159
+      stress       0.81      1.00      0.90      4436
+
+    accuracy                           0.82      5595
+   macro avg       0.91      0.56      0.55      5595
+weighted avg       0.85      0.82      0.75      5595
+
+Macro F1   : 0.553
+AUC        : 0.767
+F1@opt     : 0.555  (t=0.978)
+Bal. Acc   : 0.559
+MCC        : 0.309
+F1 std     : 0.041  (mean per fold: 0.559)
+Confusion  : TN=136 FP=1023 FN=0 TP=4436
+
+=================================================================
+  Ensemble WDD — 60 common feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       1.00      0.12      0.21      1159
+      stress       0.81      1.00      0.90      4436
+
+    accuracy                           0.82      5595
+   macro avg       0.91      0.56      0.55      5595
+weighted avg       0.85      0.82      0.76      5595
+
+Macro F1   : 0.555
+AUC        : 0.722
+F1@opt     : 0.628  (t=0.977)
+Bal. Acc   : 0.560
+MCC        : 0.311
+F1 std     : 0.040  (mean per fold: 0.560)
+Confusion  : TN=138 FP=1021 FN=0 TP=4436
+
+=================================================================
+  WDD LOSO — DANN — 60 common feat
+=================================================================
+  fold  1 | f01  F1=0.558
+  fold  2 | f02  F1=0.435
+  fold  3 | f03  F1=0.501
+  fold  4 | f04  F1=0.784
+  fold  5 | f05  F1=0.607
+  fold  6 | f06  F1=0.684
+  fold  7 | f08  F1=0.692
+  fold  8 | f09  F1=0.169
+  fold  9 | f10  F1=0.433
+  fold 10 | f11  F1=0.596
+  fold 11 | f12  F1=0.593
+  fold 12 | f13  F1=0.528
+  fold 13 | f15  F1=0.673
+  fold 14 | f16  F1=0.653
+  fold 15 | f17  F1=0.510
+  fold 16 | f18  F1=0.659
+
+=================================================================
+  DANN WDD — 60 common feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.37      0.30      0.33      1159
+      stress       0.83      0.86      0.84      4436
+
+    accuracy                           0.75      5595
+   macro avg       0.60      0.58      0.59      5595
+weighted avg       0.73      0.75      0.74      5595
+
+Macro F1   : 0.586
+AUC        : 0.585
+F1@opt     : 0.589  (t=0.817)
+Bal. Acc   : 0.582
+MCC        : 0.176
+F1 std     : 0.139  (mean per fold: 0.567)
+Confusion  : TN=346 FP=813 FN=601 TP=3835
+
+=================================================================
+  WDD LOSO — AutoGluon — 60 common feat
+=================================================================
+  AutoGluon fold 1 err: Learner is already fit.
+
+=================================================================
+  AutoGluon WDD — 60 common feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       1.00      0.12      0.21      1068
+      stress       0.81      1.00      0.89      3984
+
+    accuracy                           0.81      5052
+   macro avg       0.90      0.56      0.55      5052
+weighted avg       0.85      0.81      0.75      5052
+
+Macro F1   : 0.553
+AUC        : 0.636
+F1@opt     : 0.599  (t=0.999)
+Bal. Acc   : 0.559
+MCC        : 0.309
+F1 std     : 0.040  (mean per fold: 0.559)
+Confusion  : TN=126 FP=942 FN=0 TP=3984
+
+=================================================================
+  WDD LOSO — Classical — 90 all feat
+=================================================================
+  fold  1  LogReg=0.608  SVM=0.558  RF=0.548  ET=0.558  Ensemble=0.558
+  fold  2  LogReg=0.295  SVM=0.742  RF=0.633  ET=0.649  Ensemble=0.691
+  fold  3  LogReg=0.096  SVM=0.494  RF=0.481  ET=0.473  Ensemble=0.473
+  fold  4  LogReg=0.758  SVM=0.624  RF=0.558  ET=0.558  Ensemble=0.558
+  fold  5  LogReg=0.554  SVM=0.595  RF=0.581  ET=0.581  Ensemble=0.581
+  fold  6  LogReg=0.672  SVM=0.684  RF=0.608  ET=0.608  Ensemble=0.608
+  fold  7  LogReg=0.686  SVM=0.583  RF=0.571  ET=0.583  Ensemble=0.571
+  fold  8  LogReg=0.102  SVM=0.636  RF=0.555  ET=0.579  Ensemble=0.579
+  fold  9  LogReg=0.080  SVM=0.563  RF=0.542  ET=0.542  Ensemble=0.542
+  fold 10  LogReg=0.557  SVM=0.569  RF=0.569  ET=0.569  Ensemble=0.590
+  fold 11  LogReg=0.496  SVM=0.620  RF=0.595  ET=0.595  Ensemble=0.595
+  fold 12  LogReg=0.787  SVM=0.550  RF=0.550  ET=0.539  Ensemble=0.561
+  fold 13  LogReg=0.536  SVM=0.635  RF=0.595  ET=0.595  Ensemble=0.595
+  fold 14  LogReg=0.559  SVM=0.640  RF=0.625  ET=0.610  Ensemble=0.610
+  fold 15  LogReg=0.446  SVM=0.510  RF=0.501  ET=0.501  Ensemble=0.501
+  fold 16  LogReg=0.133  SVM=0.659  RF=0.579  ET=0.607  Ensemble=0.593
+
+=================================================================
+  LogReg WDD — 90 all feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.21      0.38      0.27      1159
+      stress       0.79      0.63      0.70      4436
+
+    accuracy                           0.57      5595
+   macro avg       0.50      0.50      0.48      5595
+weighted avg       0.67      0.57      0.61      5595
+
+Macro F1   : 0.484
+AUC        : 0.526
+F1@opt     : 0.439  (t=1.000)
+Bal. Acc   : 0.501
+MCC        : 0.001
+F1 std     : 0.236  (mean per fold: 0.460)
+Confusion  : TN=435 FP=724 FN=1659 TP=2777
+
+=================================================================
+  SVM WDD — 90 all feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       1.00      0.17      0.29      1159
+      stress       0.82      1.00      0.90      4436
+
+    accuracy                           0.83      5595
+   macro avg       0.91      0.58      0.60      5595
+weighted avg       0.86      0.83      0.78      5595
+
+Macro F1   : 0.596
+AUC        : 0.562
+F1@opt     : 0.603  (t=1.000)
+Bal. Acc   : 0.585
+MCC        : 0.373
+F1 std     : 0.062  (mean per fold: 0.604)
+Confusion  : TN=196 FP=963 FN=0 TP=4436
+
+=================================================================
+  RF WDD — 90 all feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       1.00      0.13      0.23      1159
+      stress       0.81      1.00      0.90      4436
+
+    accuracy                           0.82      5595
+   macro avg       0.91      0.56      0.56      5595
+weighted avg       0.85      0.82      0.76      5595
+
+Macro F1   : 0.563
+AUC        : 0.667
+F1@opt     : 0.640  (t=0.859)
+Bal. Acc   : 0.564
+MCC        : 0.324
+F1 std     : 0.039  (mean per fold: 0.568)
+Confusion  : TN=149 FP=1010 FN=0 TP=4436
+
+=================================================================
+  ET WDD — 90 all feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       1.00      0.13      0.23      1159
+      stress       0.82      1.00      0.90      4436
+
+    accuracy                           0.82      5595
+   macro avg       0.91      0.57      0.57      5595
+weighted avg       0.85      0.82      0.76      5595
+
+Macro F1   : 0.566
+AUC        : 0.786
+F1@opt     : 0.650  (t=0.967)
+Bal. Acc   : 0.566
+MCC        : 0.328
+F1 std     : 0.042  (mean per fold: 0.572)
+Confusion  : TN=153 FP=1006 FN=0 TP=4436
+
+=================================================================
+  Ensemble WDD — 90 all feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       1.00      0.14      0.24      1159
+      stress       0.82      1.00      0.90      4436
+
+    accuracy                           0.82      5595
+   macro avg       0.91      0.57      0.57      5595
+weighted avg       0.85      0.82      0.76      5595
+
+Macro F1   : 0.569
+AUC        : 0.694
+F1@opt     : 0.647  (t=0.957)
+Bal. Acc   : 0.568
+MCC        : 0.334
+F1 std     : 0.047  (mean per fold: 0.575)
+Confusion  : TN=158 FP=1001 FN=0 TP=4436
+
+=================================================================
+  WDD LOSO — DANN — 90 all feat
+=================================================================
+  fold  1 | f01  F1=0.558
+  fold  2 | f02  F1=0.101
+  fold  3 | f03  F1=0.494
+  fold  4 | f04  F1=0.613
+  fold  5 | f05  F1=0.595
+  fold  6 | f06  F1=0.684
+  fold  7 | f08  F1=0.708
+  fold  8 | f09  F1=0.625
+  fold  9 | f10  F1=0.563
+  fold 10 | f11  F1=0.590
+  fold 11 | f12  F1=0.620
+  fold 12 | f13  F1=0.550
+  fold 13 | f15  F1=0.635
+  fold 14 | f16  F1=0.653
+  fold 15 | f17  F1=0.510
+  fold 16 | f18  F1=0.659
+
+=================================================================
+  DANN WDD — 90 all feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.39      0.21      0.27      1159
+      stress       0.82      0.91      0.86      4436
+
+    accuracy                           0.77      5595
+   macro avg       0.60      0.56      0.57      5595
+weighted avg       0.73      0.77      0.74      5595
+
+Macro F1   : 0.566
+AUC        : 0.609
+F1@opt     : 0.615  (t=1.000)
+Bal. Acc   : 0.561
+MCC        : 0.157
+F1 std     : 0.134  (mean per fold: 0.572)
+Confusion  : TN=243 FP=916 FN=388 TP=4048
+
+=================================================================
+  WDD LOSO — AutoGluon — 90 all feat
+=================================================================
+
+=================================================================
+  AutoGluon WDD — 90 all feat
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       1.00      0.13      0.23      1159
+      stress       0.81      1.00      0.90      4436
+
+    accuracy                           0.82      5595
+   macro avg       0.91      0.56      0.56      5595
+weighted avg       0.85      0.82      0.76      5595
+
+Macro F1   : 0.564
+AUC        : 0.662
+F1@opt     : 0.639  (t=0.991)
+Bal. Acc   : 0.565
+MCC        : 0.325
+F1 std     : 0.041  (mean per fold: 0.569)
+Confusion  : TN=150 FP=1009 FN=0 TP=4436
+
+Resultados guardados em: /home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/../results/wdd_classical.json

@@ -1,0 +1,18 @@
+{
+  "model": "Ensemble(ET+RF+HGB)",
+  "source_definition": "3_anxolotl/friedman_nemenyi_anxolotl.py:70-74 (== recompute_macro_f1.py:173-176)",
+  "voting": "hard",
+  "voting_mismatch_flag": "task described 'soft-voting'; repo's canonical definition is 'hard' -- used as-is for comparability with Table 1.11",
+  "dataset": "WESAD",
+  "feature_set": "55 wrist-only (acc_wrist, hr_, ibi_, rmssd_, sdnn_)",
+  "normalisation": "BL-norm (2_cross_dataset/cross_dataset_blnorm.py :: baseline_relative_scale)",
+  "cv": "LOSO (LeaveOneGroupOut), 15 subjects, full dataset (no subsample)",
+  "n_folds": 15,
+  "macro_f1_mean": 0.6990779700692127,
+  "macro_f1_sd": 0.1766651063875467,
+  "balanced_accuracy": 0.7063908712272056,
+  "accuracy": 0.782423373503313,
+  "auroc_canonical": null,
+  "auroc_canonical_note": "N/A -- voting='hard' has no predict_proba; matches the Anxolotl Ensemble(ET+RF+HGB) row in results_master.csv, which also lists AUROC=MISSING for the same structural reason.",
+  "auroc_supplementary_nonstandard": 0.8516251289775758
+}

@@ -1,0 +1,39 @@
+====================================================================================================
+COMPONENT ABLATION -- FAIR RE-RUN (calibration + demographics), canonical ET-1000 configuration
+====================================================================================================
+Model         : ExtraTrees(n_estimators=1000, max_features=0.5, class_weight=balanced, random_state=42)
+Normalisation : baseline_relative_scale (physio) -- LEAK-FIXED 2026-07-19 (demographics_analysis.py);
+                StandardScaler (demographic block only, fit on training-fold subjects) where noted
+CV            : LOSO, 37 subjects. Phase 3 (stress_phase==3) excluded. Windows: 686 (of 699 before exclusion).
+Metric        : Macro F1.
+Extends       : results/component_ablation_et1000_leakfixed.txt -- that file is NOT overwritten.
+
+----------------------------------------------------------------------------------------------------
+PART 1 -- ADAPTIVE CALIBRATION, with matched-eval control
+----------------------------------------------------------------------------------------------------
+Config                             MacroF1       SD    AUROC   TotalEvalWindows
+----------------------------------------------------------------------------------------------------
+baseline (full eval, ref)           0.9169   0.0883   0.9646                686   <- should match canonical ET-1000 (0.9169)
+with calibration                    0.9017   0.1027   0.9583                537
+no calibration, matched eval        0.8963   0.1068   0.9588                537   <- same eval windows as row above, no cal.
+
+Three pairwise paired Wilcoxon signed-rank tests (two-sided, 37 subjects):
+  with-calibration    vs baseline (full eval)     : statistic=38.00  p=0.001367  (SIGNIFICANT)  [confounded: eval sets differ]
+  with-calibration    vs matched-eval (no cal)     : statistic=0.00  p=0.108809  (not significant)  [TRUE effect of calibration training data]
+  matched-eval (no cal) vs baseline (full eval)    : statistic=12.00  p=0.000079  (SIGNIFICANT)  [pure eval-set-composition effect]
+
+----------------------------------------------------------------------------------------------------
+PART 2 -- DEMOGRAPHIC FEATURES, fair normalisation for the demographic block
+----------------------------------------------------------------------------------------------------
+Subjects missing from Data_tese.xlsx (zero-filled demo row): none
+
+Config                                   MacroF1       SD    AUROC
+----------------------------------------------------------------------------------------------------
+without demographics (55, ref)            0.9169   0.0883   0.9646   <- should match canonical ET-1000 (0.9169)
+with demographics, BL-norm-all (orig)     0.9138   0.0850   0.9646   <- reproduces the confound (demo collapsed to 0)
+with demographics, fair norm (new)        0.9111   0.0846   0.9614
+
+Three pairwise paired Wilcoxon signed-rank tests (two-sided, 37 subjects):
+  BL-norm-all demographics vs without demographics : statistic=13.00  p=0.483303  (not significant)  [reproduces confounded original result]
+  fair-norm demographics   vs without demographics : statistic=7.00  p=0.236724  (not significant)  [TRUE effect, demo signal preserved]
+  fair-norm demographics   vs BL-norm-all demographics: statistic=24.00  p=0.721277  (not significant)  [does fixing the normalisation change the outcome?]

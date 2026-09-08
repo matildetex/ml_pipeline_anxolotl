@@ -1,0 +1,68 @@
+	Warning: Exception caused LightGBMXT_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+	Warning: Exception caused LightGBM_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+	Warning: Exception caused CatBoost_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+	Warning: Exception caused NeuralNetFastAI_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+REDUCED: (25807, 55), subjects=15
+  fold  1  F1=0.6209  (2.3 min elapsed)
+	Warning: Exception caused LightGBMXT_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+	Warning: Exception caused LightGBM_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+	Warning: Exception caused CatBoost_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+	Warning: Exception caused NeuralNetFastAI_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+	Warning: Exception caused XGBoost_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+  fold  2  F1=0.6407  (4.4 min elapsed)
+	Warning: Exception caused LightGBMXT_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+	Warning: Exception caused LightGBM_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+	Warning: Exception caused CatBoost_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+	Warning: Exception caused NeuralNetFastAI_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+	Warning: Exception caused XGBoost_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+  fold  3  F1=0.7079  (6.6 min elapsed)
+	Warning: Exception caused LightGBMXT_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+	Warning: Exception caused LightGBM_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+	Warning: Exception caused CatBoost_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+	Warning: Exception caused NeuralNetFastAI_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+  fold  4  F1=0.7874  (8.7 min elapsed)
+	Warning: Exception caused LightGBMXT_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+	Warning: Exception caused LightGBM_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+	Warning: Exception caused CatBoost_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+	Warning: Exception caused NeuralNetFastAI_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+  fold  5  F1=0.4223  (10.8 min elapsed)
+	Warning: Exception caused LightGBMXT_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+	Warning: Exception caused LightGBM_BAG_L1 to fail during training... Skipping this model.
+		Unknown Error
+Traceback (most recent call last):
+  File "/home/matildxi/Secretária/Documentos/Tese/anxolotl/1_wesad/classical/wesad_task4_autogluon_only.py", line 38, in <module>
+    path=fold_path).fit(
+                    ^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/common/utils/decorators.py", line 34, in _call
+    return f(*gargs, **gkwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/tabular/predictor/predictor.py", line 1412, in fit
+    self._fit(ag_fit_kwargs=ag_fit_kwargs, ag_post_fit_kwargs=ag_post_fit_kwargs)
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/tabular/predictor/predictor.py", line 1420, in _fit
+    self._post_fit(**ag_post_fit_kwargs)
+  File "/home/matildxi/anaconda3/envs/ml/lib/python3.11/site-packages/autogluon/tabular/predictor/predictor.py", line 1768, in _post_fit
+    raise RuntimeError(
+RuntimeError: No models were trained successfully during fit(). Inspect the log output or increase verbosity to determine why no models were fit. Alternatively, set `raise_on_no_models_fitted` to False during the fit call.

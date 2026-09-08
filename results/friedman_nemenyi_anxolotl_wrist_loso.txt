@@ -1,0 +1,59 @@
+==============================================================================
+Friedman + Nemenyi — Anxolotl, wrist-only, canonical LOSO configuration
+==============================================================================
+Config: 60s window / 30s stride, boundary fix applied, stress_phase==3 excluded,
+55 wrist features (acc_wrist, hr, ibi, rmssd, sdnn x 11 stats), BL-norm (leak-fixed
+2026-07-19), LOSO-CV, 37 subjects, 686 windows (13 phase3 windows removed of 699).
+
+DL architectures NOT included: no CNN-GRU/1D-CNN/BiGRU/Transformer/SSM model has
+been trained on Anxolotl tabular data in this repo (those are WESAD-only, see
+scripts/friedman_nemenyi.py). PEasyPI CNN exists for Anxolotl but evaluates on
+1s-stride near-continuous sequence windows (hundreds of test instances/subject),
+not this 60s/30s-stride tabular pipeline -- excluded to avoid comparing incompatible
+evaluation granularities under one Friedman test.
+
+Friedman chi-square = 26.9231   p-value = 0.000150   (n_models=7, n_subjects=37)
+--> SIGNIFICANT differences among models (p<0.05).
+
+------------------------------------------------------------------------------
+Mean rank and mean MacroF1 per model (rank 1 = best)
+------------------------------------------------------------------------------
+Model                    Mean rank    Mean MacroF1        SD
+ET-1000                       3.27          0.9169    0.0895
+ET-1000 mf=0.3                3.58          0.9111    0.0959
+Ensemble(ET+RF+HGB)           3.65          0.9084    0.0844
+RF-1000                       3.72          0.9068    0.0894
+LGBM-dart                     4.39          0.8895    0.1036
+HGB                           4.62          0.8806    0.0947
+LGBM-gbdt                     4.77          0.8820    0.0917
+
+------------------------------------------------------------------------------
+Nemenyi pairwise p-values (full matrix)
+------------------------------------------------------------------------------
+                     ET-1000  ET-1000 mf=0.3  RF-1000     HGB  Ensemble(ET+RF+HGB)  LGBM-dart  LGBM-gbdt
+ET-1000               1.0000          0.9962   0.9745  0.1005               0.9891     0.2776     0.0447
+ET-1000 mf=0.3        0.9962          1.0000   1.0000  0.3696               1.0000     0.6730     0.2124
+RF-1000               0.9745          1.0000   1.0000  0.5462               1.0000     0.8305     0.3533
+HGB                   0.1005          0.3696   0.5462  1.0000               0.4554     0.9993     0.9999
+Ensemble(ET+RF+HGB)   0.9891          1.0000   1.0000  0.4554               1.0000     0.7570     0.2776
+LGBM-dart             0.2776          0.6730   0.8305  0.9993               0.7570     1.0000     0.9891
+LGBM-gbdt             0.0447          0.2124   0.3533  0.9999               0.2776     0.9891     1.0000
+
+------------------------------------------------------------------------------
+Pairs reaching significance (p < 0.05), sorted by p-value
+------------------------------------------------------------------------------
+  ET-1000                vs LGBM-gbdt              p=0.0447
+
+------------------------------------------------------------------------------
+Note on statistical power at n=37
+------------------------------------------------------------------------------
+The Friedman test itself (omnibus, all models at once) has reasonable power at
+n=37 subjects -- clearly better powered than the WESAD equivalent (n=15, see
+friedman_nemenyi.py), which is why a global effect can be detected here even when
+individual differences between models are modest. The Nemenyi post-hoc test is
+the weaker link: it corrects for all pairwise comparisons among 7 models (21 pairs), which is conservative, and with
+MacroF1 differences between the top models typically under 0.02-0.03, n=37 paired
+subjects is still on the low side for detecting small-to-moderate pairwise effect
+sizes after that correction. A significant Nemenyi pair here is a comparatively
+strong claim; a non-significant pair does not prove the two models are equivalent,
+only that this sample could not separate them at the corrected alpha.

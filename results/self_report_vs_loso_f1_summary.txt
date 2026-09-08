@@ -1,0 +1,69 @@
+SELF-REPORT (VAS 0-10) vs LOSO MACRO F1 — CORRELATION ANALYSIS
+Generated: 2026-07-24
+
+Purpose: answer jury question #2 — does subjective self-reported stress
+intensity predict per-subject classification difficulty in the LOSO model?
+
+Data joining note (non-trivial): the subject codes used in the LOSO results
+files (p6-p44 = session number) are NOT the same as the "ID do Participante"
+field in the Google Form (Data_tese.xlsx, sheets Questionário/VAS/EADS-21).
+These were matched by aligning each session's recording start time to the
+nearest Questionário submission timestamp (forms were filled within ~60-130s
+of session start in all but 2 cases). One stray Questionário/VAS row
+(participant ID=14, submitted 2026-05-06 16:15) has no matching session at
+all and was excluded from the join as an orphaned/erroneous entry.
+
+Canonical LOSO subject set (n=37): all recorded sessions except p6 and p24
+(both excluded per results/canonical_numbers_for_thesis.txt: p6 = no valid
+arm-raise gestures; p24 = excluded from processed_data).
+
+Coverage: 36/37 canonical subjects have a matched VAS self-report value.
+Exactly one canonical subject (p41) has no questionnaire/VAS submission at all
+(session exists and has a valid F1, but no matching form was found within the
++/-  window) — genuinely missing, not a mapping error (confirmed by exhausting
+all 37 available non-stray questionnaire IDs 1:1 against all other 36 sessions).
+
+F1 source: results/anxolotl_wrist_loso_per_subject.csv, column 'ET-1000'
+(wrist-only canonical LOSO config, mean=0.9169/SD=0.0895 — the same
+per-subject values behind the Friedman/Nemenyi test in
+results/friedman_nemenyi_anxolotl_wrist_loso.txt, i.e. Sec. 3.4.3's stat test).
+
+VAS (0-10, "De 0 a 10, quão stressado se sentiu durante este teste"):
+  n=36  mean=6.167  sd=1.715  median=6.0  min=2  max=10
+
+F1 (matched n=36): mean=0.9161  sd=0.0907
+  (close to but not identical to the full-37 canonical 0.9169/0.0895, since one
+  subject, p41, is dropped from this n=36 pairing for lacking a VAS value)
+
+CORRELATION — VAS (0-10) vs per-subject Macro F1:
+  Pearson  r = 0.1901   p = 0.2667
+  Spearman rho = 0.1694   p = 0.3232
+  --> WEAK, NOT STATISTICALLY SIGNIFICANT. Self-reported stress intensity does
+      not predict per-subject LOSO classification performance in this sample.
+
+Secondary check — EADS-21 total score (sum of 21 items, validated instrument,
+more scale points than the single-item VAS) vs the same F1 (n=36):
+  Pearson  r = 0.1052   p = 0.5415
+  Spearman rho = 0.1412   p = 0.4115
+  EADS-21 total: mean=14.36 sd=9.13 min=3 max=40
+  --> Same qualitative conclusion: weak, non-significant.
+
+Robustness check — VAS vs an alternative F1 source (results/final_model_per_subject.csv,
+the ECG+adaptive-calibration "winning config", BINARY F1 on the stress class,
+NOT the same metric as the canonical macro F1 above, included only as a
+sensitivity check, n=36):
+  Pearson  r = 0.2462  p = 0.1477
+  Spearman rho = 0.2185  p = 0.2004
+  --> Still weak/non-significant. Conclusion is stable across both F1 definitions.
+
+INTERPRETATION FOR THE THESIS / DEFENSE:
+No credible evidence that subjects who *felt* more stressed were easier (or
+harder) for the model to classify. This should be framed as an honest,
+reported-not-hidden null result: physiological stress detection and
+subjective stress perception are, at minimum, not strongly coupled at the
+per-subject level in this dataset — consistent with the broader
+psychophysiology literature on the dissociation between self-report and
+autonomic arousal. It is not evidence against the model (which is evaluated
+against the experimental protocol's phase labels, not against self-report),
+but it does mean self-report cannot be offered as external validation of
+per-subject model difficulty.

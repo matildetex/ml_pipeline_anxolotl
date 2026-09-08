@@ -1,0 +1,149 @@
+==============================================================================
+WESAD SCHEMA AUDIT -- extent of the pre/post-2026-07-17 schema split
+==============================================================================
+NOTE ON TIMESTAMPS: this file's timestamps were formatted via pandas.Timestamp
+on a raw epoch value, which displays as naive UTC -- 1 hour EARLIER than the
+machine's local time (WEST, UTC+1) used in results/wesad_shap_reverification_
+2026-07-24.txt and results/acc_wrist_min_wesad_2026-07-24.txt (which used
+datetime.fromtimestamp(), local time). E.g. the processed_data.pkl regen shown
+below as "15:31:57" is the same file/instant as "16:31:57" elsewhere in this
+audit -- add 1 hour to any timestamp in this file to compare directly against
+the other two reports. All STALE/current classifications below were computed
+by comparing raw epoch values (unaffected by display timezone) and are correct
+as-is; only the printed clock times carry this 1-hour display offset.
+------------------------------------------------------------------------------
+1. WESAD-full FEATURE COUNT: current vs thesis-reported (137)
+------------------------------------------------------------------------------
+  CURRENT (processed_data/wesad/processed_data.pkl, mtime 2026-07-17 15:31:57.612862349):
+    130 features, 25807 windows, 15 subjects
+  OLD (processed_data/wesad_archive/processed_data_137feat_snapshot.pkl, recovered snapshot, mtime 2026-07-24 15:39:01.825922251):
+    137 features, 27543 windows, 15 subjects
+
+  Thesis reports 137 features for WESAD-full. CURRENT schema has 130. MISMATCH -- thesis figure is for the OLD schema.
+
+  OLD  signal channels (16): ['acc_chest', 'acc_wrist', 'ecg_hr', 'ecg_ibi', 'ecg_rmssd', 'ecg_sdnn', 'eda_chest', 'eda_wrist', 'emg_chest', 'hr', 'ibi', 'resp_freq', 'resp_iri', 'rmssd', 'sdnn', 'temp_wrist']
+  NEW  signal channels (11): ['acc_chest', 'acc_wrist', 'eda_chest', 'eda_wrist', 'emg_chest', 'hr', 'ibi', 'rmssd', 'sdnn', 'temp_chest', 'temp_wrist']
+  OLD per-channel stats (8): ['_kurtosis', '_max', '_mean', '_min', '_p25', '_p75', '_skew', '_std']
+  NEW per-channel stats (11): ['_delta_mean', '_kurtosis', '_lf_hf', '_max', '_mean', '_min', '_p25', '_p75', '_skew', '_slope', '_std']
+
+  REMOVED (in OLD 137-schema, absent from CURRENT): ['ecg_hr', 'ecg_ibi', 'ecg_rmssd', 'ecg_sdnn', 'resp_freq', 'resp_iri']
+  ADDED   (new in CURRENT, absent from OLD 137-schema): ['temp_chest']
+
+  Arithmetic: OLD = 16 channels x 8 stats (128) + 9 demo = 137.
+              NEW = 11 channels x 11 stats (121) + 9 demo = 130.
+  16 -> 11 channels: removed ecg_hr/ecg_ibi/ecg_rmssd/ecg_sdnn (4, chest-ECG-derived HRV) + resp_freq/resp_iri (2, respiration) = -6; added temp_chest (+1). Net -5.
+  Per-channel stats went 8 -> 11 (added slope, lf_hf, delta_mean) -- this is why total feature count (130) is close to 137 despite losing 5 net channels: more stats per surviving channel partially offsets fewer channels.
+
+  IMPORTANT: current hr/ibi/rmssd/sdnn channels are wrist-BVP-derived (1_wesad/wesad_preprocessing.py:199, bvp_to_1hz(wrist["BVP"])) -- the OLD schema had these SAME wrist-derived channels ALSO (unchanged), PLUS a fully separate chest-ECG-derived HRV group (ecg_hr/ecg_ibi/ecg_rmssd/ecg_sdnn) that no longer exists at all. So it is not just RESP that vanished -- chest-based cardiac HRV vanished too, and the current "HR/IBI/RMSSD/SDNN" group is wrist-only, where the old schema had both wrist and chest cardiac channels represented separately.
+
+  CONCLUSION 1: thesis's "137 features" figure for WESAD-full matches ONLY the OLD, now-superseded schema. The CURRENT pipeline produces 130, missing RESP entirely and missing chest-ECG-derived HRV entirely (kept only wrist-derived HRV), and gained one channel (temp_chest) it did not have before.
+
+------------------------------------------------------------------------------
+2. PROVENANCE OF LightGBM 0.920 / BiGRU 0.925 / "all models WESAD-full" TABLE
+------------------------------------------------------------------------------
+results_master.csv is itself the pre-existing "all models WESAD-full comparison" table (already schema-tagged per row: n_features, n_windows, source_file). Relevant rows:
+
+  [all-137 (OLD schema)        ] SVM                            macro_f1=0.765    acc=0.7720   n_windows=11016  n_feat=137   src=results/wesad_svm.json;.txt
+  [all-137 (OLD schema)        ] ExtraTrees                     macro_f1=0.848    acc=0.8583   n_windows=27543  n_feat=137   src=results/wesad_et.json;.txt
+  [all-137 (OLD schema)        ] RandomForest                   macro_f1=0.855    acc=0.8668   n_windows=27543  n_feat=137   src=results/wesad_rf.json;.txt
+  [all-137 (OLD schema)        ] LogisticRegression             macro_f1=0.816    acc=0.8298   n_windows=27543  n_feat=137   src=results/wesad_logreg.json;.txt
+  [all-137 (OLD schema -- STALE)] Ensemble(XGB+RF+LGBM)          macro_f1=0.912    acc=0.92     n_windows=27543  n_feat=137   src=results/wesad_ensemble.txt (STALE)
+  [all-130 (NEW schema -- CANONICAL)] Ensemble(XGB+RF+LGBM)          macro_f1=0.872    acc=0.8839   n_windows=25807  n_feat=130   src=results/wesad_ensemble.json
+  [all-137 (OLD schema)        ] AutoGluon good_quality (canonical script run) macro_f1=0.886    acc=0.8923   n_windows=27543  n_feat=137   src=results/wesad_autogluon.json
+  [all-137 (OLD schema)        ] AutoGluon best_quality (notebook run) macro_f1=0.846    acc=0.86     n_windows=27543  n_feat=137   src=1_wesad/autogluon/autogluon-wesad.ipynb
+  [all-16ch(raw seq)           ] 1D-CNN                         macro_f1=0.912    acc=0.9172   n_windows=27543  n_feat=16    src=results/wesad_1dcnn.json;.txt
+  [all-16ch(raw seq)           ] CNN-GRU                        macro_f1=0.902    acc=0.9086   n_windows=27543  n_feat=16    src=results/wesad_cnngru.json;.txt
+  [all-16ch(raw seq)           ] Transformer                    macro_f1=0.890    acc=0.8977   n_windows=27543  n_feat=16    src=results/wesad_transformer.json;.txt
+  [all-16ch(raw seq)           ] Mamba(SSM)                     macro_f1=0.888    acc=0.8948   n_windows=27543  n_feat=16    src=results/wesad_mamba.json;.txt
+  [all-16ch(raw seq)           ] RNN(BiGRU)                     macro_f1=0.924    acc=0.9295   n_windows=27543  n_feat=16    src=results/wesad_rnn.json;.txt
+  [all-16ch(raw seq)           ] DANN                           macro_f1=0.813    acc=0.8273   n_windows=27543  n_feat=16    src=results/wesad_dann.json;.txt
+  [all-16ch(raw seq)           ] RNN/BiGRU                      macro_f1=0.9197   acc=MISSING  n_windows=27543  n_feat=16    src=results/dl_variance_summary.txt;dl_variance_raw.csv
+  [all-16ch(raw seq)           ] 1D-CNN                         macro_f1=0.9044   acc=MISSING  n_windows=27543  n_feat=16    src=results/dl_variance_summary.txt;dl_variance_raw.csv
+  [all-16ch(raw seq)           ] CNN-GRU                        macro_f1=0.9156   acc=MISSING  n_windows=27543  n_feat=16    src=results/dl_variance_summary.txt;dl_variance_raw.csv
+  [all-16ch(raw seq)           ] Transformer                    macro_f1=0.8992   acc=MISSING  n_windows=27543  n_feat=16    src=results/dl_variance_summary.txt;dl_variance_raw.csv
+  [full-137 (old schema, RERUN)] LogisticRegression (L1,C=0.001,saga) macro_f1=0.7953   acc=0.8298   n_windows=27543  n_feat=137   src=results/wesad_classical_rerun.json (this audit rerun, 2026-07-24)
+  [full-137 (old schema, RERUN)] LogisticRegression (L1,C=0.001,saga) macro_f1=0.7821   acc=0.8030   n_windows=27543  n_feat=137   src=results/wesad_classical_rerun.json (this audit rerun, 2026-07-24)
+  [full-137 (old schema, RERUN)] SVM (poly deg3,C=0.1,balanced) macro_f1=0.7503   acc=0.8131   n_windows=11016  n_feat=137   src=results/wesad_classical_rerun.json (this audit rerun, 2026-07-24)
+  [full-137 (old schema, RERUN)] SVM (poly deg3,C=0.1,balanced) macro_f1=0.7506   acc=0.8129   n_windows=11016  n_feat=137   src=results/wesad_classical_rerun.json (this audit rerun, 2026-07-24)
+  [full-137 (old schema, RERUN)] RandomForest (n=200,depth=10,sqrt) macro_f1=0.8780   acc=0.8922   n_windows=27543  n_feat=137   src=results/wesad_classical_rerun.json (this audit rerun, 2026-07-24)
+  [full-137 (old schema, RERUN)] RandomForest (n=200,depth=10,sqrt) macro_f1=0.9003   acc=0.9125   n_windows=27543  n_feat=137   src=results/wesad_classical_rerun.json (this audit rerun, 2026-07-24)
+  [full-137 (old schema, RERUN)] XGBoost (n=200,depth=6,lr=0.1) macro_f1=0.8800   acc=0.8929   n_windows=27543  n_feat=137   src=results/wesad_classical_rerun.json (this audit rerun, 2026-07-24)
+  [full-137 (old schema, RERUN)] XGBoost (n=200,depth=6,lr=0.1) macro_f1=0.8984   acc=0.9095   n_windows=27543  n_feat=137   src=results/wesad_classical_rerun.json (this audit rerun, 2026-07-24)
+  [full-137 (old schema, RERUN)] LightGBM (n=305,depth=4,lr=0.195,leaves=37) macro_f1=0.8860   acc=0.8953   n_windows=27543  n_feat=137   src=results/wesad_classical_rerun.json (this audit rerun, 2026-07-24)
+  [full-137 (old schema, RERUN)] LightGBM (n=305,depth=4,lr=0.195,leaves=37) macro_f1=0.9116   acc=0.9190   n_windows=27543  n_feat=137   src=results/wesad_classical_rerun.json (this audit rerun, 2026-07-24)
+  [full-137 (old schema, RERUN)] SoftVoting-3-model (LGBM+XGB+RF) macro_f1=0.7902   acc=0.8297   n_windows=27543  n_feat=10    src=results/wesad_classical_rerun.json (this audit rerun, 2026-07-24)
+  [full-137 (old schema, RERUN)] SoftVoting-3-model (LGBM+XGB+RF) macro_f1=0.8066   acc=0.8395   n_windows=27543  n_feat=20    src=results/wesad_classical_rerun.json (this audit rerun, 2026-07-24)
+  [full-137 (old schema, RERUN)] SoftVoting-3-model (LGBM+XGB+RF) macro_f1=0.7937   acc=0.8258   n_windows=27543  n_feat=30    src=results/wesad_classical_rerun.json (this audit rerun, 2026-07-24)
+  [full-137 (old schema, RERUN)] SoftVoting-3-model (LGBM+XGB+RF) macro_f1=0.8928   acc=0.9019   n_windows=27543  n_feat=137   src=results/wesad_classical_rerun.json (this audit rerun, 2026-07-24)
+  [full-137 (old schema, RERUN)] SoftVoting-5-model (all)       macro_f1=0.7721   acc=0.8194   n_windows=11016  n_feat=10    src=results/wesad_classical_rerun.json (this audit rerun, 2026-07-24)
+  [full-137 (old schema, RERUN)] SoftVoting-5-model (all)       macro_f1=0.8362   acc=0.8690   n_windows=11016  n_feat=20    src=results/wesad_classical_rerun.json (this audit rerun, 2026-07-24)
+  [full-137 (old schema, RERUN)] SoftVoting-5-model (all)       macro_f1=0.8102   acc=0.8432   n_windows=11016  n_feat=30    src=results/wesad_classical_rerun.json (this audit rerun, 2026-07-24)
+  [full-137 (old schema, RERUN)] SoftVoting-5-model (all)       macro_f1=0.8872   acc=0.9053   n_windows=11016  n_feat=137   src=results/wesad_classical_rerun.json (this audit rerun, 2026-07-24)
+  [all-137 (OLD schema)        ] AutoGluon good_quality (FIXED, Ray/NVML bug corrected) macro_f1=0.9091   acc=0.9187   n_windows=27543  n_feat=137   src=results/wesad_autogluon_rerun_fixed.json/.txt (this audit rerun, 2026-07-25)
+
+  -- LightGBM 0.920 --
+  No standalone LightGBM WESAD result file exists anywhere in the repo (confirmed by results_master.csv's own explicit row: "no standalone LightGBM/HGB single-model WESAD result file exists ... only appears as one member inside the Ensemble"). The only nearby number: Ensemble(XGB+RF+LGBM), OLD 137-schema, results/wesad_ensemble.txt -- macro_f1=0.912, ACCURACY=0.92, n_windows=27543 (OLD, matches the 137-feat/27543-window signature), run_date 2026-06-05, tagged "STALE" in results_master.csv already. The NEW-schema Ensemble rerun (results/wesad_ensemble.json, 2026-07-17, 130 feat/25807 windows) gives macro_f1=0.872, accuracy=0.8839 -- neither matches 0.920 on either metric. If the thesis's "LightGBM 0.920" is this Ensemble's accuracy mislabelled as its LightGBM component, it is OLD-schema. If it is a genuinely separate LightGBM run, no artifact for it survives on disk at all (old OR new schema) -- it cannot be verified either way.
+
+  -- BiGRU 0.925 --
+    wrist-5ch(raw seq)         single-run LOSO (see also 5-seed variance row below)                   macro_f1=0.829
+    all-16ch(raw seq)          LOSO                                                                   macro_f1=0.924
+    wrist-5ch(raw seq)         5-seed variance study; this is the likely source of a thesis '0.835' f macro_f1=0.8420
+    all-16ch(raw seq)          5-seed variance study                                                  macro_f1=0.9197
+
+  Closest values: 0.924 (all-16ch raw sequences, single LOSO run, run_date 2026-06-07, results/wesad_rnn.json/.txt) and 0.9197 (all-16ch, 5-seed variance mean, 2026-07-22, results/dl_variance_summary.txt). BOTH are all-16ch, n_windows=27543 -- the OLD-schema signature. Critically, BiGRU (and every other DL model: 1D-CNN, CNN-GRU, Transformer, Mamba, DANN-seq) is NOT trained on processed_data/wesad/processed_data.pkl (the tabular pkl that got regenerated 2026-07-17) at all -- scripts/common.py:12-15 points WESAD_SEQ_PATH at DANN/wesad/processed_data_sequences.pkl by default, a completely separate sequence-format artifact.
+  DANN/wesad/processed_data_sequences.pkl mtime: 2026-04-20 16:14:43.853857279 -- predates even the OLD 137-tabular-schema's own June dates, and was never touched by the 2026-07-17 regen at all (different file, different pipeline). Its 16-channel layout (xai.py:81-83, SEQ_CHANNEL_NAMES) explicitly includes ECG_HR/IBI/RMSSD/SDNN and RESP_freq/RESP_iri -- the OLD channel set, still in active use for every DL model result in the repo today.
+
+  CONCLUSION 2: BOTH named numbers trace to OLD-schema artifacts. LightGBM 0.920 -- if it is the Ensemble's accuracy -- is OLD (137 feat/27543 windows, 2026-06-05, STALE per results_master.csv's own tag); if it is a genuine standalone LightGBM run, no artifact survives to check either way. BiGRU 0.925 (closest: 0.924 or 0.9197) is unambiguously OLD (16ch/27543 windows, sourced from a sequence pkl that predates and is untouched by the 2026-07-17 regen). The "all models on WESAD-full" comparison table (results_master.csv) is ALREADY schema-tagged per row and already flags the canonical/STALE split -- reuse it directly rather than re-deriving; only the Ensemble row has a both-schema pair computed (0.912 old / 0.872 new), every DL row only has the OLD number.
+
+------------------------------------------------------------------------------
+3. ALL WESAD-RELATED result FILES, mtime vs 2026-07-17 16:31:57 CUTOFF
+------------------------------------------------------------------------------
+
+  wesad_autogluon.json                          2026-06-05 02:35:39  STALE
+  wesad_logreg.json                             2026-06-05 09:58:48  STALE
+  wesad_logreg.txt                              2026-06-05 09:58:48  STALE
+  wesad_svm.json                                2026-06-05 10:05:40  STALE
+  wesad_svm.txt                                 2026-06-05 10:05:40  STALE
+  wesad_rf.json                                 2026-06-05 10:30:53  STALE
+  wesad_rf.txt                                  2026-06-05 10:30:53  STALE
+  wesad_et.json                                 2026-06-05 10:33:27  STALE
+  wesad_et.txt                                  2026-06-05 10:33:27  STALE
+  wesad_ensemble.txt                            2026-06-05 10:37:11  STALE
+  wesad_autogluon.txt                           2026-06-05 10:37:12  STALE
+  wesad_1dcnn.json                              2026-06-05 12:29:24  STALE
+  wesad_1dcnn.txt                               2026-06-05 12:29:24  STALE
+  wesad_cnngru.json                             2026-06-06 15:28:56  STALE
+  wesad_cnngru.txt                              2026-06-06 15:28:56  STALE
+  wesad_rnn.json                                2026-06-07 04:03:24  STALE
+  wesad_rnn.txt                                 2026-06-07 04:03:24  STALE
+  wesad_transformer.json                        2026-06-07 16:50:54  STALE
+  wesad_transformer.txt                         2026-06-07 16:50:54  STALE
+  wesad_mamba.json                              2026-06-07 21:32:12  STALE
+  wesad_mamba.txt                               2026-06-07 21:32:12  STALE
+  wesad_dann.json                               2026-06-07 23:34:38  STALE
+  wesad_dann.txt                                2026-06-07 23:34:38  STALE
+  cross_dataset_wesad.txt                       2026-06-08 08:46:22  STALE
+  cross_dataset_wesad.json                      2026-06-08 08:46:22  STALE
+  wesad_ensemble.json                           2026-07-17 16:18:41  current
+  wesad_55plus_ecg_loso.txt                     2026-07-18 20:52:09  current
+  watch_ecg_vs_wesad.txt                        2026-07-18 21:53:13  current
+  watch_ecg_90s_vs_wesad.txt                    2026-07-18 22:34:56  current
+  anxolotl_vs_wesad_FINAL.txt                   2026-07-18 22:56:47  current
+  wesad_classical_rerun_task1.json              2026-07-24 17:27:40  current
+  wesad_classical_rerun_task2.json              2026-07-24 19:03:45  current
+  wesad_classical_rerun.txt                     2026-07-24 19:08:11  current
+  wesad_classical_rerun_task4.json              2026-07-25 02:13:09  current
+  wesad_classical_rerun.json                    2026-07-25 02:13:11  current
+  wesad_classical_rerun_SUMMARY.md              2026-07-25 02:14:57  current
+  wesad_autogluon_rerun_fixed.json              2026-07-25 21:14:24  current
+  wesad_autogluon_rerun_fixed.txt               2026-07-25 21:14:24  current
+  acc_wrist_min_wesad_2026-07-24.txt            2026-07-25 21:35:05  current
+  wesad_shap_reverification_2026-07-24.txt      2026-07-25 22:42:39  current
+
+  TOTAL: 40 WESAD result files, 25 STALE (predate the regen), 15 current/post-regen.
+
+  Note: "current" mtime does not by itself mean "current schema" -- e.g. results/wesad_classical_rerun*.json (2026-07-24) were DELIBERATELY rerun on the OLD 137-feat archive for audit purposes (results_master.csv tags them "full-137 (old schema, RERUN)"), not because they use the new pipeline. Check feature_set/n_windows in results_master.csv, not just mtime, before trusting a "current"-mtime file as new-schema.
+
+==============================================================================
+END
+==============================================================================

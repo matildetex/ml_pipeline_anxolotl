@@ -1,0 +1,83 @@
+Loading WESAD...
+
+=================================================================
+  WESAD LOSO — Ensemble XGB+RF+LGBM — WRIST features
+=================================================================
+  Features: 56 wrist
+  fold  1 F1=0.419
+  fold  2 F1=0.877
+  fold  3 F1=0.919
+  fold  4 F1=0.605
+  fold  5 F1=0.899
+  fold  6 F1=1.000
+  fold  7 F1=0.286
+  fold  8 F1=0.810
+  fold  9 F1=0.708
+  fold 10 F1=1.000
+  fold 11 F1=0.770
+  fold 12 F1=0.796
+  fold 13 F1=0.717
+  fold 14 F1=0.939
+  fold 15 F1=0.689
+
+=================================================================
+  Ensemble WESAD — wrist (56 feat)
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.85      0.83      0.84     17577
+      stress       0.72      0.75      0.73      9966
+
+    accuracy                           0.80     27543
+   macro avg       0.79      0.79      0.79     27543
+weighted avg       0.80      0.80      0.80     27543
+
+Macro F1   : 0.788
+AUC        : 0.876
+F1@opt     : 0.794  (t=0.195)
+Bal. Acc   : 0.790
+MCC        : 0.576
+F1 std     : 0.197  (mean per fold: 0.762)
+Confusion  : TN=14649 FP=2928 FN=2516 TP=7450
+
+=================================================================
+  WESAD LOSO — Ensemble XGB+RF+LGBM — ALL features
+=================================================================
+  Features: 137 total
+  fold  1 F1=0.870
+  fold  2 F1=0.570
+  fold  3 F1=0.844
+  fold  4 F1=1.000
+  fold  5 F1=0.992
+  fold  6 F1=1.000
+  fold  7 F1=0.914
+  fold  8 F1=0.752
+  fold  9 F1=0.856
+  fold 10 F1=0.990
+  fold 11 F1=0.998
+  fold 12 F1=0.927
+  fold 13 F1=0.943
+  fold 14 F1=1.000
+  fold 15 F1=0.998
+
+=================================================================
+  Ensemble WESAD — all (137 feat)
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.95      0.92      0.93     17577
+      stress       0.86      0.92      0.89      9966
+
+    accuracy                           0.92     27543
+   macro avg       0.91      0.92      0.91     27543
+weighted avg       0.92      0.92      0.92     27543
+
+Macro F1   : 0.912
+AUC        : 0.974
+F1@opt     : 0.914  (t=0.514)
+Bal. Acc   : 0.918
+MCC        : 0.826
+F1 std     : 0.116  (mean per fold: 0.910)
+Confusion  : TN=16128 FP=1449 FN=810 TP=9156
+
+Resultados guardados em: /home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/../results/wesad_ensemble.json

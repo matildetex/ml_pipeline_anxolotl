@@ -1,0 +1,38 @@
+[
+  {
+    "label": "ExtraTrees BL-norm | default",
+    "f1": 0.7294870494252257,
+    "f1opt": 0.7976745838168083,
+    "auc": 0.8736911577736928,
+    "ba": 0.7659956108740191,
+    "mcc": 0.5589760612414908,
+    "dataset": "WESAD\u2192Anxolotl"
+  },
+  {
+    "label": "ExtraTrees BL-norm | optimal",
+    "f1": 0.7976745838168083,
+    "f1opt": 0.7976745838168083,
+    "auc": 0.8736911577736928,
+    "ba": 0.8155109444718878,
+    "mcc": 0.6274750007017711,
+    "dataset": "WESAD\u2192Anxolotl"
+  },
+  {
+    "label": "ExtraTrees std-scaler | default",
+    "f1": 0.29574678536102866,
+    "f1opt": 0.5295588526211672,
+    "auc": 0.5293107776527084,
+    "ba": 0.5,
+    "mcc": 0.0,
+    "dataset": "WESAD\u2192Anxolotl"
+  },
+  {
+    "label": "ExtraTrees std-scaler | optimal",
+    "f1": 0.5295588526211672,
+    "f1opt": 0.5295588526211672,
+    "auc": 0.5293107776527084,
+    "ba": 0.5360969170843894,
+    "mcc": 0.0713641575311852,
+    "dataset": "WESAD\u2192Anxolotl"
+  }
+]

@@ -1,0 +1,92 @@
+==============================================================================
+acc_wrist_min DIRECTION CHECK -- WESAD wrist-only (Section 3.1.6, ExtraTrees)
+==============================================================================
+Windows: 25807, subjects: 15, wrist features: 77
+Label dist: baseline(0)=16726  stress(1)=9081
+
+------------------------------------------------------------------------------
+1. DISTRIBUTION OF acc_wrist_min BY CLASS (raw units, pre-StandardScaler)
+------------------------------------------------------------------------------
+  Baseline (n=16726): mean=6.2563e+01  std=1.0910e+00  median=6.2557e+01
+  Stress   (n=9081): mean=6.2340e+01  std=1.6191e+00  median=6.2522e+01
+  Mean difference (stress - baseline): -2.2272e-01
+  => stress windows have systematically LOWER acc_wrist_min than baseline windows (pooled means).
+
+  [Pooled, non-independence caveat] Mann-Whitney U=72847608.0, p=6.017e-08
+
+  Per-subject paired comparison (n=15/15 subjects with both classes present):
+    Subjects with stress_mean > baseline_mean : 6
+    Subjects with stress_mean < baseline_mean : 9
+    Mean per-subject delta (stress-baseline)  : -2.2948e-01  (std=5.3159e-01)
+    Paired t-test        : t=-1.672, p=1.167e-01
+    Wilcoxon signed-rank : W=41.0, p=3.028e-01
+
+  CONCLUSION 1: WESAD stress windows have NOT significantly lower acc_wrist_min than baseline (per-subject paired Wilcoxon p=3.028e-01).
+
+------------------------------------------------------------------------------
+2. SHAP DIRECTION FOR acc_wrist_min (WESAD_wrist / ET, pooled fit, xai.py replica)
+------------------------------------------------------------------------------
+  TreeSHAP on stratified sample: n=1200 (baseline=600, stress=600)
+  acc_wrist_min mean|SHAP| = 0.002477  (rank 34/77)
+  Spearman(feature value, SHAP value) = +0.0384  (p=1.833e-01)
+  Mean SHAP value by feature-value quintile (Q1=lowest acc_wrist_min ... Q5=highest):
+    Q1: mean SHAP(class=stress) = -0.0017  (n=240)
+    Q2: mean SHAP(class=stress) = -0.0011  (n=240)
+    Q3: mean SHAP(class=stress) = -0.0004  (n=240)
+    Q4: mean SHAP(class=stress) = +0.0011  (n=240)
+    Q5: mean SHAP(class=stress) = -0.0019  (n=240)
+
+  CONCLUSION 2: HIGH acc_wrist_min values push the model TOWARD stress (positive SHAP); LOW values push toward baseline.
+
+------------------------------------------------------------------------------
+2b. CRITICAL CAVEAT -- figures/shap/WESAD_wrist_ET_bar.png IS STALE
+------------------------------------------------------------------------------
+figures/shap/WESAD_wrist_ET_bar.png (the existing figure showing acc_wrist_min as
+the #1 feature for WESAD_wrist/ET, mtime 2026-07-16 20:50) was generated BEFORE
+processed_data/wesad/processed_data.pkl was regenerated the next day (mtime
+2026-07-17 16:31). This staleness is already flagged, unresolved, in
+MISSING.md:74 and ANXOLOTL_AUDIT_FULL.txt:1016 ("the existing WESAD SHAP figures
+... predate the 2026-07-17 16:31 schema regen ... check exact per-file mtime
+before trusting them as current-schema") -- this investigation is the check.
+
+Verdict: the figure does NOT reflect the current, canonical WESAD schema. Re-running
+the IDENTICAL xai.py WESAD_wrist/ET/SHAP pipeline (same feature set, same model
+hyperparameters, same stratified-sample seed) on the CURRENT processed_data.pkl
+(25,807 rows / 15 subjects / 77 wrist features -- matches RECONCILIATION.md's
+documented current schema) gives a materially different result:
+
+  Stale figure (pre-2026-07-17 regen) : acc_wrist_min rank 1/~77, importance ~0.044
+  This investigation (current schema) : acc_wrist_min rank 34/77, importance 0.0025
+
+acc_wrist_min is NOT an important feature in the CURRENT WESAD_wrist/ET model.
+If Section 3.1.6's claim that acc_wrist_min is "also top in WESAD wrist-only" is
+sourced from that figure, the claim is built on a stale, superseded feature cache
+and should be corrected regardless of the direction question below -- the premise
+itself ("acc_wrist_min matters in WESAD, just like Anxolotl") does not hold under
+the current pipeline. Separately, WESAD's window/stride (60s/1s, near-continuous,
+1_wesad/wesad_preprocessing.py:27-28) is not protocol-matched to Anxolotl's 60s/30s
+(already flagged in MISSING.md:120) -- another reason a direct WESAD/Anxolotl
+comparison on this feature is weaker evidence than a within-Anxolotl finding.
+
+------------------------------------------------------------------------------
+3. DIRECTION COMPARISON: WESAD vs Anxolotl
+------------------------------------------------------------------------------
+Anxolotl (results/acc_wrist_min_investigation_2026-07-24.txt): stress ~2x HIGHER acc_wrist_min than baseline (paired Wilcoxon p=1.56e-05); SHAP Spearman(feature,SHAP)=+0.51 (high value -> pushes toward stress).
+
+  WESAD distribution direction : stress LOWER than baseline, NOT significant (paired Wilcoxon p=0.30)
+  WESAD SHAP direction          : nominally high -> stress, NOT significant (Spearman p=0.18)
+
+  VERDICT: Neither WESAD test reaches significance, and the feature is not
+  meaningfully important in WESAD to begin with (rank 34/77, mean|SHAP|=0.0025,
+  ~14x smaller than Anxolotl's 0.035). Calling the nominal directions "same" or
+  "opposite" as Anxolotl would overinterpret noise around a near-null effect. The
+  honest answer to "does WESAD replicate Anxolotl's direction": WESAD provides NO
+  reliable signal either way -- acc_wrist_min is not a real driver of the current
+  WESAD_wrist/ET model, on the current (post-2026-07-17) feature cache. Given the
+  2b staleness finding, do not cite WESAD as corroborating (or contradicting) the
+  Anxolotl acc_wrist_min result at all -- treat the Anxolotl finding as standing on
+  its own, and correct Section 3.1.6's cross-dataset framing accordingly.
+
+==============================================================================
+END
+==============================================================================

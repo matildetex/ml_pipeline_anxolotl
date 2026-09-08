@@ -1,0 +1,426 @@
+Loading data...
+Feature set shapes: {'watch': (712, 60), 'watch+ecg': (712, 77), 'watch+ecg+demo': (712, 88), 'watch+ecg+eads': (712, 82), 'watch+ecg+demo+eads': (712, 93)}
+[1/20] watch | thresh=False | cal=False  -> best=ET-1000 F1=0.9279  (379s)
+[2/20] watch | thresh=False | cal=True  -> best=ET-1000 F1=0.9332  (369s)
+[3/20] watch | thresh=True | cal=False  -> best=GB F1=0.9270  (388s)
+[4/20] watch | thresh=True | cal=True  -> best=HGB F1=0.9273  (398s)
+Exception ignored in: <function ResourceTracker.__del__ at 0x71d26669ea20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x700a42c9aa20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x797daa496a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x734f85e96a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7bb8ab786a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7b4b67992a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x715c8bf8aa20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x786cea58aa20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x72df14c8ea20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x73f92929ea20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7d1c8f096a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7a9938696a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7d0c4978aa20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7d773ee96a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x793274686a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x73000b69aa20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7babf4696a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x73e84938ea20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x713861b8ea20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+[5/20] watch+ecg | thresh=False | cal=False  -> best=ET-1000 F1=0.9461  (9670s)
+Exception ignored in: <function ResourceTracker.__del__ at 0x7c1c21ea2a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7876b278ea20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7b5a0f89ea20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7e330028aa20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7fd4373b2a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7bf7f7b8ea20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82,[6/20] watch+ecg | thresh=False | cal=True  -> best=RF-1000 F1=0.9470  (2135s)
+[7/20] watch+ecg | thresh=True | cal=False  -> best=RF-1000 F1=0.9353  (832s)
+[8/20] watch+ecg | thresh=True | cal=True  -> best=RF-1000 F1=0.9471  (474s)
+[9/20] watch+ecg+demo | thresh=False | cal=False  -> best=ET-1000 F1=0.9471  (418s)
+[10/20] watch+ecg+demo | thresh=False | cal=True  -> best=ET-1000 F1=0.9500  (418s)
+Exception ignored in: <function ResourceTracker.__del__ at 0x73875d38ea20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x716de639aa20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7283cce9aa20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x77771ba7ea20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7ea0d7796a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7a6f33296a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x73c9e629ea20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x797a1409aa20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7dd67968ea20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7e963f89ea20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x77e576e9aa20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7b8a4b796a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x728c6d09aa20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x75286109ea20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7fabd8d9ea20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7d5394196a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7e4a05792a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x704062d8aa20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+[11/20] watch+ecg+demo | thresh=True | cal=False  -> best=LGBM-dart F1=0.9330  (4946s)
+[12/20] watch+ecg+demo | thresh=True | cal=True  -> best=LGBM-deep F1=0.9450  (428s)
+[13/20] watch+ecg+eads | thresh=False | cal=False  -> best=ET-1000 F1=0.9471  (342s)
+[14/20] watch+ecg+eads | thresh=False | cal=True  -> best=RF-1000 F1=0.9455  (329s)
+[15/20] watch+ecg+eads | thresh=True | cal=False  -> best=RF-1000 F1=0.9381  (410s)
+[16/20] watch+ecg+eads | thresh=True | cal=True  -> best=RF-1000 F1=0.9471  (408s)
+[17/20] watch+ecg+demo+eads | thresh=False | cal=False  -> best=ET-1000 F1=0.9392  (336s)
+[18/20] watch+ecg+demo+eads | thresh=False | cal=True  -> best=ET-1000 F1=0.9479  (343s)
+[19/20] watch+ecg+demo+eads | thresh=True | cal=False  -> best=RF-1000 F1=0.9354  (414s)
+[20/20] watch+ecg+demo+eads | thresh=True | cal=True  -> best=RF-1000 F1=0.9471  (419s)
+
+Total grid time: 23855s
+Saved results/all_models_grid.csv (300 rows)
+
+================================================================================
+TOP 20 CONFIGURATIONS
+================================================================================
+        feature_set  opt_thresh  calibration      model       f1      auc
+     watch+ecg+demo       False         True    ET-1000 0.950045 0.993667
+watch+ecg+demo+eads       False         True    ET-1000 0.947869 0.993270
+     watch+ecg+demo       False        False    ET-1000 0.947135 0.991658
+     watch+ecg+eads       False        False    ET-1000 0.947109 0.992424
+     watch+ecg+eads        True         True    RF-1000 0.947084 0.983104
+watch+ecg+demo+eads        True         True    RF-1000 0.947084 0.984466
+          watch+ecg        True         True    RF-1000 0.947084 0.985034
+          watch+ecg       False         True    RF-1000 0.946998 0.985034
+          watch+ecg       False         True    ET-1000 0.946854 0.991737
+     watch+ecg+demo       False         True    RF-1000 0.946386 0.985034
+          watch+ecg       False        False    ET-1000 0.946128 0.992605
+     watch+ecg+eads       False         True    RF-1000 0.945454 0.983104
+watch+ecg+demo+eads        True         True  LGBM-deep 0.945023 0.978394
+     watch+ecg+eads        True         True  LGBM-deep 0.945023 0.978394
+     watch+ecg+demo        True         True  LGBM-deep 0.945023 0.978394
+          watch+ecg        True         True  LGBM-deep 0.945023 0.978394
+     watch+ecg+eads       False         True    ET-1000 0.944763 0.991737
+     watch+ecg+eads       False         True ExtraTrees 0.944534 0.987404
+watch+ecg+demo+eads       False         True    RF-1000 0.944453 0.984466
+     watch+ecg+demo        True         True  LGBM-dart 0.942832 0.977032
+
+BEST OVERALL: ET-1000  F1=0.9500  [watch+ecg+demo, thresh=False, cal=True]
+Exception ignored in: <function ResourceTracker.__del__ at 0x70284d696a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+Exception ignored in: <function ResourceTracker.__del__ at 0x73fa3cb8ea20>
+Traceback (most recent call last):
+Exception ignored in: <function ResourceTracker.__del__ at 0x75ded5c96a20>
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+ChildProcessError: [Errno 10] No child processes
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7d3cbb296a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+Exception ignored in: <function ResourceTracker.__del__ at 0x745681196a20>
+Exception ignored in: <function ResourceTracker.__del__ at 0x73b356a96a20>
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7edf5729aa20>
+Exception ignored in: <function ResourceTracker.__del__ at 0x7ca2acc9aa20>
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x77cbf089aa20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x72992b592a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x70a49688aa20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x717358b96a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x73d92db86a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7954d2186a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x7eaee488aa20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x717f0689ea20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x717921596a20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x78d96c18ea20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x71622118ea20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes
+Exception ignored in: <function ResourceTracker.__del__ at 0x71d75d19aa20>
+Traceback (most recent call last):
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 82, in __del__
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 91, in _stop
+  File "/home/matildxi/anaconda3/lib/python3.13/multiprocessing/resource_tracker.py", line 116, in _stop_locked
+ChildProcessError: [Errno 10] No child processes

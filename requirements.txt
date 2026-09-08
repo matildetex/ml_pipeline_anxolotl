@@ -1,0 +1,56 @@
+# Pinned to the versions actually installed in the working conda env
+# ("ml", Python 3.11.15, /home/matildxi/anaconda3/envs/ml) as of 2026-08-30.
+# Install: pip install -r requirements.txt
+# (GPU deep-learning scripts additionally need a CUDA-enabled torch build —
+#  see README.md "Deep learning / GPU" for the exact index-url to use.)
+
+# ── Core data / ML ──────────────────────────────────────────────────────────
+numpy==2.3.5
+pandas==2.3.3
+scipy==1.16.3
+scikit-learn==1.7.2
+imbalanced-learn==0.14.1
+joblib==1.5.3
+
+# ── Boosted trees ───────────────────────────────────────────────────────────
+lightgbm==4.6.0
+xgboost==3.1.3
+catboost==1.2.10
+
+# ── AutoML ───────────────────────────────────────────────────────────────────
+autogluon.tabular==1.5.0
+autogluon.common==1.5.0
+autogluon.core==1.5.0
+autogluon.features==1.5.0
+ray==2.52.1
+
+# ── Deep learning (PyTorch) ─────────────────────────────────────────────────
+# CPU wheel by default; see README.md for the CUDA index-url used in Docker.
+torch==2.9.1
+torchvision==0.24.1
+
+# ── Explainability / stats ──────────────────────────────────────────────────
+shap==0.51.0
+statsmodels==0.14.6
+scikit-posthocs==0.14.0
+optuna==4.8.0
+
+# ── Signal processing ───────────────────────────────────────────────────────
+neurokit2==0.2.13
+bioread==2025.5.2
+
+# ── Plotting ─────────────────────────────────────────────────────────────────
+matplotlib==3.10.8
+seaborn==0.13.2
+plotly==6.7.0
+
+# ── I/O ──────────────────────────────────────────────────────────────────────
+openpyxl==3.1.5
+pyarrow==20.0.0
+tqdm==4.67.3
+
+# ── Notebooks (only needed to run the *.ipynb files under 1_wesad/, 2_cross_dataset/, 3_anxolotl/) ──
+jupyterlab==4.5.6
+ipykernel==7.2.0
+notebook==7.5.5
+nbconvert==7.17.1

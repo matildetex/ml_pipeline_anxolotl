@@ -1,0 +1,41 @@
+======================================================================
+DL Variance Analysis — WESAD LOSO, N=5 seeds per model/config
+Mamba (SSM) excluded: ~10h/single-run on this GPU (75.9s/epoch vs
+7-9s/epoch for the others), not feasible to repeat 5x.
+======================================================================
+
+                      mean     std     min     max
+model       config                                
+1D-CNN      all     0.9044  0.0028  0.9013  0.9084
+            wrist   0.7446  0.0160  0.7246  0.7662
+CNN-GRU     all     0.9156  0.0087  0.9019  0.9242
+            wrist   0.7668  0.0135  0.7548  0.7874
+BiGRU       all     0.9197  0.0049  0.9138  0.9255
+            wrist   0.8420  0.0037  0.8382  0.8476
+Transformer all     0.8992  0.0054  0.8913  0.9044
+            wrist   0.7999  0.0228  0.7606  0.8171
+
+----------------------------------------------------------------------
+Formatted for thesis (mean ± sd):
+----------------------------------------------------------------------
+
+WRIST:
+  1D-CNN         MacroF1 = 0.7446 ± 0.0160  (n=5)
+  CNN-GRU        MacroF1 = 0.7668 ± 0.0135  (n=5)
+  BiGRU          MacroF1 = 0.8420 ± 0.0037  (n=5)
+  Transformer    MacroF1 = 0.7999 ± 0.0228  (n=5)
+
+ALL:
+  1D-CNN         MacroF1 = 0.9044 ± 0.0028  (n=5)
+  CNN-GRU        MacroF1 = 0.9156 ± 0.0087  (n=5)
+  BiGRU          MacroF1 = 0.9197 ± 0.0049  (n=5)
+  Transformer    MacroF1 = 0.8992 ± 0.0054  (n=5)
+
+----------------------------------------------------------------------
+Compute cost (for methods section)
+----------------------------------------------------------------------
+Total: 40 runs, 74.0h on NVIDIA RTX 3050 Ti Laptop GPU (4GB)
+  1D-CNN         avg 50.1 min/run
+  CNN-GRU        avg 80.6 min/run
+  BiGRU          avg 115.0 min/run
+  Transformer    avg 198.2 min/run

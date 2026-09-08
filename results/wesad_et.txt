@@ -1,0 +1,53 @@
+Loading WESAD...
+
+=================================================================
+  WESAD LOSO — ExtraTrees — WRIST features
+=================================================================
+  Features: 56 wrist
+
+=================================================================
+  ET WESAD — wrist (56 feat)
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.79      0.81      0.80     17577
+      stress       0.65      0.63      0.64      9966
+
+    accuracy                           0.74     27543
+   macro avg       0.72      0.72      0.72     27543
+weighted avg       0.74      0.74      0.74     27543
+
+Macro F1   : 0.718
+AUC        : 0.819
+F1@opt     : 0.722  (t=0.407)
+Bal. Acc   : 0.716
+MCC        : 0.436
+F1 std     : 0.177  (mean per fold: 0.679)
+Confusion  : TN=14156 FP=3421 FN=3714 TP=6252
+
+=================================================================
+  WESAD LOSO — ExtraTrees — ALL features
+=================================================================
+  Features: 137 total
+
+=================================================================
+  ET WESAD — all (137 feat)
+=================================================================
+              precision    recall  f1-score   support
+
+    baseline       0.90      0.87      0.89     17577
+      stress       0.79      0.83      0.81      9966
+
+    accuracy                           0.86     27543
+   macro avg       0.84      0.85      0.85     27543
+weighted avg       0.86      0.86      0.86     27543
+
+Macro F1   : 0.848
+AUC        : 0.945
+F1@opt     : 0.862  (t=0.562)
+Bal. Acc   : 0.853
+MCC        : 0.698
+F1 std     : 0.153  (mean per fold: 0.834)
+Confusion  : TN=15340 FP=2237 FN=1666 TP=8300
+
+Resultados guardados em: /home/matildxi/Secretária/Documentos/Tese/anxolotl/scripts/../results/wesad_et.json

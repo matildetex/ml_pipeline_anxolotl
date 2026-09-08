@@ -1,0 +1,18 @@
+Per-fold MacroF1 by window config
+
+Window=30s: n_folds=37
+  Mean=0.7987  Std=0.1242  Min=0.4750  Max=1.0000
+  Values: [np.float64(0.9364), np.float64(0.5875), np.float64(0.7996), np.float64(0.6812), np.float64(0.8655), np.float64(0.7443), np.float64(0.8091), np.float64(0.9246), np.float64(0.8221), np.float64(0.8043), np.float64(0.475), np.float64(0.6778), np.float64(0.8148), np.float64(0.977), np.float64(0.8503), np.float64(0.7339), np.float64(0.8604), np.float64(0.8074), np.float64(0.6661), np.float64(0.7467), np.float64(0.9024), np.float64(0.9647), np.float64(0.5603), np.float64(0.9665), np.float64(0.7994), np.float64(0.7128), np.float64(1.0), np.float64(0.6661), np.float64(0.864), np.float64(0.6155), np.float64(0.8146), np.float64(0.8082), np.float64(0.938), np.float64(0.9016), np.float64(0.6792), np.float64(0.8919), np.float64(0.8845)]
+
+Window=60s: n_folds=37
+  Mean=0.8817  Std=0.0994  Min=0.6190  Max=1.0000
+  Values: [np.float64(1.0), np.float64(1.0), np.float64(0.9519), np.float64(0.7083), np.float64(0.9521), np.float64(0.8444), np.float64(0.899), np.float64(1.0), np.float64(0.7597), np.float64(1.0), np.float64(0.7143), np.float64(0.8375), np.float64(0.8397), np.float64(0.9506), np.float64(0.8194), np.float64(0.9443), np.float64(0.8), np.float64(0.9251), np.float64(0.781), np.float64(0.8091), np.float64(0.8944), np.float64(1.0), np.float64(0.619), np.float64(1.0), np.float64(0.9537), np.float64(0.7349), np.float64(1.0), np.float64(0.781), np.float64(1.0), np.float64(0.8182), np.float64(0.8875), np.float64(0.9083), np.float64(0.8634), np.float64(0.9251), np.float64(0.8571), np.float64(1.0), np.float64(0.8444)]
+
+Window=90s: n_folds=37
+  Mean=0.9333  Std=0.1221  Min=0.4167  Max=1.0000
+  Values: [np.float64(1.0), np.float64(0.9251), np.float64(1.0), np.float64(0.9161), np.float64(0.9212), np.float64(0.7879), np.float64(0.9091), np.float64(1.0), np.float64(0.7483), np.float64(1.0), np.float64(0.4167), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(0.899), np.float64(0.9111), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(0.641), np.float64(1.0), np.float64(1.0), np.float64(0.8667), np.float64(1.0), np.float64(0.9212), np.float64(1.0), np.float64(0.9212), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(0.7483), np.float64(1.0), np.float64(1.0)]
+
+Window=120s: n_folds=37
+  Mean=0.9573  Std=0.0832  Min=0.6970  Max=1.0000
+  Values: [np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(0.8889), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(0.775), np.float64(1.0), np.float64(0.7778), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(0.8889), np.float64(1.0), np.float64(1.0), np.float64(0.906), np.float64(1.0), np.float64(1.0), np.float64(0.9111), np.float64(1.0), np.float64(0.697), np.float64(1.0), np.float64(0.8), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(1.0), np.float64(0.775), np.float64(1.0), np.float64(1.0)]
+

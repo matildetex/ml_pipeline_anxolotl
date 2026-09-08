@@ -1,0 +1,1127 @@
+Loading existing tabular features...
+Existing: 712 windows, 60 features, 37 subjects
+
+── p7 ──
+  Session duration : 1363.2s (22.7 min)
+  ACC samples      : 34165  (fs≈25 Hz)
+  HR/IBI readings  : 272
+  HR range         : 84–132 bpm
+  IBI range        : 455–714 ms
+  ℹ️  No gesture detected in first 60s — baseline anchored at t=0.
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=0.0s  → baseline start
+    Marker 2 at t=490.8s  → breathing 1 start (discard)
+    Marker 3 at t=669.3s  → stress 1 start
+    Marker 4 at t=848.9s  → breathing 2 start (discard)
+    Marker 5 at t=1034.4s  → stress 2 start
+    Marker 6 at t=1254.9s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 399s (6.7 min)
+    Discard (-1): 665s
+
+  Assembled DataFrame: (699, 9)
+    Rest rows   : 300
+    Stress rows : 399
+    Stress phase 1: 179 rows
+    Stress phase 2: 220 rows
+    Stress phase 3: 0 rows
+   t0=1775039346  biopac_start=1775039279  offset=66.5s (BIOPAC started 67s before watch)
+   ECG: 2797030 samples (23.3 min)
+   Windows processed: 22
+
+── p8 ──
+  Session duration : 1299.5s (21.7 min)
+  ACC samples      : 32570  (fs≈25 Hz)
+  HR/IBI readings  : 260
+  HR range         : 63–83 bpm
+  IBI range        : 723–952 ms
+  ⚠️  Only 5/8 markers found — session appears incomplete (3 gesture(s) missing).
+
+  Detected 5 markers (wrist-raise gestures):
+    Marker 1 at t=3.0s  → baseline start
+    Marker 2 at t=432.9s  → breathing 1 start (discard)
+    Marker 3 at t=612.5s  → stress 1 start
+    Marker 4 at t=792.0s  → breathing 2 start (discard)
+    Marker 5 at t=975.6s  → stress 2 start
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 180s (3.0 min)
+    Discard (-1): 820s
+
+  Assembled DataFrame: (480, 9)
+    Rest rows   : 300
+    Stress rows : 180
+    Stress phase 1: 180 rows
+    Stress phase 2: 0 rows
+    Stress phase 3: 0 rows
+   t0=1775049559  biopac_start=1775049480  offset=78.7s (BIOPAC started 79s before watch)
+   ECG: 2701170 samples (22.5 min)
+   Windows processed: 14
+
+── p9 ──
+  Session duration : 1207.1s (20.1 min)
+  ACC samples      : 30255  (fs≈25 Hz)
+  HR/IBI readings  : 242
+  HR range         : 62–83 bpm
+  IBI range        : 723–968 ms
+  ⚠️  Only 5/8 markers found — session appears incomplete (3 gesture(s) missing).
+
+  Detected 5 markers (wrist-raise gestures):
+    Marker 1 at t=0.0s  → baseline start
+    Marker 2 at t=332.2s  → breathing 1 start (discard)
+    Marker 3 at t=514.7s  → stress 1 start
+    Marker 4 at t=700.2s  → breathing 2 start (discard)
+    Marker 5 at t=883.8s  → stress 2 start
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 186s (3.1 min)
+    Discard (-1): 722s
+
+  Assembled DataFrame: (486, 9)
+    Rest rows   : 300
+    Stress rows : 186
+    Stress phase 1: 186 rows
+    Stress phase 2: 0 rows
+    Stress phase 3: 0 rows
+   t0=1775658815  biopac_start=1775658740  offset=75.2s (BIOPAC started 75s before watch)
+   ECG: 2509040 samples (20.9 min)
+   Windows processed: 15
+
+── p10 ──
+  Session duration : 1321.6s (22.0 min)
+  ACC samples      : 33120  (fs≈25 Hz)
+  HR/IBI readings  : 265
+  HR range         : 76–105 bpm
+  IBI range        : 571–789 ms
+  ℹ️  No gesture detected in first 60s — baseline anchored at t=0.
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=0.0s  → baseline start
+    Marker 2 at t=372.1s  → breathing 1 start (discard)
+    Marker 3 at t=549.7s  → stress 1 start
+    Marker 4 at t=728.2s  → breathing 2 start (discard)
+    Marker 5 at t=905.8s  → stress 2 start
+    Marker 6 at t=1228.0s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 502s (8.4 min)
+    Discard (-1): 520s
+
+  Assembled DataFrame: (802, 9)
+    Rest rows   : 300
+    Stress rows : 502
+    Stress phase 1: 179 rows
+    Stress phase 2: 323 rows
+    Stress phase 3: 0 rows
+   t0=1775662087  biopac_start=1775661866  offset=220.5s (BIOPAC started 221s before watch)
+   ECG: 2834800 samples (23.6 min)
+   Windows processed: 25
+
+── p11 ──
+  Session duration : 1426.2s (23.8 min)
+  ACC samples      : 35745  (fs≈25 Hz)
+  HR/IBI readings  : 285
+  HR range         : 81–115 bpm
+  IBI range        : 522–741 ms
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=11.0s  → baseline start
+    Marker 2 at t=537.7s  → breathing 1 start (discard)
+    Marker 3 at t=719.2s  → stress 1 start
+    Marker 4 at t=904.7s  → breathing 2 start (discard)
+    Marker 5 at t=1084.3s  → stress 2 start
+    Marker 6 at t=1379.5s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 480s (8.0 min)
+    Discard (-1): 647s
+
+  Assembled DataFrame: (780, 9)
+    Rest rows   : 300
+    Stress rows : 480
+    Stress phase 1: 185 rows
+    Stress phase 2: 295 rows
+    Stress phase 3: 0 rows
+   t0=1776248879  biopac_start=1776248823  offset=55.7s (BIOPAC started 56s before watch)
+   ECG: 2886870 samples (24.1 min)
+   Windows processed: 24
+
+── p12 ──
+  Session duration : 1392.9s (23.2 min)
+  ACC samples      : 34910  (fs≈25 Hz)
+  HR/IBI readings  : 278
+  HR range         : 77–114 bpm
+  IBI range        : 526–779 ms
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=0.9s  → baseline start
+    Marker 2 at t=444.8s  → breathing 1 start (discard)
+    Marker 3 at t=647.3s  → stress 1 start
+    Marker 4 at t=854.8s  → breathing 2 start (discard)
+    Marker 5 at t=1067.3s  → stress 2 start
+    Marker 6 at t=1246.9s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 386s (6.4 min)
+    Discard (-1): 707s
+
+  Assembled DataFrame: (686, 9)
+    Rest rows   : 300
+    Stress rows : 386
+    Stress phase 1: 207 rows
+    Stress phase 2: 179 rows
+    Stress phase 3: 0 rows
+   t0=1776259537  biopac_start=1776259432  offset=105.2s (BIOPAC started 105s before watch)
+   ECG: 2925260 samples (24.4 min)
+   Windows processed: 21
+
+── p13 ──
+  Session duration : 1421.0s (23.7 min)
+  ACC samples      : 35610  (fs≈25 Hz)
+  HR/IBI readings  : 285
+  HR range         : 75–100 bpm
+  IBI range        : 600–800 ms
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=5.0s  → baseline start
+    Marker 2 at t=436.9s  → breathing 1 start (discard)
+    Marker 3 at t=696.3s  → stress 1 start
+    Marker 4 at t=875.9s  → breathing 2 start (discard)
+    Marker 5 at t=1093.4s  → stress 2 start
+    Marker 6 at t=1324.8s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 410s (6.8 min)
+    Discard (-1): 711s
+
+  Assembled DataFrame: (710, 9)
+    Rest rows   : 300
+    Stress rows : 410
+    Stress phase 1: 179 rows
+    Stress phase 2: 231 rows
+    Stress phase 3: 0 rows
+   t0=1776262928  biopac_start=1776262688  offset=239.5s (BIOPAC started 240s before watch)
+   ECG: 3253570 samples (27.1 min)
+   Windows processed: 22
+
+── p14 ──
+  Session duration : 1459.8s (24.3 min)
+  ACC samples      : 36585  (fs≈25 Hz)
+  HR/IBI readings  : 292
+  HR range         : 65–97 bpm
+  IBI range        : 619–923 ms
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=24.9s  → baseline start
+    Marker 2 at t=473.8s  → breathing 1 start (discard)
+    Marker 3 at t=664.4s  → stress 1 start
+    Marker 4 at t=852.9s  → breathing 2 start (discard)
+    Marker 5 at t=1072.3s  → stress 2 start
+    Marker 6 at t=1311.7s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 427s (7.1 min)
+    Discard (-1): 733s
+
+  Assembled DataFrame: (727, 9)
+    Rest rows   : 300
+    Stress rows : 427
+    Stress phase 1: 188 rows
+    Stress phase 2: 239 rows
+    Stress phase 3: 0 rows
+   t0=1776268519  biopac_start=1776268436  offset=82.7s (BIOPAC started 83s before watch)
+   ECG: 2996520 samples (25.0 min)
+   Windows processed: 23
+
+── p15 ──
+  Session duration : 1309.4s (21.8 min)
+  ACC samples      : 32815  (fs≈25 Hz)
+  HR/IBI readings  : 262
+  HR range         : 58–88 bpm
+  IBI range        : 682–1034 ms
+  ⚠️  Only 5/8 markers found — session appears incomplete (3 gesture(s) missing).
+
+  Detected 5 markers (wrist-raise gestures):
+    Marker 1 at t=0.0s  → baseline start
+    Marker 2 at t=434.0s  → breathing 1 start (discard)
+    Marker 3 at t=618.5s  → stress 1 start
+    Marker 4 at t=804.1s  → breathing 2 start (discard)
+    Marker 5 at t=988.6s  → stress 2 start
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 186s (3.1 min)
+    Discard (-1): 824s
+
+  Assembled DataFrame: (486, 9)
+    Rest rows   : 300
+    Stress rows : 186
+    Stress phase 1: 186 rows
+    Stress phase 2: 0 rows
+    Stress phase 3: 0 rows
+   t0=1776778689  biopac_start=1776778618  offset=71.1s (BIOPAC started 71s before watch)
+   ECG: 2689640 samples (22.4 min)
+   Windows processed: 15
+
+── p16 ──
+  Session duration : 1366.6s (22.8 min)
+  ACC samples      : 34250  (fs≈25 Hz)
+  HR/IBI readings  : 273
+  HR range         : 77–145 bpm
+  IBI range        : 414–779 ms
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=3.0s  → baseline start
+    Marker 2 at t=353.1s  → breathing 1 start (discard)
+    Marker 3 at t=484.8s  → stress 1 start
+    Marker 4 at t=665.4s  → breathing 2 start (discard)
+    Marker 5 at t=849.9s  → stress 2 start
+    Marker 6 at t=1041.4s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 373s (6.2 min)
+    Discard (-1): 694s
+
+  Assembled DataFrame: (673, 9)
+    Rest rows   : 300
+    Stress rows : 373
+    Stress phase 1: 181 rows
+    Stress phase 2: 192 rows
+    Stress phase 3: 0 rows
+   t0=1776853250  biopac_start=1776853146  offset=104.5s (BIOPAC started 104s before watch)
+   ECG: 2829590 samples (23.6 min)
+   Windows processed: 21
+
+── p17 ──
+  Session duration : 1348.2s (22.5 min)
+  ACC samples      : 33790  (fs≈25 Hz)
+  HR/IBI readings  : 270
+  HR range         : 72–105 bpm
+  IBI range        : 571–833 ms
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=20.0s  → baseline start
+    Marker 2 at t=448.9s  → breathing 1 start (discard)
+    Marker 3 at t=628.4s  → stress 1 start
+    Marker 4 at t=812.0s  → breathing 2 start (discard)
+    Marker 5 at t=1024.5s  → stress 2 start
+    Marker 6 at t=1185.1s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 344s (5.7 min)
+    Discard (-1): 705s
+
+  Assembled DataFrame: (644, 9)
+    Rest rows   : 300
+    Stress rows : 344
+    Stress phase 1: 183 rows
+    Stress phase 2: 161 rows
+    Stress phase 3: 0 rows
+   t0=1776868534  biopac_start=1776868461  offset=73.3s (BIOPAC started 73s before watch)
+   ECG: 2762490 samples (23.0 min)
+   Windows processed: 20
+
+── p18 ──
+  Session duration : 1303.4s (21.7 min)
+  ACC samples      : 32665  (fs≈25 Hz)
+  HR/IBI readings  : 262
+  HR range         : 80–116 bpm
+  IBI range        : 517–750 ms
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=3.0s  → baseline start
+    Marker 2 at t=437.9s  → breathing 1 start (discard)
+    Marker 3 at t=619.5s  → stress 1 start
+    Marker 4 at t=800.0s  → breathing 2 start (discard)
+    Marker 5 at t=981.6s  → stress 2 start
+    Marker 6 at t=1206.0s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 406s (6.8 min)
+    Discard (-1): 598s
+
+  Assembled DataFrame: (706, 9)
+    Rest rows   : 300
+    Stress rows : 406
+    Stress phase 1: 181 rows
+    Stress phase 2: 225 rows
+    Stress phase 3: 0 rows
+   t0=1776951041  biopac_start=1776950968  offset=73.5s (BIOPAC started 73s before watch)
+   ECG: 2700260 samples (22.5 min)
+   Windows processed: 22
+
+── p19 ──
+  Session duration : 1398.9s (23.3 min)
+  ACC samples      : 35060  (fs≈25 Hz)
+  HR/IBI readings  : 280
+  HR range         : 74–99 bpm
+  IBI range        : 606–811 ms
+  ⚠️  Only 5/8 markers found — session appears incomplete (3 gesture(s) missing).
+
+  Detected 5 markers (wrist-raise gestures):
+    Marker 1 at t=5.0s  → baseline start
+    Marker 2 at t=531.7s  → breathing 1 start (discard)
+    Marker 3 at t=711.2s  → stress 1 start
+    Marker 4 at t=888.8s  → breathing 2 start (discard)
+    Marker 5 at t=1069.4s  → stress 2 start
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 177s (3.0 min)
+    Discard (-1): 922s
+
+  Assembled DataFrame: (477, 9)
+    Rest rows   : 300
+    Stress rows : 177
+    Stress phase 1: 177 rows
+    Stress phase 2: 0 rows
+    Stress phase 3: 0 rows
+   t0=1776957265  biopac_start=1776957211  offset=53.8s (BIOPAC started 54s before watch)
+   ECG: 2864450 samples (23.9 min)
+   Windows processed: 14
+
+── p20 ──
+  Session duration : 1374.0s (22.9 min)
+  ACC samples      : 34435  (fs≈25 Hz)
+  HR/IBI readings  : 275
+  HR range         : 68–98 bpm
+  IBI range        : 612–882 ms
+  ⚠️  Only 5/8 markers found — session appears incomplete (3 gesture(s) missing).
+
+  Detected 5 markers (wrist-raise gestures):
+    Marker 1 at t=9.0s  → baseline start
+    Marker 2 at t=490.8s  → breathing 1 start (discard)
+    Marker 3 at t=672.4s  → stress 1 start
+    Marker 4 at t=865.9s  → breathing 2 start (discard)
+    Marker 5 at t=1041.5s  → stress 2 start
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 193s (3.2 min)
+    Discard (-1): 882s
+
+  Assembled DataFrame: (493, 9)
+    Rest rows   : 300
+    Stress rows : 193
+    Stress phase 1: 193 rows
+    Stress phase 2: 0 rows
+    Stress phase 3: 0 rows
+   t0=1777027698  biopac_start=1777027609  offset=88.5s (BIOPAC started 89s before watch)
+   ECG: 2870680 samples (23.9 min)
+   Windows processed: 15
+
+── p21 ──
+  Session duration : 1295.5s (21.6 min)
+  ACC samples      : 32470  (fs≈25 Hz)
+  HR/IBI readings  : 260
+  HR range         : 74–96 bpm
+  IBI range        : 625–811 ms
+  ⚠️  Only 5/8 markers found — session appears incomplete (3 gesture(s) missing).
+
+  Detected 5 markers (wrist-raise gestures):
+    Marker 1 at t=7.9s  → baseline start
+    Marker 2 at t=432.9s  → breathing 1 start (discard)
+    Marker 3 at t=614.4s  → stress 1 start
+    Marker 4 at t=794.0s  → breathing 2 start (discard)
+    Marker 5 at t=922.7s  → stress 2 start
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 179s (3.0 min)
+    Discard (-1): 817s
+
+  Assembled DataFrame: (479, 9)
+    Rest rows   : 300
+    Stress rows : 179
+    Stress phase 1: 179 rows
+    Stress phase 2: 0 rows
+    Stress phase 3: 0 rows
+   t0=1777036821  biopac_start=1777036772  offset=48.6s (BIOPAC started 49s before watch)
+   ECG: 2628980 samples (21.9 min)
+   Windows processed: 14
+
+── p22 ──
+  Session duration : 1365.7s (22.8 min)
+  ACC samples      : 34225  (fs≈25 Hz)
+  HR/IBI readings  : 273
+  HR range         : 88–135 bpm
+  IBI range        : 444–682 ms
+
+  Detected 8 markers (wrist-raise gestures):
+    Marker 1 at t=16.0s  → baseline start
+    Marker 2 at t=335.2s  → breathing 1 start (discard)
+    Marker 3 at t=479.8s  → stress 1 start
+    Marker 4 at t=665.4s  → breathing 2 start (discard)
+    Marker 5 at t=851.9s  → stress 2 start
+    Marker 6 at t=1034.5s  → breathing 3 start (discard)
+    Marker 7 at t=1160.2s  → stress 3 start
+    Marker 8 at t=1294.9s  → baseline final start
+  ⚠️  Baseline final truncated: 72s (expected 300s)
+
+  Label distribution (seconds):
+    Rest (0)    : 372s (6.2 min)
+    Stress (1)  : 503s (8.4 min)
+    Discard (-1): 491s
+
+  Assembled DataFrame: (875, 9)
+    Rest rows   : 372
+    Stress rows : 503
+    Stress phase 1: 186 rows
+    Stress phase 2: 183 rows
+    Stress phase 3: 134 rows
+   t0=1777039716  biopac_start=1777039672  offset=44.0s (BIOPAC started 44s before watch)
+   ECG: 2748500 samples (22.9 min)
+   Windows processed: 28
+
+── p23 ──
+  Session duration : 1362.4s (22.7 min)
+  ACC samples      : 34145  (fs≈25 Hz)
+  HR/IBI readings  : 272
+  HR range         : 77–113 bpm
+  IBI range        : 531–779 ms
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=6.0s  → baseline start
+    Marker 2 at t=415.9s  → breathing 1 start (discard)
+    Marker 3 at t=643.4s  → stress 1 start
+    Marker 4 at t=827.9s  → breathing 2 start (discard)
+    Marker 5 at t=1036.4s  → stress 2 start
+    Marker 6 at t=1248.9s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 396s (6.6 min)
+    Discard (-1): 667s
+
+  Assembled DataFrame: (696, 9)
+    Rest rows   : 300
+    Stress rows : 396
+    Stress phase 1: 184 rows
+    Stress phase 2: 212 rows
+    Stress phase 3: 0 rows
+   t0=1777042124  biopac_start=1777042045  offset=78.8s (BIOPAC started 79s before watch)
+   ECG: 2809800 samples (23.4 min)
+   Windows processed: 22
+
+── p25 ──
+  Session duration : 1352.8s (22.5 min)
+  ACC samples      : 33905  (fs≈25 Hz)
+  HR/IBI readings  : 271
+  HR range         : 75–109 bpm
+  IBI range        : 550–800 ms
+  ⚠️  Only 5/8 markers found — session appears incomplete (3 gesture(s) missing).
+
+  Detected 5 markers (wrist-raise gestures):
+    Marker 1 at t=14.0s  → baseline start
+    Marker 2 at t=479.8s  → breathing 1 start (discard)
+    Marker 3 at t=659.4s  → stress 1 start
+    Marker 4 at t=824.0s  → breathing 2 start (discard)
+    Marker 5 at t=1017.5s  → stress 2 start
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 164s (2.7 min)
+    Discard (-1): 889s
+
+  Assembled DataFrame: (464, 9)
+    Rest rows   : 300
+    Stress rows : 164
+    Stress phase 1: 164 rows
+    Stress phase 2: 0 rows
+    Stress phase 3: 0 rows
+   t0=1778063877  biopac_start=1778063819  offset=58.0s (BIOPAC started 58s before watch)
+   ECG: 2730730 samples (22.8 min)
+   Windows processed: 14
+
+── p26 ──
+  Session duration : 1291.1s (21.5 min)
+  ACC samples      : 32360  (fs≈25 Hz)
+  HR/IBI readings  : 259
+  HR range         : 77–98 bpm
+  IBI range        : 612–779 ms
+  ⚠️  Only 5/8 markers found — session appears incomplete (3 gesture(s) missing).
+
+  Detected 5 markers (wrist-raise gestures):
+    Marker 1 at t=6.9s  → baseline start
+    Marker 2 at t=414.9s  → breathing 1 start (discard)
+    Marker 3 at t=595.5s  → stress 1 start
+    Marker 4 at t=780.0s  → breathing 2 start (discard)
+    Marker 5 at t=958.6s  → stress 2 start
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 185s (3.1 min)
+    Discard (-1): 807s
+
+  Assembled DataFrame: (485, 9)
+    Rest rows   : 300
+    Stress rows : 185
+    Stress phase 1: 185 rows
+    Stress phase 2: 0 rows
+    Stress phase 3: 0 rows
+   t0=1778089566  biopac_start=1778089504  offset=61.9s (BIOPAC started 62s before watch)
+   ECG: 2632680 samples (21.9 min)
+   Windows processed: 15
+
+── p27 ──
+  Session duration : 1410.7s (23.5 min)
+  ACC samples      : 35355  (fs≈25 Hz)
+  HR/IBI readings  : 282
+  HR range         : 69–88 bpm
+  IBI range        : 682–870 ms
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=6.0s  → baseline start
+    Marker 2 at t=320.2s  → breathing 1 start (discard)
+    Marker 3 at t=500.8s  → stress 1 start
+    Marker 4 at t=689.3s  → breathing 2 start (discard)
+    Marker 5 at t=894.8s  → stress 2 start
+    Marker 6 at t=1087.4s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 382s (6.4 min)
+    Discard (-1): 729s
+
+  Assembled DataFrame: (682, 9)
+    Rest rows   : 300
+    Stress rows : 382
+    Stress phase 1: 189 rows
+    Stress phase 2: 193 rows
+    Stress phase 3: 0 rows
+   t0=1778246446  biopac_start=1778246340  offset=106.2s (BIOPAC started 106s before watch)
+   ECG: 2862140 samples (23.9 min)
+   Windows processed: 21
+
+── p28 ──
+  Session duration : 1386.3s (23.1 min)
+  ACC samples      : 34745  (fs≈25 Hz)
+  HR/IBI readings  : 278
+  HR range         : 66–82 bpm
+  IBI range        : 732–909 ms
+  ⚠️  Only 5/8 markers found — session appears incomplete (3 gesture(s) missing).
+
+  Detected 5 markers (wrist-raise gestures):
+    Marker 1 at t=9.0s  → baseline start
+    Marker 2 at t=487.8s  → breathing 1 start (discard)
+    Marker 3 at t=681.3s  → stress 1 start
+    Marker 4 at t=874.8s  → breathing 2 start (discard)
+    Marker 5 at t=1051.4s  → stress 2 start
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 193s (3.2 min)
+    Discard (-1): 894s
+
+  Assembled DataFrame: (493, 9)
+    Rest rows   : 300
+    Stress rows : 193
+    Stress phase 1: 193 rows
+    Stress phase 2: 0 rows
+    Stress phase 3: 0 rows
+   t0=1778249157  biopac_start=1778249041  offset=115.9s (BIOPAC started 116s before watch)
+   ECG: 2918340 samples (24.3 min)
+   Windows processed: 15
+
+── p29 ──
+  Session duration : 1333.5s (22.2 min)
+  ACC samples      : 33420  (fs≈25 Hz)
+  HR/IBI readings  : 267
+  HR range         : 82–109 bpm
+  IBI range        : 550–732 ms
+  ⚠️  Only 5/8 markers found — session appears incomplete (3 gesture(s) missing).
+
+  Detected 5 markers (wrist-raise gestures):
+    Marker 1 at t=5.0s  → baseline start
+    Marker 2 at t=458.9s  → breathing 1 start (discard)
+    Marker 3 at t=641.4s  → stress 1 start
+    Marker 4 at t=823.0s  → breathing 2 start (discard)
+    Marker 5 at t=1006.5s  → stress 2 start
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 181s (3.0 min)
+    Discard (-1): 853s
+
+  Assembled DataFrame: (481, 9)
+    Rest rows   : 300
+    Stress rows : 181
+    Stress phase 1: 181 rows
+    Stress phase 2: 0 rows
+    Stress phase 3: 0 rows
+   t0=1778251572  biopac_start=1778251519  offset=52.8s (BIOPAC started 53s before watch)
+   ECG: 2699580 samples (22.5 min)
+   Windows processed: 15
+
+── p30 ──
+  Session duration : 1354.0s (22.6 min)
+  ACC samples      : 33935  (fs≈25 Hz)
+  HR/IBI readings  : 271
+  HR range         : 72–108 bpm
+  IBI range        : 556–833 ms
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=15.0s  → baseline start
+    Marker 2 at t=424.9s  → breathing 1 start (discard)
+    Marker 3 at t=647.4s  → stress 1 start
+    Marker 4 at t=823.9s  → breathing 2 start (discard)
+    Marker 5 at t=1017.5s  → stress 2 start
+    Marker 6 at t=1238.9s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 397s (6.6 min)
+    Discard (-1): 657s
+
+  Assembled DataFrame: (697, 9)
+    Rest rows   : 300
+    Stress rows : 397
+    Stress phase 1: 176 rows
+    Stress phase 2: 221 rows
+    Stress phase 3: 0 rows
+   t0=1778679107  biopac_start=1778679044  offset=62.9s (BIOPAC started 63s before watch)
+   ECG: 2759440 samples (23.0 min)
+   Windows processed: 22
+
+── p31 ──
+  Session duration : 1380.1s (23.0 min)
+  ACC samples      : 34590  (fs≈25 Hz)
+  HR/IBI readings  : 269
+  HR range         : 64–101 bpm
+  IBI range        : 594–938 ms
+  ⚠️  Suspicious spacing(s) detected: [np.float64(454.0)]s (expected ≤400s). Some markers may be misplaced.
+  ⚠️  Only 5/8 markers found — session appears incomplete (3 gesture(s) missing).
+
+  Detected 5 markers (wrist-raise gestures):
+    Marker 1 at t=10.0s  → baseline start
+    Marker 2 at t=329.2s  → breathing 1 start (discard)
+    Marker 3 at t=450.9s  → stress 1 start
+    Marker 4 at t=633.4s  → breathing 2 start (discard)
+    Marker 5 at t=1087.3s  → stress 2 start
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 183s (3.0 min)
+    Discard (-1): 898s
+
+  Assembled DataFrame: (483, 9)
+    Rest rows   : 300
+    Stress rows : 183
+    Stress phase 1: 183 rows
+    Stress phase 2: 0 rows
+    Stress phase 3: 0 rows
+   t0=1778681874  biopac_start=1778681823  offset=51.1s (BIOPAC started 51s before watch)
+   ECG: 2776820 samples (23.1 min)
+   Windows processed: 15
+
+── p32 ──
+  Session duration : 1151.1s (19.2 min)
+  ACC samples      : 28850  (fs≈25 Hz)
+  HR/IBI readings  : 231
+  HR range         : 78–104 bpm
+  IBI range        : 577–769 ms
+  ⚠️  Only 4/8 markers found — session appears incomplete (4 gesture(s) missing).
+
+  Detected 4 markers (wrist-raise gestures):
+    Marker 1 at t=13.0s  → baseline start
+    Marker 2 at t=445.9s  → breathing 1 start (discard)
+    Marker 3 at t=639.4s  → stress 1 start
+    Marker 4 at t=823.9s  → breathing 2 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 184s (3.1 min)
+    Discard (-1): 668s
+
+  Assembled DataFrame: (484, 9)
+    Rest rows   : 300
+    Stress rows : 184
+    Stress phase 1: 184 rows
+    Stress phase 2: 0 rows
+    Stress phase 3: 0 rows
+   t0=1778686069  biopac_start=1778685646  offset=423.3s (BIOPAC started 423s before watch)
+   ECG: 3090170 samples (25.8 min)
+   Windows processed: 15
+
+── p33 ──
+  Session duration : 1341.0s (22.3 min)
+  ACC samples      : 33610  (fs≈25 Hz)
+  HR/IBI readings  : 268
+  HR range         : 75–122 bpm
+  IBI range        : 492–800 ms
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=11.9s  → baseline start
+    Marker 2 at t=437.8s  → breathing 1 start (discard)
+    Marker 3 at t=618.4s  → stress 1 start
+    Marker 4 at t=794.9s  → breathing 2 start (discard)
+    Marker 5 at t=979.5s  → stress 2 start
+    Marker 6 at t=1312.7s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 509s (8.5 min)
+    Discard (-1): 532s
+
+  Assembled DataFrame: (809, 9)
+    Rest rows   : 300
+    Stress rows : 509
+    Stress phase 1: 176 rows
+    Stress phase 2: 333 rows
+    Stress phase 3: 0 rows
+   t0=1778754881  biopac_start=1778754814  offset=67.1s (BIOPAC started 67s before watch)
+   ECG: 2683200 samples (22.4 min)
+   Windows processed: 25
+
+── p34 ──
+  Session duration : 1391.6s (23.2 min)
+  ACC samples      : 34875  (fs≈25 Hz)
+  HR/IBI readings  : 279
+  HR range         : 97–140 bpm
+  IBI range        : 429–619 ms
+  ℹ️  No gesture detected in first 60s — baseline anchored at t=0.
+  ⚠️  Suspicious spacing(s) detected: [np.float64(792.0)]s (expected ≤400s). Some markers may be misplaced.
+  ⚠️  Only 4/8 markers found — session appears incomplete (4 gesture(s) missing).
+
+  Detected 4 markers (wrist-raise gestures):
+    Marker 1 at t=0.0s  → baseline start
+    Marker 2 at t=329.2s  → breathing 1 start (discard)
+    Marker 3 at t=1121.3s  → stress 1 start
+    Marker 4 at t=1317.8s  → breathing 2 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 196s (3.3 min)
+    Discard (-1): 896s
+
+  Assembled DataFrame: (496, 9)
+    Rest rows   : 300
+    Stress rows : 196
+    Stress phase 1: 196 rows
+    Stress phase 2: 0 rows
+    Stress phase 3: 0 rows
+   t0=1778765609  biopac_start=1778765559  offset=50.2s (BIOPAC started 50s before watch)
+   ECG: 2832060 samples (23.6 min)
+   Windows processed: 15
+
+── p35 ──
+  Session duration : 1333.5s (22.2 min)
+  ACC samples      : 33420  (fs≈25 Hz)
+  HR/IBI readings  : 266
+  HR range         : 71–90 bpm
+  IBI range        : 667–845 ms
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=11.0s  → baseline start
+    Marker 2 at t=461.9s  → breathing 1 start (discard)
+    Marker 3 at t=641.4s  → stress 1 start
+    Marker 4 at t=819.0s  → breathing 2 start (discard)
+    Marker 5 at t=1004.6s  → stress 2 start
+    Marker 6 at t=1266.9s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 440s (7.3 min)
+    Discard (-1): 594s
+
+  Assembled DataFrame: (740, 9)
+    Rest rows   : 300
+    Stress rows : 440
+    Stress phase 1: 178 rows
+    Stress phase 2: 262 rows
+    Stress phase 3: 0 rows
+   t0=1778769050  biopac_start=1778768986  offset=63.7s (BIOPAC started 64s before watch)
+   ECG: 2717640 samples (22.6 min)
+   Windows processed: 23
+
+── p36 ──
+  Session duration : 1440.6s (24.0 min)
+  ACC samples      : 36105  (fs≈25 Hz)
+  HR/IBI readings  : 288
+  HR range         : 75–107 bpm
+  IBI range        : 561–800 ms
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=13.0s  → baseline start
+    Marker 2 at t=331.2s  → breathing 1 start (discard)
+    Marker 3 at t=562.6s  → stress 1 start
+    Marker 4 at t=744.1s  → breathing 2 start (discard)
+    Marker 5 at t=924.7s  → stress 2 start
+    Marker 6 at t=1116.2s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 374s (6.2 min)
+    Discard (-1): 767s
+
+  Assembled DataFrame: (674, 9)
+    Rest rows   : 300
+    Stress rows : 374
+    Stress phase 1: 182 rows
+    Stress phase 2: 192 rows
+    Stress phase 3: 0 rows
+   t0=1778772332  biopac_start=1778772255  offset=77.4s (BIOPAC started 77s before watch)
+   ECG: 2952430 samples (24.6 min)
+   Windows processed: 21
+
+── p37 ──
+  Session duration : 1405.6s (23.4 min)
+  ACC samples      : 35225  (fs≈25 Hz)
+  HR/IBI readings  : 281
+  HR range         : 69–95 bpm
+  IBI range        : 632–870 ms
+  ⚠️  Only 5/8 markers found — session appears incomplete (3 gesture(s) missing).
+
+  Detected 5 markers (wrist-raise gestures):
+    Marker 1 at t=11.0s  → baseline start
+    Marker 2 at t=430.9s  → breathing 1 start (discard)
+    Marker 3 at t=675.4s  → stress 1 start
+    Marker 4 at t=870.9s  → breathing 2 start (discard)
+    Marker 5 at t=1044.5s  → stress 2 start
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 195s (3.2 min)
+    Discard (-1): 911s
+
+  Assembled DataFrame: (495, 9)
+    Rest rows   : 300
+    Stress rows : 195
+    Stress phase 1: 195 rows
+    Stress phase 2: 0 rows
+    Stress phase 3: 0 rows
+   t0=1778775648  biopac_start=1778775598  offset=50.5s (BIOPAC started 50s before watch)
+   ECG: 2851440 samples (23.8 min)
+   Windows processed: 15
+
+── p38 ──
+  Session duration : 1360.0s (22.7 min)
+  ACC samples      : 34085  (fs≈25 Hz)
+  HR/IBI readings  : 272
+  HR range         : 68–103 bpm
+  IBI range        : 583–882 ms
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=7.0s  → baseline start
+    Marker 2 at t=474.8s  → breathing 1 start (discard)
+    Marker 3 at t=650.4s  → stress 1 start
+    Marker 4 at t=835.0s  → breathing 2 start (discard)
+    Marker 5 at t=1022.5s  → stress 2 start
+    Marker 6 at t=1296.8s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 458s (7.6 min)
+    Discard (-1): 603s
+
+  Assembled DataFrame: (758, 9)
+    Rest rows   : 300
+    Stress rows : 458
+    Stress phase 1: 184 rows
+    Stress phase 2: 274 rows
+    Stress phase 3: 0 rows
+   t0=1779196999  biopac_start=1779196928  offset=70.6s (BIOPAC started 71s before watch)
+   ECG: 2780000 samples (23.2 min)
+   Windows processed: 24
+
+── p39 ──
+  Session duration : 1411.9s (23.5 min)
+  ACC samples      : 35385  (fs≈25 Hz)
+  HR/IBI readings  : 282
+  HR range         : 80–103 bpm
+  IBI range        : 583–750 ms
+  ⚠️  Only 5/8 markers found — session appears incomplete (3 gesture(s) missing).
+
+  Detected 5 markers (wrist-raise gestures):
+    Marker 1 at t=5.0s  → baseline start
+    Marker 2 at t=479.8s  → breathing 1 start (discard)
+    Marker 3 at t=675.4s  → stress 1 start
+    Marker 4 at t=880.9s  → breathing 2 start (discard)
+    Marker 5 at t=1085.4s  → stress 2 start
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 205s (3.4 min)
+    Discard (-1): 907s
+
+  Assembled DataFrame: (505, 9)
+    Rest rows   : 300
+    Stress rows : 205
+    Stress phase 1: 205 rows
+    Stress phase 2: 0 rows
+    Stress phase 3: 0 rows
+   t0=1779201109  biopac_start=1779201016  offset=92.9s (BIOPAC started 93s before watch)
+   ECG: 2889960 samples (24.1 min)
+   Windows processed: 15
+
+── p40 ──
+  Session duration : 1323.8s (22.1 min)
+  ACC samples      : 33182  (fs≈25 Hz)
+  HR/IBI readings  : 264
+  HR range         : 61–96 bpm
+  IBI range        : 625–984 ms
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=9.0s  → baseline start
+    Marker 2 at t=445.9s  → breathing 1 start (discard)
+    Marker 3 at t=626.5s  → stress 1 start
+    Marker 4 at t=804.0s  → breathing 2 start (discard)
+    Marker 5 at t=986.6s  → stress 2 start
+    Marker 6 at t=1257.7s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 449s (7.5 min)
+    Discard (-1): 575s
+
+  Assembled DataFrame: (749, 9)
+    Rest rows   : 300
+    Stress rows : 449
+    Stress phase 1: 178 rows
+    Stress phase 2: 271 rows
+    Stress phase 3: 0 rows
+   t0=1779283375  biopac_start=1779283244  offset=131.1s (BIOPAC started 131s before watch)
+   ECG: 2674290 samples (22.3 min)
+   Windows processed: 23
+
+── p41 ── NO BIOPAC (skipping, 19 windows → NaN)
+
+── p42 ──
+  Session duration : 1296.0s (21.6 min)
+  ACC samples      : 32480  (fs≈25 Hz)
+  HR/IBI readings  : 259
+  HR range         : 84–113 bpm
+  IBI range        : 531–714 ms
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=11.0s  → baseline start
+    Marker 2 at t=424.0s  → breathing 1 start (discard)
+    Marker 3 at t=603.5s  → stress 1 start
+    Marker 4 at t=783.1s  → breathing 2 start (discard)
+    Marker 5 at t=964.6s  → stress 2 start
+    Marker 6 at t=1220.0s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 436s (7.3 min)
+    Discard (-1): 560s
+
+  Assembled DataFrame: (736, 9)
+    Rest rows   : 300
+    Stress rows : 436
+    Stress phase 1: 180 rows
+    Stress phase 2: 256 rows
+    Stress phase 3: 0 rows
+   t0=1779290354  biopac_start=1779290275  offset=79.3s (BIOPAC started 79s before watch)
+   ECG: 2669340 samples (22.2 min)
+   Windows processed: 23
+
+── p43 ──
+  Session duration : 1341.5s (22.4 min)
+  ACC samples      : 33626  (fs≈25 Hz)
+  HR/IBI readings  : 263
+  HR range         : 64–144 bpm
+  IBI range        : 417–938 ms
+  ⚠️  Only 6/8 markers found — session appears incomplete (2 gesture(s) missing).
+
+  Detected 6 markers (wrist-raise gestures):
+    Marker 1 at t=7.0s  → baseline start
+    Marker 2 at t=443.7s  → breathing 1 start (discard)
+    Marker 3 at t=617.3s  → stress 1 start
+    Marker 4 at t=829.7s  → breathing 2 start (discard)
+    Marker 5 at t=1013.3s  → stress 2 start
+    Marker 6 at t=1283.6s  → breathing 3 start (discard)
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 482s (8.0 min)
+    Discard (-1): 560s
+
+  Assembled DataFrame: (782, 9)
+    Rest rows   : 300
+    Stress rows : 482
+    Stress phase 1: 212 rows
+    Stress phase 2: 270 rows
+    Stress phase 3: 0 rows
+   t0=1779371537  biopac_start=1779371475  offset=61.6s (BIOPAC started 62s before watch)
+   ECG: 2741360 samples (22.8 min)
+   Windows processed: 25
+
+── p44 ──
+  Session duration : 1453.3s (24.2 min)
+  ACC samples      : 36420  (fs≈25 Hz)
+  HR/IBI readings  : 291
+  HR range         : 85–113 bpm
+  IBI range        : 531–706 ms
+  ⚠️  Only 5/8 markers found — session appears incomplete (3 gesture(s) missing).
+
+  Detected 5 markers (wrist-raise gestures):
+    Marker 1 at t=14.0s  → baseline start
+    Marker 2 at t=501.8s  → breathing 1 start (discard)
+    Marker 3 at t=733.2s  → stress 1 start
+    Marker 4 at t=938.7s  → breathing 2 start (discard)
+    Marker 5 at t=1124.3s  → stress 2 start
+
+  Label distribution (seconds):
+    Rest (0)    : 300s (5.0 min)
+    Stress (1)  : 205s (3.4 min)
+    Discard (-1): 949s
+
+  Assembled DataFrame: (505, 9)
+    Rest rows   : 300
+    Stress rows : 205
+    Stress phase 1: 205 rows
+    Stress phase 2: 0 rows
+    Stress phase 3: 0 rows
+   t0=1779373414  biopac_start=1779373265  offset=149.3s (BIOPAC started 149s before watch)
+   ECG: 3134520 samples (26.1 min)
+   Windows processed: 15
+
+=======================================================
+ECG features computed:  688/712 windows
+NaN windows (no BIOPAC): 24
+Saved → processed_data/anxolotl/processed_data_anxolotl_ecg.pkl
+Shape  : (712, 12)
+Columns: ['ecg_rr_mean', 'ecg_rr_std', 'ecg_rmssd', 'ecg_pnn50', 'ecg_hr', 'ecg_lf_power', 'ecg_hf_power', 'ecg_lf_hf', 'ecg_amp_mean', 'ecg_amp_std', 'ecg_resp_mean', 'ecg_resp_std']
+
+ECG feature stats (valid windows):
+       ecg_rr_mean  ecg_rr_std  ecg_rmssd  ecg_pnn50   ecg_hr  ecg_lf_power  ecg_hf_power  ecg_lf_hf  ecg_amp_mean  ecg_amp_std  ecg_resp_mean  ecg_resp_std
+count      688.000     688.000    688.000    688.000  688.000  6.860000e+02  6.880000e+02    686.000       688.000      688.000        688.000       688.000
+mean       580.112     174.149    192.346      0.439  111.250  1.392487e+05  3.389042e+04      1.954         0.000        0.075          0.006         0.624
+std        152.022     535.992    748.297      0.216   31.123  2.049483e+06  4.864171e+05     10.919         0.000        0.049          0.054         0.772
+min        317.739      29.661     22.411      0.021   47.100  0.000000e+00  0.000000e+00      0.000        -0.001        0.016         -0.362         0.014
+25%        452.620      76.482     71.324      0.256   88.316  4.047420e+02  3.610560e+02      0.578        -0.000        0.043         -0.002         0.147
+50%        593.707     110.117    111.015      0.428  101.060  8.511570e+02  8.079870e+02      1.061         0.000        0.070          0.007         0.312
+75%        679.376     154.435    150.259      0.621  132.562  1.798145e+03  1.994858e+03      1.833         0.000        0.094          0.014         0.740
+max       1273.872   10105.766  14384.911      1.000  188.834  4.310713e+07  1.012651e+07    280.724         0.002        0.539          0.368         4.710
