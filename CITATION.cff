@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: >-
   If you use this software, please cite it using the metadata below.
 type: software
-title: Anxolotl pipeline
+title: "Advanced Wearable Technology and Signal Processing for Mental Health Monitoring"
 abstract: >-
   Machine learning pipeline for stress/anxiety detection from wearable
   physiological signals, evaluated within-dataset (WESAD, WDD, Anxolotl) and
@@ -18,11 +18,3 @@ repository-code: "TODO: add the repository URL once this project is pushed to a 
 license: MIT
 version: "0.1.0"
 date-released: "2026-08-30"
-
-# TODO before publishing this file:
-#  - Confirm the exact thesis title and add it as a `preferred-citation` entry
-#    of type `thesis`, with `institution`, `year`, and `url`/`doi` once available.
-#  - If this code accompanies a published paper or the Zenodo dataset release,
-#    add those as additional `references` entries once the dataset's own DOI
-#    is minted (the dataset release is prepared and published separately from
-#    this code repository).
