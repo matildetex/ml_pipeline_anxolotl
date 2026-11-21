@@ -10,7 +10,6 @@ authors:
     given-names: Matilde
     affiliation: Universidade de Aveiro
     email: matilde.teixeira@ua.pt
-repository-code: "TODO: add the repository URL once this project is pushed to a remote (GitHub/GitLab/etc.)"
 license: MIT
 version: "0.1.0"
 date-released: "2026-08-30"
