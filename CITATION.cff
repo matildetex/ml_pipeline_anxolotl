@@ -2,13 +2,9 @@ cff-version: 1.2.0
 message: >-
   If you use this software, please cite it using the metadata below.
 type: software
-title: "Advanced Wearable Technology and Signal Processing for Mental Health Monitoring"
+title: "Assessment of Stress States Using Consumer Wearable Devices: Contributions to Continuous Anxiety Monitoring"
 abstract: >-
-  Machine learning pipeline for stress/anxiety detection from wearable
-  physiological signals, evaluated within-dataset (WESAD, WDD, Anxolotl) and
-  cross-dataset (train on WESAD/WDD, test on Anxolotl) using classical models,
-  deep learning, ensembles and AutoML, with LOSO cross-validation and
-  SHAP-based explainability.
+  Anxiety disorders are the most common mental disorders and often go undetected. Consumer smartwatches, already worn by millions of people, offer a way to monitor the physiological signals that accompany these conditions continuously and unobtrusively. This work assesses whether a consumer wearable device, the Apple Watch, can detect acute stress from heart rate, a heart-rate-derived inter-beat interval, and acceleration alone, without the electrodermal activity on which most of the literature relies. For this purpose, a new dataset was collected from 37 university students during a laboratory stress protocol based on the PASAT, using Anxolotl, a mobile anxiety-monitoring system developed in previous work and adapted here for watchOS, and analysed together with two public datasets, WESAD and WDD. A subject-independent pipeline was developed and evaluated with tree-based, ensemble, deep learning, and domain-adversarial models under leave-one-subject-out cross-validation, complemented by cross-dataset transfer and explainability analysis. A label-free per-subject normalisation enabled the Apple Watch to detect stress in unseen subjects with an AUROC of 0.84, against 0.75 without normalisation at the stress proportion of the protocol, and the cardiac channels alone reached 0.74, showing that the signal is not explained by movement alone. The evaluation was also validated with a control using noise features, which identified and corrected an inflation affecting baseline-anchored normalisation and ensured that the results reflect physiology rather than the pipeline. On WESAD, the full multimodal configuration reached a Macro-F1 of 0.91. These findings show that a widely available consumer device can support subject-independent stress assessment and provide a validation procedure for baseline-normalised pipelines, as a contribution towards continuous anxiety monitoring.
 authors:
   - family-names: Teixeira
     given-names: Matilde
